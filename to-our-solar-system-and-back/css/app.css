@@ -1,0 +1,1615 @@
+@import url("https://use.typekit.net/pnd8jrt.css");
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+.centered {
+  text-align: center;
+}
+.centered > .absolute {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.particles {
+  position: relative;
+}
+.particles > * {
+  display: block;
+  position: absolute;
+}
+.blue {
+  border-radius: 18px;
+  background-color: rgba(0, 133, 213, 0.4);
+}
+.nooverflow {
+  overflow: hidden;
+}
+.sequence {
+  position: relative;
+}
+.sequence > span {
+  display: inline-block;
+}
+.height.full {
+  height: 100vh;
+}
+.height.half {
+  height: 50vh;
+}
+.height.larger {
+  height: 100vh;
+}
+.hidden {
+  display: none !important;
+}
+.ignore {
+  pointer-events: none;
+  user-select: none;
+}
+.disabled {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.3;
+}
+.clickable {
+  cursor: pointer;
+  user-select: none;
+}
+section {
+  width: 100%;
+  position: relative;
+}
+section.fixed {
+  position: fixed;
+  top: 0;
+}
+section > .buffer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  height: 300%;
+}
+section > .buffer.bottom {
+  height: 200%;
+}
+section > .buffer.top {
+  top: 0;
+  height: 200%;
+}
+section > .buffer.top.bottom {
+  top: 0;
+  height: 100%;
+}
+.absolute,
+.absolutes > * {
+  position: absolute;
+}
+.absolute span,
+.absolutes > * span,
+.absolute strong,
+.absolutes > * strong,
+.absolute em,
+.absolutes > * em,
+.absolute i,
+.absolutes > * i,
+.absolute a,
+.absolutes > * a {
+  position: relative;
+}
+.relative,
+.relatives > * {
+  position: relative;
+}
+.inline,
+.inlines > * {
+  display: inline-block;
+  position: static !important;
+}
+.layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.popout {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.toggled {
+  filter: drop-shadow(0 0 20px #309dde);
+}
+.progress {
+  display: inline-block;
+  right: 40px;
+  top: 10px;
+}
+.progress > * {
+  position: static !important;
+  margin-left: 5px;
+  display: inline-block;
+}
+.progress .tab {
+  width: 16px;
+  height: 16px;
+  border-radius: 1px;
+  background-color: none;
+  border: 2.5px solid #555555;
+}
+.progress .tab.progressed {
+  background-color: #0085d5;
+  border: 2.5px solid #ffffff;
+}
+.progress img {
+  width: 21px;
+  height: 21px;
+}
+[data-help] {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.loader-background {
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #000000;
+}
+.loader-background .loader {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
+.loader-background .loader.dots {
+  margin-top: -15px;
+}
+.divider {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+}
+#rotatedevice {
+  background-color: black;
+  text-align: center;
+}
+#rotatedevice .title {
+  top: 6vw;
+  left: 6vw;
+  text-align: left;
+  position: absolute;
+}
+#rotatedevice .title .s36 {
+  font-size: 2vw;
+}
+#rotatedevice .title .s57 {
+  font-size: 3vw;
+}
+#rotatedevice .banner {
+  width: 100vw;
+}
+#rotatedevice .message {
+  left: 10vw;
+  width: 80vw;
+  color: white;
+  position: relative;
+}
+#rotatedevice .rotater {
+  width: 80vw;
+  max-height: 50vh;
+}
+.nasal {
+  font-family: nasalization, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.proxima {
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+.proxima.reg {
+  font-weight: 400;
+}
+.proxima.med {
+  font-weight: 500;
+}
+.proxima.semi {
+  font-weight: 600;
+}
+.proxima.bold {
+  font-weight: 700;
+}
+.proxima.extra {
+  font-weight: 800;
+}
+.proxima.black {
+  font-weight: 900;
+}
+.proxima.italic {
+  font-style: italic;
+}
+.yellow {
+  color: #ffb43d;
+}
+.white {
+  color: #ffffff;
+}
+.gray {
+  color: #bbb;
+}
+.step-yellow {
+  color: #fcaa35;
+}
+.step-gray {
+  color: #979898;
+}
+.step-blue {
+  color: #0085d5;
+}
+.corn {
+  color: #67d6e5;
+}
+.corn.dark {
+  color: #0085d5;
+}
+.s12 {
+  font-size: 12px;
+}
+.s14 {
+  font-size: 14px;
+}
+.s15 {
+  font-size: 15px;
+}
+.s16 {
+  font-size: 16px;
+}
+.s18 {
+  font-size: 18px;
+}
+.s20 {
+  font-size: 20px;
+}
+.s21 {
+  font-size: 21px;
+}
+.s22 {
+  font-size: 22px;
+}
+.s24 {
+  font-size: 24px;
+}
+.s30 {
+  font-size: 30px;
+}
+.s36 {
+  font-size: 36px;
+}
+.s57 {
+  font-size: 57px;
+}
+.s80 {
+  font-size: 80px;
+}
+.s57.white,
+.s80.white {
+  text-shadow: 1px 1px 0px gray;
+}
+.s36.shadowed {
+  text-shadow: 1px 1px 4px gray;
+}
+.s100 {
+  font-size: 100px;
+}
+.scene {
+  width: 1024px;
+  height: 624px;
+  position: relative;
+}
+.scene .container {
+  width: 100%;
+  height: 100%;
+}
+.scene .container .background {
+  width: 1750px;
+  height: 736px;
+  position: absolute;
+  left: -363px;
+  top: -56px;
+}
+.scene .container .background * {
+  position: absolute;
+}
+.scene .container .background span,
+.scene .container .background strong,
+.scene .container .background em,
+.scene .container .background i,
+.scene .container .background a,
+.scene .container .background br {
+  position: relative;
+}
+.scene .container .background .divider {
+  z-index: 100;
+  right: 0;
+  transform: translateX(50%);
+  width: 40%;
+  height: 100%;
+  opacity: 0;
+}
+.scene .container .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.scene .container .content * {
+  position: absolute;
+}
+.scene .container .content span,
+.scene .container .content strong,
+.scene .container .content em,
+.scene .container .content i,
+.scene .container .content a,
+.scene .container .content br {
+  position: relative;
+}
+.scene .container .cover {
+  width: 1750px;
+  height: 736px;
+  position: absolute;
+  left: -363px;
+  top: -56px;
+  background-color: rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+}
+.scene .dialog {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.scene .dialog * {
+  position: absolute;
+}
+.scene .dialog span,
+.scene .dialog strong,
+.scene .dialog em,
+.scene .dialog i,
+.scene .dialog a {
+  position: relative;
+}
+.scene .wide {
+  width: 100%;
+}
+.scene .entire {
+  width: 100%;
+  height: 100%;
+}
+.dialog {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.dialog .close {
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  top: 30px;
+}
+.dialog .blue {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  height: 75%;
+  width: 90%;
+}
+.dialog .dialog-title {
+  position: absolute;
+  top: 0%;
+  height: 20%;
+  padding-top: 4%;
+  padding-left: 9%;
+}
+.button {
+  border-radius: 6px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  padding: 0.4em 1.2em;
+  display: inline-block;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+.button.white {
+  background-color: white;
+  color: black;
+}
+.button.corn {
+  background-color: #0085d5;
+  color: white;
+}
+.button.shadowless {
+  box-shadow: inherit;
+}
+.button.smaller {
+  font-size: 16px;
+}
+.circle {
+  border-radius: 30px;
+  font-size: 30px;
+  padding: 15px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-family: nasalization, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.circle.white {
+  background-color: white;
+  color: #00213c;
+}
+.scroll-up {
+  transform: translateY(-30%) translateX(-50%);
+  left: 50%;
+}
+.scene .content .scroll-up {
+  top: -56px;
+}
+.next {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+#screen2b .sky,
+#screen1 .sky {
+  top: 0;
+  height: 624px;
+}
+#screen2b .sunset,
+#screen1 .sunset {
+  bottom: 0;
+  height: 359px;
+}
+#screen2b .foreground,
+#screen1 .foreground {
+  bottom: 0;
+  height: 456px;
+}
+#screen2b .rocket,
+#screen1 .rocket {
+  top: -16.98717949%;
+  left: 60%;
+  height: 16.98717949%;
+}
+#screen2b .moon,
+#screen1 .moon {
+  left: 10%;
+  top: 10%;
+  height: 8.81410256%;
+}
+#screen2b .tagline,
+#screen1 .tagline {
+  bottom: 5%;
+  left: 24.12109375%;
+  height: 3.52564103%;
+}
+#screen2b .title,
+#screen1 .title {
+  top: 30%;
+  left: 10%;
+  height: 18.58974359%;
+  width: 40.72265625%;
+  line-height: 2.5em;
+}
+#screen2b .title-solar,
+#screen1 .title-solar {
+  height: 75%;
+}
+#screen2b .title-back,
+#screen1 .title-back {
+  top: 95px;
+  height: 25%;
+}
+#screen2 .title {
+  bottom: 20%;
+  left: 10%;
+}
+#screen2 .tagline {
+  bottom: 10%;
+  left: 10%;
+}
+#screen2 .instructions {
+  right: 10%;
+  top: 10%;
+  width: 200px;
+}
+#screen2 .hotspot {
+  cursor: pointer;
+}
+#screen2 .hotspot.h1 {
+  top: 10%;
+  left: 45%;
+}
+#screen2 .hotspot.h2 {
+  top: 40%;
+  left: 70%;
+}
+#screen2 .hotspot.h3 {
+  top: 55%;
+  left: 55%;
+}
+#screen2 .dialog.h1 .astronaut {
+  top: 50px;
+  left: 30px;
+}
+#screen2 .dialog.h1 .astronaut-text {
+  top: 120px;
+  left: 250px;
+  width: 180px;
+}
+#screen2 .dialog.h1 .food {
+  left: 550px;
+  top: 50px;
+}
+#screen2 .dialog.h1 .food-text {
+  left: 500px;
+  top: 300px;
+  width: 400px;
+}
+#screen2 .dialog.h2 .skylab {
+  left: 50px;
+  top: 50px;
+}
+#screen2 .dialog.h2 .skylab-text {
+  left: 520px;
+  top: 170px;
+  width: 350px;
+}
+#screen2 .dialog.h3 .person {
+  top: 101px;
+}
+#screen2 .dialog.h3 .person-text {
+  top: 100px;
+  left: 450px;
+  width: 350px;
+}
+#screen3 .stars {
+  width: 1024px;
+  left: 363px;
+}
+#screen3 .doors-left {
+  top: -56px;
+  left: -320px;
+}
+#screen3 .doors-right {
+  top: -56px;
+  right: -380px;
+}
+#screen3 .floor {
+  bottom: -50px;
+  left: -220px;
+}
+#screen3 .telescope {
+  bottom: -50px;
+  left: 50px;
+}
+#screen3 .title {
+  left: 700px;
+  top: 60px;
+  width: 250px;
+}
+#screen3 .subtitle {
+  left: 705px;
+  top: 269px;
+  width: 220px;
+}
+#screen3 .instructions {
+  left: 705px;
+  top: 470px;
+  width: 200px;
+}
+#screen3 .hotspot {
+  cursor: pointer;
+}
+#screen3 .hotspot.h1 {
+  left: 48%;
+}
+#screen3 .hotspot.h2 {
+  top: 40%;
+  left: 23%;
+}
+#screen3 .hotspot.h3 {
+  top: 55%;
+  left: 46%;
+}
+#screen3 .parallax .dialog-title {
+  width: 800px;
+}
+#screen3 .parallax .spacecraft {
+  padding: 30px 50px;
+  text-align: center;
+}
+#screen3 .parallax .circle-1 {
+  left: 50px;
+  top: 100px;
+}
+#screen3 .parallax .text-1 {
+  top: 100px;
+  left: 130px;
+  width: 180px;
+}
+#screen3 .parallax .circle-2 {
+  left: 50px;
+  top: 230px;
+}
+#screen3 .parallax .text-2 {
+  top: 230px;
+  left: 130px;
+  width: 200px;
+}
+#screen3 .parallax .circle-3 {
+  top: 100px;
+  left: 320px;
+}
+#screen3 .parallax .text-3 {
+  top: 100px;
+  left: 400px;
+  width: 200px;
+}
+#screen3 .parallax .circle-4 {
+  top: 100px;
+  left: 610px;
+}
+#screen3 .parallax .text-4 {
+  top: 100px;
+  left: 690px;
+  width: 200px;
+}
+#screen3 .parallax .summary {
+  padding: 30px;
+  bottom: 0;
+}
+#screen3 .spect .help {
+  top: 5px;
+  left: 160px;
+  width: 704px;
+}
+#screen3 .spect .help img {
+  left: -25px;
+  top: 4px;
+}
+#screen3 .spect .prev {
+  bottom: 0;
+  left: 10px;
+}
+#screen3 .spect .next {
+  bottom: 0;
+  right: 10px;
+}
+#screen3 .spect .next-question,
+#screen3 .spect .close-dialog {
+  bottom: 35px;
+  right: 45px;
+  text-align: right;
+}
+#screen3 .spect .outof {
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+#screen3 .spect .dialog-title {
+  left: 50px;
+  top: 50px;
+  width: 900px;
+  padding: 0;
+}
+#screen3 .spect .blue {
+  top: 230px;
+  height: 374px;
+}
+#screen3 .spect .light-blue {
+  left: 100px;
+  top: 100px;
+  right: 100px;
+  bottom: 40px;
+  border-radius: 16px;
+  background-color: #a4bdcc;
+  padding: 15px 30px;
+  color: #013656;
+}
+#screen3 .spect .light-blue .absorption-spectrum {
+  padding-right: 40px;
+}
+#screen3 .spect .light-blue .spectrum0 {
+  top: 55px;
+  left: 30px;
+}
+#screen3 .spect .light-blue .spectrum0.label {
+  top: 90px;
+}
+#screen3 .spect .light-blue .spectrum1 {
+  top: 55px;
+  right: 30px;
+}
+#screen3 .spect .light-blue .spectrum1.label {
+  top: 90px;
+}
+#screen3 .spect .light-blue .label {
+  width: 300px;
+  text-align: center;
+}
+#screen3 .spect .light-blue .emission-spectrum {
+  top: 125px;
+}
+#screen3 .spect .light-blue .spectrum2 {
+  top: 170px;
+  left: 30px;
+}
+#screen3 .spect .light-blue .spectrum2.label {
+  top: 205px;
+}
+#screen3 .spect .light-blue .spectrum3 {
+  top: 170px;
+  right: 30px;
+}
+#screen3 .spect .light-blue .spectrum3.label {
+  top: 205px;
+}
+#screen3 .spect .description {
+  padding: 30px;
+}
+#screen3 .spect .question {
+  left: 80px;
+  top: 120px;
+  width: 300px;
+}
+#screen3 .spect .question-image {
+  top: 210px;
+  left: 80px;
+}
+#screen3 .spect .question-image-description {
+  width: 300px;
+  top: 245px;
+  left: 80px;
+  text-align: center;
+}
+#screen3 .spect .answers {
+  right: 80px;
+  top: 110px;
+  width: 387px;
+}
+#screen3 .spect .answers > .answer {
+  background-color: #0085d5;
+  color: #ffffff;
+  border-radius: 6px;
+  height: 32px;
+  position: relative;
+  margin-top: 10px;
+  line-height: 28px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+#screen3 .spect .answers > .answer.selected {
+  border: 2px solid #ffffff;
+}
+#screen3 .spect .answers > .answer.correct::before {
+  content: url(../images/02/modals/spectrometry/02_modal_Spectometry_feedbac_check.png);
+  left: -30px;
+  position: absolute;
+  top: -1px;
+}
+#screen3 .spect .answers > .answer.incorrect::before {
+  content: url(../images/02/modals/spectrometry/02_modal_Spectometry_feedbac_x.png);
+  left: -30px;
+  position: absolute;
+  top: -1px;
+}
+#screen3 .spect .submit {
+  right: 80px;
+  bottom: 50px;
+}
+#screen3 .distance .dialog-title {
+  width: 800px;
+}
+#screen3 .distance .instructions {
+  left: 0px;
+  top: 30px;
+  width: 100%;
+  text-align: center;
+}
+#screen3 .distance .drag {
+  cursor: pointer;
+  top: 80px;
+}
+#screen3 .distance .drag.saturn {
+  left: 175px;
+}
+#screen3 .distance .drag.moon {
+  left: 325px;
+}
+#screen3 .distance .drag.dipper {
+  left: 475px;
+}
+#screen3 .distance .drag.milky {
+  left: 625px;
+}
+#screen3 .distance .earth {
+  top: 200px;
+  left: 30px;
+}
+#screen3 .distance .arrow {
+  top: 280px;
+}
+#screen3 .distance .arrow.a1 {
+  left: 200px;
+}
+#screen3 .distance .arrow.a2 {
+  left: 370px;
+}
+#screen3 .distance .arrow.a3 {
+  left: 540px;
+}
+#screen3 .distance .arrow.a4 {
+  left: 710px;
+}
+#screen3 .distance .drop-success {
+  top: 280px;
+}
+#screen3 .distance .drop-success.d1 {
+  left: 200px;
+}
+#screen3 .distance .drop-success.d2 {
+  left: 370px;
+}
+#screen3 .distance .drop-success.d3 {
+  left: 540px;
+}
+#screen3 .distance .drop-success.d4 {
+  left: 710px;
+}
+#screen3 .distance .drop {
+  top: 225px;
+}
+#screen3 .distance .drop.d1 {
+  left: 230px;
+}
+#screen3 .distance .drop.d2 {
+  left: 400px;
+}
+#screen3 .distance .drop.d3 {
+  left: 570px;
+}
+#screen3 .distance .drop.d4 {
+  left: 740px;
+}
+#screen3 .distance .drop-text {
+  width: 127px;
+  height: 127px;
+  line-height: 127px;
+  text-align: center;
+  top: 225px;
+}
+#screen3 .distance .drop-text.d1 {
+  left: 230px;
+}
+#screen3 .distance .drop-text.d2 {
+  left: 400px;
+}
+#screen3 .distance .drop-text.d3 {
+  left: 570px;
+}
+#screen3 .distance .drop-text.d4 {
+  left: 740px;
+}
+#screen3 .distance .drop-area {
+  width: 100px;
+  height: 101px;
+  top: 238px;
+}
+#screen3 .distance .drop-area.d1 {
+  left: 243px;
+}
+#screen3 .distance .drop-area.d2 {
+  left: 413px;
+}
+#screen3 .distance .drop-area.d3 {
+  left: 583px;
+}
+#screen3 .distance .drop-area.d4 {
+  left: 753px;
+}
+#screen3 .distance .info {
+  bottom: 0;
+  padding: 40px;
+}
+#screen3 .distance .submit {
+  top: 120px;
+  left: 405px;
+}
+#screen3 .distance .good-job {
+  top: 120px;
+  text-align: center;
+  width: 100%;
+}
+#screen3 .distance .nice-try {
+  top: 120px;
+  left: 390px;
+}
+#screen3 .distance .correct-order {
+  top: 120px;
+  text-align: center;
+  width: 100%;
+}
+#screen4 .planet1 {
+  top: 260px;
+  left: 150px;
+  width: 200px;
+}
+#screen4 .planet2 {
+  top: 260px;
+  left: 420px;
+}
+#screen4 .planet3 {
+  top: 280px;
+  left: 710px;
+}
+#screen4 .desc1 {
+  top: 460px;
+  left: 150px;
+  width: 200px;
+  text-align: center;
+}
+#screen4 .desc2 {
+  top: 460px;
+  left: 420px;
+  width: 170px;
+  text-align: center;
+}
+#screen4 .desc3 {
+  top: 460px;
+  left: 710px;
+  width: 150px;
+  text-align: center;
+}
+#screen4 .checkbox1 {
+  top: 250px;
+  left: 130px;
+}
+#screen4 .checkbox2 {
+  top: 250px;
+  left: 400px;
+}
+#screen4 .checkbox3 {
+  top: 250px;
+  left: 670px;
+}
+#screen4 .challenge1 {
+  top: 20px;
+  left: 20px;
+}
+#screen4 .blue {
+  top: 50px;
+  left: 50px;
+  width: 924px;
+  height: 148px;
+}
+#screen4 .blue.congrats {
+  background-color: #309dde;
+}
+#screen4 .intro {
+  left: 150px;
+  top: 15px;
+  width: 740px;
+}
+#screen4 .instructions {
+  top: 113px;
+  left: 140px;
+}
+#screen4 .think {
+  top: 520px;
+  left: 65px;
+  width: 894px;
+}
+#screen4 .submit {
+  top: 210px;
+  left: 448px;
+}
+#screen4 .great {
+  top: 20px;
+  left: 20px;
+}
+#screen4 .learned {
+  top: 60px;
+  left: 20px;
+  width: 720px;
+}
+#screen4 .continue {
+  top: 210px;
+  left: 444px;
+}
+#large_scroll .background {
+  width: 100%;
+  margin-bottom: -10%;
+}
+#large_scroll .scroll-up {
+  position: fixed;
+  top: 0;
+}
+#large_scroll .asteroid {
+  position: fixed;
+}
+#large_scroll #scroll_marker {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+.congrats-screen .blue-heading {
+  left: 80px;
+  top: 100px;
+  width: 202px;
+  height: 252px;
+  border-radius: 16px;
+  background-color: rgba(0, 101, 213, 0.4);
+}
+.congrats-screen .white-box {
+  left: 70px;
+  top: 65px;
+  width: 92px;
+  height: 122px;
+  border-radius: 16px;
+  border: 2.5px solid #9cd2f2;
+  line-height: 122px;
+  text-align: center;
+}
+.congrats-screen .challenge {
+  top: 30px;
+  left: 20px;
+}
+.congrats-screen .to-our {
+  left: 400px;
+  top: 100px;
+}
+.congrats-screen .great-work {
+  top: 210px;
+  left: 400px;
+}
+.congrats-screen .learned {
+  left: 400px;
+  top: 260px;
+  width: 550px;
+}
+.congrats-screen .now {
+  left: 400px;
+  top: 350px;
+  width: 550px;
+}
+.congrats-screen .continue {
+  left: 400px;
+  top: 420px;
+}
+.congrats-screen .twf {
+  left: 400px;
+  top: 500px;
+}
+.congrats-screen .de {
+  left: 500px;
+  top: 500px;
+}
+.congrats-screen .copyright {
+  text-align: center;
+  bottom: 20px;
+  width: 100%;
+}
+.congrats-screen .progress {
+  top: 20px;
+  right: 50px;
+}
+.congrats-screen .progress .tab {
+  width: 14px;
+  height: 14px;
+  border: 2.5px solid rgba(35, 35, 85, 0.3);
+}
+.congrats-screen .progress .tab.progressed {
+  border: 2.5px solid white;
+}
+#screen5 .uncheckable {
+  background-color: #0085d5;
+  border-radius: 11px;
+  width: 200px;
+  padding-right: 30px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+#screen5 .uncheckable::after {
+  content: "\25BA";
+  position: absolute;
+  right: 10px;
+  top: 2px;
+}
+#screen5 .uncheckable.checked::after {
+  content: "\25BC";
+}
+#screen5 .land-instructions {
+  top: 56px;
+  left: 363px;
+}
+#screen5 .land-instructions .step1 {
+  left: 200px;
+  top: 500px;
+}
+#screen5 .land-instructions .step2 {
+  left: 595px;
+  top: 500px;
+}
+#screen5 .land-instructions .step3 {
+  left: 890px;
+  top: 500px;
+}
+#screen5 .land-instructions .step1-hl {
+  left: 570px;
+  top: 240px;
+}
+#screen5 .land-instructions .step2-hl {
+  left: 570px;
+  top: 315px;
+}
+#screen5 .land-instructions .step3-hl {
+  left: 570px;
+  top: 390px;
+}
+#screen5 .land-instructions .mission-instructions {
+  left: 120px;
+  top: 200px;
+  width: 330px;
+}
+#screen5 .land-instructions .sequence {
+  top: 200px;
+  left: 600px;
+  width: 260px;
+}
+#screen5 .try-again .lets {
+  left: 120px;
+  top: 200px;
+  width: 330px;
+}
+#screen5 .nice-try {
+  left: 120px;
+  top: 200px;
+  width: 330px;
+}
+#screen5 .blue {
+  left: 50px;
+  width: 924px;
+  top: 50px;
+  height: 150px;
+}
+#screen5 .challenge2 {
+  top: 20px;
+  left: 20px;
+}
+#screen5 .intro {
+  left: 150px;
+  top: 15px;
+  width: 700px;
+}
+#screen5 .instructions {
+  left: 289px;
+  top: 106px;
+}
+#screen5 .thrust {
+  left: 117px;
+  top: 250px;
+}
+#screen5 .thrust-text {
+  left: 117px;
+  top: 340px;
+  width: 200px;
+}
+#screen5 .lift {
+  left: 397px;
+  top: 250px;
+}
+#screen5 .lift-text {
+  left: 397px;
+  top: 340px;
+  width: 200px;
+}
+#screen5 .draga {
+  left: 677px;
+  top: 250px;
+}
+#screen5 .draga-text {
+  left: 677px;
+  top: 340px;
+  width: 200px;
+}
+#screen5 .dialog.h1 .submit {
+  top: 550px;
+  left: 450px;
+}
+#screen5 .dialog.h2 .blue {
+  height: 280px;
+}
+#screen5 .dialog.h2 .drag {
+  cursor: pointer;
+  top: 200px;
+  width: 100px;
+  height: 101px;
+  background-color: #0085d5;
+  border-radius: 11px;
+  line-height: 100px;
+  text-align: center;
+  user-select: none;
+}
+#screen5 .dialog.h2 .drag.thrust {
+  left: 175px;
+}
+#screen5 .dialog.h2 .drag.lift {
+  left: 325px;
+}
+#screen5 .dialog.h2 .drag.newton3 {
+  left: 475px;
+  line-height: 20px;
+  padding-top: 20px;
+  height: 80px;
+}
+#screen5 .dialog.h2 .drag.weight {
+  left: 625px;
+}
+#screen5 .dialog.h2 .drag.dragg {
+  left: 775px;
+}
+#screen5 .dialog.h2 .drop {
+  top: 360px;
+}
+#screen5 .dialog.h2 .drop.d1 {
+  left: 125px;
+}
+#screen5 .dialog.h2 .drop.d2 {
+  left: 295px;
+}
+#screen5 .dialog.h2 .drop.d3 {
+  left: 465px;
+}
+#screen5 .dialog.h2 .drop.d4 {
+  left: 635px;
+}
+#screen5 .dialog.h2 .drop.d5 {
+  left: 805px;
+}
+#screen5 .dialog.h2 .drop-area {
+  width: 100px;
+  height: 101px;
+  top: 373px;
+}
+#screen5 .dialog.h2 .drop-area.d1 {
+  left: 138px;
+}
+#screen5 .dialog.h2 .drop-area.d2 {
+  left: 308px;
+}
+#screen5 .dialog.h2 .drop-area.d3 {
+  left: 478px;
+}
+#screen5 .dialog.h2 .drop-area.d4 {
+  left: 648px;
+}
+#screen5 .dialog.h2 .drop-area.d5 {
+  left: 818px;
+}
+#screen5 .dialog.h2 .drop-desc {
+  width: 128px;
+  top: 494px;
+}
+#screen5 .dialog.h2 .drop-desc.d1 {
+  left: 125px;
+}
+#screen5 .dialog.h2 .drop-desc.d2 {
+  left: 295px;
+}
+#screen5 .dialog.h2 .drop-desc.d3 {
+  left: 465px;
+}
+#screen5 .dialog.h2 .drop-desc.d4 {
+  left: 635px;
+}
+#screen5 .dialog.h2 .drop-desc.d5 {
+  left: 805px;
+}
+#screen5 .dialog.h2 .submit {
+  left: 470px;
+  top: 230px;
+}
+#screen5 .dialog.h2 .nice-try {
+  top: 220px;
+  left: 100px;
+  width: 820px;
+}
+#screen5 .dialog.h2 .try-again {
+  left: 350px;
+  top: 65px;
+}
+#screen5 .dialog.h2 .correct-order {
+  top: 220px;
+  text-align: center;
+  width: 100%;
+}
+#screen5 .dialog.h2 .good-job {
+  top: 210px;
+  left: 100px;
+  width: 820px;
+  text-align: center;
+}
+#screen5 .dialog.h2 .continue {
+  left: 460px;
+  top: 280px;
+}
+#congrats3 .now {
+  top: 330px;
+}
+#congrats3 .continue {
+  top: 440px;
+}
+#congrats4 .download.inline {
+  width: 18px;
+  margin-top: 2px;
+  margin-bottom: -2px;
+  margin-right: 4px;
+}
+#congrats4 .replay {
+  left: 110px;
+  top: 380px;
+}
+#congrats4 .replay img {
+  margin-bottom: -5px;
+}
+#congrats4 .continue {
+  top: 330px;
+}
+#congrats4 .tgredu {
+  left: 700px;
+  top: 470px;
+}
+#congrats4 .tgredu .topline {
+  text-transform: none;
+  top: 2px;
+  left: 36px;
+}
+#landing .rover {
+  left: 100px;
+  top: 100px;
+}
+#landing .rover-arm {
+  left: 495px;
+  top: 240px;
+  transform-origin: 45px 64px;
+}
+#landing .radio {
+  left: 280px;
+  top: 45px;
+}
+#landing .samples {
+  text-align: center;
+  top: 20px;
+  width: 1024px;
+}
+#landing .continue {
+  left: 440px;
+  top: 500px;
+}
+#screen6 .sample {
+  left: 240px;
+  top: 280px;
+}
+#screen6 .title {
+  width: 100%;
+  text-align: center;
+  top: 100px;
+}
+#screen6 .super {
+  top: 180px;
+  left: 260px;
+}
+#screen6 .continue {
+  left: 440px;
+  top: 530px;
+}
+#screen7 .challenge1 {
+  top: 20px;
+  left: 20px;
+}
+#screen7 .blue {
+  top: 50px;
+  left: 50px;
+  width: 924px;
+  height: 148px;
+}
+#screen7 .blue.congrats {
+  background-color: #309dde;
+}
+#screen7 .intro {
+  left: 150px;
+  top: 15px;
+  width: 740px;
+}
+#screen7 .instructions {
+  top: 90px;
+  left: 240px;
+}
+#screen7 .learn1 {
+  left: 200px;
+  top: 240px;
+}
+#screen7 .learn2 {
+  left: 400px;
+  top: 240px;
+}
+#screen7 .learn3 {
+  left: 380px;
+  top: 410px;
+}
+#screen7 .learn4 {
+  left: 560px;
+  top: 410px;
+}
+#screen7 .learn5 {
+  left: 700px;
+  top: 260px;
+}
+#screen7 .learn6 {
+  left: 140px;
+  top: 420px;
+}
+#screen7 .checkbox1 {
+  left: 190px;
+  top: 230px;
+}
+#screen7 .checkbox2 {
+  left: 390px;
+  top: 230px;
+}
+#screen7 .checkbox3 {
+  left: 370px;
+  top: 400px;
+}
+#screen7 .checkbox4 {
+  left: 550px;
+  top: 400px;
+}
+#screen7 .checkbox5 {
+  left: 690px;
+  top: 250px;
+}
+#screen7 .checkbox6 {
+  left: 130px;
+  top: 410px;
+}
+#screen7 .learn1-text {
+  left: 216px;
+  top: 381px;
+  width: 200px;
+}
+#screen7 .learn2-text {
+  left: 436px;
+  top: 339px;
+  text-align: center;
+  width: 200px;
+}
+#screen7 .learn3-text {
+  left: 418px;
+  top: 545px;
+}
+#screen7 .learn4-text {
+  left: 613px;
+  top: 563px;
+}
+#screen7 .learn5-text {
+  left: 760px;
+  top: 395px;
+}
+#screen7 .learn6-text {
+  left: 161px;
+  top: 490px;
+  width: 200px;
+}
+#screen7 .continue {
+  left: 440px;
+  top: 580px;
+}
+#screen7 .dialog .dialog-title {
+  left: 40px;
+  top: 20px;
+}
+#screen7 .dialog .back {
+  top: 134px;
+  left: 57px;
+}
+#screen7 .dialog .blue {
+  top: 200px;
+  background-color: #0085d5;
+  left: 120px;
+  color: white;
+  padding: 40px;
+  width: 300px;
+  height: 170px;
+}
+#screen8 .sky {
+  top: 0;
+  height: 624px;
+}
+#screen8 .sunset {
+  bottom: 0;
+  height: 359px;
+}
+#screen8 .foreground {
+  bottom: 0;
+  height: 456px;
+}
+#screen8 .rocket {
+  top: -16.98717949%;
+  left: 60%;
+  height: 16.98717949%;
+}
+#screen8 .moon {
+  left: 10%;
+  top: 10%;
+  height: 8.81410256%;
+}
+#screen8 .title {
+  top: 80px;
+  left: 100px;
+  width: 400px;
+}
+#screen8 .title-back {
+  top: 48px;
+}
+#screen8 .panel {
+  left: 815px;
+  top: 25px;
+}
+#screen8 .numbers {
+  top: 50px;
+  left: 865px;
+}
+#screen8 .checks {
+  top: 58px;
+  left: 945px;
+}
+#screen8 .cert {
+  left: 826px;
+  top: 340px;
+}
+#screen8 .play {
+  left: 826px;
+  top: 418px;
+}
+#screen8 .tiger {
+  left: 826px;
+  top: 513px;
+}
+#screen8 .twf {
+  left: 100px;
+  top: 500px;
+  width: 97px;
+}
+#screen8 .dised {
+  left: 220px;
+  top: 525px;
+  height: 30px;
+}
+#screen8 .congrats {
+  left: 100px;
+  top: 185px;
+}
+#screen8 .completed {
+  left: 100px;
+  top: 250px;
+}

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    
+    <script>
+      var DEBUG = true;
+      var BACKWARDS = true;
+      var TRANSITION_DURING = true;
+      var TRANSITION_DURATION = 0;
+    </script>
+    
+    <!-- <link rel="stylesheet" href="css/vendor.css"> -->
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-529BLX5');</script>
+    <!-- End Google Tag Manager -->
+    
+  </head>
+  <body>
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-529BLX5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  
+    <!-- Screen_04 -->
+    <section id="screen4_trigger" class="full height" data-hide="fadeOut 2s">
+      <div id="screen4_buffer" class="top buffer"></div>
+      <section id="screen4">
+        <div class="scene">
+          <div class="container">
+            <div class="background">
+              <img data-src="images/global/starField.png" class="entire">
+              <div class="entire stars"></div>
+            </div>
+            <div class="content">
+              <div class="progress">
+                <div class="tab progressed"></div>
+                <div class="tab"></div>
+                <div class="tab"></div>
+                <div class="tab"></div>
+                <img data-src="images/global/progressStar.png">
+              </div>
+              <img data-src="images/global/asteroid.png" class="planet1 clickable planet" data-toggle="p1" data-checkbox="c1" data-planet="1">
+              <img data-src="images/03/chall_01_planet_02.png" class="planet2 clickable planet" data-toggle="p2" data-checkbox="c2" data-planet="2">
+              <img data-src="images/03/chall_01_planet_03.png" class="planet3 clickable planet" data-toggle="p3" data-checkbox="c3" data-planet="3">
+              <div class="desc desc1 proxima bold white s18" data-checkbox="c1">
+                Asteroid
+              </div>
+              <div class="desc desc2 proxima bold white s18" data-checkbox="c2">
+                Venus
+              </div>
+              <div class="desc desc3 proxima bold white s18" data-checkbox="c3">
+                Titan<br>(Saturn's moon)
+              </div>
+              <img data-src="images/03/chall_01_planet_checkbox.png" class="checkbox1 clickable checkbox hide-c1" data-toggle="c1" data-planet="p1">
+              <img data-src="images/03/chall_01_planet_checkbox.png" class="checkbox2 clickable checkbox hide-c2" data-toggle="c2" data-planet="p2">
+              <img data-src="images/03/chall_01_planet_checkbox.png" class="checkbox3 clickable checkbox hide-c3" data-toggle="c3" data-planet="p3">
+              <img data-src="images/03/chall_01_planet_checkbox_selected.png" class="checkbox1 clickable checkbox hidden show-c1" data-toggle="c1">
+              <img data-src="images/03/chall_01_planet_checkbox_selected.png" class="checkbox2 clickable checkbox hidden show-c2" data-toggle="c2">
+              <img data-src="images/03/chall_01_planet_checkbox_selected.png" class="checkbox3 clickable checkbox hidden show-c3" data-toggle="c3">
+              
+              <div class="blue">
+                <img data-src="images/03/chall_01_planet_chall_01.png" class="challenge1">
+                <div class="intro proxima reg gray s18">
+                  In this mission, you will act as a planetary scientist tasked with returning to Earth with samples from a celestial object in our solar system. When analyzed, the results will help us understand the universe, provide details about Earth's past, and will further explorations of the solar system and deep space. 
+                </div>
+                <div class="instructions proxima reg white s18">
+                  Click on each celestial object to learn more. Click the selection box to choose an object to study.
+                </div>
+              </div>
+              <div class="think proxima reg white s21 hide-p1 hide-p2 hide-p3">
+                Think about what astronomical spectrometry would reveal about samples from each. Which planet would you like to study further? Why?
+              </div>
+              <div class="think proxima reg white s21 hidden show-p1">
+                This celestial object shows evidence of water from its infrared spectral absorptions. Water-bearing minerals are very helpful for scientists to understand the formation and evolution of the solar system. A sample could confirm evidence of water and lead to answers or more questions!
+              </div>
+              <div class="think proxima reg white s21 hidden show-p2">
+                This rocky celestial object has a thick atmosphere. UV light is reflected by high altitude clouds but heavily absorbed. It is very dark high up in the atmosphere. A sample may help scientists determine what type of core this celestial object has.
+              </div>
+              <div class="think proxima reg white s21 hidden show-p3">
+                This celestial object has a hazy atmosphere with clouds of methane. Infrared imaging shows dark, dune-filled regions. Scientists are interested in learning more about its methane-filled lakes, rivers, and oceans. Maybe a sample could help!
+              </div>
+              <div class="submit clickable hidden white button" data-hide="fadeOut reverse" data-show="fadeIn">
+                Submit
+              </div>
+              <div class="continue clickable hidden white button" data-show="fadeIn ~0.5s">
+                Continue
+              </div>
+              <img data-src="images/intro/scrollUp.png" class="scroll-up hidden">
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    
+    <!-- Big Scroll -->
+    <section id="large_scroll" class="ignore">
+      <img src="images/global/eyeCandy.png" class="background" onload="scrollToStart()">
+      <img src="images/global/asteroid.png" class="asteroid">
+      <div id="scroll_marker"></div>
+    </section>
+    
+    <!-- Screen_03 -->
+    <section id="screen3_outro" class="larger height transition ignore"></section>
+    <section id="screen3" class="fixed full height hidden">
+      <div class="scene">
+        <div class="container">
+          <div class="background">
+            <img data-src="images/global/starField.png" class="entire">
+            <div class="entire stars"></div>
+          </div>
+          <div class="content">
+            <img data-src="images/02/02_tele_doors_left.png" class="doors-left">
+            <img data-src="images/02/02_tele_doors_right.png" class="doors-right">
+            <img data-src="images/02/02_tele_platform.png" class="floor">
+            <img data-src="images/02/02_tele_telescope.png" class="telescope">
+            <div class="title nasal s57 white">What Do You know</div>
+            <div class="subtitle proxima reg yellow s24">about the technologies scientists use to make observations of our universe?</div>
+            <div class="instructions proxima reg white s21">This information will help you complete a later mission!</div>
+            <img data-src="images/global/modal_hotspot.png" class="hotspot h1" data-dialog="#screen3 .dialog.h1">
+            <img data-src="images/global/modal_hotspot.png" class="hotspot h2" data-dialog="#screen3 .dialog.h2">
+            <img data-src="images/global/modal_hotspot.png" class="hotspot h3" data-dialog="#screen3 .dialog.h3">
+            <img data-src="images/intro/scrollUp.png" class="scroll-up clickable next hidden" data-goto="screen4_trigger" data-goto-options="16s quad-inout">
+          </div>
+          <div class="cover hidden" data-show="fadeIn 0.5s" data-hide="fadeOut ~0.5s 0.5s"></div>
+        </div>
+        <!-- Dialog 1 -->
+        <div class="parallax dialog h1 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+          <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+          <div class="dialog-title proxima reg yellow s24" data-show="fadeIn ~1.5s">
+            What are some ways to estimate the vast distances between Earth and the planets, moons, and stars scientists study?
+            <span class="white">One method is parallax.</span>
+          </div>
+          <div class="blue">
+            <div class="spacecraft proxima semi white s21">
+              Spacecraft use parallax to estimate distances. You can use parallax to estimate the distance to faraway objects.
+            </div>
+            <div class="circle-1 white circle">1</div>
+            <div class="text-1 proxima reg white s18">
+              Hold your thumb out in front of you.
+            </div>
+            <div class="circle-2 white circle">2</div>
+            <div class="text-2 proxima reg white s18">
+              Close one of your eyes, and note the object in the distance.
+            </div>
+            <div class="circle-3 white circle">3</div>
+            <div class="text-3 proxima reg white s18">
+              Open your eye, and look back at your thumb.<br>
+              <br>
+              Keep opening and closing one eye at a time and focusing on your thumb and the object in the distance.<br>
+              <br>
+              What do you notice?
+            </div>
+            <div class="circle-4 white circle">4</div>
+            <div class="text-4 proxima reg white s18">
+              Now, move your thumb closer to your face and again focus on the distant object. Then your thumb with different eyes, one at a time.
+            </div>
+            <div class="summary proxima reg white s18">
+              What do you notice about the distance and your thumb? The amount that the object seems to move is related to how far away the object is. This is parallax!
+            </div>
+          </div>
+        </div>
+        <!-- Dialog 2 -->
+        <div class="spect dialog h2 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+          <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+          <div class="help help-absorption proxima reg s15 yellow hidden hide-help">
+            <img data-src="images/02/modals/spectrometry/02_modal_Spectometry_def_triangle.png">
+            <strong class="white">Absorption:</strong> Absorption occurs when radiated energy is absorbed by an object. Absorption spectra are produced when the light emitted from a hot, dense material passes through a cooler, less dense gas.
+          </div>
+          <div class="help help-emission proxima reg s15 yellow hidden hide-help">
+            <img data-src="images/02/modals/spectrometry/02_modal_Spectometry_def_triangle.png">
+            <strong class="white">Emission:</strong> Emission indicates that radiation is being released by an object.
+          </div>
+          <div class="show-0 dialog-title proxima reg white s24" data-show="fadeIn ~1.5s">
+            Astronomers can tell a lot about celestial objects through a technique called spectrometry. 
+            Looking at the spectrum of visible light and other forms of electromagnetic radiation, spectrometry can reveal the chemical composition of stars, planets, galaxies and other objects found in space, just like how a prism can reveal all the colors that make up light!
+          </div>
+          <div class="show-1 show-2 show-3 show-4 show-5 dialog-title proxima reg white s20 hidden">
+            <strong>Astronomical spectrometry</strong> is the study of how electromagnetic waves interact with matter, including the <strong class="yellow" data-help="absorption">absorption</strong> and <strong class="yellow" data-help="emission">emission</strong> of radiation.<br>
+            <br>
+            Stars, planets, and other celestial objects produce an emission spectrum or an absorption spectrum. Each spectrum can then be compared with the spectra of known substances.
+          </div>
+          <div class="blue">
+            <div class="show-0 description proxima reg white s22">
+              The lines on each spectrum correspond to the wavelengths of radiation either being absorbed or emitted.
+            </div>
+            <div class="show-1 show-2 show-3 show-4 show-5 description proxima reg white s22 hidden">
+              Astronomical spectrometry helps scientists classify unknown samples. <strong>This will be critical to your mission.</strong>
+              Let's see what you can identify using astronomical spectrometry!
+            </div>
+            <div class="show-0 entire hidden" data-slide-show="fadeIn">
+              <div class="light-blue proxima med">
+                <div class="absorption-spectrum">
+                  An absorption spectrum shows radiation that is being <strong>absorbed</strong> by an object. The more color, the broader the spectrum.
+                </div>
+                <img class="spectrum0" data-src="images/02/modals/spectrometry/Absorbtion_Hydrogen.png">
+                <div class="spectrum0 label s14">*Absorption spectrum of Hydrogen</div>
+                <img class="spectrum1" data-src="images/02/modals/spectrometry/Absorbtion_Fluorine.png">
+                <div class="spectrum1 label s14">*Absorption spectrum of Fluorine</div>
+                <div class="emission-spectrum">
+                  An emission spectrum shows radiation that is being <strong>emitted</strong> by an object. The less color, the narrower the spectrum.
+                </div>
+                <img class="spectrum2" data-src="images/02/modals/spectrometry/Emission Hydrogen.png">
+                <div class="spectrum2 label s14">*Emission spectrum of Hydrogen</div>
+                <img class="spectrum3" data-src="images/02/modals/spectrometry/Emission_Fluorine.png">
+                <div class="spectrum3 label s14">*Emission spectrum of Fluorine</div>
+              </div>
+            </div>
+            <div class="show-1 entire hidden" data-slide-show="fadeIn">
+              <div class="question proxima med white s21">
+                1. What can you tell about the substances emitted from the hot gas?
+              </div>
+              <img class="question-image" data-src="images/02/modals/spectrometry/02_modal_Spectometry_emission.png">
+              <div class="question-image-description proxima reg s12 white">Emission Spectrum</div>
+              <div class="answers show-1" data-slide-show="flipInX">
+                <div class="answer clickable proxima med white s16">The spectrum is very broad.</div>
+                <div class="answer clickable proxima med white s16 good">The spectrum is very narrow.</div>
+                <div class="answer clickable proxima med white s16">The spectrum shows only UV rays.</div>
+                <div class="answer clickable proxima med white s16">The spectrum shows only IR rays.</div>
+              </div>
+              <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+              <div class="next-question clickable proxima semi s15 yellow finished-show hidden">Next<br>Question</div>
+            </div>
+            <div class="show-2 entire hidden" data-slide-show="fadeIn">
+              <div class="question proxima med white s21 show-2 hidden">
+                2. What can you tell about the substances absorbed by the cold gas?
+              </div>
+              <img class="question-image" data-src="images/02/modals/spectrometry/02_modal_Spectometry_continuous.png">
+              <div class="question-image-description proxima reg s12 white">Absorption Spectrum</div>
+              <div class="answers show-2" data-slide-show="flipInX">
+                <div class="answer clickable proxima med white s16 good">The spectrum is very broad.</div>
+                <div class="answer clickable proxima med white s16">The spectrum is very narrow.</div>
+                <div class="answer clickable proxima med white s16">The spectrum shows only UV rays.</div>
+                <div class="answer clickable proxima med white s16">The spectrum shows only IR rays.</div>
+              </div>
+              <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+              <div class="next-question clickable proxima semi s15 yellow finished-show hidden">Next<br>Question</div>
+            </div>
+            <div class="show-3 entire hidden" data-slide-show="fadeIn">
+              <div class="question proxima med white s21">
+                3. If you see a substance through your spectroscope that emits a very narrow spectrum, what can you infer about the substance?
+              </div>
+              <div class="answers show-3" data-slide-show="flipInX">
+                <div class="answer clickable proxima med white s16">The substance is a cold gas or a rock.</div>
+                <div class="answer clickable proxima med white s16 good">The substance is a hot gas.</div>
+                <div class="answer clickable proxima med white s16">The type of substance cannot be determined.</div>
+                <div class="answer clickable proxima med white s16">The substance could be one of many things.</div>
+              </div>
+              <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+              <div class="next-question clickable proxima semi s15 yellow finished-show hidden">Next<br>Question</div>
+            </div>
+            <div class="show-4 entire hidden" data-slide-show="fadeIn">
+              <div class="question proxima med white s21">
+                4. If you see a substance through your spectroscope that produces a very broad absorption spectrum, what can you infer about the substance?
+              </div>
+              <div class="answers show-4" data-slide-show="flipInX">
+                <div class="answer clickable proxima med white s16 good">The substance is a cold gas or a rock.</div>
+                <div class="answer clickable proxima med white s16">The substance is a hot gas.</div>
+                <div class="answer clickable proxima med white s16">The type of substance cannot be determined.</div>
+                <div class="answer clickable proxima med white s16">The substance could be one of many things.</div>
+              </div>
+              <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+              <div class="next-question clickable proxima semi s15 yellow finished-show hidden">Next<br>Question</div>
+            </div>
+            <div class="show-5 entire hidden" data-slide-show="fadeIn">
+              <div class="question proxima med white s21">
+                5. What can you determine about an unknown substance?
+              </div>
+              <img class="question-image" data-src="images/02/modals/spectrometry/02_modal_Spectometry_absorbtion.png">
+              <div class="question-image-description proxima reg s12 white">Absorption Spectrum</div>
+              <div class="answers show-5" data-slide-show="flipInX">
+                <div class="answer clickable proxima med white s16">Wavelengths are unrelated to substance composition.</div>
+                <div class="answer clickable proxima med white s16 good">Wavelengths correspond to substance composition.</div>
+                <div class="answer clickable proxima med white s16">Every substance contains a large amount of water.</div>
+                <div class="answer clickable proxima med white s16">Most substances are composed of elements.</div>
+              </div>
+              <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+              <div class="close-dialog clickable proxima semi s15 yellow finished-show hidden">Close<br>Dialog</div>
+            </div>
+            <div class="next clickable s100 nasal white">&rsaquo;</div>
+            <div class="prev clickable s100 nasal white">&lsaquo;</div>
+            <div class="outof proxima med s15 white show-0 hidden">1 of 6</div>
+            <div class="outof proxima med s15 white show-1 hidden">2 of 6</div>
+            <div class="outof proxima med s15 white show-2 hidden">3 of 6</div>
+            <div class="outof proxima med s15 white show-3 hidden">4 of 6</div>
+            <div class="outof proxima med s15 white show-4 hidden">5 of 6</div>
+            <div class="outof proxima med s15 white show-5 hidden">6 of 6</div>
+          </div>
+        </div>
+        <!-- Dialog 3 -->
+        <div class="distance dialog h3 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+          <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+          <div class="dialog-title proxima reg yellow s24" data-show="fadeIn ~1.5s">
+            Before investigating space exploration, it's important to understand distances in space.
+            <span class="white">What sort of images can you see through a telescope?</span>
+          </div>
+          <div class="blue">
+            <div class="instructions proxima reg white s21">
+              Drag the images in order from closest to Earth to farthest away.
+            </div>
+            
+            <img class="earth" data-src="images/02/modals/telescope/02_modal_telescope_earth.png">
+            
+            <img class="arrow a1 drop-failure-d1" data-src="images/02/modals/telescope/02_modal_telescope_arrow.png">
+            <img class="drop-success drop-success-d1 d1 hidden" data-src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+            <img class="drop d1" data-src="images/02/modals/telescope/02_modal_telescope_target.png">
+            <div class="drop-text d1 nasal white s18">1</div>
+            <div class="drop-area d1" data-name="d1"></div>
+            
+            <img class="arrow a2 drop-failure-d2" data-src="images/02/modals/telescope/02_modal_telescope_arrow.png">
+            <img class="drop-success drop-success-d2 d2 hidden" data-src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+            <img class="drop d2" data-src="images/02/modals/telescope/02_modal_telescope_target.png">
+            <div class="drop-text d2 nasal white s18">2</div>
+            <div class="drop-area d2" data-name="d2"></div>
+            
+            <img class="arrow a3 drop-failure-d3" data-src="images/02/modals/telescope/02_modal_telescope_arrow.png">
+            <img class="drop-success drop-success-d3 d3 hidden" data-src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+            <img class="drop d3" data-src="images/02/modals/telescope/02_modal_telescope_target.png">
+            <div class="drop-text d3 nasal white s18">3</div>
+            <div class="drop-area d3" data-name="d3"></div>
+            
+            <img class="arrow a4 drop-failure-d4" data-src="images/02/modals/telescope/02_modal_telescope_arrow.png">
+            <img class="drop-success drop-success-d4 d4 hidden" data-src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+            <img class="drop d4" data-src="images/02/modals/telescope/02_modal_telescope_target.png">
+            <div class="drop-text d4 nasal white s18">4</div>
+            <div class="drop-area d4" data-name="d4"></div>
+            
+            <div class="good-job proxima bold white s30 hidden drag-success" 
+              data-drag-success="zoomIn 2s">
+              Good Job!
+            </div>
+            
+            <div class="submit clickable white button drag-done hidden" 
+              data-drag-done="bounceIn" data-drag-success="fadeOut" data-drag-failure="fadeOut" data-drag-retry="fadeOut">
+              Submit
+            </div>
+            
+            <div class="nice-try drag-retry clickable white button hidden" 
+              data-drag-retry="zoomIn 2s">
+              Try Again!
+            </div>
+            
+            <div class="correct-order proxima bold white s30 drag-failure hidden"
+              data-drag-failure="fadeIn 2s">
+              Nice Try! Here's the correct order:
+            </div>
+            
+            <img class="drag saturn" data-target="d2" data-src="images/02/modals/telescope/02_modal_telescope_saturn.png">
+            <img class="drag moon" data-target="d1" data-src="images/02/modals/telescope/02_modal_telescope_moon.png">
+            <img class="drag dipper" data-target="d3" data-src="images/02/modals/telescope/02_modal_telescope_bigDipper.png">
+            <img class="drag milky" data-target="d4" data-src="images/02/modals/telescope/02_modal_telescope_milkyWay.png">
+            
+            <div class="info proxima med white s18">
+              Some telescopes orbit around Earth. Other telescopes sit on the ground so people can look through them.
+              The <strong>Hubble Space Telescope</strong> is an extremely powerful telescope that is also a satellite.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="screen3_trigger" class="full height ignore">
+      <div id="screen3_buffer" class="buffer"></div>
+    </section>
+    
+    <!-- Screen_02b -->
+    <section id="screen2b_outro" class="larger height transition ignore"></section>
+    <section id="screen2b" class="fixed full height hidden">
+      <div class="scene">
+        <div class="container">
+          <div class="background">
+            <img data-src="images/intro/sky.png" class="sky">
+            <div class="entire stars"></div>
+            <img data-src="images/intro/sunset.png" class="sunset">
+            <img data-src="images/intro/foreground.png" class="foreground">
+          </div>
+          <div class="content">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="screen2b_trigger" class="full height ignore">
+      <div id="screen2b_buffer" class="bottom buffer"></div>
+    </section>
+    
+    <!-- Screen_02 -->
+    <section id="screen2_outro" class="larger height transition ignore"></section>
+    <section id="screen2" class="fixed full height hidden">
+      <div class="scene">
+        <div class="container">
+          <div class="background">
+            <img data-src="images/01/01_bg.png" class="entire">
+          </div>
+          <div class="content">
+            <div class="title nasal s57 white">Do You<br>Explore?</div>
+            <div class="tagline proxima reg yellow s24">From the bottom of the ocean to outer space, there is a lot to discover!</div>
+            <div class="instructions proxima reg white s21">Select each highlighted area to explore.</div>
+            <img data-src="images/global/modal_hotspot.png" class="hotspot h1" data-dialog="#screen2 .dialog.h1"
+              onmouseenter="m8(this).play('pulse 2s')">
+            <img data-src="images/global/modal_hotspot.png" class="hotspot h2" data-dialog="#screen2 .dialog.h2"
+              onmouseenter="m8(this).play('pulse 2s')">
+            <img data-src="images/global/modal_hotspot.png" class="hotspot h3" data-dialog="#screen2 .dialog.h3"
+              onmouseenter="m8(this).play('pulse 2s')">
+          </div>
+          <div class="cover hidden" data-show="fadeIn 0.5s" data-hide="fadeOut ~0.5s 0.5s"></div>
+        </div>
+        <div class="dialog h1 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+          <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+          <div class="dialog-title proxima reg yellow s24" data-show="fadeIn ~1.5s">
+            Space exploration has directly benefited our home lives.
+          </div>
+          <div class="blue" data-show="fadeIn ~1s">
+            <img data-src="images/01/modals/01_modal_home_astronaut.png" class="astronaut" data-show="zoomIn ~1s">
+            <div class="astronaut-text proxima reg white s21" data-show="zoomIn ~1.5s">
+              Space suits needed new types of materials and fabrics to keep humans safe, this led to advances such as:<br>
+              <br>
+              <span class="nasal">Velcro and memory foam.</span>
+            </div>
+            <img data-src="images/01/modals/01_modal_home_food.png" class="food" data-show="fadeIn ~2s">
+            <div class="food-text proxima reg white s21" data-show="fadeIn ~2.5s">
+              While traveling in space, humans needed to eat and drink, this led to advances in:<br>
+              <br>
+              <span class="nasal">Dehydrated food and water purification systems</span>
+            </div>
+          </div>
+        </div>
+        <div class="dialog h2 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">          
+          <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+          <div class="dialog-title proxima reg yellow s24" data-show="fadeIn ~1.5s">
+            Space exploration has directly benefited how we use energy.
+          </div>
+          <div class="blue">
+            <img data-src="images/01/modals/01_modal_solar_skylab.png" class="skylab" data-show="bounceIn ~1.5s">
+            <div class="skylab-text proxima reg white s21" data-show="fadeIn ~2s">
+              Scientists discovered that the sun's energy could be harnessed, which led to advances in:<br>
+              <br>
+              <span class="nasal">Solar power</span>
+            </div>
+          </div>
+        </div>
+        <div class="dialog h3 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">          
+          <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+          <div class="dialog-title proxima reg yellow s24" data-show="fadeIn ~1.5s">
+            Space exploration has greatly impacted the tools we use.
+          </div>
+          <div class="blue">
+            <img data-src="images/01/modals/01_modal_person_phone.png" class="person" data-show="fadeIn ~1s">
+            <div class="person-text proxima reg white s21" data-show="fadeIn ~2s">
+              Humans could not keep up with the calculations needed to escape Earth's gravity, cross space, and monitor the many systems onboard. This led to advances in:<br>
+              <br>
+              <span class="nasal">Increasingly fast and powerful computers and smart phones that are helpful in performing functions more quickly and more accurately.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="next bottomed hidden" src="images/global/continue-button.png" data-goto="screen3_trigger" data-goto-options="10s linear">
+    </section>
+    <section id="screen2_trigger" class="full height ignore">
+      <div id="screen2_buffer" class="buffer"></div>
+    </section>
+    
+    <!-- Screen_01 -->
+    <section id="screen1_outro" class="larger height transition ignore"></section>
+    <section id="screen1" class="fixed full height hidden">
+      <div class="scene">
+        <div class="container">
+          <div class="background">
+            <img data-src="images/intro/sky.png" class="sky">
+            <div class="entire stars"></div>
+            <img data-src="images/intro/sunset.png" class="sunset">
+            <img data-src="images/intro/rocket.png" class="rocket">
+            <img data-src="images/intro/foreground.png" class="foreground">
+            <div class="loader-background">
+              <img class="loader image" src="images/global/preloader.png">
+              <div class="loader dots nasal white s57"><!--
+              --><span>.</span><!--
+              --><span>.</span><!--
+              --><span>.</span><!--
+            --></div>
+            </div>
+          </div>
+          <div class="content">
+            <img data-src="images/intro/moon.png" class="moon">
+            <div class="tagline proxima reg yellow s24">
+              Discover the <strong class="white">STEM</strong> Behind Sustainable Rocketry
+            </div>
+            <div class="title">
+              <div class="title-solar nasal white">
+                <span class="s36">To Our</span><br>
+                <span class="s57">Solar System</span>
+              </div>
+              <div class="title-back nasal corn s36">
+                and Back
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="next bottomed" src="images/global/continue-button.png" data-goto="screen2_trigger" style="opacity:0">
+    </section>
+    <section id="screen1_trigger" class="full height ignore">
+      <div id="screen1_buffer" class="bottom buffer"></div>
+    </section>
+    
+    <!-- Divider for Sideways Transitions -->
+    <img src="images/global/divider.png" class="divider ignore">
+    
+    <!-- Congrats Screen for Challenge 1 -->
+    <section id="congrats1" class="congrats-screen fixed full height hidden" data-show="fadeIn 2s">
+      <div class="scene">
+        <div class="container">
+          <div class="background">
+            <img class="bg entire" data-src="images/complete/completion_bg.png">
+          </div>
+          <div class="content">
+            <img class="gradient entire" data-src="images/complete/complete_gradient.png">
+            <div class="progress">
+              <div class="tab progressed"></div>
+              <div class="tab"></div>
+              <div class="tab"></div>
+              <div class="tab"></div>
+              <img data-src="images/global/progressStar.png">
+            </div>
+            <div class="blue-heading">
+              <img class="challenge" data-src="images/complete/challenge.png">
+              <div class="white-box nasal white s80">1</div>
+            </div>
+            <div class="to-our nasal white s36 shadowed">
+              To our Solar<br>
+              System and Back
+            </div>
+            <div class="great-work proxima extra s20">
+              Great work!
+            </div>
+            <div class="learned proxima reg s20">
+              You have learned about why humans explore space, the materials on Earth that have been inspired by space, and technologies that scientists use to make observations.
+            </div>
+            <div class="now proxima extra corn dark s20">
+              Now that you have selected your celestial object, you need to collect samples and bring them back to Earth.
+            </div>
+            <div class="continue clickable corn shadowless smaller button">
+              Continue
+            </div>
+            <img class="twf" data-src="images/complete/twf.png">
+            <img class="de" data-src="images/complete/de.png">
+            <div class="copyright proxima reg s14">
+              Copyright &copy; 2018 Discovery Education. All rights reserved. Discovery Education is a Division of Discovery Communications, LLC.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Rotate Device -->
+    <section id="rotatedevice" class="fixed full height hidden">
+      <div class="title">
+        <div class="title-solar nasal white">
+          <span class="s36">To Our</span><br>
+          <span class="s57">Solar System</span>
+        </div>
+        <div class="title-back nasal corn s36">
+          and Back
+        </div>
+      </div>
+      <img class="banner" src="images/global/bg.png">
+      <br>
+      <div class="message proxima reg s30">
+        Please rotate your device to landscape mode or increase the width of your browser to view this activity.<br>
+      </div>
+      <br><br>
+      <img class="rotater" src="images/global/tabletWith_bg.png">
+    </section>
+    
+    <script src="js/challenge1.js"></script>
+    
+  </body>
+</html>

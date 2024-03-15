@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    
+    <script>
+      var DEBUG = true;
+      var BACKWARDS = false;
+      var TRANSITION_DURING = true;
+      var TRANSITION_DURATION = 0;
+    </script>
+    
+    <!-- <link rel="stylesheet" href="css/vendor.css"> -->
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-529BLX5');</script>
+    <!-- End Google Tag Manager -->
+    
+  </head>
+  <body>
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-529BLX5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Screen_05 -->
+    <section id="screen5" class="fixed full height hidden">
+      <div class="scene">
+        <div class="container">
+          <div class="background">
+            <canvas class="canvas" width="1750" height="736"></canvas>
+            <div class="loader-background ignore">
+              <img class="loader image" src="images/global/preloader.png">
+              <div class="loader dots nasal white s57"><!--
+              --><span>.</span><!--
+              --><span>.</span><!--
+              --><span>.</span><!--
+            --></div>
+            </div>
+            <div class="land-instructions ignore hidden" data-show="fadeIn 0.5s" data-hide="fadeOut">
+              
+              <img class="step1" data-src="images/launch/01_circle.png"
+                data-show="fadeInHalf ~2.5s">
+              <img class="step2" data-src="images/launch/02_circle.png"
+                data-show="fadeInHalf ~4.5s">
+              <img class="step3" data-src="images/launch/03_circle.png"
+                data-show="fadeInHalf ~6.5s">
+                
+              <img class="step1-hl" data-src="images/launch/stepHL.png"
+                data-show="fadeIn ~2.5s, fadeOut ~1s">
+              <img class="step2-hl" data-src="images/launch/stepHL.png"
+                data-show="fadeIn ~4.5s, fadeOut ~1s">
+              <img class="step3-hl" data-src="images/launch/stepHL.png"
+                data-show="fadeIn ~6.5s, fadeOut ~1s">
+                
+              <div class="mission-instructions gray proxima reg s16">
+                <span class="proxima bold white">Mission Instructions:</span><br>
+                <br>
+                To land the rocket, you must choose how quickly to release the fuel and with what thrust amount.<br>
+                <br>
+                <span class="proxima bold white">Be careful!</span><br>
+                <br>
+                If you release too much too quickly, the rocket will slow down too soon.<br>
+                <br>
+                If you release too little too late, the rocket will land too soon.
+              </div>
+              <div class="sequence proxima s20">
+                <span class="white nasal s24">Launch Sequence:</span><br>
+                <br>
+                <span class="step-yellow">1. Choose the amount of fuel to release.</span><br>
+                <br>
+                <span class="step-gray">2. Select the amount of thrust you wish to exert.</span><br>
+                <br>
+                <span class="step-blue">3. Ignite the fuel.</span>
+              </div>
+            </div>
+          </div>
+          <div class="content ignore">
+            <div class="try-again hidden" data-show="fadeIn" data-hide="fadeOut">
+              <div class="lets proxima bold white s24">Lets try again!</div>
+            </div>
+            <div class="nice-try hidden" data-show="fadeIn" data-hide="fadeOut">
+              <div class="proxima bold white s24">Nice try! Let's continue.</div>
+            </div>
+          </div>
+          <div class="cover hidden" data-show="fadeIn 0.5s" data-hide="fadeOut ~0.5s 0.5s"></div>
+        </div>
+        <div class="dialog h1" data-show="fadeIn" data-hide="fadeOut">
+          <div class="progress">
+            <div class="tab progressed"></div>
+            <div class="tab progressed"></div>
+            <div class="tab"></div>
+            <div class="tab"></div>
+            <img data-src="images/global/progressStar.png">
+          </div>
+          <div class="blue">
+            <img data-src="images/04/chall_02_challange02.png" class="challenge2">
+            <div class="intro proxima reg gray s22">
+              Now that you have selected your celestial object, you need to collect samples and bring them back to Earth. First, let's explore the four factors affecting flight and landing: thrust, lift, weight, and drag.
+            </div>
+            <div class="instructions proxima reg white s22">
+              Select the terms below to learn more:
+            </div>
+          </div>
+          <div class="thrust nasal white s22 clickable uncheckable" data-check="c1">THRUST</div>
+          <div class="thrust-text proxima reg white s18 hidden show-c1" data-check-play="fadeInUp">
+            <strong>Thrust</strong> is the upward motion force that propels the rocket upward and off the planet's surface. It is a reaction to the force of the fuel combustion occurring in the rocket engines.
+          </div>
+          <div class="lift nasal white s22 clickable uncheckable" data-check="c2">LIFT & WEIGHT</div>
+          <div class="lift-text proxima reg white s18 hidden show-c2" data-check-play="fadeInUp">
+            If a rocket launch is successful, <strong>lift</strong> is the propelling force that uses <strong>thrust</strong> to overcome the <strong>weight</strong> (the force pulling down the mass) of the rocket.
+          </div>
+          <div class="draga nasal white s22 clickable uncheckable" data-check="c3">DRAG</div>
+          <div class="draga-text proxima reg white s18 hidden show-c3" data-check-play="fadeInUp">
+            <strong>Drag</strong> is another opposing force to <strong>weight</strong> and is produced by the forces of resistance and friction, including air resistance. <strong>Drag</strong> and friction would not be found in a vacuum, like space!
+          </div>
+          <div class="submit terms clickable hidden white button" data-submit-show="fadeIn">
+            Continue
+          </div>
+        </div>
+        <div class="dialog h2 hidden" data-show="fadeIn ~0.5s" data-hide="zoomOut">
+          <div class="progress">
+            <div class="tab progressed"></div>
+            <div class="tab progressed"></div>
+            <div class="tab"></div>
+            <div class="tab"></div>
+            <img data-src="images/global/progressStar.png">
+          </div>
+          <div class="blue">
+            <img data-src="images/04/chall_02_challange02.png" class="challenge2">
+            <div class="intro proxima reg gray s22">
+              Test your understanding of forces and Newton's Three Laws of Motion by completing the exercise below. Once you are successful, your rocket will launch!
+            </div>
+            <div class="instructions proxima reg white s22">
+              Drag each tile to the matching definition.
+            </div>
+          </div>
+          
+          <img class="drop d1" data-src="images/02/modals/telescope/02_modal_telescope_target.png">
+          <div class="drop-area d1" data-name="d1"></div>
+          <div class="drop-desc d1 proxima reg white s15">
+            For a rocket to lift off, the thrust must be greater than this force, that is caused by gravity.
+          </div>
+          
+          <img class="drop d2" data-src="images/02/modals/telescope/02_modal_telescope_target.png">
+          <div class="drop-area d2" data-name="d2"></div>
+          <div class="drop-desc d2 proxima reg white s15">
+            This, along with weight, acts as resistance (or friction) to rocket motion.
+          </div>
+          
+          <img class="drop d3" data-src="images/02/modals/telescope/02_modal_telescope_target.png">
+          <div class="drop-area d3" data-name="d3"></div>
+          <div class="drop-desc d3 proxima reg white s15">
+            This law states that if a net force acts on an object, it will cause an acceleration of that object.
+          </div>
+          
+          <img class="drop d4" data-src="images/02/modals/telescope/02_modal_telescope_target.png">
+          <div class="drop-area d4" data-name="d4"></div>
+          <div class="drop-desc d4 proxima reg white s15">
+            This is used to stabilize and control the direction of flight.
+          </div>
+          
+          <img class="drop d5" data-src="images/02/modals/telescope/02_modal_telescope_target.png">
+          <div class="drop-area d5" data-name="d5"></div>
+          <div class="drop-desc d5 proxima reg white s15">
+            The faster the exhaust is pushed through the rocket engine, the more forceful this is.
+          </div>
+          
+          <div class="good-job proxima bold white s20 hidden drag-success" 
+            data-drag-success="zoomIn 2s">
+            Great work! You know the basic forces and motion<br>that guide the design and flight of rockets.
+          </div>
+          
+          <div class="nice-try proxima reg white s16 hidden" 
+            data-drag-retry="zoomIn 2s">
+            Not quite. Here are some clues to help you try again! Newton's second law explains the force that moves any aircraft through the air.
+            In order for a rocket to lift off, the action, or thrust, from the engine must be greater than the weight of the rocket.
+            Drag results when particles of the air are moved aside as the rocket moves through it, creating friction.
+            
+            <div class="try-again drag-retry clickable white button hidden" 
+              data-drag-retry="zoomIn 2s">
+              Try Again!
+            </div>
+          </div>
+          
+          <div class="correct-order proxima bold white s30 drag-failure hidden"
+            data-drag-failure="fadeIn 2s">
+            Nice Try! Here's the correct order:
+          </div>
+          
+          <div class="submit clickable white button drag-done hidden" 
+            data-drag-done="bounceIn" data-drag-success="fadeOut" data-drag-failure="fadeOut" data-drag-retry="fadeOut">
+            Submit
+          </div>
+          
+          <div class="drag thrust nasal white s18" data-target="d5">
+            Thrust
+          </div>
+          <div class="drag lift nasal white s18" data-target="d4">
+            Lift
+          </div>
+          <div class="drag newton3 nasal white s16" data-target="d3">
+            Newton's<br>Second<br>Law
+          </div>
+          <div class="drag weight nasal white s18" data-target="d1">
+            Weight
+          </div>
+          <div class="drag dragg nasal white s18" data-target="d2">
+            Drag
+          </div>
+          
+          <div class="continue clickable white button hidden"
+            data-continue-show="fadeIn 3s">
+            Continue
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <section id="screen5_trigger" class="full height ignore">
+      <div id="screen5_buffer" class="top bottom buffer"></div>
+    </section>
+    
+    <!-- Planet Landing Screen -->
+    <section id="landing" class="fixed full height hidden" data-show="fadeIn 2s" data-hide="fadeOut 0.5s">
+      <div class="scene">
+        <div class="container">
+          <div class="background">
+            <img class="bg entire" data-src>
+          </div>
+          <div class="content">
+            <img class="rover" data-src="images/launch/collect_rover.png">
+            <img class="rover-arm" data-src="images/launch/collect_rover_arm.png">
+            <img class="radio" data-src="images/global/modal_hotspot.png">
+            <div class="samples nasal white s36 shadowed"><!--
+            --><span>S</span><!--
+            --><span>a</span><!--
+            --><span>m</span><!--
+            --><span>p</span><!--
+            --><span>l</span><!--
+            --><span>e</span><!--
+            --><span>&nbsp;</span><!--
+            --><span>d</span><!--
+            --><span>a</span><!--
+            --><span>t</span><!--
+            --><span>a</span><!--
+            --><span>&nbsp;</span><!--
+            --><span>s</span><!--
+            --><span>e</span><!--
+            --><span>n</span><!--
+            --><span>t</span><!--
+            --><span>.</span>
+            </div>
+            <div class="continue clickable white button">
+              Continue
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Screen_06 -->
+    <section id="screen6" class="fixed full height hidden" data-show="fadeIn">
+      <div class="scene">
+        <div class="container">
+          <div class="background">
+            <img class="entire" data-src="images/06/sample_bg.png">
+          </div>
+          <div class="content">
+            <img class="sample" data-src>
+            <div class="title nasal white s36">Sample Analyzed</div>
+            <div class="super proxima reg yellow s20 centered">
+              Your samples will be analyzed by many other scientists.<br>
+              You might even have a new substance named after you!
+            </div>
+            <div class="continue clickable corn shadowless smaller button">
+              Continue
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Screen_07 -->
+    <section id="screen7" class="fixed full height hidden">
+      <div class="scene">
+        <div class="container">
+          <div class="background">
+            <img class="entire" data-src="images/global/starField.png">
+            <div class="entire stars"></div>
+          </div>
+          <div class="content">
+            <div class="progress">
+              <div class="tab progressed"></div>
+              <div class="tab progressed"></div>
+              <div class="tab progressed"></div>
+              <div class="tab"></div>
+              <img data-src="images/global/progressStar.png">
+            </div>
+            <div class="blue">
+              <img data-src="images/07/chal_4.png" class="challenge1">
+              <div class="intro proxima reg gray s18">
+                How do these principles of rocketry and force apply to real-life careers? A diverse set of careers work with scientists to apply their research to many fields.
+              </div>
+              <div class="instructions proxima reg white s18">
+                Explore some of these professionals and learn about their careers.
+              </div>
+            </div>
+            <img class="clickable learn1" data-src="images/07/09_careers_3d.png" data-dialog="#screen7 .dialog.h1" data-text=".learn1-text" data-check="c1">
+            <img class="clickable learn2" data-src="images/07/09_careers_aero.png" data-dialog="#screen7 .dialog.h2" data-text=".learn2-text" data-check="c2">
+            <img class="clickable learn3" data-src="images/07/09_careers_chem.png" data-dialog="#screen7 .dialog.h3" data-text=".learn3-text" data-check="c3">
+            <img class="clickable learn4" data-src="images/07/09_careers_elec.png" data-dialog="#screen7 .dialog.h4" data-text=".learn4-text" data-check="c4">
+            <img class="clickable learn5" data-src="images/07/09_careers_geo.png" data-dialog="#screen7 .dialog.h5" data-text=".learn5-text" data-check="c5">
+            <img class="clickable learn6" data-src="images/07/09_careers_mrktng.png" data-dialog="#screen7 .dialog.h6" data-text=".learn6-text" data-check="c6">
+            <div class="proxima reg s18 white">
+              <div class="learn1-text">Materials Scientist</div>
+              <div class="learn2-text">Aerospace Engineer<br>and Operations</div>
+              <div class="learn3-text">Chemist</div>
+              <div class="learn4-text">Electrician</div>
+              <div class="learn5-text">Geoscientist</div>
+              <div class="learn6-text">Project Manager</div>
+            </div>
+            
+            <img data-src="images/03/chall_01_planet_checkbox.png" class="checkbox1 clickable checkbox hide-c1" data-toggle="c1" data-dialog="#screen7 .dialog.h1" data-text=".learn1-text" data-check="c1">
+            <img data-src="images/03/chall_01_planet_checkbox.png" class="checkbox2 clickable checkbox hide-c2" data-toggle="c2" data-dialog="#screen7 .dialog.h2" data-text=".learn2-text" data-check="c2">
+            <img data-src="images/03/chall_01_planet_checkbox.png" class="checkbox3 clickable checkbox hide-c3" data-toggle="c3" data-dialog="#screen7 .dialog.h3" data-text=".learn3-text" data-check="c3">
+            <img data-src="images/03/chall_01_planet_checkbox.png" class="checkbox4 clickable checkbox hide-c4" data-toggle="c4" data-dialog="#screen7 .dialog.h4" data-text=".learn4-text" data-check="c4">
+            <img data-src="images/03/chall_01_planet_checkbox.png" class="checkbox5 clickable checkbox hide-c5" data-toggle="c5" data-dialog="#screen7 .dialog.h5" data-text=".learn5-text" data-check="c5">
+            <img data-src="images/03/chall_01_planet_checkbox.png" class="checkbox6 clickable checkbox hide-c6" data-toggle="c6" data-dialog="#screen7 .dialog.h6" data-text=".learn6-text" data-check="c6">
+            <img data-src="images/03/chall_01_planet_checkbox_selected.png" class="checkbox1 clickable checkbox hidden show-c1" data-toggle="c1">
+            <img data-src="images/03/chall_01_planet_checkbox_selected.png" class="checkbox2 clickable checkbox hidden show-c2" data-toggle="c2">
+            <img data-src="images/03/chall_01_planet_checkbox_selected.png" class="checkbox3 clickable checkbox hidden show-c3" data-toggle="c3">
+            <img data-src="images/03/chall_01_planet_checkbox_selected.png" class="checkbox4 clickable checkbox hidden show-c4" data-toggle="c4">
+            <img data-src="images/03/chall_01_planet_checkbox_selected.png" class="checkbox5 clickable checkbox hidden show-c5" data-toggle="c5">
+            <img data-src="images/03/chall_01_planet_checkbox_selected.png" class="checkbox6 clickable checkbox hidden show-c6" data-toggle="c6">
+            
+            <div class="continue clickable corn shadowless smaller button hidden">
+              Continue
+            </div>
+          </div>
+          <div class="cover hidden" data-show="fadeIn 0.5s" data-hide="fadeOut ~0.5s 0.5s"></div>
+        </div>
+        <div class="dialog h1 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+          <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+          <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+            Materials Scientist
+          </div>
+          <img class="back" data-src="images/07/09_career_modal_materials.png">
+          <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+            A materials scientist uses chemistry, biology, and engineering to discover new materials.
+          </div>
+        </div>
+        <div class="dialog h2 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+          <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+          <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+            Aerospace Engineer and Operations Technician
+          </div>
+          <img class="back" data-src="images/07/09_career_modal_aero.png">
+          <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+            Aerospace engineers and operations technicians operate and maintain equipment used in developing, testing, producing, and sustaining new aircraft and spacecraft. 
+          </div>
+        </div>
+        <div class="dialog h3 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+          <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+          <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+            Chemist
+          </div>
+          <img class="back" data-src="images/07/09_career_modal_chemist.png">
+          <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+            Chemists and materials scientists study substances at the atomic and molecular levels and analyze the ways in which the substances interact with one another. They use their knowledge to develop new and improved products.
+          </div>
+        </div>
+        <div class="dialog h4 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+          <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+          <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+            Electrician
+          </div>
+          <img class="back" data-src="images/07/09_career_modal_electrician.png">
+          <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+            Electricians install, maintain, and repair electrical power, communications, lighting, and control systems in homes, businesses, and factories - and spacecraft!
+          </div>
+        </div>
+        <div class="dialog h5 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+          <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+          <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+            Geoscientist
+          </div>
+          <img class="back" data-src="images/07/09_career_modal_geology.png">
+          <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+            Geoscientists study the physical aspects of Earth, such as its composition, structure, and processes, to learn about its past, present, and future.
+          </div>
+        </div>
+        <div class="dialog h6 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+          <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+          <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+            Project Manager: Marketing
+          </div>
+          <img class="back" data-src="images/07/09_career_modal_marketing.png">
+          <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+            Advertising, promotions, and marketing managers plan programs to generate interest in products or services. They work with art directors, sales agents, and financial staff members.
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Screen 8 -->
+    <section id="screen8" class="fixed full height hidden">
+      <div class="scene">
+        <div class="container">
+          <div class="background">
+            <img data-src="images/intro/sky.png" class="sky">
+            <div class="entire stars"></div>
+            <img data-src="images/intro/sunset.png" class="sunset">
+            <img data-src="images/intro/foreground.png" class="foreground">
+          </div>
+          <div class="content">
+            <!-- <img data-src="images/intro/moon.png" class="moon"> -->
+            <div class="title">
+              <div class="title-solar nasal white">
+                <span class="s12">To Our</span><br>
+                <span class="s22">Solar System</span>
+              </div>
+              <div class="title-back nasal corn s14">
+                and Back
+              </div>
+            </div>
+            <div class="congrats proxima extra s30 yellow">
+              Congratulations!
+            </div>
+            <div class="completed proxima reg s30 white">
+              You have successfully completed<br>
+              <strong>To Our Solar System and Back.</strong>
+            </div>
+            <img class="panel" data-src="images/10/wrapUp_panel.png">
+            <img class="numbers" data-src="images/10/wrapUp_challenges-numbers.png">
+            <img class="checks" data-src="images/10/wrapUp_yellowChecks.png">
+            <img class="cert clickable" data-src="images/10/wrapUp_cert_bttn.png">
+            <img class="play clickable" data-src="images/10/wrapUp_play_bttn.png">
+            <img class="tiger clickable" data-src="images/10/wrapUp_tgr_bttn.png">
+            <img class="dised" data-src="images/10/wrapUp_de_white.png">
+            <img class="twf" data-src="images/complete/twf_white.png">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Congrats Screen for Challenge 2 -->
+    <section id="congrats2" class="congrats-screen fixed full height hidden" data-show="fadeIn 2s">
+      <div class="scene">
+        <div class="container">
+          <div class="background">
+            <img class="bg entire" data-src="images/complete/completion_bg.png">
+          </div>
+          <div class="content">
+            <img class="gradient entire" data-src="images/complete/complete_gradient.png">
+            <div class="progress">
+              <div class="tab progressed"></div>
+              <div class="tab progressed"></div>
+              <div class="tab"></div>
+              <div class="tab"></div>
+              <img data-src="images/global/progressStar.png">
+            </div>
+            <div class="blue-heading">
+              <img class="challenge" data-src="images/complete/challenge.png">
+              <div class="white-box nasal white s80">2</div>
+            </div>
+            <div class="to-our nasal white s36 shadowed">
+              To our Solar<br>
+              System and Back
+            </div>
+            <div class="great-work proxima extra s20">
+              Great work!
+            </div>
+            <div class="learned proxima reg s20">
+              You know the basic forces and motion that guide the design and flight of rockets.
+            </div>
+            <div class="now proxima extra corn dark s20">
+              Now you are ready to launch your rocket into space in order to collect the samples.
+            </div>
+            <div class="continue clickable corn shadowless smaller button">
+              Blast Off
+            </div>
+            <img class="twf" data-src="images/complete/twf.png">
+            <img class="de" data-src="images/complete/de.png">
+            <div class="copyright proxima reg s14">
+              Copyright &copy; 2018 Discovery Education. All rights reserved. Discovery Education is a Division of Discovery Communications, LLC.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Congrats Screen for Challenge 3 -->
+    <section id="congrats3" class="congrats-screen fixed full height hidden" data-show="fadeIn 2s" data-hide="fadeOut 2s">
+      <div class="scene">
+        <div class="container">
+          <div class="background">
+            <img class="bg entire" data-src="images/complete/completion_bg.png">
+          </div>
+          <div class="content">
+            <img class="gradient entire" data-src="images/complete/complete_gradient.png">
+            <div class="progress">
+              <div class="tab progressed"></div>
+              <div class="tab progressed"></div>
+              <div class="tab progressed"></div>
+              <div class="tab"></div>
+              <img data-src="images/global/progressStar.png">
+            </div>
+            <div class="blue-heading">
+              <img class="challenge" data-src="images/complete/challenge.png">
+              <div class="white-box nasal white s80">3</div>
+            </div>
+            <div class="to-our nasal white s36 shadowed">
+              To our Solar<br>
+              System and Back
+            </div>
+            <div class="great-work proxima extra s20">
+              Super job on landing your rocket!
+            </div>
+            <div class="learned proxima reg s20">
+              Your samples will be analyzed by many other scientists. You might even have a new substance named after you!
+            </div>
+            <div class="now proxima extra corn dark s20">
+              Thinking about the time, effort, technology, and money that it took to launch your rocket and bring it back to Earth, do you think it would be better if your rocket was a renewable or nonrenewable resource?
+            </div>
+            <div class="continue clickable corn shadowless smaller button">
+              Continue
+            </div>
+            <img class="twf" data-src="images/complete/twf.png">
+            <img class="de" data-src="images/complete/de.png">
+            <div class="copyright proxima reg s14">
+              Copyright &copy; 2018 Discovery Education. All rights reserved. Discovery Education is a Division of Discovery Communications, LLC.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Congrats Screen for Challenge 4 -->
+    <section id="congrats4" class="congrats-screen fixed full height hidden" data-show="fadeIn 2s">
+      <div class="scene">
+        <div class="container">
+          <div class="background">
+            <img class="bg entire" data-src="images/complete/completion_bg.png">
+          </div>
+          <div class="content">
+            <img class="gradient entire" data-src="images/complete/complete_gradient.png">
+            <div class="progress">
+              <div class="tab progressed"></div>
+              <div class="tab progressed"></div>
+              <div class="tab progressed"></div>
+              <div class="tab progressed"></div>
+              <img data-src="images/global/progressStar.png">
+            </div>
+            <div class="blue-heading">
+              <img class="challenge" data-src="images/complete/challenge.png">
+              <div class="white-box nasal white s80">4</div>
+            </div>
+            <div class="to-our nasal white s36 shadowed">
+              To our Solar<br>
+              System and Back
+            </div>
+            <div class="great-work proxima extra s20">
+              You did a great job!
+            </div>
+            <div class="learned proxima reg s20">
+              Do you think you could explain to a classmate or friend what you have learned about rocketry and forces?
+            </div>
+            <div class="continue clickable corn shadowless smaller button">
+              Continue
+            </div>
+            <img class="twf" data-src="images/complete/twf.png">
+            <img class="de" data-src="images/complete/de.png">
+            <div class="copyright proxima reg s14">
+              Copyright &copy; 2018 Discovery Education. All rights reserved. Discovery Education is a Division of Discovery Communications, LLC.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Rotate Device -->
+    <section id="rotatedevice" class="fixed full height hidden">
+      <div class="title">
+        <div class="title-solar nasal white">
+          <span class="s36">To Our</span><br>
+          <span class="s57">Solar System</span>
+        </div>
+        <div class="title-back nasal corn s36">
+          and Back
+        </div>
+      </div>
+      <img class="banner" src="images/global/bg.png">
+      <br>
+      <div class="message proxima reg s30">
+        Please rotate your device to landscape mode or increase the width of your browser to view this activity.<br>
+      </div>
+      <br><br>
+      <img class="rotater" src="images/global/tabletWith_bg.png">
+    </section>
+    
+    <script src="js/challenge2.js"></script>
+    
+  </body>
+</html>
