@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script>
+        var DEBUG = true;
+        var BACKWARDS = false;
+        var TRANSITION_DURING = true;
+        var TRANSITION_DURATION = 0;
+    </script>
+
+    <!-- <link rel="stylesheet" href="css/vendor.css"> -->
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+<body>
+<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXT2GWQ" height="0" width="0" title="Google Tag Manager"></iframe></noscript>
+<!-- Volcano Rescue -->
+<section id="volcano_rescue_map" class="fixed full height hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img data-src="images/global/map-bg.jpg" class="sky">
+            </div>
+            <div class="content">
+                <img data-src="images/challenge-2/c2-icon.png"
+                     class="mp-c2-icon">
+                <img data-src="images/global/map-drone.png"
+                     class="mp-drone">
+                <img data-src="images/global/map-go.png"
+                     class="mp-go">
+                <img data-src="images/global/map-location.png"
+                     class="mp-c2-location">
+
+                <div class="map-title nasal white s54">
+                    Volcano</div>
+
+                <div class="map-subtitle proxima med s24 white">
+                    <span class="step-blue proxima bold">Rescue assignment: </span>Hawaii</div>
+
+                <div class="mission-alert proxima reg s21 yellow lh-tight">
+                    Scientists have detected activity in an active volcano!</div>
+
+                <div class="mission-message proxima reg s18 lt-gray lh-tight">
+                    Could an eruption be imminent? Help navigate a robot to the volcano to monitor its activity!</div>
+
+                <div class="drone-label proxima reg s15 lt-blue">
+                    Robot: Drone</div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+
+                <hr class="title-underline" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="volcano_mission_debrief" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-2/c2-mission-debrief-bg.jpg" class="sky">
+            </div>
+            <div class="content">
+                <img src="images/challenge-2/c2-icon-large.png"
+                     class="mp-c2-icon-large">
+
+                <div class="debrief-title nasal white s58">
+                    Volcano</div>
+
+                <div class="debrief-alert proxima s25 yellow">
+                    Use a drone to help scientists monitor a volcano before it erupts!</div>
+
+                <div class="debrief-message proxima s18 white">
+                    Help provide 24-hour surveillance of the volcano as an early warning system.</div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="volcano_mission_questions" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next next-vmq hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-2/c2-mission-debrief-bg.jpg" class="sky">
+                <div class="overlay"></div>
+                <img src="images/challenge-2/c2-bg-w-glow.png" class="c2-background-w-glow hidden">
+            </div>
+            <div class="content">
+                 <!--Taken From Screen #3-->
+                <div class="volcano-assembly-questions container dialog h1" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <div class="blue-heading">
+                        <img class="heading-image" src="images/challenge-2/c2-icon-inverted.png">
+                        <div class="dialog-title proxima reg off-gray lh-tight s20" data-show="fadeIn ~1.5s">
+                            You'll be navigating a robot to the volcano to monitor its activity, but first, you'll need to assure the robot has all of the equipment it needs.<br />
+                            <br />
+                            <strong class="white">Answer the questions below:</strong>
+                        </div>
+                    </div>
+
+                    <div class="question-container">
+
+                        <div class="show-1 entire hidden" data-slide-show="fadeIn">
+                            <div class="question proxima reg orange-brown s21">
+                                1. What mode of transportation is the best way to reach the volcano from the boat?
+                            </div>
+                            <div class="answers show-1" data-slide-show="flipInX">
+                                <div class="answer clickable proxima med white s16 good">Flying with wings</div>
+                                <div class="answer clickable proxima med white s16">Driving on land</div>
+                                <div class="answer clickable proxima med white s16">Swimming underwater</div>
+                                <div class="answer clickable proxima med white s16">Running on foot</div>
+                            </div>
+                            <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+                            <div class="next-question clickable proxima semi s15 yellow finished-show hidden">Next<br>Question</div>
+                        </div>
+                        <div class="show-2 entire hidden" data-slide-show="fadeIn">
+                            <div class="question proxima reg orange-brown s21">
+                                1. What does the robot need to monitor the hot magma in the volcano?
+                            </div>
+                            <div class="answers show-2" data-slide-show="flipInX">
+                                <div class="answer clickable proxima med white s16">Temperature sensor</div>
+                                <div class="answer clickable proxima med white s16 good">Depth sensor</div>
+                                <div class="answer clickable proxima med white s16">Infrared</div>
+                                <div class="answer clickable proxima med white s16">Rain Gauge</div>
+                            </div>
+                            <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+                            <div class="next-question clickable proxima semi s15 yellow finished-show hidden">Next<br>Question</div>
+                        </div>
+                        <div class="show-3 entire hidden" data-slide-show="fadeIn">
+                            <div class="question proxima med white s21">
+                                3. To provide 24-hour monitoring, what should the robot bring to extend its operational time?
+                            </div>
+                            <div class="answers show-3" data-slide-show="flipInX">
+                                <div class="answer clickable proxima med white s16">Flotation device</div>
+                                <div class="answer clickable proxima med white s16 good">Extra battery pack</div>
+                                <div class="answer clickable proxima med white s16">First aid</div>
+                                <div class="answer clickable proxima med white s16">Vaccines</div>
+                            </div>
+                            <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+                            <div class="close-dialog clickable proxima semi s15 yellow finished-show hidden">Close<br>Dialog</div>
+                        </div>
+                        <div class="next clickable s100 nasal white">&rsaquo;</div>
+                        <div class="prev clickable s100 nasal white">&lsaquo;</div>
+                        <div class="outof proxima med s15 white show-1 hidden">1 of 3</div>
+                        <div class="outof proxima med s15 white show-2 hidden">2 of 3</div>
+                        <div class="outof proxima med s15 white show-3 hidden">3 of 3</div>
+                    </div>
+                </div>
+
+                <div class="quiz-wrapup hidden">
+                    <div class="blue-heading">
+                        <img class="heading-image" src="images/challenge-2/c2-icon-inverted.png">
+                        <div class="dialog-title proxima reg off-gray lh-tight s20" data-show="fadeIn ~1.5s">
+                            <strong class="white">Congratulations!</strong><br />
+                            <br />
+                            You're robot is ready. You'll need to fly your drone from a carrier off the coast and into the volcano so that it can provide more information about when it is likely to erupt.
+                        </div>
+                    </div>
+                    <img class="c2-drone" src="images/challenge-2/c2-drone.png">
+                </div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="volcano_tutorial_mission" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-2/c2-mission-debrief-bg.jpg" class="sky">
+                <div class="overlay"></div>
+            </div>
+            <div class="content">
+                <div class="game-board">
+                    <img class="game-grid" src="images/challenge-2/c2-game-grid-1.png">
+                    <img class="game-1-destination" src="images/challenge-2/c2-game-destination-1.png">
+                    <img class="game-piece" src="images/challenge-2/c2-game-drone.png">
+                </div>
+
+                <img class="help-icon" src="images/global/info.png">
+                <div class="game-title nasal reg s36 white">Volcano</div>
+                <div class="game-instructions proxima reg s20 yellow">1. Approach and Enter</div>
+
+                <img class="reset-button" src="images/global/controls_Reset.png">
+                <img class="launch-button" src="images/global/controls_Launch.png">
+
+                <div class="turn-left-text proxima reg s14 blue-gray">Left Turn</div>
+                <div class="game-control turn-left">
+                    <img class="control-image turn-left" src="images/global/controls_Left.png">
+                </div>
+
+                <div class="move-forward-text proxima reg s14 blue-gray">Forward</div>
+                <div class="game-control move-forward">
+                    <img class="control-image move-forward" src="images/global/controls_Forward.png">
+                </div>
+
+                <div class="turn-right-text proxima reg s14 blue-gray">Right Turn</div>
+                <div class="game-control turn-right">
+                    <img class="control-image turn-right" src="images/global/controls_Right.png">
+                </div>
+
+                <div class="enter-text proxima reg s14 blue-gray">Enter</div>
+                <div class="game-control special-command enter">
+                    <img class="control-image enter" src="images/global/controls_Enter.png">
+                </div>
+
+                <div class="movement-directions proxima white s15">
+                    <strong class="yellow">Plot Course:</strong> Drag each direction tile on the left to the boxes below. Then, click LAUNCH.
+                </div>
+                <div class="movement-queue">
+                    <img class="tile-0" src="images/global/target_tile.png">
+                    <!--TODO: Generate this programatically-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="volcano_get_sample_mission" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next next-vmq hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-2/c2-mission-debrief-bg.jpg" class="sky">
+                <div class="overlay"></div>
+            </div>
+            <div class="content">
+
+                <div class="game-board">
+                    <img class="game-grid" src="images/challenge-2/c2-game-grid-2.png">
+                    <img class="game-2-destination" src="images/challenge-2/c2-game-destination-2.png">
+                    <img class="game-2-air-current-hazards" src="images/challenge-2/c2-hazard-air-currents.png">
+                    <img class="game-piece" src="images/challenge-2/c2-game-drone-2.png">
+                </div>
+
+                <img class="help-icon" src="images/global/info.png">
+                <div class="game-title nasal reg s36 white">Volcano</div>
+                <div class="game-instructions proxima reg s20 yellow">2. Collect a sample</div>
+
+                <img class="reset-button" src="images/global/controls_Reset.png">
+                <img class="launch-button" src="images/global/controls_Launch.png">
+
+                <div class="turn-left-text proxima reg s14 blue-gray">Left Turn</div>
+                <div class="game-control turn-left">
+                    <img class="control-image turn-left" src="images/global/controls_Left.png">
+                </div>
+
+                <div class="move-forward-text proxima reg s14 blue-gray">Forward</div>
+                <div class="game-control move-forward">
+                    <img class="control-image move-forward" src="images/global/controls_Forward.png">
+                </div>
+
+                <div class="turn-right-text proxima reg s14 blue-gray">Right Turn</div>
+                <div class="game-control turn-right">
+                    <img class="control-image turn-right" src="images/global/controls_Right.png">
+                </div>
+
+                <div class="get-sample-text proxima reg s14 blue-gray lh-tight">Collect Sample</div>
+                <div class="game-control special-command get-sample">
+                    <img class="control-image enter" src="images/global/controls_Sample.png">
+                </div>
+
+                <div class="movement-queue">
+                    <img class="tile-0" src="images/global/target_tile.png">
+                    <!--TODO: Generate this programatically-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/challenge2.js"></script>
+
+</body>
+</html>

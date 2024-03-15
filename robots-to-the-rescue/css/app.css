@@ -1,0 +1,3511 @@
+@import url("https://use.typekit.net/pnd8jrt.css");
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+.centered {
+  text-align: center;
+}
+.centered > .absolute {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.particles {
+  position: relative;
+}
+.particles > * {
+  display: block;
+  position: absolute;
+}
+.blue {
+  border-radius: 18px;
+  background-color: rgba(0, 133, 213, 0.4);
+}
+.blue-heading {
+  left: 80px;
+  top: 100px;
+  width: 202px;
+  height: 252px;
+  border-radius: 16px;
+  background-color: rgba(0, 101, 213, 0.4);
+}
+.nooverflow {
+  overflow: hidden;
+}
+.sequence {
+  position: relative;
+}
+.sequence > span {
+  display: inline-block;
+}
+.height.full {
+  height: 100vh;
+}
+.height.half {
+  height: 50vh;
+}
+.height.larger {
+  height: 100vh;
+}
+.hidden {
+  display: none !important;
+}
+.ignore {
+  pointer-events: none;
+  user-select: none;
+}
+.disabled {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.3;
+}
+.clickable {
+  cursor: pointer;
+  user-select: none;
+}
+section {
+  width: 100%;
+  position: relative;
+}
+section.fixed {
+  position: fixed;
+  top: 0;
+}
+section > .buffer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  height: 300%;
+}
+section > .buffer.bottom {
+  height: 200%;
+}
+section > .buffer.top {
+  top: 0;
+  height: 200%;
+}
+section > .buffer.top.bottom {
+  top: 0;
+  height: 100%;
+}
+.absolute,
+.absolutes > * {
+  position: absolute;
+}
+.absolute span,
+.absolutes > * span,
+.absolute strong,
+.absolutes > * strong,
+.absolute em,
+.absolutes > * em,
+.absolute i,
+.absolutes > * i,
+.absolute a,
+.absolutes > * a {
+  position: relative;
+}
+.relative,
+.relatives > * {
+  position: relative;
+}
+.inline,
+.inlines > * {
+  display: inline-block;
+  position: static !important;
+}
+.layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.popout {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.toggled {
+  filter: drop-shadow(0 0 20px #309dde);
+}
+.progress {
+  display: inline-block;
+  right: 40px;
+  top: 10px;
+}
+.progress > * {
+  position: static !important;
+  margin-left: 5px;
+  display: inline-block;
+}
+.progress .tab {
+  width: 16px;
+  height: 16px;
+  border-radius: 1px;
+  background-color: none;
+  border: 2.5px solid #aaa;
+  box-sizing: border-box;
+  opacity: 0.8;
+}
+.progress .tab.progressed {
+  background-color: #0085d5;
+  border: 2.5px solid #ffffff;
+  opacity: 1;
+}
+.progress img {
+  width: 21px;
+  height: 21px;
+}
+[data-help] {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.loader-background {
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #000000;
+}
+.loader-background .loader {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
+.loader-background .loader.dots {
+  margin-top: -15px;
+}
+.divider {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.lds-ring-fixed-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -32px;
+  margin-right: -32px;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.nasal {
+  font-family: nasalization, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.proxima {
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+.proxima.reg {
+  font-weight: 400;
+}
+.proxima.med {
+  font-weight: 500;
+}
+.proxima.semi {
+  font-weight: 600;
+}
+.proxima.bold {
+  font-weight: 700;
+}
+.proxima.extra {
+  font-weight: 800;
+}
+.proxima.black-bold {
+  font-weight: 900;
+}
+.proxima.italic {
+  font-style: italic;
+}
+.lh-tight {
+  line-height: 1.1em;
+}
+.yellow {
+  color: #ffb43d;
+}
+.white {
+  color: #ffffff;
+}
+.black {
+  color: #000;
+}
+.gray {
+  color: #bbb;
+}
+.off-gray {
+  color: #c0bfbf;
+}
+.blue-gray {
+  color: #b0c0ca;
+}
+.orange-brown {
+  color: #eba332;
+}
+.step-yellow {
+  color: #fcaa35;
+}
+.step-gray {
+  color: #979898;
+}
+.step-blue {
+  color: #0085d5;
+}
+.lt-blue {
+  color: #80a4b9;
+}
+.corn {
+  color: #67d6e5;
+}
+.corn.dark {
+  color: #0085d5;
+}
+.lt-gray {
+  color: #e2e2e2;
+}
+.s12 {
+  font-size: 12px;
+}
+.s14 {
+  font-size: 14px;
+}
+.s15 {
+  font-size: 15px;
+}
+.s16 {
+  font-size: 16px;
+}
+.s18 {
+  font-size: 18px;
+}
+.s20 {
+  font-size: 20px;
+}
+.s21 {
+  font-size: 21px;
+}
+.s22 {
+  font-size: 22px;
+}
+.s24 {
+  font-size: 24px;
+}
+.s25 {
+  font-size: 25px;
+}
+.s30 {
+  font-size: 30px;
+}
+.s36 {
+  font-size: 36px;
+}
+.s40 {
+  font-size: 36px;
+}
+.s54 {
+  font-size: 54px;
+}
+.s57 {
+  font-size: 57px;
+}
+.s58 {
+  font-size: 58px;
+}
+.s64 {
+  font-size: 64px;
+}
+.s80 {
+  font-size: 80px;
+}
+.s57.white,
+.s80.white {
+  text-shadow: 1px 1px 0px gray;
+}
+.s36.shadowed {
+  text-shadow: 1px 1px 4px gray;
+}
+.s100 {
+  font-size: 100px;
+}
+.scene {
+  width: 1024px;
+  height: 624px;
+  position: relative;
+}
+.scene .container {
+  width: 100%;
+  height: 100%;
+}
+.scene .container .background {
+  width: 1750px;
+  height: 736px;
+  position: absolute;
+  left: -363px;
+  top: -56px;
+  pointer-events: none;
+}
+.scene .container .background * {
+  position: absolute;
+}
+.scene .container .background span,
+.scene .container .background strong,
+.scene .container .background em,
+.scene .container .background i,
+.scene .container .background a,
+.scene .container .background br {
+  position: relative;
+}
+.scene .container .background .divider {
+  z-index: 100;
+  right: 0;
+  transform: translateX(50%);
+  width: 40%;
+  height: 100%;
+  opacity: 0;
+}
+.scene .container .background .overlay {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.7;
+}
+.scene .container .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.scene .container .content * {
+  position: absolute;
+}
+.scene .container .content span,
+.scene .container .content strong,
+.scene .container .content em,
+.scene .container .content i,
+.scene .container .content a,
+.scene .container .content br {
+  position: relative;
+}
+.scene .container .cover {
+  width: 1750px;
+  height: 736px;
+  position: absolute;
+  left: -363px;
+  top: -56px;
+  background-color: rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+  z-index: 1000;
+}
+.scene .dialog {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1001;
+}
+.scene .dialog * {
+  position: absolute;
+}
+.scene .dialog span,
+.scene .dialog strong,
+.scene .dialog em,
+.scene .dialog i,
+.scene .dialog a {
+  position: relative;
+}
+.scene .wide {
+  width: 100%;
+}
+.scene .entire {
+  width: 100%;
+  height: 100%;
+}
+.next {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  bottom: 12%;
+}
+.dialog {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.dialog .close {
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  top: 30px;
+}
+.dialog .blue,
+.dialog .question-container {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  height: 75%;
+  width: 90%;
+}
+.dialog .blue-heading {
+  top: 15%;
+  left: 5%;
+  height: 25%;
+  width: 90%;
+}
+.dialog .blue-heading .heading-image {
+  top: 25px;
+  left: 20px;
+}
+.dialog .dialog-title {
+  position: absolute;
+  top: 0%;
+  height: 20%;
+  padding-top: 4%;
+  padding-left: 9%;
+}
+.button {
+  border-radius: 6px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  padding: 0.4em 1.2em;
+  display: inline-block;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+.button.white {
+  background-color: white;
+  color: black;
+}
+.button.corn {
+  background-color: #0085d5;
+  color: white;
+}
+.button.shadowless {
+  box-shadow: inherit;
+}
+.button.smaller {
+  font-size: 16px;
+}
+.circle {
+  border-radius: 30px;
+  font-size: 30px;
+  padding: 15px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-family: nasalization, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.circle.white {
+  background-color: white;
+  color: #00213c;
+}
+#splash_screen .parallax-sky {
+  background-color: #1c2444;
+  width: 100%;
+  height: 100%;
+}
+#splash_screen .next {
+  bottom: 0;
+}
+#splash_screen .project-title {
+  top: 80px;
+  left: 50px;
+}
+#splash_screen .project-sub-title {
+  top: 145px;
+  left: 50px;
+}
+#splash_screen .icon-container {
+  top: 180px;
+  left: 490px;
+  height: 310px;
+  width: 410px;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+#splash_screen .icon-container .icon-outline-earth {
+  top: 113px;
+  left: 157px;
+}
+#splash_screen .icon-container .icon-flood {
+  top: 80px;
+  left: 90px;
+}
+#splash_screen .icon-container .icon-hurricane {
+  top: 180px;
+  left: 265px;
+}
+#splash_screen .icon-container .icon-tornado {
+  top: 80px;
+  left: 265px;
+}
+#splash_screen .icon-container .icon-tsunami {
+  top: 180px;
+  left: 90px;
+}
+#splash_screen .icon-container .icon-volcano {
+  top: 235px;
+  left: 177px;
+}
+#splash_screen .icon-container .label-container {
+  /*top: inherit;
+            left: inherit;*/
+}
+#splash_screen .icon-container .label-container .label-earthquake {
+  top: 0px;
+  left: 156px;
+}
+#splash_screen .icon-container .label-container .label-tornadoes {
+  top: 90px;
+  left: 330px;
+}
+#splash_screen .icon-container .label-container .label-hurricanes {
+  top: 195px;
+  left: 330px;
+}
+#splash_screen .icon-container .label-container .label-volcanoes {
+  top: 295px;
+  left: 164px;
+}
+#splash_screen .icon-container .label-container .label-tsunamis {
+  top: 195px;
+  left: 0px;
+}
+#splash_screen .icon-container .label-container .label-floods {
+  top: 90px;
+  left: 22px;
+}
+#splash_screen .begin-button {
+  top: 580px;
+  left: 370px;
+  background-color: #1586d2;
+  border-radius: 40px;
+  padding: 5px 30px;
+}
+#splash_screen .c1-icon {
+  top: 465px;
+  left: 50px;
+}
+#splash_screen .welcome-message {
+  top: 490px;
+  left: 220px;
+  width: 750px;
+}
+#splash_screen .team-title {
+  top: 515px;
+  left: 220px;
+  width: 750px;
+}
+#splash_screen .team-message {
+  top: 565px;
+  left: 220px;
+  width: 750px;
+}
+#project_debrief .title {
+  left: 700px;
+  top: 60px;
+  width: 250px;
+}
+#project_debrief .subtitle {
+  left: 705px;
+  top: 269px;
+  width: 220px;
+}
+#project_debrief .instructions {
+  left: 705px;
+  top: 470px;
+  width: 200px;
+}
+#project_debrief .c3-atv {
+  left: 310px;
+  top: 280px;
+}
+#project_debrief .blue-heading {
+  top: 12%;
+  left: 5%;
+  height: 25%;
+  width: 90%;
+}
+#project_debrief .blue-heading .heading-image {
+  top: 25px;
+  left: 20px;
+}
+#project_debrief .dialog-title {
+  left: 130px;
+  top: 30px;
+  width: 800px;
+  padding: 0;
+}
+#project_debrief .c1-earth-rasterized {
+  top: 310px;
+  left: 490px;
+}
+#project_debrief .c1-inside-earth-indicator {
+  top: 460px;
+  left: 510px;
+}
+#project_debrief .c1-inside-earth-label {
+  top: 510px;
+  left: 360px;
+}
+#project_debrief .c1-inside-earth-pointer {
+  top: 520px;
+  left: 482px;
+}
+#project_debrief .c1-outside-earth-indicator {
+  top: 468px;
+  left: 685px;
+}
+#project_debrief .c1-outside-earth-label {
+  top: 535px;
+  left: 800px;
+}
+#project_debrief .c1-outside-earth-pointer {
+  top: 535px;
+  left: 751px;
+}
+#project_debrief .c1-severe-weather-indicator {
+  top: 326px;
+  left: 727px;
+}
+#project_debrief .c1-severe-weather-label {
+  top: 290px;
+  left: 800px;
+}
+#project_debrief .c1-severe-weather-pointer {
+  top: 330px;
+  left: 766px;
+}
+#project_debrief .definition-title {
+  top: 200px;
+  left: 80px;
+}
+#project_debrief .definition-text {
+  top: 230px;
+  left: 80px;
+  width: 300px;
+}
+#project_debrief .categories-title {
+  top: 110px;
+  left: 320px;
+}
+#hazard_dnd .scene > .container {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+#hazard_dnd .title {
+  left: 700px;
+  top: 60px;
+  width: 250px;
+}
+#hazard_dnd .subtitle {
+  left: 705px;
+  top: 269px;
+  width: 220px;
+}
+#hazard_dnd .instructions {
+  left: 705px;
+  top: 470px;
+  width: 200px;
+}
+#hazard_dnd .c3-atv {
+  left: 310px;
+  top: 280px;
+}
+#hazard_dnd .blue-heading {
+  top: 12%;
+  left: 5%;
+  height: 25%;
+  width: 90%;
+}
+#hazard_dnd .blue-heading .heading-image {
+  top: 25px;
+  left: 20px;
+}
+#hazard_dnd .dialog-title {
+  left: 140px;
+  top: 45px;
+  width: 700px;
+  padding: 0;
+}
+#hazard_dnd .categories-title {
+  top: 110px;
+  left: 180px;
+}
+#hazard_dnd .hazards-heading {
+  top: 250px;
+  left: 420px;
+}
+#hazard_dnd .hazards-source .ui-draggable.ui-draggable-handle {
+  width: 85px;
+  height: 85px;
+}
+#hazard_dnd .hazards-source .drag {
+  cursor: pointer;
+}
+#hazard_dnd .hazards-source .hazard {
+  margin: 8px 12px;
+}
+#hazard_dnd .hazards-source .hazard-floods {
+  top: 282px;
+  left: 133px;
+}
+#hazard_dnd .hazards-source .hazard-tsunamis {
+  top: 282px;
+  left: 263px;
+}
+#hazard_dnd .hazards-source .hazard-hurricanes {
+  top: 282px;
+  left: 393px;
+}
+#hazard_dnd .hazards-source .hazard-volcanoes {
+  top: 282px;
+  left: 523px;
+}
+#hazard_dnd .hazards-source .hazard-earthquakes {
+  top: 282px;
+  left: 653px;
+}
+#hazard_dnd .hazards-source .hazard-tornadoes {
+  top: 282px;
+  left: 783px;
+}
+#hazard_dnd .hazards-targets .c1-target-inside-outline-container {
+  top: 450px;
+  left: 130px;
+}
+#hazard_dnd .hazards-targets .c1-target-inside-outline-container .inside-label {
+  top: -25px;
+  left: 0px;
+  width: 215px;
+  text-align: center;
+}
+#hazard_dnd .hazards-targets .c1-target-surface-outline-container {
+  top: 450px;
+  left: 400px;
+}
+#hazard_dnd .hazards-targets .c1-target-surface-outline-container .surface-label {
+  top: -25px;
+  left: -10px;
+  width: 137px;
+  text-align: center;
+}
+#hazard_dnd .hazards-targets .c1-target-event-outline-container {
+  top: 450px;
+  left: 570px;
+}
+#hazard_dnd .hazards-targets .c1-target-event-outline-container .event-label {
+  top: -25px;
+  left: 0px;
+  width: 316px;
+  text-align: center;
+}
+#hazard_dnd .hazards-targets .drop-area {
+  width: 110px;
+  height: 120px;
+  top: 458px;
+}
+#hazard_dnd .hazards-targets .drop-area.d1 {
+  left: 129px;
+}
+#hazard_dnd .hazards-targets .drop-area.d2 {
+  left: 237px;
+}
+#hazard_dnd .hazards-targets .drop-area.d3 {
+  left: 403px;
+}
+#hazard_dnd .hazards-targets .drop-area.d4 {
+  left: 569px;
+}
+#hazard_dnd .hazards-targets .drop-area.d5 {
+  left: 673px;
+}
+#hazard_dnd .hazards-targets .drop-area.d6 {
+  left: 777px;
+}
+#hazard_dnd .drop {
+  top: 225px;
+}
+#hazard_dnd .drop.d1 {
+  left: 230px;
+}
+#hazard_dnd .drop.d2 {
+  left: 400px;
+}
+#hazard_dnd .drop.d3 {
+  left: 570px;
+}
+#hazard_dnd .drop.d4 {
+  left: 740px;
+}
+#hazard_dnd .distance .arrow {
+  top: 280px;
+}
+#hazard_dnd .distance .arrow.a1 {
+  left: 200px;
+}
+#hazard_dnd .distance .arrow.a2 {
+  left: 370px;
+}
+#hazard_dnd .distance .arrow.a3 {
+  left: 540px;
+}
+#hazard_dnd .distance .arrow.a4 {
+  left: 710px;
+}
+#hazard_dnd .distance .drop-success {
+  top: 455px;
+}
+#hazard_dnd .distance .drop-success.d1 {
+  left: 210px;
+}
+#hazard_dnd .distance .drop-success.d2 {
+  left: 318px;
+}
+#hazard_dnd .distance .drop-success.d3 {
+  left: 482px;
+}
+#hazard_dnd .distance .drop-success.d4 {
+  left: 648px;
+}
+#hazard_dnd .distance .drop-success.d5 {
+  left: 750px;
+}
+#hazard_dnd .distance .drop-success.d6 {
+  left: 855px;
+}
+#hazard_dnd .distance .submit {
+  top: 300px;
+  left: 460px;
+}
+#hazard_dnd .distance .good-job {
+  top: 300px;
+  text-align: center;
+  width: 400px;
+  left: 320px;
+}
+#hazard_dnd .distance .nice-try {
+  top: 300px;
+  text-align: center;
+  width: 110px;
+  left: 442px;
+}
+#hazard_dnd .distance .correct-order {
+  top: 300px;
+  text-align: center;
+  width: 920px;
+  left: 50px;
+}
+#earths_layers .fixed {
+  position: fixed;
+}
+#earths_layers #earths_layers_a {
+  z-index: 1;
+}
+#earths_layers #earths_layers_b {
+  z-index: 2;
+}
+#earths_layers #earths_layers_c {
+  z-index: 3;
+}
+#earths_layers #earths_layers_d {
+  z-index: 4;
+}
+#earths_layers #earths_layers_e {
+  z-index: 5;
+}
+#earths_layers #earths_layers_f {
+  z-index: 6;
+}
+#earths_layers #earths_layers_g {
+  z-index: 7;
+}
+#earths_layers #earths_layers_h {
+  z-index: 8;
+}
+#earths_layers #earths_layers_i {
+  z-index: 9;
+}
+#earths_layers #earths_layers_a,
+#earths_layers #earths_layers_b,
+#earths_layers #earths_layers_c,
+#earths_layers #earths_layers_d,
+#earths_layers #earths_layers_e,
+#earths_layers #earths_layers_f,
+#earths_layers #earths_layers_g,
+#earths_layers #earths_layers_h {
+  overflow: hidden;
+}
+#earths_layers #earths_layers_i {
+  overflow: hidden;
+  height: 400vh;
+  margin-bottom: -300vh;
+}
+#earths_layers #earths_layers_h,
+#earths_layers #earths_layers_f,
+#earths_layers #earths_layers_d,
+#earths_layers #earths_layers_b {
+  overflow: hidden;
+  height: 200vh;
+  margin-bottom: -100vh;
+}
+#earths_layers #earths_layers_dialog {
+  z-index: 10;
+}
+#earths_layers #earths_layers_dialog .black-background {
+  background-color: black;
+  opacity: 0.9;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#earths_layers #earths_layers_dialog .dialog .dialog-title {
+  top: 0px;
+  left: 50px;
+}
+#earths_layers #earths_layers_dialog .dialog .icon {
+  top: 30px;
+  left: 60px;
+}
+#earths_layers #earths_layers_dialog .dialog .modal-bg-image {
+  top: 20%;
+  left: 5%;
+  height: 75%;
+  width: 90%;
+}
+#earths_layers #earths_layers_dialog .dialog.h-volcanoes .description-info {
+  top: 220px;
+  left: 130px;
+  width: 350px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-volcanoes .label-info-magma {
+  top: 560px;
+  left: 775px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-volcanoes .label-info-main-vent {
+  top: 425px;
+  left: 770px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-volcanoes .label-info-side-vent {
+  top: 240px;
+  left: 870px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-volcanoes .label-info-crater {
+  top: 160px;
+  left: 815px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-volcanoes .label-info-gas-and-ash {
+  top: 145px;
+  left: 605px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-volcanoes .label-info-lava-flow {
+  top: 260px;
+  left: 550px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-earthquakes .label-info-plates {
+  top: 195px;
+  left: 690px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-earthquakes .label-info-crust {
+  top: 262px;
+  left: 65px;
+  width: 140px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-earthquakes .description-info {
+  top: 560px;
+  left: 240px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-earthquakes .line-container {
+  width: 32px;
+  height: 50px;
+  top: 220px;
+  left: 680px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-earthquakes .line-container .line {
+  width: 32px;
+  height: 47px;
+  border-bottom: 1px solid white;
+  -webkit-transform: translateY(-20px) translateX(5px) rotate(-51deg);
+  -moz-transform: translateY(-20px) translateX(5px) rotate(-51deg);
+  -ms-transform: translateY(-20px) translateX(5px) rotate(-51deg);
+}
+#earths_layers #earths_layers_dialog .dialog.h-tsunamis .description-info {
+  top: 160px;
+  left: 120px;
+  width: 550px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-floods .description-info {
+  top: 190px;
+  left: 120px;
+  width: 275px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-tornadoes .description-info {
+  top: 280px;
+  left: 700px;
+  width: 260px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-hurricanes .description-info {
+  top: 160px;
+  left: 100px;
+  width: 250px;
+}
+#earths_layers .background {
+  margin-bottom: -10%;
+}
+#earths_layers .scroll-up {
+  position: fixed;
+  top: 0;
+}
+#earths_layers #scroll_marker {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+#earths_layers .scroll-up-text {
+  top: 630px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+}
+#earths_layers .scroll-title-container {
+  top: 450px;
+  left: 55px;
+  width: 910px;
+  height: 158px;
+  background-color: #0085d5;
+  border-radius: 33px;
+}
+#earths_layers .scroll-title-container .scroll-title {
+  top: 60px;
+  left: 240px;
+  width: 400px;
+  text-align: center;
+}
+#earths_layers .scroll-title-container .scroll-directions {
+  top: 20px;
+  left: 5%;
+  width: 90%;
+  text-align: center;
+}
+#earths_layers .text-block-info-a {
+  top: 200px;
+  left: 135px;
+  width: 790px;
+}
+#earths_layers .text-block-info-b {
+  top: 330px;
+  left: 135px;
+  width: 790px;
+}
+#earths_layers .inner-core-container {
+  top: 510px;
+  left: 60px;
+  height: 400px;
+}
+#earths_layers .inner-core-container .inner-core-image {
+  top: 20px;
+  left: 0px;
+}
+#earths_layers .inner-core-container .inner-core-info {
+  top: 70px;
+  left: 330px;
+  width: 500px;
+}
+#earths_layers .inner-core-container .inner-core-title {
+  top: 144px;
+  left: 330px;
+  width: 300px;
+}
+#earths_layers .inner-core-container .inner-core-line {
+  top: 153px;
+  left: 160px;
+  height: 2px;
+  width: 150px;
+  background-color: black;
+  border: none;
+}
+#earths_layers .inner-core-distance {
+  top: 165px;
+  left: 720px;
+  width: 170px;
+  height: 80px;
+  background-color: #eac235;
+  text-align: right;
+}
+#earths_layers .inner-core-distance .inner-core-distance-info {
+  top: 10px;
+  left: 20px;
+  right: 20px;
+}
+#earths_layers .outer-core-container {
+  top: 1350px;
+  left: 60px;
+}
+#earths_layers .outer-core-container .outer-core-image {
+  top: 20px;
+  left: 600px;
+}
+#earths_layers .outer-core-container .outer-core-info {
+  top: 70px;
+  left: 0;
+  width: 500px;
+}
+#earths_layers .outer-core-container .outer-core-title {
+  top: 144px;
+  left: 330px;
+  width: 300px;
+}
+#earths_layers .outer-core-container .outer-core-line {
+  top: 153px;
+  left: 560px;
+  height: 2px;
+  width: 115px;
+  background-color: black;
+  border: none;
+}
+#earths_layers .outer-core-distance {
+  top: 210px;
+  left: 20px;
+  width: 170px;
+  height: 80px;
+  background-color: #e9501c;
+  text-align: left;
+}
+#earths_layers .outer-core-distance .outer-core-distance-info {
+  top: 10px;
+  left: 20px;
+  right: 20px;
+}
+#earths_layers .mantle-container {
+  top: 900px;
+  left: 60px;
+}
+#earths_layers .mantle-container .mantle-image {
+  top: 120px;
+  left: 0px;
+}
+#earths_layers .mantle-container .mantle-info-1 {
+  top: 70px;
+  left: 330px;
+  width: 450px;
+}
+#earths_layers .mantle-container .mantle-title {
+  top: 243px;
+  left: 330px;
+  width: 300px;
+}
+#earths_layers .mantle-container .mantle-line {
+  top: 253px;
+  left: 250px;
+  height: 3px;
+  width: 60px;
+  background-color: white;
+  border: none;
+}
+#earths_layers .mantle-container .mantle-info-2 {
+  top: 310px;
+  left: 330px;
+  width: 450px;
+}
+#earths_layers .select-dialog-instructions {
+  top: 50px;
+  left: 650px;
+  width: 145px;
+}
+#earths_layers .crust-title {
+  top: 340px;
+  left: 110px;
+}
+#earths_layers .crust-line {
+  top: 370px;
+  left: 143px;
+  width: 3px;
+  height: 30px;
+  border: none;
+  background-color: white;
+}
+#earths_layers .crust-info {
+  top: 480px;
+  left: 60px;
+  width: 400px;
+}
+#earths_layers .atmosphere-title {
+  top: 330px;
+  left: 450px;
+}
+#earths_layers .atmosphere-info {
+  top: 120px;
+  left: 450px;
+  width: 400px;
+}
+#earths_layers .hotspot {
+  width: 129px;
+}
+#earths_layers .hotspot.hotspot-volcanoes {
+  top: 1300px;
+  left: 650px;
+}
+#earths_layers .hotspot.hotspot-volcanoes .hotspot-text {
+  top: 125px;
+}
+#earths_layers .hotspot.hotspot-earthquakes {
+  top: 1020px;
+  left: 450px;
+}
+#earths_layers .hotspot.hotspot-earthquakes .hotspot-text {
+  top: -15px;
+  left: -5px;
+}
+#earths_layers .hotspot.hotspot-tsunamis {
+  top: 820px;
+  left: 100px;
+}
+#earths_layers .hotspot.hotspot-tsunamis .hotspot-text {
+  top: -15px;
+  left: 0px;
+}
+#earths_layers .hotspot.hotspot-floods {
+  top: 710px;
+  left: 320px;
+}
+#earths_layers .hotspot.hotspot-floods .hotspot-text {
+  top: 125px;
+  left: 0px;
+}
+#earths_layers .hotspot.hotspot-tornadoes {
+  top: 550px;
+  left: 450px;
+}
+#earths_layers .hotspot.hotspot-tornadoes .hotspot-text {
+  top: 125px;
+  left: 0px;
+}
+#earths_layers .hotspot.hotspot-hurricanes {
+  top: 440px;
+  left: 160px;
+}
+#earths_layers .hotspot.hotspot-hurricanes .hotspot-text {
+  top: 125px;
+  left: 0px;
+}
+#earths_layers .hotspot .hotspot-text {
+  width: 100%;
+  text-align: center;
+}
+#earths_layers .hotspot .hotspot-text .hotspot-text {
+  top: 0px;
+  left: 0px;
+}
+#earths_layers .trigger {
+  position: absolute;
+}
+#earths_layers .trigger.intro-text-trigger {
+  top: 0px;
+  left: 2%;
+  right: 96%;
+  height: 100%;
+}
+#earths_layers .trigger.inner-core-trigger {
+  top: 900px;
+  left: 0;
+  right: 98%;
+  height: 100%;
+}
+#earths_layers .trigger.outer-core-trigger {
+  height: 100%;
+  width: 20px;
+  z-index: 10000;
+  position: absolute;
+}
+#earths_layers .trigger.outer-core-trigger-2 {
+  height: 100%;
+  width: 20px;
+  z-index: 10000;
+  position: absolute;
+}
+#earths_layers .trigger.mantle-trigger-1 {
+  height: 100%;
+  width: 20px;
+  z-index: 10000;
+  position: absolute;
+}
+#earths_layers .trigger.mantle-trigger-2 {
+  height: 100%;
+  width: 20px;
+  z-index: 10000;
+  position: absolute;
+}
+#earths_layers .trigger.modal-trigger-1 {
+  height: 100%;
+  width: 20px;
+  z-index: 10000;
+  position: absolute;
+}
+#earths_layers .trigger.modal-trigger-2 {
+  height: 100%;
+  width: 20px;
+  z-index: 10000;
+  position: absolute;
+}
+#earths_layers .trigger.modal-trigger-3 {
+  height: 100%;
+  width: 20px;
+  z-index: 10000;
+  position: absolute;
+}
+.congrats-screen .blue-heading {
+  left: 80px;
+  top: 100px;
+  width: 202px;
+  height: 252px;
+  border-radius: 16px;
+  background-color: rgba(0, 101, 213, 0.4);
+}
+.congrats-screen .white-box {
+  left: 70px;
+  top: 65px;
+  width: 92px;
+  height: 122px;
+  border-radius: 16px;
+  border: 2.5px solid #9cd2f2;
+  line-height: 122px;
+  text-align: center;
+}
+.congrats-screen .challenge {
+  top: 30px;
+  left: 20px;
+}
+.congrats-screen .to-our {
+  left: 400px;
+  top: 100px;
+}
+.congrats-screen .great-work {
+  top: 210px;
+  left: 400px;
+}
+.congrats-screen .learned {
+  left: 400px;
+  top: 260px;
+  width: 550px;
+}
+.congrats-screen .now {
+  left: 400px;
+  top: 350px;
+  width: 550px;
+}
+.congrats-screen .continue {
+  left: 400px;
+  top: 420px;
+}
+.congrats-screen .twf {
+  left: 400px;
+  top: 500px;
+}
+.congrats-screen .de {
+  left: 500px;
+  top: 500px;
+}
+.congrats-screen .copyright {
+  text-align: center;
+  bottom: 20px;
+  width: 100%;
+}
+.congrats-screen .progress {
+  top: 20px;
+  right: 50px;
+}
+.congrats-screen .progress .tab {
+  width: 14px;
+  height: 14px;
+  border: 2.5px solid rgba(35, 35, 85, 0.3);
+}
+.congrats-screen .progress .tab.progressed {
+  border: 2.5px solid white;
+}
+#hazard_dnd .stars {
+  width: 1024px;
+  left: 363px;
+}
+#hazard_dnd .doors-left {
+  top: -56px;
+  left: -320px;
+}
+#hazard_dnd .doors-right {
+  top: -56px;
+  right: -380px;
+}
+#hazard_dnd .floor {
+  bottom: -50px;
+  left: -220px;
+}
+#hazard_dnd .telescope {
+  bottom: -50px;
+  left: 50px;
+}
+#hazard_dnd .title {
+  left: 700px;
+  top: 60px;
+  width: 250px;
+}
+#hazard_dnd .subtitle {
+  left: 705px;
+  top: 269px;
+  width: 220px;
+}
+#hazard_dnd .instructions {
+  left: 705px;
+  top: 470px;
+  width: 200px;
+}
+#hazard_dnd .hotspot {
+  cursor: pointer;
+}
+#hazard_dnd .hotspot.h1 {
+  left: 48%;
+}
+#hazard_dnd .hotspot.h2 {
+  top: 40%;
+  left: 23%;
+}
+#hazard_dnd .hotspot.h3 {
+  top: 55%;
+  left: 46%;
+}
+#hazard_dnd .parallax .dialog-title {
+  width: 800px;
+}
+#hazard_dnd .parallax .spacecraft {
+  padding: 30px 50px;
+  text-align: center;
+}
+#hazard_dnd .parallax .circle-1 {
+  left: 50px;
+  top: 100px;
+}
+#hazard_dnd .parallax .text-1 {
+  top: 100px;
+  left: 130px;
+  width: 180px;
+}
+#hazard_dnd .parallax .circle-2 {
+  left: 50px;
+  top: 230px;
+}
+#hazard_dnd .parallax .text-2 {
+  top: 230px;
+  left: 130px;
+  width: 200px;
+}
+#hazard_dnd .parallax .circle-3 {
+  top: 100px;
+  left: 320px;
+}
+#hazard_dnd .parallax .text-3 {
+  top: 100px;
+  left: 400px;
+  width: 200px;
+}
+#hazard_dnd .parallax .circle-4 {
+  top: 100px;
+  left: 610px;
+}
+#hazard_dnd .parallax .text-4 {
+  top: 100px;
+  left: 690px;
+  width: 200px;
+}
+#hazard_dnd .parallax .summary {
+  padding: 30px;
+  bottom: 0;
+}
+#hazard_dnd .spect .help {
+  top: 5px;
+  left: 160px;
+  width: 704px;
+}
+#hazard_dnd .spect .help img {
+  left: -25px;
+  top: 4px;
+}
+#hazard_dnd .spect .prev {
+  bottom: 0;
+  left: 10px;
+}
+#hazard_dnd .spect .next {
+  bottom: 0;
+  right: 10px;
+}
+#hazard_dnd .spect .next-question,
+#hazard_dnd .spect .close-dialog {
+  bottom: 35px;
+  right: 45px;
+  text-align: right;
+}
+#hazard_dnd .spect .outof {
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+#hazard_dnd .spect .dialog-title {
+  left: 50px;
+  top: 50px;
+  width: 900px;
+  padding: 0;
+}
+#hazard_dnd .spect .blue {
+  top: 230px;
+  height: 374px;
+}
+#hazard_dnd .spect .description {
+  padding: 30px;
+}
+#hazard_dnd .spect .question {
+  left: 80px;
+  top: 120px;
+  width: 300px;
+}
+#hazard_dnd .spect .question-image {
+  top: 210px;
+  left: 80px;
+}
+#hazard_dnd .spect .question-image-description {
+  width: 300px;
+  top: 245px;
+  left: 80px;
+  text-align: center;
+}
+#hazard_dnd .spect .answers {
+  right: 80px;
+  top: 110px;
+  width: 387px;
+}
+#hazard_dnd .spect .answers > .answer {
+  background-color: #0085d5;
+  color: #ffffff;
+  border-radius: 6px;
+  height: 32px;
+  position: relative;
+  margin-top: 10px;
+  line-height: 28px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+#hazard_dnd .spect .answers > .answer.selected {
+  border: 2px solid #ffffff;
+}
+#hazard_dnd .spect .answers > .answer.correct::before {
+  content: url(../images/02/modals/spectrometry/02_modal_Spectometry_feedbac_check.png);
+  left: -30px;
+  position: absolute;
+  top: -1px;
+}
+#hazard_dnd .spect .answers > .answer.incorrect::before {
+  content: url(../images/02/modals/spectrometry/02_modal_Spectometry_feedbac_x.png);
+  left: -30px;
+  position: absolute;
+  top: -1px;
+}
+#hazard_dnd .spect .submit {
+  right: 80px;
+  bottom: 50px;
+}
+#screen2 .title {
+  bottom: 20%;
+  left: 10%;
+}
+#screen2 .tagline {
+  bottom: 10%;
+  left: 10%;
+}
+#screen2 .instructions {
+  right: 10%;
+  top: 10%;
+  width: 200px;
+}
+#screen2 .hotspot {
+  cursor: pointer;
+}
+#screen2 .hotspot.h1 {
+  top: 10%;
+  left: 45%;
+}
+#screen2 .hotspot.h2 {
+  top: 40%;
+  left: 70%;
+}
+#screen2 .hotspot.h3 {
+  top: 55%;
+  left: 55%;
+}
+#screen2 .dialog.h1 .astronaut {
+  top: 50px;
+  left: 30px;
+}
+#screen2 .dialog.h1 .astronaut-text {
+  top: 120px;
+  left: 250px;
+  width: 180px;
+}
+#screen2 .dialog.h1 .food {
+  left: 550px;
+  top: 50px;
+}
+#screen2 .dialog.h1 .food-text {
+  left: 500px;
+  top: 300px;
+  width: 400px;
+}
+#screen2 .dialog.h2 .skylab {
+  left: 50px;
+  top: 50px;
+}
+#screen2 .dialog.h2 .skylab-text {
+  left: 520px;
+  top: 170px;
+  width: 350px;
+}
+#screen2 .dialog.h3 .person {
+  top: 101px;
+}
+#screen2 .dialog.h3 .person-text {
+  top: 100px;
+  left: 450px;
+  width: 350px;
+}
+#screen4 .planet1 {
+  top: 260px;
+  left: 150px;
+  width: 200px;
+}
+#screen4 .planet2 {
+  top: 260px;
+  left: 420px;
+}
+#screen4 .planet3 {
+  top: 280px;
+  left: 710px;
+}
+#screen4 .desc1 {
+  top: 460px;
+  left: 150px;
+  width: 200px;
+  text-align: center;
+}
+#screen4 .desc2 {
+  top: 460px;
+  left: 420px;
+  width: 170px;
+  text-align: center;
+}
+#screen4 .desc3 {
+  top: 460px;
+  left: 710px;
+  width: 150px;
+  text-align: center;
+}
+#screen4 .checkbox1 {
+  top: 250px;
+  left: 130px;
+}
+#screen4 .checkbox2 {
+  top: 250px;
+  left: 400px;
+}
+#screen4 .checkbox3 {
+  top: 250px;
+  left: 670px;
+}
+#screen4 .challenge1 {
+  top: 20px;
+  left: 20px;
+}
+#screen4 .blue {
+  top: 50px;
+  left: 50px;
+  width: 924px;
+  height: 148px;
+}
+#screen4 .blue.congrats {
+  background-color: #309dde;
+}
+#screen4 .intro {
+  left: 150px;
+  top: 15px;
+  width: 740px;
+}
+#screen4 .instructions {
+  top: 113px;
+  left: 140px;
+}
+#screen4 .think {
+  top: 520px;
+  left: 65px;
+  width: 894px;
+}
+#screen4 .submit {
+  top: 210px;
+  left: 448px;
+}
+#screen4 .great {
+  top: 20px;
+  left: 20px;
+}
+#screen4 .learned {
+  top: 60px;
+  left: 20px;
+  width: 720px;
+}
+#screen4 .continue {
+  top: 210px;
+  left: 444px;
+}
+#large_scroll .background {
+  width: 100%;
+  margin-bottom: -10%;
+}
+#large_scroll .scroll-up {
+  position: fixed;
+  top: 0;
+}
+#large_scroll .asteroid {
+  position: fixed;
+}
+#large_scroll #scroll_marker {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+#robot_attachments .challenge1 {
+  top: 20px;
+  left: 20px;
+}
+#robot_attachments .blue {
+  top: 50px;
+  left: 50px;
+  width: 924px;
+  height: 148px;
+}
+#robot_attachments .blue.congrats {
+  background-color: #309dde;
+}
+#robot_attachments .intro {
+  left: 150px;
+  top: 15px;
+  width: 740px;
+}
+#robot_attachments .instructions {
+  top: 110px;
+  left: 190px;
+}
+#robot_attachments .continue {
+  left: 440px;
+  top: 580px;
+}
+#robot_attachments #attachment-containers {
+  top: 250px;
+  left: 50px;
+}
+#robot_attachments #attachment-containers .attachment {
+  cursor: pointer;
+}
+#robot_attachments #attachment-containers .attachment-wheels {
+  top: 0px;
+  left: 20px;
+}
+#robot_attachments #attachment-containers .attachment-wings {
+  top: 0px;
+  left: 140px;
+}
+#robot_attachments #attachment-containers .attachment-legs {
+  top: 0px;
+  left: 260px;
+}
+#robot_attachments #attachment-containers .attachment-first-aid {
+  top: 0px;
+  left: 380px;
+}
+#robot_attachments #attachment-containers .attachment-float {
+  top: 0px;
+  left: 500px;
+}
+#robot_attachments #attachment-containers .attachment-temp {
+  top: 0px;
+  left: 620px;
+}
+#robot_attachments #attachment-containers .attachment-depth {
+  top: 160px;
+  left: 20px;
+}
+#robot_attachments #attachment-containers .attachment-touch {
+  top: 160px;
+  left: 140px;
+}
+#robot_attachments #attachment-containers .attachment-sonic {
+  top: 160px;
+  left: 260px;
+}
+#robot_attachments #attachment-containers .attachment-prop {
+  top: 160px;
+  left: 380px;
+}
+#robot_attachments #attachment-containers .attachment-gyro {
+  top: 160px;
+  left: 500px;
+}
+#robot_attachments #attachment-containers .attachment-infrared {
+  top: 160px;
+  left: 620px;
+}
+#robot_attachments #attachment-containers .information-display {
+  top: 40px;
+  left: 735px;
+  width: 175px;
+  height: 200px;
+}
+#robot_attachments #attachment-containers .information-display .backdrop {
+  background-color: white;
+  opacity: .1;
+  width: 100%;
+  height: 100%;
+}
+#robot_attachments #attachment-containers .information-display .title {
+  top: 0px;
+  left: 0px;
+  width: 90%;
+  padding: 10% 5%;
+}
+#robot_attachments #attachment-containers .information-display .description {
+  top: 27%;
+  left: 0px;
+  width: 90%;
+  padding: 0% 5%;
+}
+#robot_attachments #attachment-containers .selected .attachment-selected.hidden {
+  display: block !important;
+}
+#challenge_1_quiz .title {
+  left: 700px;
+  top: 60px;
+  width: 250px;
+}
+#challenge_1_quiz .subtitle {
+  left: 705px;
+  top: 269px;
+  width: 220px;
+}
+#challenge_1_quiz .instructions {
+  left: 705px;
+  top: 470px;
+  width: 200px;
+}
+#challenge_1_quiz .c2-drone {
+  left: 130px;
+  top: 280px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .help {
+  top: 5px;
+  left: 160px;
+  width: 704px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .help img {
+  left: -25px;
+  top: 4px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .prev {
+  bottom: 0;
+  left: 10px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .next {
+  bottom: 0;
+  right: 10px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .next-question,
+#challenge_1_quiz .challenge_1_quiz_questions .close-dialog {
+  bottom: 35px;
+  right: 45px;
+  text-align: right;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .outof {
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .dialog-title {
+  left: 130px;
+  top: 25px;
+  width: 800px;
+  padding: 0;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .question-container {
+  top: 230px;
+  height: 374px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .description {
+  padding: 30px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .question {
+  left: 80px;
+  top: 70px;
+  width: 800px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .show-1 .question,
+#challenge_1_quiz .challenge_1_quiz_questions .show-2 .question {
+  top: 50px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .show-1 .submit,
+#challenge_1_quiz .challenge_1_quiz_questions .show-2 .submit {
+  bottom: 0px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .show-3 .answers,
+#challenge_1_quiz .challenge_1_quiz_questions .show-4 .answers {
+  top: 150px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .question-image {
+  top: 210px;
+  left: 80px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .question-image-description {
+  width: 300px;
+  top: 245px;
+  left: 80px;
+  text-align: center;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .answers {
+  top: 110px;
+  right: 267px;
+  width: 387px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .answers > .answer {
+  background-color: #0085d5;
+  color: #ffffff;
+  border-radius: 6px;
+  height: 32px;
+  position: relative;
+  margin-top: 10px;
+  line-height: 28px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .answers > .answer.selected {
+  border: 2px solid #ffffff;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .answers > .answer.correct::before {
+  content: url(../images/02/modals/spectrometry/02_modal_Spectometry_feedbac_check.png);
+  left: -30px;
+  position: absolute;
+  top: -1px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .answers > .answer.incorrect::before {
+  content: url(../images/02/modals/spectrometry/02_modal_Spectometry_feedbac_x.png);
+  left: -30px;
+  position: absolute;
+  top: -1px;
+}
+#challenge_1_quiz .challenge_1_quiz_questions .submit {
+  right: 267px;
+  bottom: 50px;
+}
+#challenge_1_quiz .quiz-wrapup {
+  width: 100%;
+  height: 100%;
+}
+#challenge_1_quiz .quiz-wrapup .dialog-title {
+  left: 130px;
+  top: 42px;
+  width: 800px;
+  padding: 0;
+}
+#challenge_1_quiz .quiz-wrapup.congrats-screen .now {
+  top: 330px;
+}
+#volcano_rescue_map .mp-c2-icon {
+  left: 40px;
+  top: 40px;
+}
+#volcano_rescue_map .mp-drone {
+  top: 200px;
+  left: 150px;
+}
+#volcano_rescue_map .mp-go {
+  top: 500px;
+  left: 150px;
+}
+#volcano_rescue_map .mp-c2-location {
+  top: 545px;
+  left: 960px;
+}
+#volcano_rescue_map .map-title {
+  top: 55px;
+  left: 150px;
+}
+#volcano_rescue_map .map-subtitle {
+  top: 120px;
+  left: 150px;
+}
+#volcano_rescue_map .mission-alert {
+  top: 334px;
+  left: 150px;
+  width: 300px;
+}
+#volcano_rescue_map .mission-message {
+  top: 400px;
+  left: 150px;
+  width: 300px;
+}
+#volcano_rescue_map .drone-label {
+  top: 252px;
+  left: 330px;
+}
+#volcano_rescue_map .title-underline {
+  top: 108px;
+  left: 154px;
+  width: 360px;
+}
+#volcano_rescue_map .spinning-earth-container {
+  top: 80px;
+  left: 520px;
+}
+#volcano_rescue_map #volcano-locations {
+  z-index: 20;
+}
+#volcano_rescue_map .location {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 3px solid white;
+  margin-left: -15px;
+  margin-top: -15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#volcano_mission_debrief .mp-c2-icon-large {
+  top: 440px;
+  left: 55px;
+}
+#volcano_mission_debrief .debrief-title {
+  top: 460px;
+  left: 220px;
+}
+#volcano_mission_debrief .debrief-alert {
+  top: 535px;
+  left: 220px;
+}
+#volcano_mission_debrief .debrief-message {
+  top: 570px;
+  left: 220px;
+}
+#volcano_mission_questions .title {
+  left: 700px;
+  top: 60px;
+  width: 250px;
+}
+#volcano_mission_questions .subtitle {
+  left: 705px;
+  top: 269px;
+  width: 220px;
+}
+#volcano_mission_questions .instructions {
+  left: 705px;
+  top: 470px;
+  width: 200px;
+}
+#volcano_mission_questions .c2-drone {
+  left: 130px;
+  top: 280px;
+}
+#volcano_mission_questions .volcano-assembly-questions .help {
+  top: 5px;
+  left: 160px;
+  width: 704px;
+}
+#volcano_mission_questions .volcano-assembly-questions .help img {
+  left: -25px;
+  top: 4px;
+}
+#volcano_mission_questions .volcano-assembly-questions .prev {
+  bottom: 0;
+  left: 10px;
+}
+#volcano_mission_questions .volcano-assembly-questions .next {
+  bottom: 0;
+  right: 10px;
+}
+#volcano_mission_questions .volcano-assembly-questions .next-question,
+#volcano_mission_questions .volcano-assembly-questions .close-dialog {
+  bottom: 35px;
+  right: 45px;
+  text-align: right;
+}
+#volcano_mission_questions .volcano-assembly-questions .outof {
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+#volcano_mission_questions .volcano-assembly-questions .dialog-title {
+  left: 130px;
+  top: 42px;
+  width: 800px;
+  padding: 0;
+}
+#volcano_mission_questions .volcano-assembly-questions .question-container {
+  top: 230px;
+  height: 374px;
+}
+#volcano_mission_questions .volcano-assembly-questions .description {
+  padding: 30px;
+}
+#volcano_mission_questions .volcano-assembly-questions .question {
+  left: 80px;
+  top: 70px;
+  width: 800px;
+}
+#volcano_mission_questions .volcano-assembly-questions .question-image {
+  top: 210px;
+  left: 80px;
+}
+#volcano_mission_questions .volcano-assembly-questions .question-image-description {
+  width: 300px;
+  top: 245px;
+  left: 80px;
+  text-align: center;
+}
+#volcano_mission_questions .volcano-assembly-questions .answers {
+  top: 110px;
+  right: 267px;
+  width: 387px;
+}
+#volcano_mission_questions .volcano-assembly-questions .answers > .answer {
+  background-color: #0085d5;
+  color: #ffffff;
+  border-radius: 6px;
+  height: 32px;
+  position: relative;
+  margin-top: 10px;
+  line-height: 28px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+#volcano_mission_questions .volcano-assembly-questions .answers > .answer.selected {
+  border: 2px solid #ffffff;
+}
+#volcano_mission_questions .volcano-assembly-questions .answers > .answer.correct::before {
+  content: url(../images/02/modals/spectrometry/02_modal_Spectometry_feedbac_check.png);
+  left: -30px;
+  position: absolute;
+  top: -1px;
+}
+#volcano_mission_questions .volcano-assembly-questions .answers > .answer.incorrect::before {
+  content: url(../images/02/modals/spectrometry/02_modal_Spectometry_feedbac_x.png);
+  left: -30px;
+  position: absolute;
+  top: -1px;
+}
+#volcano_mission_questions .volcano-assembly-questions .submit {
+  right: 267px;
+  bottom: 50px;
+}
+#volcano_mission_questions .quiz-wrapup {
+  width: 100%;
+  height: 100%;
+}
+#volcano_mission_questions .quiz-wrapup .blue-heading {
+  top: 12%;
+  left: 5%;
+  height: 25%;
+  width: 90%;
+}
+#volcano_mission_questions .quiz-wrapup .blue-heading .heading-image {
+  top: 25px;
+  left: 20px;
+}
+#volcano_mission_questions .quiz-wrapup .dialog-title {
+  left: 130px;
+  top: 42px;
+  width: 800px;
+  padding: 0;
+}
+#volcano_tutorial_mission .help-icon {
+  top: 75px;
+  left: 30px;
+}
+#volcano_tutorial_mission .tutorial-dialog .bg-image {
+  top: 20px;
+  left: 20px;
+}
+#volcano_tutorial_mission .tutorial-dialog .close {
+  top: 30px;
+  left: 930px;
+}
+#volcano_tutorial_mission .game-title {
+  top: 150px;
+  left: 40px;
+}
+#volcano_tutorial_mission .game-instructions {
+  top: 200px;
+  left: 40px;
+}
+#volcano_tutorial_mission .reset-button {
+  top: 450px;
+  left: 40px;
+}
+#volcano_tutorial_mission .launch-button {
+  top: 500px;
+  left: 40px;
+}
+#volcano_tutorial_mission .turn-left-text {
+  top: 350px;
+  left: 41px;
+}
+#volcano_tutorial_mission .move-forward-text {
+  top: 350px;
+  left: 107px;
+}
+#volcano_tutorial_mission .turn-right-text {
+  top: 350px;
+  left: 168px;
+}
+#volcano_tutorial_mission .enter-text {
+  top: 500px;
+  left: 182px;
+}
+#volcano_tutorial_mission .game-control.turn-left {
+  top: 370px;
+  left: 40px;
+}
+#volcano_tutorial_mission .game-control.move-forward {
+  top: 370px;
+  left: 105px;
+}
+#volcano_tutorial_mission .game-control.turn-right {
+  top: 370px;
+  left: 170px;
+}
+#volcano_tutorial_mission .game-control.enter,
+#volcano_tutorial_mission .game-control.special-command {
+  top: 435px;
+  left: 170px;
+}
+#volcano_tutorial_mission .movement-directions {
+  top: 520px;
+  left: 280px;
+}
+#volcano_tutorial_mission .movement-queue {
+  top: 560px;
+  left: 280px;
+  width: 900px;
+  height: 60px;
+}
+#volcano_tutorial_mission .movement-queue > .drop-area {
+  position: relative;
+  display: inline-block;
+  background-size: 60px;
+  width: 60px;
+  height: 60px;
+  background-image: url(../images/global/target_tile.png);
+}
+#volcano_tutorial_mission .game-board {
+  top: 75px;
+  left: 280px;
+}
+#volcano_tutorial_mission .game-board .game-grid {
+  top: 0;
+  left: 0;
+}
+#volcano_tutorial_mission .game-board .game-1-destination {
+  top: 204px;
+  left: -16px;
+}
+#volcano_tutorial_mission .game-board .game-piece {
+  top: 0px;
+  left: 558px;
+  width: 112px;
+  height: 110px;
+}
+#volcano_tutorial_mission .game-board .game-piece .game-piece-sprite {
+  top: 6px;
+  left: 8px;
+}
+#volcano_tutorial_mission .message-dialog .message-text {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 30%;
+  /* bottom: 10%; */
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 32px;
+  /* height: 200px; */
+  color: white;
+  padding: 32px 64px 32px 32px;
+  text-align: center;
+}
+#volcano_tutorial_mission .message-dialog .close {
+  right: 22%;
+  top: 33%;
+}
+#volcano_get_sample_mission .help-icon {
+  top: 75px;
+  left: 30px;
+}
+#volcano_get_sample_mission .get-sample-dialog .bg-image {
+  top: 20px;
+  left: 20px;
+}
+#volcano_get_sample_mission .get-sample-dialog .close {
+  top: 30px;
+  left: 930px;
+}
+#volcano_get_sample_mission .game-title {
+  top: 150px;
+  left: 40px;
+}
+#volcano_get_sample_mission .game-instructions {
+  top: 200px;
+  left: 40px;
+}
+#volcano_get_sample_mission .reset-button {
+  top: 450px;
+  left: 40px;
+}
+#volcano_get_sample_mission .launch-button {
+  top: 500px;
+  left: 40px;
+}
+#volcano_get_sample_mission .turn-left-text {
+  top: 350px;
+  left: 41px;
+}
+#volcano_get_sample_mission .move-forward-text {
+  top: 350px;
+  left: 107px;
+}
+#volcano_get_sample_mission .turn-right-text {
+  top: 350px;
+  left: 168px;
+}
+#volcano_get_sample_mission .get-sample-text {
+  top: 500px;
+  left: 175px;
+  width: 45px;
+  text-align: center;
+}
+#volcano_get_sample_mission .game-control.turn-left {
+  top: 370px;
+  left: 40px;
+}
+#volcano_get_sample_mission .game-control.move-forward {
+  top: 370px;
+  left: 105px;
+}
+#volcano_get_sample_mission .game-control.turn-right {
+  top: 370px;
+  left: 170px;
+}
+#volcano_get_sample_mission .game-control.enter,
+#volcano_get_sample_mission .game-control.special-command {
+  top: 435px;
+  left: 170px;
+}
+#volcano_get_sample_mission .movement-directions {
+  top: 520px;
+  left: 280px;
+}
+#volcano_get_sample_mission .movement-queue {
+  top: 560px;
+  left: 40px;
+  width: 900px;
+  height: 60px;
+}
+#volcano_get_sample_mission .movement-queue > .drop-area {
+  position: relative;
+  display: inline-block;
+  background-size: 60px;
+  width: 60px;
+  height: 60px;
+  background-image: url(../images/global/target_tile.png);
+}
+#volcano_get_sample_mission .game-board {
+  top: 45px;
+  left: 160px;
+}
+#volcano_get_sample_mission .game-board .game-grid {
+  top: 0;
+  left: 0;
+}
+#volcano_get_sample_mission .game-board .game-2-destination {
+  top: 82px;
+  left: 589px;
+}
+#volcano_get_sample_mission .game-board .game-2-air-current-hazards {
+  top: 195px;
+  left: 295px;
+}
+#volcano_get_sample_mission .game-board .game-piece {
+  top: 293px;
+  left: 197px;
+  width: 98px;
+  height: 98px;
+}
+#volcano_get_sample_mission .game-board .game-piece .game-piece-sprite {
+  left: 6px;
+  top: 6px;
+}
+#volcano_get_sample_mission .message-dialog .message-text {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 30%;
+  /* bottom: 10%; */
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 32px;
+  /* height: 200px; */
+  color: white;
+  padding: 32px 64px 32px 32px;
+  text-align: center;
+}
+#volcano_get_sample_mission .message-dialog .close {
+  right: 22%;
+  top: 33%;
+}
+#volcano_congrats_screen .now {
+  top: 330px;
+}
+#earthquake_rescue_map .mp-c3-icon {
+  left: 40px;
+  top: 40px;
+}
+#earthquake_rescue_map .mp-atv {
+  top: 200px;
+  left: 150px;
+}
+#earthquake_rescue_map .mp-go {
+  top: 500px;
+  left: 150px;
+}
+#earthquake_rescue_map .mp-c3-location {
+  top: 545px;
+  left: 960px;
+}
+#earthquake_rescue_map .map-title {
+  top: 55px;
+  left: 150px;
+}
+#earthquake_rescue_map .map-subtitle {
+  top: 120px;
+  left: 150px;
+}
+#earthquake_rescue_map .mission-alert {
+  top: 334px;
+  left: 150px;
+  width: 300px;
+}
+#earthquake_rescue_map .mission-message {
+  top: 430px;
+  left: 150px;
+  width: 300px;
+}
+#earthquake_rescue_map .atv-label {
+  top: 288px;
+  left: 190px;
+}
+#earthquake_rescue_map .title-underline {
+  top: 108px;
+  left: 154px;
+  width: 360px;
+}
+#earthquake_rescue_map .spinning-earth-container {
+  top: 80px;
+  left: 520px;
+}
+#earthquake_rescue_map #earthquake-locations {
+  z-index: 20;
+}
+#earthquake_rescue_map .location {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 3px solid white;
+  margin-left: -15px;
+  margin-top: -15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#earthquake_mission_debrief .mp-c2-icon-large {
+  top: 440px;
+  left: 55px;
+}
+#earthquake_mission_debrief .debrief-title {
+  top: 460px;
+  left: 220px;
+}
+#earthquake_mission_debrief .debrief-alert {
+  top: 535px;
+  left: 220px;
+}
+#earthquake_mission_debrief .debrief-message {
+  top: 570px;
+  left: 220px;
+}
+#earthquake_mission_questions .title {
+  left: 700px;
+  top: 60px;
+  width: 250px;
+}
+#earthquake_mission_questions .subtitle {
+  left: 705px;
+  top: 269px;
+  width: 220px;
+}
+#earthquake_mission_questions .instructions {
+  left: 705px;
+  top: 470px;
+  width: 200px;
+}
+#earthquake_mission_questions .c3-atv {
+  left: 310px;
+  top: 280px;
+}
+#earthquake_mission_questions .next-emq {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  bottom: 12%;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .help {
+  top: 5px;
+  left: 160px;
+  width: 704px;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .help img {
+  left: -25px;
+  top: 4px;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .prev {
+  bottom: 0;
+  left: 10px;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .next {
+  bottom: 0;
+  right: 10px;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .next-question,
+#earthquake_mission_questions .earthquake-assembly-questions .close-dialog {
+  bottom: 35px;
+  right: 45px;
+  text-align: right;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .outof {
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .dialog-title {
+  left: 130px;
+  top: 42px;
+  width: 800px;
+  padding: 0;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .question-container {
+  top: 230px;
+  height: 374px;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .description {
+  padding: 30px;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .question {
+  left: 80px;
+  top: 40px;
+  width: 800px;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .question-image {
+  top: 210px;
+  left: 80px;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .question-image-description {
+  width: 300px;
+  top: 245px;
+  left: 80px;
+  text-align: center;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .answers {
+  top: 110px;
+  right: 267px;
+  width: 387px;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .answers > .answer {
+  background-color: #0085d5;
+  color: #ffffff;
+  border-radius: 6px;
+  height: 32px;
+  position: relative;
+  margin-top: 10px;
+  line-height: 28px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .answers > .answer.selected {
+  border: 2px solid #ffffff;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .answers > .answer.correct::before {
+  content: url(../images/02/modals/spectrometry/02_modal_Spectometry_feedbac_check.png);
+  left: -30px;
+  position: absolute;
+  top: -1px;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .answers > .answer.incorrect::before {
+  content: url(../images/02/modals/spectrometry/02_modal_Spectometry_feedbac_x.png);
+  left: -30px;
+  position: absolute;
+  top: -1px;
+}
+#earthquake_mission_questions .earthquake-assembly-questions .submit {
+  right: 267px;
+  bottom: 50px;
+}
+#earthquake_mission_questions .quiz-wrapup {
+  width: 100%;
+  height: 100%;
+}
+#earthquake_mission_questions .quiz-wrapup .blue-heading {
+  top: 12%;
+  left: 5%;
+  height: 25%;
+  width: 90%;
+}
+#earthquake_mission_questions .quiz-wrapup .blue-heading .heading-image {
+  top: 25px;
+  left: 20px;
+}
+#earthquake_mission_questions .quiz-wrapup .dialog-title {
+  left: 130px;
+  top: 42px;
+  width: 800px;
+  padding: 0;
+}
+#earthquake_disaster_relief_mission .help-icon {
+  top: 50px;
+  left: 30px;
+}
+#earthquake_disaster_relief_mission .disaster-relief-dialog .bg-image {
+  top: 20px;
+  left: 20px;
+}
+#earthquake_disaster_relief_mission .disaster-relief-dialog .close {
+  top: 29px;
+  left: 933px;
+  width: 45px;
+  height: 45px;
+}
+#earthquake_disaster_relief_mission .game-title {
+  top: 135px;
+  left: 40px;
+}
+#earthquake_disaster_relief_mission .game-instructions {
+  top: 175px;
+  left: 40px;
+}
+#earthquake_disaster_relief_mission .reset-button {
+  top: 450px;
+  left: 40px;
+}
+#earthquake_disaster_relief_mission .launch-button {
+  top: 500px;
+  left: 40px;
+}
+#earthquake_disaster_relief_mission .turn-left-text {
+  top: 350px;
+  left: 41px;
+}
+#earthquake_disaster_relief_mission .move-forward-text {
+  top: 350px;
+  left: 107px;
+}
+#earthquake_disaster_relief_mission .turn-right-text {
+  top: 350px;
+  left: 168px;
+}
+#earthquake_disaster_relief_mission .disaster-relief-text {
+  top: 500px;
+  left: 175px;
+  width: 45px;
+  text-align: center;
+}
+#earthquake_disaster_relief_mission .game-control.turn-left {
+  top: 370px;
+  left: 40px;
+}
+#earthquake_disaster_relief_mission .game-control.move-forward {
+  top: 370px;
+  left: 105px;
+}
+#earthquake_disaster_relief_mission .game-control.turn-right {
+  top: 370px;
+  left: 170px;
+}
+#earthquake_disaster_relief_mission .game-control.disaster-relief,
+#earthquake_disaster_relief_mission .game-control.special-command {
+  top: 435px;
+  left: 170px;
+}
+#earthquake_disaster_relief_mission .game-control .control-image {
+  padding: 4px;
+}
+#earthquake_disaster_relief_mission .movement-directions {
+  top: 520px;
+  left: 280px;
+}
+#earthquake_disaster_relief_mission .movement-queue {
+  top: 560px;
+  left: 40px;
+  width: 100%;
+  height: 60px;
+}
+#earthquake_disaster_relief_mission .movement-queue > .drop-area {
+  position: relative;
+  display: inline-block;
+  background-size: 60px;
+  width: 60px;
+  height: 60px;
+  background-image: url(../images/global/target_tile.png);
+}
+#earthquake_disaster_relief_mission .game-board {
+  top: 50px;
+  left: 170px;
+}
+#earthquake_disaster_relief_mission .game-board .game-grid {
+  top: 0;
+  left: 0;
+}
+#earthquake_disaster_relief_mission .game-board .hazards-crack {
+  top: 307px;
+  left: 546px;
+}
+#earthquake_disaster_relief_mission .game-board .hazards-debris {
+  top: 212px;
+  left: 381px;
+}
+#earthquake_disaster_relief_mission .game-board .hazards-debris-lg {
+  top: 44px;
+  left: 457px;
+}
+#earthquake_disaster_relief_mission .game-board .hazards-fire {
+  top: 74px;
+  left: 141px;
+}
+#earthquake_disaster_relief_mission .game-board .game-3-destination-1 {
+  top: 400px;
+  left: 80px;
+}
+#earthquake_disaster_relief_mission .game-board .game-3-destination-2 {
+  top: 240px;
+  left: 640px;
+}
+#earthquake_disaster_relief_mission .game-board .game-piece {
+  top: 0px;
+  left: 240px;
+  width: 80px;
+  height: 80px;
+}
+#earthquake_disaster_relief_mission .game-board .game-piece img {
+  top: 5px;
+  left: 34px;
+}
+#earthquake_disaster_relief_mission .message-dialog .message-text {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 30%;
+  /* bottom: 10%; */
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 32px;
+  /* height: 200px; */
+  color: white;
+  padding: 32px 64px 32px 32px;
+  text-align: center;
+}
+#earthquake_disaster_relief_mission .message-dialog .close {
+  right: 22%;
+  top: 33%;
+}
+#earthquake_congrats_screen .now {
+  top: 330px;
+}
+#earthquake_congrats_screen .continue {
+  top: 445px;
+}
+#interactive_summary .scene > .container {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+#interactive_summary .title {
+  left: 700px;
+  top: 60px;
+  width: 250px;
+}
+#interactive_summary .subtitle {
+  left: 705px;
+  top: 269px;
+  width: 220px;
+}
+#interactive_summary .instructions {
+  left: 705px;
+  top: 470px;
+  width: 200px;
+}
+#interactive_summary .blue-heading {
+  top: 12%;
+  left: 5%;
+  height: 25%;
+  width: 90%;
+}
+#interactive_summary .blue-heading .heading-image {
+  top: 25px;
+  left: 20px;
+}
+#interactive_summary .dialog-title {
+  left: 140px;
+  top: 45px;
+  width: 700px;
+  padding: 0;
+}
+#interactive_summary .categories-title {
+  top: 110px;
+  left: 180px;
+}
+#interactive_summary .impacts-heading {
+  top: 250px;
+  left: 485px;
+}
+#interactive_summary .impacts-source .ui-draggable.ui-draggable-handle {
+  width: 85px;
+  height: 105px;
+}
+#interactive_summary .impacts-source .drag {
+  cursor: pointer;
+}
+#interactive_summary .impacts-source .impact {
+  margin: 8px 5px;
+}
+#interactive_summary .impacts-source .impact-landscapes {
+  top: 282px;
+  left: 205px;
+}
+#interactive_summary .impacts-source .impact-money {
+  top: 282px;
+  left: 335px;
+}
+#interactive_summary .impacts-source .impact-migration {
+  top: 282px;
+  left: 465px;
+}
+#interactive_summary .impacts-source .impact-injury {
+  top: 282px;
+  left: 595px;
+}
+#interactive_summary .impacts-source .impact-property {
+  top: 282px;
+  left: 725px;
+}
+#interactive_summary .impact-targets .c4-target-short-term-impacts-container {
+  top: 450px;
+  left: 190px;
+}
+#interactive_summary .impact-targets .c4-target-short-term-impacts-container .impact-label {
+  top: -25px;
+  left: 0px;
+  width: 316px;
+  text-align: center;
+}
+#interactive_summary .impact-targets .c4-target-long-term-impacts-container {
+  top: 450px;
+  left: 620px;
+}
+#interactive_summary .impact-targets .c4-target-long-term-impacts-container .impact-label {
+  top: -25px;
+  left: -5px;
+  width: 215px;
+  text-align: center;
+}
+#interactive_summary .impact-targets .drop-area {
+  width: 95px;
+  height: 120px;
+  top: 458px;
+}
+#interactive_summary .impact-targets .drop-area.d1 {
+  left: 200px;
+}
+#interactive_summary .impact-targets .drop-area.d2 {
+  left: 300px;
+}
+#interactive_summary .impact-targets .drop-area.d3 {
+  left: 400px;
+}
+#interactive_summary .impact-targets .drop-area.d4 {
+  left: 630px;
+}
+#interactive_summary .impact-targets .drop-area.d5 {
+  left: 730px;
+}
+#interactive_summary .impacts .arrow {
+  top: 280px;
+}
+#interactive_summary .impacts .arrow.a1 {
+  left: 200px;
+}
+#interactive_summary .impacts .arrow.a2 {
+  left: 370px;
+}
+#interactive_summary .impacts .arrow.a3 {
+  left: 540px;
+}
+#interactive_summary .impacts .arrow.a4 {
+  left: 710px;
+}
+#interactive_summary .impacts .drop-success {
+  top: 455px;
+}
+#interactive_summary .impacts .drop-success.d1 {
+  left: 270px;
+}
+#interactive_summary .impacts .drop-success.d2 {
+  left: 370px;
+}
+#interactive_summary .impacts .drop-success.d3 {
+  left: 470px;
+}
+#interactive_summary .impacts .drop-success.d4 {
+  left: 700px;
+}
+#interactive_summary .impacts .drop-success.d5 {
+  left: 800px;
+}
+#interactive_summary .impacts .submit {
+  top: 300px;
+  left: 460px;
+}
+#interactive_summary .impacts .good-job {
+  top: 300px;
+  text-align: center;
+  width: 400px;
+  left: 320px;
+}
+#interactive_summary .impacts .nice-try {
+  top: 300px;
+  text-align: center;
+  width: 110px;
+  left: 442px;
+}
+#interactive_summary .impacts .correct-order {
+  top: 300px;
+  text-align: center;
+  width: 920px;
+  left: 50px;
+}
+#career_connection .challenge1 {
+  top: 20px;
+  left: 20px;
+}
+#career_connection .blue {
+  top: 50px;
+  left: 50px;
+  width: 924px;
+  height: 148px;
+}
+#career_connection .blue.congrats {
+  background-color: #309dde;
+}
+#career_connection .intro {
+  left: 150px;
+  top: 15px;
+  width: 740px;
+}
+#career_connection .instructions {
+  top: 90px;
+  left: 240px;
+}
+#career_connection .learn1 {
+  left: 120px;
+  top: 280px;
+}
+#career_connection .learn2 {
+  left: 400px;
+  top: 240px;
+}
+#career_connection .learn3 {
+  left: 370px;
+  top: 440px;
+}
+#career_connection .learn4 {
+  left: 710px;
+  top: 280px;
+}
+#career_connection .learn5 {
+  left: 580px;
+  top: 425px;
+}
+#career_connection .checkbox1 {
+  left: 140px;
+  top: 270px;
+}
+#career_connection .checkbox2 {
+  left: 440px;
+  top: 240px;
+}
+#career_connection .checkbox3 {
+  left: 320px;
+  top: 500px;
+}
+#career_connection .checkbox4 {
+  left: 880px;
+  top: 270px;
+}
+#career_connection .checkbox5 {
+  left: 710px;
+  top: 505px;
+}
+#career_connection .learn1-text {
+  left: 151px;
+  top: 391px;
+  width: 200px;
+}
+#career_connection .learn2-text {
+  left: 426px;
+  top: 360px;
+  text-align: center;
+  width: 200px;
+}
+#career_connection .learn3-text {
+  left: 327px;
+  top: 545px;
+}
+#career_connection .learn4-text {
+  left: 720px;
+  top: 395px;
+  width: 200px;
+}
+#career_connection .learn5-text {
+  left: 573px;
+  top: 543px;
+  width: 200px;
+}
+#career_connection .continue {
+  left: 440px;
+  top: 580px;
+}
+#career_connection .dialog .dialog-title {
+  left: 40px;
+  top: 20px;
+}
+#career_connection .dialog .back {
+  top: 134px;
+  left: 57px;
+}
+#career_connection .dialog .blue {
+  top: 200px;
+  background-color: #0085d5;
+  left: 120px;
+  color: white;
+  padding: 40px;
+  width: 300px;
+  height: 170px;
+}
+#final_congrats_screen .download.inline {
+  width: 18px;
+  margin-top: 2px;
+  margin-bottom: -2px;
+  margin-right: 4px;
+}
+#final_congrats_screen .replay {
+  left: 110px;
+  top: 380px;
+}
+#final_congrats_screen .replay img {
+  margin-bottom: -5px;
+}
+#final_congrats_screen .continue {
+  top: 420px;
+}
+#final_congrats_screen .tgredu {
+  left: 700px;
+  top: 470px;
+}
+#final_congrats_screen .tgredu .topline {
+  text-transform: none;
+  top: 2px;
+  left: 36px;
+}
+#final_congrats_screen .now {
+  top: 350px;
+}
+#wrap_up .title {
+  top: 80px;
+  left: 565px;
+  width: 400px;
+}
+#wrap_up .title-back {
+  top: 48px;
+  width: 600px;
+  left: 55px;
+}
+#wrap_up .panel {
+  left: 815px;
+  top: 25px;
+}
+#wrap_up .numbers {
+  top: 50px;
+  left: 865px;
+}
+#wrap_up .checks {
+  top: 58px;
+  left: 945px;
+}
+#wrap_up .cert {
+  left: 826px;
+  top: 340px;
+}
+#wrap_up .play {
+  left: 826px;
+  top: 418px;
+}
+#wrap_up .tiger {
+  left: 826px;
+  top: 513px;
+}
+#wrap_up .twf {
+  left: 70px;
+  top: 510px;
+  width: 100px;
+}
+#wrap_up .dised {
+  left: 220px;
+  top: 525px;
+  height: 30px;
+}
+#wrap_up .congrats {
+  left: 100px;
+  top: 350px;
+  width: 680px;
+  text-align: right;
+}
+#wrap_up .completed {
+  left: 180px;
+  top: 220px;
+  width: 600px;
+  text-align: right;
+}
+#screen5 .uncheckable {
+  background-color: #0085d5;
+  border-radius: 11px;
+  width: 200px;
+  padding-right: 30px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+#screen5 .uncheckable::after {
+  content: "\25BA";
+  position: absolute;
+  right: 10px;
+  top: 2px;
+}
+#screen5 .uncheckable.checked::after {
+  content: "\25BC";
+}
+#screen5 .land-instructions .step1 {
+  left: 200px;
+  top: 500px;
+}
+#screen5 .land-instructions .step2 {
+  left: 595px;
+  top: 500px;
+}
+#screen5 .land-instructions .step3 {
+  left: 890px;
+  top: 500px;
+}
+#screen5 .land-instructions .step1-hl {
+  left: 570px;
+  top: 240px;
+}
+#screen5 .land-instructions .step2-hl {
+  left: 570px;
+  top: 315px;
+}
+#screen5 .land-instructions .step3-hl {
+  left: 570px;
+  top: 390px;
+}
+#screen5 .land-instructions .mission-instructions {
+  left: 120px;
+  top: 200px;
+  width: 330px;
+}
+#screen5 .land-instructions .sequence {
+  top: 200px;
+  left: 600px;
+  width: 260px;
+}
+#screen5 .try-again .lets {
+  left: 120px;
+  top: 200px;
+  width: 330px;
+}
+#screen5 .nice-try {
+  left: 120px;
+  top: 200px;
+  width: 330px;
+}
+#screen5 .blue {
+  left: 50px;
+  width: 924px;
+  top: 50px;
+  height: 150px;
+}
+#screen5 .challenge2 {
+  top: 20px;
+  left: 20px;
+}
+#screen5 .intro {
+  left: 150px;
+  top: 15px;
+  width: 700px;
+}
+#screen5 .instructions {
+  left: 289px;
+  top: 106px;
+}
+#screen5 .thrust {
+  left: 117px;
+  top: 250px;
+}
+#screen5 .thrust-text {
+  left: 117px;
+  top: 340px;
+  width: 200px;
+}
+#screen5 .lift {
+  left: 397px;
+  top: 250px;
+}
+#screen5 .lift-text {
+  left: 397px;
+  top: 340px;
+  width: 200px;
+}
+#screen5 .draga {
+  left: 677px;
+  top: 250px;
+}
+#screen5 .draga-text {
+  left: 677px;
+  top: 340px;
+  width: 200px;
+}
+#screen5 .dialog.h1 .submit {
+  top: 550px;
+  left: 450px;
+}
+#screen5 .dialog.h2 .blue {
+  height: 280px;
+}
+#screen5 .dialog.h2 .drag {
+  cursor: pointer;
+  top: 200px;
+  width: 100px;
+  height: 101px;
+  background-color: #0085d5;
+  border-radius: 11px;
+  line-height: 100px;
+  text-align: center;
+  user-select: none;
+}
+#screen5 .dialog.h2 .drag.thrust {
+  left: 175px;
+}
+#screen5 .dialog.h2 .drag.lift {
+  left: 325px;
+}
+#screen5 .dialog.h2 .drag.newton3 {
+  left: 475px;
+  line-height: 20px;
+  padding-top: 20px;
+  height: 80px;
+}
+#screen5 .dialog.h2 .drag.weight {
+  left: 625px;
+}
+#screen5 .dialog.h2 .drag.dragg {
+  left: 775px;
+}
+#screen5 .dialog.h2 .drop {
+  top: 360px;
+}
+#screen5 .dialog.h2 .drop.d1 {
+  left: 125px;
+}
+#screen5 .dialog.h2 .drop.d2 {
+  left: 295px;
+}
+#screen5 .dialog.h2 .drop.d3 {
+  left: 465px;
+}
+#screen5 .dialog.h2 .drop.d4 {
+  left: 635px;
+}
+#screen5 .dialog.h2 .drop.d5 {
+  left: 805px;
+}
+#screen5 .dialog.h2 .drop-area {
+  width: 100px;
+  height: 101px;
+  top: 373px;
+}
+#screen5 .dialog.h2 .drop-area.d1 {
+  left: 138px;
+}
+#screen5 .dialog.h2 .drop-area.d2 {
+  left: 308px;
+}
+#screen5 .dialog.h2 .drop-area.d3 {
+  left: 478px;
+}
+#screen5 .dialog.h2 .drop-area.d4 {
+  left: 648px;
+}
+#screen5 .dialog.h2 .drop-area.d5 {
+  left: 818px;
+}
+#screen5 .dialog.h2 .drop-desc {
+  width: 128px;
+  top: 494px;
+}
+#screen5 .dialog.h2 .drop-desc.d1 {
+  left: 125px;
+}
+#screen5 .dialog.h2 .drop-desc.d2 {
+  left: 295px;
+}
+#screen5 .dialog.h2 .drop-desc.d3 {
+  left: 465px;
+}
+#screen5 .dialog.h2 .drop-desc.d4 {
+  left: 635px;
+}
+#screen5 .dialog.h2 .drop-desc.d5 {
+  left: 805px;
+}
+#screen5 .dialog.h2 .submit {
+  left: 470px;
+  top: 230px;
+}
+#screen5 .dialog.h2 .nice-try {
+  top: 220px;
+  left: 100px;
+  width: 820px;
+}
+#screen5 .dialog.h2 .try-again {
+  left: 350px;
+  top: 65px;
+}
+#screen5 .dialog.h2 .correct-order {
+  top: 220px;
+  text-align: center;
+  width: 100%;
+}
+#screen5 .dialog.h2 .good-job {
+  top: 210px;
+  left: 100px;
+  width: 820px;
+  text-align: center;
+}
+#screen5 .dialog.h2 .continue {
+  left: 460px;
+  top: 280px;
+}
+#congrats3 .now {
+  top: 330px;
+}
+#congrats3 .continue {
+  top: 440px;
+}
+#landing .rover {
+  left: 100px;
+  top: 100px;
+}
+#landing .rover-arm {
+  left: 495px;
+  top: 240px;
+  transform-origin: 45px 64px;
+}
+#landing .radio {
+  left: 280px;
+  top: 45px;
+}
+#landing .samples {
+  text-align: center;
+  top: 20px;
+  width: 1024px;
+}
+#landing .continue {
+  left: 440px;
+  top: 500px;
+}
+#screen6 .sample {
+  left: 240px;
+  top: 280px;
+}
+#screen6 .title {
+  width: 100%;
+  text-align: center;
+  top: 100px;
+}
+#screen6 .super {
+  top: 180px;
+  left: 260px;
+}
+#screen6 .continue {
+  left: 440px;
+  top: 530px;
+}

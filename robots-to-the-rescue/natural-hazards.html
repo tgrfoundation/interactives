@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script>
+        var DEBUG = false;
+        var BACKWARDS = false;
+        var TRANSITION_DURING = false;
+        var TRANSITION_DURATION = 0;
+    </script>
+
+    <!-- <link rel="stylesheet" href="css/vendor.css"> -->
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+<body>
+<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXT2GWQ" height="0" width="0" title="Google Tag Manager"></iframe></noscript>
+<!-- Splash Screen -->
+<section id="splash_screen" class="fixed full height hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <div class="parallax-sky"></div>
+                <img class="splash-bg loader image" src="images/splash-screen/splash-bg.png">
+            </div>
+            <div class="content">
+                <div class="project-title nasal white s64">
+                    Natural Hazards</div>
+                <div class="project-sub-title proxima semi step-blue s36">
+                    Robots to the Rescue</div>
+
+                <div class="icon-container">
+                    <img id="center" class="icon-earth icon-outline-earth" src="images/global/icon-outline-earth.png">
+
+                    <img class="icon icon-earthquake" src="images/global/icon-earthquake.png">
+                    <img class="icon icon-tornado" src="images/global/icon-tornado.png">
+                    <img class="icon icon-hurricane" src="images/global/icon-hurricane.png">
+                    <img class="icon icon-volcano" src="images/global/icon-volcano.png">
+                    <img class="icon icon-tsunami" src="images/global/icon-tsunami.png">
+                    <img class="icon icon-flood" src="images/global/icon-flood.png">
+
+                    <div class="label-container">
+                        <div class="icon-label label-earthquake proxima reg s18 white">Earthquakes</div>
+                        <div class="icon-label label-tornadoes proxima reg s18 white">Tornadoes</div>
+                        <div class="icon-label label-hurricanes proxima reg s18 white">Hurricanes</div>
+                        <div class="icon-label label-volcanoes proxima reg s18 white">Volcanoes</div>
+                        <div class="icon-label label-tsunamis proxima reg s18 white">Tsunamis</div>
+                        <div class="icon-label label-floods proxima reg s18 white">Floods</div>
+                    </div>
+                </div>
+
+                <div class="challenge-1-intro">
+                    <img class="c1-icon" src="images/challenge-1/c1-icon.png">
+
+                    <div class="welcome-message proxima reg s24 step-blue">
+                        Welcome to the</div>
+
+                    <div class="team-title nasal s36 white">
+                        Natural Hazard Rapid Response Team</div>
+
+                    <div class="team-message proxima reg s20 lh-tight yellow">
+                        Develop robots to help respond to natural hazards and examine how <br />natural hazards affect humans and societies.</div>
+                </div>
+
+                <div class="clickable begin-button proxima reg white s24">Begin</div>
+
+            </div>
+        </div>
+    </div>
+    <img class="next clickable" src="images/global_old/continue-button.png" style="opacity:0">
+</section>
+
+<!-- project_debrief -->
+<section id="project_debrief" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-1/c1-stormy-sunset.png" class="sky">
+            </div>
+            <div class="content">
+                <div class="blue-heading">
+                    <img class="heading-image" src="images/challenge-1/c1-icon-inverted.png">
+                    <div class="dialog-title proxima reg off-gray lh-tight s20" data-show="fadeIn ~1.5s">
+                        A <strong class="white">natural hazard</strong> is an extreme event that occurs naturally. It can cause harm to humans and can result in billions of dollars in damage to property or other things we care about. Natural hazards are caused by different <strong class="white">processes</strong>.
+                    </div>
+                    <div class="definition-title proxima med s24 yellow">Process</div>
+                    <div class="definition-text proxima reg s21 off-gray">an event (or series of events) that can shape and change Earth.</div>
+                </div>
+                <img class="c1-earth-rasterized" src="images/challenge-1/c1-earth-rasterized.png">
+                <img class="c1-inside-earth-indicator" src="images/challenge-1/c1-inside-earth-indicator.png">
+                <img class="c1-inside-earth-label" src="images/challenge-1/c1-inside-earth-label.png">
+                <img class="c1-inside-earth-pointer" src="images/challenge-1/c1-inside-earth-pointer.png">
+                <img class="c1-outside-earth-indicator" src="images/challenge-1/c1-outside-earth-indicator.png">
+                <img class="c1-outside-earth-label" src="images/challenge-1/c1-outside-earth-label.png">
+                <img class="c1-outside-earth-pointer" src="images/challenge-1/c1-outside-earth-pointer.png">
+                <img class="c1-severe-weather-indicator" src="images/challenge-1/c1-severe-weather-indicator.png">
+                <img class="c1-severe-weather-label" src="images/challenge-1/c1-severe-weather-label.png">
+                <img class="c1-severe-weather-pointer" src="images/challenge-1/c1-severe-weather-pointer.png">
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- hazard_dnd -->
+<section id="hazard_dnd" class="fixed full height hidden">
+    <!--<a href="earths-layers.html">--><img src="images/global/next.png" class="next clickable hidden"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-1/c1-stormy-sunset.png" class="sky">
+            </div>
+            <div class="content">
+                <div class="blue-heading">
+                    <img class="heading-image" src="images/challenge-1/c1-icon-inverted.png">
+                    <div class="dialog-title proxima reg off-gray lh-tight s20" data-show="fadeIn ~1.5s">
+                        Processes that can cause natural hazards fall into three categories, depending on <span class="white">how</span> and <span class="white">where</span> they happen.
+                    </div>
+                    <div class="categories-title proxima semi s21 white">Drag each natural hazard to the correct process category below:</div>
+                </div>
+                <div class="hazards-heading proxima reg s21 yellow">NATURAL HAZARDS</div>
+
+                <div class="distance">
+
+                    <div class="hazards-targets">
+                        <div class="c1-target-inside-outline-container">
+                            <div class="inside-label proxima reg s15 white">INSIDE THE EARTH</div>
+                            <img class="c1-target-inside-outline" src="images/challenge-1/c1-target-inside-outline.png">
+                        </div>
+                        <div class="c1-target-surface-outline-container">
+                            <div class="surface-label proxima reg s15 white">EARTH'S SURFACE</div>
+                            <img class="c1-target-surface-outline" src="images/challenge-1/c1-target-surface-outline.png">
+                        </div>
+                        <div class="c1-target-event-outline-container">
+                            <div class="event-label proxima reg s15 white">SEVERE WEATHER EVENTS</div>
+                            <img class="c1-target-event-outline" src="images/challenge-1/c1-target-event-outline.png">
+                        </div>
+                        <div class="drop-area d1" data-name='["d1","d2"]' data-correct='d1'></div>
+                        <div class="drop-area d2" data-name='["d1","d2"]' data-correct='d2'></div>
+                        <div class="drop-area d3" data-name='d3' data-correct='d3'></div>
+                        <div class="drop-area d4" data-name='["d4","d5", "d6"]' data-correct='d4'></div>
+                        <div class="drop-area d5" data-name='["d4","d5", "d6"]' data-correct='d5'></div>
+                        <div class="drop-area d6" data-name='["d4","d5", "d6"]' data-correct='d6'></div>
+                    </div>
+
+                    <div class="hazards-source">
+                        <div class="drag hazard hazard-tsunamis" data-target="d3"><img class="c1-hazard-drag-tsunami" src="images/challenge-1/c1-hazard-drag-tsunami.png"></div>
+                        <div class="drag hazard hazard-tornadoes" data-target="d6"><img class="c1-hazard-drag-tornado" src="images/challenge-1/c1-hazard-drag-tornado.png"></div>
+                        <div class="drag hazard hazard-earthquakes" data-target="d1"><img class="c1-hazard-drag-earthquake" src="images/challenge-1/c1-hazard-drag-earthquake.png"></div>
+                        <div class="drag hazard hazard-floods" data-target="d4"><img class="c1-hazard-drag-flood" src="images/challenge-1/c1-hazard-drag-flood.png"></div>
+                        <div class="drag hazard hazard-hurricanes" data-target="d5"><img class="c1-hazard-drag-hurricane" src="images/challenge-1/c1-hazard-drag-hurricane.png"></div>
+                        <div class="drag hazard hazard-volcanoes" data-target="d2"><img class="c1-hazard-drag-volcano" src="images/challenge-1/c1-hazard-drag-volcano.png"></div>
+
+                        <img class="drop-success drop-success-d1 d1 hidden" src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+                        <img class="drop-success drop-success-d2 d2 hidden" src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+                        <img class="drop-success drop-success-d3 d3 hidden" src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+                        <img class="drop-success drop-success-d4 d4 hidden" src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+                        <img class="drop-success drop-success-d5 d5 hidden" src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+                        <img class="drop-success drop-success-d6 d6 hidden" src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+                    </div>
+
+                    <div class="good-job proxima bold white s30 hidden drag-success"
+                         data-drag-success="zoomIn 2s">
+                        Good Job!
+                    </div>
+
+                    <div class="submit clickable white button drag-done hidden"
+                         data-drag-done="bounceIn" data-drag-success="fadeOut" data-drag-failure="fadeOut" data-drag-retry="fadeOut">
+                        Submit
+                    </div>
+
+                    <div class="nice-try drag-retry clickable white button hidden"
+                         data-drag-retry="zoomIn 2s">
+                        Try Again!
+                    </div>
+
+                    <div class="correct-order proxima bold white s30 drag-failure hidden"
+                         data-drag-failure="fadeIn 2s">
+                        Nice Try! Here's the correct answer:
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/natural-hazards.js"></script>
+
+</body>
+</html>

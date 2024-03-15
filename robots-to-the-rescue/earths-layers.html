@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script>
+        var DEBUG = false;
+        var BACKWARDS = true;
+        var TRANSITION_DURING = true;
+        var TRANSITION_DURATION = 0;
+    </script>
+
+    <!-- <link rel="stylesheet" href="css/vendor.css"> -->
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+<body id="earths_layers">
+<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXT2GWQ" height="0" width="0" title="Google Tag Manager"></iframe></noscript>
+<!-- Earth's Layers I-->
+<section id="earths_layers_i" class="full height">
+    <!--<img data-src="images/earths-layers/scroller_bg.jpg" class="background">-->
+    <div id="scroll_marker"></div>
+    <div class="modal-trigger-3 trigger"></div>
+    <img data-src="images/global/next.png" class="next clickable hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img data-src="images/earths-layers/earth_scroller_bg_i.jpg">
+            </div>
+            <div class="content">
+                <div class="atmosphere-info proxima s24 white">
+                    Weather occurs in the lowest level of our atmosphere, the troposphere.<br />
+                    <br />
+                    Extreme temperatures contribute to or intensify weather events such as hurricanes, tornadoes, and floods.
+                </div>
+                <div class="atmosphere-title proxima med s30 white">Atmosphere</div>
+                <div class="clickable hotspot hotspot-volcanoes" data-dialog="#earths_layers_dialog .dialog.h-volcanoes">
+                    <div class="hotspot-text hotspot-volcanoes-text nasal s20 reg white">Volcanoes</div>
+                    <img class="volcanoes-image" data-src="images/earths-layers/scroller_hl.png"/>
+                </div>
+                <div class="clickable hotspot hotspot-earthquakes" data-dialog="#earths_layers_dialog .dialog.h-earthquakes">
+                    <div class="hotspot-text hotspot-earthquakes-text nasal s20 reg white">Earthquakes</div>
+                    <img class="volcanoes-image" data-src="images/earths-layers/scroller_hl.png"/>
+                </div>
+                <div class="clickable hotspot hotspot-tsunamis" data-dialog="#earths_layers_dialog .dialog.h-tsunamis">
+                    <div class="hotspot-text hotspot-tsunamis-text nasal s20 reg white">Tsunamis</div>
+                    <img class="volcanoes-image" data-src="images/earths-layers/scroller_hl.png"/>
+                </div>
+                <div class="clickable hotspot hotspot-floods" data-dialog="#earths_layers_dialog .dialog.h-floods">
+                    <div class="hotspot-text hotspot-floods-text nasal s20 reg white">Floods</div>
+                    <img class="floods-image" data-src="images/earths-layers/scroller_hl.png"/>
+                </div>
+                <div class="clickable hotspot hotspot-tornadoes" data-dialog="#earths_layers_dialog .dialog.h-tornadoes">
+                    <div class="hotspot-text hotspot-tornadoes-text nasal s20 reg white">Tornadoes</div>
+                    <img class="tornadoes-image" data-src="images/earths-layers/scroller_hl.png"/>
+                </div>
+                <div class="clickable hotspot hotspot-hurricanes" data-dialog="#earths_layers_dialog .dialog.h-hurricanes">
+                    <div class="hotspot-text hotspot-hurricanes-text nasal s20 reg white">Hurricanes</div>
+                    <img class="hurricanes-image" data-src="images/earths-layers/scroller_hl.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="earths_layers_dialog" class="full height fixed hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img data-src="images/global/black-bg.png" class="black-background">
+            </div>
+            <div class="cover hidden" data-show="fadeIn 0.5s" data-hide="fadeOut ~0.5s 0.5s"></div>
+            <div class="content">
+                <div class="dialog h-volcanoes hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+                    <div class="dialog-title proxima semi yellow s36" data-show="fadeInRight ~1.5s">
+                        Volcanoes
+                    </div>
+                    <img class="icon volcano-icon" data-src="images/global/icon-volcano.png" data-show="bounceIn ~1s">
+                    <img class="modal-bg-image volcano-modal-bg" data-src="images/earths-layers/scroll_volcano_modal.png">
+                    <div class="label-info-magma proxima s18 semi white">Magma</div>
+                    <div class="label-info-main-vent proxima s18 semi white">Main Vent</div>
+                    <div class="label-info-side-vent proxima s18 semi black">Side Vent</div>
+                    <div class="label-info-crater proxima s18 semi black">Crater</div>
+                    <div class="label-info-gas-and-ash proxima s18 semi black">Gas and Ash</div>
+                    <div class="label-info-lava-flow proxima s18 semi black">Lava Flow</div>
+                    <div class="description-info proxima s21 reg black">
+                        Sometimes hot liquid rock rises between cracks inside Earth. The liquid rock is called magma.<br />
+                        <br />
+                        Moving magma causes volcanic eruptions.
+                    </div>
+                </div>
+                <div class="dialog h-earthquakes hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+                    <div class="dialog-title proxima semi yellow s36" data-show="fadeInRight ~1.5s">
+                        Earthquakes
+                    </div>
+                    <img class="icon earthquakes-icon" data-src="images/global/icon-earthquake.png" data-show="bounceIn ~1s">
+                    <img class="modal-bg-image earthquakes-modal-bg" data-src="images/earths-layers/scroll_earthquake_modal.png">
+                    <div class="label-info-plates proxima s18 semi white">Tectonic Plates</div>
+                    <div class="label-info-crust proxima s18 semi white">The Earth's crust is made up of plates, and where the plates meet are cracks or faults.</div>
+                    <div class="description-info proxima s21 reg white">
+                        During earthquakes, the ground moves along these faults.
+                    </div>
+                </div>
+                <div class="dialog h-tsunamis hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+                    <div class="dialog-title proxima semi yellow s36" data-show="fadeInRight ~1.5s">
+                        Tsunamis
+                    </div>
+                    <img class="icon tsunamis-icon" data-src="images/global/icon-tsunami.png" data-show="bounceIn ~1s">
+                    <img class="modal-bg-image tsunamis-modal-bg" data-src="images/earths-layers/scroll_tsunami_modal.png">
+                    <div class="description-info proxima s21 reg white">
+                        While wind generates most ocean waves, the movement of the ocean floor can cause a tsunami. Tsunamis are triggered by underwater earthquakes, landslides, or volcanic activity.<br />
+                        <br />
+                        The wave grows in height as it moves toward the shore.
+                    </div>
+                </div>
+                <div class="dialog h-floods hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+                    <div class="dialog-title proxima semi yellow s36" data-show="fadeInRight ~1.5s">
+                        Floods
+                    </div>
+                    <img class="icon floods-icon" data-src="images/global/icon-flood.png" data-show="bounceIn ~1s">
+                    <img class="modal-bg-image floods-modal-bg" data-src="images/earths-layers/scroll_flood_modal.png">
+                    <div class="description-info proxima s21 reg black">
+                        Floods occur when there is too much water for the ground to absorb.<br />
+                        <br />
+                        Flooding can be caused by too much rain that cannot be drained away quickly enough.
+                    </div>
+                </div>
+                <div class="dialog h-tornadoes hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+                    <div class="dialog-title proxima semi yellow s36" data-show="fadeInRight ~1.5s">
+                        Tornadoes
+                    </div>
+                    <img class="icon tornadoes-icon" data-src="images/global/icon-tornado.png" data-show="bounceIn ~1s">
+                    <img class="modal-bg-image tornadoes-modal-bg" data-src="images/earths-layers/scroll_tornadoes_modal.png">
+                    <div class="description-info proxima s21 reg white">
+                        Tornadoes are narrow funnels of wind that can blow at over 300 mph.<br />
+                        <br />
+                        They occur and disappear relatively quickly, but they can leave tremendous damage in their path.
+                    </div>
+                </div>
+                <div class="dialog h-hurricanes hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img data-src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+                    <div class="dialog-title proxima semi yellow s36" data-show="fadeInRight ~1.5s">
+                        Hurricanes
+                    </div>
+                    <img class="icon hurricanes-icon" data-src="images/global/icon-hurricane.png" data-show="bounceIn ~1s">
+                    <img class="modal-bg-image hurricanes-modal-bg" data-src="images/earths-layers/scroll_hurricane_modal.png">
+                    <div class="description-info proxima s21 reg white">
+                        Hurricanes are big storms. They have powerful winds that rotate around a region of calm, called the "eye." The effects of hurricanes can produce high winds, storm surges, intense rainfall and flooding.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Earth's Layers H-->
+<section id="earths_layers_h" class="full height">
+    <!--<img data-src="images/earths-layers/scroller_bg.jpg" class="background">-->
+    <div id="scroll_marker"></div>
+    <div class="modal-trigger-2 trigger"></div>
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img data-src="images/earths-layers/earth_scroller_bg_h.jpg">
+            </div>
+            <div class="content">
+                <div class="crust-title proxima med s30 white">Crust</div>
+                <hr class="crust-line"/>
+                <div class="crust-info proxima s24 white">
+                    The crust is where we live. It's the outer layer of Earth: a thin, solid layer of rock. It is divided into tectonic plates that move above the mantle.<br />
+                    <br />
+                    When these plates move away or toward each other, or when they scrape against each other, they can cause earthquakes, tsunamis, and volcanic eruptions.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Earth's Layers G-->
+<section id="earths_layers_g" class="full height">
+    <!--<img data-src="images/earths-layers/scroller_bg.jpg" class="background">-->
+    <div id="scroll_marker"></div>
+    <div class="modal-trigger-1 trigger"></div>
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img data-src="images/earths-layers/earth_scroller_bg_g.jpg">
+            </div>
+            <div class="content">
+                <div class="select-dialog-instructions proxima s21 white">
+                    Select each highlighted area to explore.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Earth's Layers F-->
+<section id="earths_layers_f" class="full height">
+    <!--<img data-src="images/earths-layers/scroller_bg.jpg" class="background">-->
+    <div id="scroll_marker"></div>
+    <div class="mantle-trigger-2 trigger"></div>
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img data-src="images/earths-layers/earth_scroller_bg_f.jpg">
+            </div>
+            <div class="content">
+                <div class="mantle-container">
+                    <img class="mantle-image" data-src="images/earths-layers/mantle.png" />
+                    <div class="mantle-info-1 proxima reg s24 white">The mantle is hot and semi-solid. The rocks rise from the heat and then cool and sink back down. This creates a motion much like what is seen inside a lava lamp. This motion is called convection.</div>
+                    <hr class="mantle-line"/>
+                    <div class="mantle-title proxima ed s30 white">Mantle</div>
+                    <div class="mantle-info-2 proxima reg s24 white">Convection causes Earth's tectonic plates to move. These movements can cause earthquakes, tsunamis, and volcanic eruptions. Volcanoes can form and erupt when activity in the mantle causes magma to rise up through Earth's crust!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Earth's Layers E-->
+<section id="earths_layers_e" class="full height">
+    <!--<img data-src="images/earths-layers/scroller_bg.jpg" class="background">-->
+    <div id="scroll_marker"></div>
+    <div class="mantle-trigger-1 trigger"></div>
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img data-src="images/earths-layers/earth_scroller_bg_e.jpg">
+            </div>
+            <div class="content">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Earth's Layers D-->
+<section id="earths_layers_d" class="full height">
+    <!--<img data-src="images/earths-layers/scroller_bg.jpg" class="background">-->
+    <div id="scroll_marker"></div>
+    <div class="outer-core-trigger-2 trigger"></div>
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img data-src="images/earths-layers/earth_scroller_bg_d.jpg">
+            </div>
+            <div class="content">
+                <div class="outer-core-distance">
+                    <div class="outer-core-distance-info proxima reg s18 white lh-tight">Approximately 1,800 miles below surface</div>
+                </div>
+                <div class="outer-core-container">
+                    <div class="outer-core-info proxima med s24 black">This layer surrounds the inner core. It is also made up of iron and nickel but in liquid form.</div>
+                    <div class="outer-core-title proxima bold s30 black">Outer Core</div>
+                    <img class="outer-core-image" data-src="images/earths-layers/outerCore.png" />
+                    <hr class="outer-core-line" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Earth's Layers C-->
+<section id="earths_layers_c" class="full height">
+    <!--<img data-src="images/earths-layers/scroller_bg.jpg" class="background">-->
+    <div id="scroll_marker"></div>
+    <div class="trigger outer-core-trigger"></div>
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img data-src="images/earths-layers/earth_scroller_bg_c.jpg">
+            </div>
+            <div class="content">
+                <div class="trigger inner-core-trigger"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Earth's Layers B-->
+<section id="earths_layers_b" class="full height">
+    <!--<img data-src="images/earths-layers/scroller_bg.jpg" class="background">-->
+    <div id="scroll_marker"></div>
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img data-src="images/earths-layers/earth_scroller_bg_b.jpg">
+            </div>
+            <div class="content">
+                <div class="inner-core-distance">
+                    <div class="inner-core-distance-info proxima reg s18 black lh-tight">Approximately 3,900 miles below surface</div>
+                </div>
+                <div class="inner-core-container">
+                    <img class="inner-core-image" data-src="images/earths-layers/innerCore.png" />
+                    <div class="inner-core-info proxima med s24 black">This is the hottest part of Earth! It is solid and made up of iron and nickel.</div>
+                    <hr class="inner-core-line" />
+                    <div class="inner-core-title proxima bold s30 black">Inner Core</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Earth's Layers A -->
+<section id="earths_layers_a" class="full height">
+    <!--<img data-src="images/earths-layers/scroller_bg.jpg" class="background">-->
+    <div id="scroll_marker"></div>
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img data-src="images/earths-layers/earth_scroller_bg_a.jpg">
+            </div>
+            <div class="content">
+                <div class="scroll-up-text proxima black med">Scroll Up</div>
+                <div class="scroll-title-container">
+                    <div class="scroll-title nasal reg s40 white">Journey from the Center of the Earth</div>
+                    <div class="scroll-directions proxima reg s18 white">Scroll from the center of Earth back to the surface to find out where different natural hazards come from.</div>
+                </div>
+
+                <div class="text-block-info-a proxima med s24 black">We live on a dynamic planet that is ever-changing. These natural processes can cause sudden or gradual changes to Earth's systems that can create hazards.<br /></div>
+                <div class="text-block-info-b proxima med s24 black">
+                    Although humans cannot eliminate natural hazards, we can study them to help reduce their impact.
+                </div>
+                <div class="trigger intro-text-trigger"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<section id="loader" class="fixed full height" style="z-index:10000; width:100%">
+    <div class="background" style="width:100%; height:100%">
+        <img src="images/challenge-1/c1-stormy-sunset.png" style="width:100%; height:100%"/>
+    </div>
+    <div class="content" style="text-align: center">
+        <div class="lds-ring-fixed-container">
+            <div class="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/earths_layers.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script>
+        var DEBUG = false;
+        var BACKWARDS = false;
+        var TRANSITION_DURING = true;
+        var TRANSITION_DURATION = 0;
+    </script>
+
+    <!-- <link rel="stylesheet" href="css/vendor.css"> -->
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="earth3d/plugins/sphere/requestanimationframe.polyfill.js"></script>
+    <script type="text/javascript" src="earth3d/sphere-hacked.js"></script>
+    <script type="text/javascript" src="earth3d/jquery.earth-3d.js"></script>
+</head>
+<body>
+<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXT2GWQ" height="0" width="0" title="Google Tag Manager"></iframe></noscript>
+<!-- Attachments Page -->
+<section id="robot_attachments" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-1/c1-stormy-sunset.png" class="sky">
+            </div>
+            <div class="content">
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+                <div class="blue">
+                    <img data-src="images/challenge-1/c1-icon-inverted.png" class="challenge1">
+                    <div class="intro proxima reg gray s18">
+                        Natural hazards become disasters when people's lives and livelihoods are destroyed. Sometimes it can be difficult to reach people in need during or right after a natural disaster. Robots can help us assess damage and send back important information to aid in rescue efforts.
+                    </div>
+                    <div class="instructions proxima reg white s18">
+                        Click on each item below to learn about the equipment used on rescue robots.
+                    </div>
+                </div>
+
+                <div id="attachment-containers">
+                    <div class="attachment attachment-wheels">
+                        <img src="images/challenge-1/attachments/wheels.png" class="attachment-not-selected">
+                        <img src="images/challenge-1/attachments/wheels_selected.png" class="attachment-selected hidden">
+                        <div class="title hidden">
+                            Wheels
+                        </div>
+                        <div class="description hidden">
+                            Circular objects that revolve on an axle and are fixed below the robot to enable it to move easily over the ground.
+                        </div>
+                    </div>
+                    <div class="attachment attachment-wings">
+                        <img src="images/challenge-1/attachments/wings.png" class="attachment-not-selected">
+                        <img src="images/challenge-1/attachments/wings_selected.png" class="attachment-selected hidden">
+                        <div class="title hidden">
+                            Wings
+                        </div>
+                        <div class="description hidden">
+                            Horizontal structures that project from both sides of a robot to support it in the air.
+                        </div>
+                    </div>
+                    <div class="attachment attachment-legs">
+                        <img src="images/challenge-1/attachments/legs.png" class="attachment-not-selected">
+                        <img src="images/challenge-1/attachments/legs_selected.png" class="attachment-selected hidden">
+                        <div class="title hidden">
+                            Legs
+                        </div>
+                        <div class="description hidden">
+                            Limbs on which a robot can walk and stand.
+                        </div>
+                    </div>
+                    <div class="attachment attachment-first-aid">
+                        <img src="images/challenge-1/attachments/firstAid.png" class="attachment-not-selected">
+                        <img src="images/challenge-1/attachments/firstAid_selected.png" class="attachment-selected hidden">
+                        <div class="title hidden">
+                            First Aid
+                        </div>
+                        <div class="description hidden">
+                            A collection of supplies and equipment that is used to give medical treatment.
+                        </div>
+                    </div>
+                    <div class="attachment attachment-float">
+                        <img src="images/challenge-1/attachments/float.png" class="attachment-not-selected">
+                        <img src="images/challenge-1/attachments/float_selected.png" class="attachment-selected hidden">
+                        <div class="title hidden">
+                            Floatation Device
+                        </div>
+                        <div class="description hidden">
+                            A piece of equipment designed to assist the wearer to keep afloat in water.
+                        </div>
+                    </div>
+                    <div class="attachment attachment-temp">
+                        <img src="images/challenge-1/attachments/temp.png" class="attachment-not-selected">
+                        <img src="images/challenge-1/attachments/temp_selected.png" class="attachment-selected hidden">
+                        <div class="title hidden">
+                            Temperature Sensor
+                        </div>
+                        <div class="description hidden">
+                            A sensor that can read the temperature of an object or environment.
+                        </div>
+                    </div>
+                    <div class="attachment attachment-depth">
+                        <img src="images/challenge-1/attachments/depth.png" class="attachment-not-selected">
+                        <img src="images/challenge-1/attachments/depth_selected.png" class="attachment-selected hidden">
+                        <div class="title hidden">
+                            Liquid Depth Sensor
+                        </div>
+                        <div class="description hidden">
+                            A sensor that measures water pressure to indicate depth underwater.
+                        </div>
+                    </div>
+                    <div class="attachment attachment-touch">
+                        <img src="images/challenge-1/attachments/touch.png" class="attachment-not-selected">
+                        <img src="images/challenge-1/attachments/touch_selected.png" class="attachment-selected hidden">
+                        <div class="title hidden">
+                            Touch Sensor
+                        </div>
+                        <div class="description hidden">
+                            A sensor that reacts when touch is applied, usually in the form of a button.
+                        </div>
+                    </div>
+                    <div class="attachment attachment-sonic">
+                        <img src="images/challenge-1/attachments/sonic.png" class="attachment-not-selected">
+                        <img src="images/challenge-1/attachments/sonic_selected.png" class="attachment-selected hidden">
+                        <div class="title hidden">
+                            Ultrasonic Sensor
+                        </div>
+                        <div class="description hidden">
+                            A sensor that uses high-frequency sound waves like a bat to measure the distance to an object.
+                        </div>
+                    </div>
+                    <div class="attachment attachment-prop">
+                        <img src="images/challenge-1/attachments/prop.png" class="attachment-not-selected">
+                        <img src="images/challenge-1/attachments/prop_selected.png" class="attachment-selected hidden">
+                        <div class="title hidden">
+                            Underwater Propeller
+                        </div>
+                        <div class="description hidden">
+                            An underwater thruster that is a configuration of marine propellers and hydraulic or electric motor built into, or mounted to a robot.
+                        </div>
+                    </div>
+                    <div class="attachment attachment-gyro">
+                        <img src="images/challenge-1/attachments/gyro.png" class="attachment-not-selected">
+                        <img src="images/challenge-1/attachments/gyro_selected.png" class="attachment-selected hidden">
+                        <div class="title hidden">
+                            Gyro Sensor
+                        </div>
+                        <div class="description hidden">
+                            A sensor that reacts to changes in motion or orientation.
+                        </div>
+                    </div>
+                    <div class="attachment attachment-infrared">
+                        <img src="images/challenge-1/attachments/infrared.png" class="attachment-not-selected">
+                        <img src="images/challenge-1/attachments/infrared_selected.png" class="attachment-selected hidden">
+                        <div class="title hidden">
+                            Infrared Cameras
+                        </div>
+                        <div class="description hidden">
+                            A camera that detects infrared wavelengths &mdash; invisible to the human eye &mdash; to register different temperature levels.
+                        </div>
+                    </div>
+                    <div class="information-display">
+                        <div class="backdrop"></div>
+                        <div class="title proxima s16 reg yellow">
+                            Attachment
+                        </div>
+                        <div class="description proxima s16 white reg">
+                            --------<br />
+                            Click an attachment to learn more.<br />
+                            --------<br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Challenge 1 Questions -->
+<section id="challenge_1_quiz" class="fixed full height hidden">
+    <!--<img src="images/global/next.png" class="next clickable next-vmq hidden">-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-2/c2-mission-debrief-bg.jpg" class="sky">
+                <div class="overlay"></div>
+                <img src="images/challenge-2/c2-bg-w-glow.png" class="c2-background-w-glow hidden">
+            </div>
+            <div class="cover hidden" data-show="fadeIn 0.5s" data-hide="fadeOut ~0.5s 0.5s"></div>
+            <div class="content">
+                <div class="challenge_1_quiz_questions container dialog h1" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <div class="blue-heading">
+                        <img class="heading-image" src="images/challenge-1/c1-icon-inverted.png">
+                        <div class="dialog-title proxima reg off-gray lh-tight s20" data-show="fadeIn ~1.5s">
+                            You will be building robots that can be used to help rescue people from disaster zones. What equipment will the robot need to carry?<br />
+                            <br />
+                            <strong class="white">Scientists can use sensors to inform predictions about when natural hazards will happen. Answer the following multiple choice questions to practice.</strong>
+                        </div>
+                    </div>
+
+                    <div class="outof proxima med s15 white show-1 hidden">1 of 4</div>
+                    <div class="outof proxima med s15 white show-2 hidden">2 of 4</div>
+                    <div class="outof proxima med s15 white show-3 hidden">3 of 4</div>
+                    <div class="outof proxima med s15 white show-4 hidden">4 of 4</div>
+
+                    <div class="question-container">
+
+                        <div class="show-1 entire hidden" data-slide-show="fadeIn">
+                            <div class="question proxima reg orange-brown s21">
+                                1. Scientists can use sensors to inform predictions about when natural hazards will happen. Which sensor would be the most useful during an earthquake?
+                            </div>
+                            <div class="answers show-1" >
+                                <div class="answer clickable proxima med white s16 good">Sensors that detect ground movement</div>
+                                <div class="answer clickable proxima med white s16">Cameras that record magma levels</div>
+                                <div class="answer clickable proxima med white s16">Radar that detects fast, rotating winds</div>
+                                <div class="answer clickable proxima med white s16">Radar that detects how much rain is falling</div>
+                            </div>
+                            <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+                            <div class="next-question clickable proxima semi s15 yellow finished-show hidden">Next<br>Question</div>
+                        </div>
+                        <div class="show-2 entire hidden" data-slide-show="fadeIn">
+                            <div class="question proxima reg orange-brown s21">
+                                2. Which sensor would be the most useful during a hurricane or tornado?
+                            </div>
+                            <div class="answers show-2">
+                                <div class="answer clickable proxima med white s16">Cameras that record magma levels</div>
+                                <div class="answer clickable proxima med white s16">Sensors that detect ground movement</div>
+                                <div class="answer clickable proxima med white s16 good">Radar that detects fast, rotating winds</div>
+                                <div class="answer clickable proxima med white s16">Radar that detects how much rain is falling</div>
+                            </div>
+                            <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+                            <div class="next-question clickable proxima semi s15 yellow finished-show hidden">Next<br>Question</div>
+                        </div>
+                        <div class="show-3 entire hidden" data-slide-show="fadeIn">
+                            <div class="question proxima med orange-brown s21">
+                                3. Seismic sensors detect movements in the ground like earthquakes. The ground moves when the earthquake starts. Does this sensor provide much warning?
+                            </div>
+                            <div class="answers show-3" data-slide-show="flipInX">
+                                <div class="answer clickable proxima med white s16">Yes</div>
+                                <div class="answer clickable proxima med white s16 good">No</div>
+                            </div>
+                            <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+                            <div class="next-question clickable proxima semi s15 yellow finished-show hidden">Next<br>Question</div>
+                        </div>
+                        <div class="show-4 entire hidden" data-slide-show="fadeIn">
+                            <div class="question proxima med orange-brown s21">
+                                4. Hurricane sensors use radar to track wind movement with radio waves. Can radio waves travel very far to enable scientists to see the hurricane from very far away?
+                            </div>
+                            <div class="answers show-4" data-slide-show="flipInX">
+                                <div class="answer clickable proxima med white s16 good">Yes</div>
+                                <div class="answer clickable proxima med white s16">No</div>
+                            </div>
+                            <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+                            <div class="close-dialog clickable proxima semi s15 yellow finished-show hidden">Close<br>Dialog</div>
+                        </div>
+                        <div class="next clickable s100 nasal white">&rsaquo;</div>
+                        <div class="prev clickable s100 nasal white">&lsaquo;</div>
+                    </div>
+                </div>
+
+                <div class="quiz-wrapup hidden congrats-screen">
+                    <img class="gradient entire" src="images/complete/complete_gradient.png">
+                    <div class="blue-heading">
+                        <img class="challenge" src="images/complete/challenge.png">
+                        <div class="white-box nasal white s80">1</div>
+                    </div>
+                    <div class="to-our nasal white s36 shadowed">
+                        Natural Hazards -<br />
+                        Robots to the Rescue
+                    </div>
+                    <div class="great-work proxima extra s20">
+                        Great work!
+                    </div>
+                    <div class="learned proxima reg s20">
+                        You have learned about the layers of the Earth, types of natural hazards and equipment used in natural hazards.
+                    </div>
+                    <div class="now proxima extra corn dark s20">
+                        You are now ready to help the <em>Natural Hazards Rapid Response Team</em> respond to two natural disasters using robotics!
+                    </div>
+                    <div class="continue clickable corn shadowless smaller button">
+                        Continue
+                    </div>
+                    <img class="twf" src="images/complete/twf.png">
+                    <img class="de" src="images/complete/de.png">
+                    <div class="copyright proxima reg s14">
+                        Copyright &copy; 2018 Discovery Education, Inc. All rights reserved.
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Volcano Rescue -->
+<section id="volcano_rescue_map" class="fixed full height hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/map-bg.jpg" class="sky">
+            </div>
+            <div class="content">
+                <img src="images/challenge-2/c2-icon.png"
+                     class="mp-c2-icon">
+                <img src="images/global/map-drone.png"
+                     class="mp-drone">
+                <img src="images/global/map-go.png"
+                     class="mp-go clickable">
+
+                <div class="map-title nasal white s54">
+                    Volcano</div>
+
+                <div class="map-subtitle proxima med s24 white">
+                    <span class="step-blue proxima bold">Rescue assignment: </span>Hawaii</div>
+
+                <div class="mission-alert proxima reg s21 yellow lh-tight">
+                    Scientists have detected activity in an active volcano!</div>
+
+                <div class="mission-message proxima reg s18 lt-gray lh-tight">
+                    Could an eruption be imminent? Help navigate a robot to the volcano to monitor its activity!</div>
+
+                <div class="drone-label proxima reg s15 lt-blue">
+                    Robot: Drone</div>
+
+                <div class="spinning-earth-container volcano-container">
+                    <canvas id="volcano-earth" width="600" height="600"></canvas>
+                    <div id="volcano-locations" class=""></div>
+                </div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+
+                <hr class="title-underline" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="volcano_mission_debrief" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-2/c2-mission-debrief-bg.jpg" class="sky">
+            </div>
+            <div class="content">
+                <img src="images/challenge-2/c2-icon-large.png"
+                     class="mp-c2-icon-large">
+
+                <div class="debrief-title nasal white s58">
+                    Volcano</div>
+
+                <div class="debrief-alert proxima s25 yellow">
+                    Use a drone to help scientists monitor a volcano before it erupts!</div>
+
+                <div class="debrief-message proxima s18 white">
+                    Help provide 24-hour surveillance of the volcano as an early warning system.</div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="volcano_mission_questions" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable next-vmq hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-2/c2-mission-debrief-bg.jpg" class="sky">
+                <div class="overlay"></div>
+                <img src="images/challenge-2/c2-bg-w-glow.png" class="c2-background-w-glow hidden">
+            </div>
+            <div class="cover hidden" data-show="fadeIn 0.5s" data-hide="fadeOut ~0.5s 0.5s"></div>
+            <div class="content">
+                 <!--Taken From Screen #3-->
+                <div class="volcano-assembly-questions container dialog h1" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <div class="blue-heading">
+                        <img class="heading-image" src="images/challenge-2/c2-icon-inverted.png">
+                        <div class="dialog-title proxima reg off-gray lh-tight s20" data-show="fadeIn ~1.5s">
+                            You'll be navigating a robot to the volcano to monitor its activity, but first, you'll need to assure the robot has all of the equipment it needs.<br />
+                            <br />
+                            <strong class="white">Answer the questions below:</strong>
+                        </div>
+                    </div>
+
+                    <div class="question-container">
+
+                        <div class="show-1 entire hidden" data-slide-show="fadeIn">
+                            <div class="question proxima reg orange-brown s21">
+                                1. What mode of transportation is the best way to reach the volcano from the boat?
+                            </div>
+                            <div class="answers show-1" data-slide-show="flipInX">
+                                <div class="answer clickable proxima med white s16 good">Flying</div>
+                                <div class="answer clickable proxima med white s16">Driving on land</div>
+                                <div class="answer clickable proxima med white s16">Swimming underwater</div>
+                                <div class="answer clickable proxima med white s16">Running on foot</div>
+                            </div>
+                            <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+                            <div class="next-question clickable proxima semi s15 yellow finished-show hidden">Next<br>Question</div>
+                        </div>
+                        <div class="show-2 entire hidden" data-slide-show="fadeIn">
+                            <div class="question proxima reg orange-brown s21">
+                                2. What does the robot need to monitor the hot magma in the volcano?
+                            </div>
+                            <div class="answers show-2" data-slide-show="flipInX">
+                                <div class="answer clickable proxima med white s16">Ultrasonic Sensor</div>
+                                <div class="answer clickable proxima med white s16">Liquid Depth Sensor</div>
+                                <div class="answer clickable proxima med white s16 good">Infrared Camera</div>
+                                <div class="answer clickable proxima med white s16">Rain Gauge</div>
+                            </div>
+                            <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+                            <div class="next-question clickable proxima semi s15 yellow finished-show hidden">Next<br>Question</div>
+                        </div>
+                        <div class="show-3 entire hidden" data-slide-show="fadeIn">
+                            <div class="question proxima med orange-brown s21">
+                                3. To provide 24-hour monitoring, what should the robot bring to extend its operational time?
+                            </div>
+                            <div class="answers show-3" data-slide-show="flipInX">
+                                <div class="answer clickable proxima med white s16">Flotation device</div>
+                                <div class="answer clickable proxima med white s16 good">Extra battery pack</div>
+                                <div class="answer clickable proxima med white s16">First aid</div>
+                                <div class="answer clickable proxima med white s16">Vaccines</div>
+                            </div>
+                            <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+                            <div class="close-dialog clickable proxima semi s15 yellow finished-show hidden">Close<br>Dialog</div>
+                        </div>
+                        <div class="next clickable s100 nasal white">&rsaquo;</div>
+                        <div class="prev clickable s100 nasal white">&lsaquo;</div>
+                        <div class="outof proxima med s15 white show-1 hidden">1 of 3</div>
+                        <div class="outof proxima med s15 white show-2 hidden">2 of 3</div>
+                        <div class="outof proxima med s15 white show-3 hidden">3 of 3</div>
+                    </div>
+                </div>
+
+                <div class="quiz-wrapup hidden">
+                    <div class="blue-heading">
+                        <img class="heading-image" src="images/challenge-2/c2-icon-inverted.png">
+                        <div class="dialog-title proxima reg off-gray lh-tight s20" data-show="fadeIn ~1.5s">
+                            <strong class="white">Congratulations!</strong><br />
+                            <br />
+                            Your robot is ready. You'll need to fly your drone from a carrier off the coast and into the volcano so that it can provide more information about when it is likely to erupt.
+                        </div>
+                    </div>
+                    <img class="c2-drone" src="images/challenge-2/c2-drone.png">
+                </div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="volcano_tutorial_mission" class="fixed full height hidden">
+    <!--Todo Change Next button to gameplay item-->
+    <img src="images/global/next.png" class="next hidden clickable" data-show="fadeIn">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-2/c2-mission-debrief-bg.jpg" class="sky">
+                <div class="overlay"></div>
+            </div>
+            <div class="content">
+                
+                <div class="game-board">
+                    <img class="game-grid" src="images/challenge-2/c2-game-grid-1.png">
+                    <img class="game-1-destination" src="images/challenge-2/c2-game-destination-1.png">
+                    <div class="game-piece">
+                      <img class="game-piece-sprite" src="images/challenge-2/c2-game-drone.png">
+                    </div>
+                </div>
+
+                <img class="help-icon clickable hotspot hotspot-tutorial-help" data-dialog="#volcano_tutorial_mission .tutorial-dialog" src="images/global/info.png">
+
+                <div class="game-title nasal reg s36 white">Volcano</div>
+                <div class="game-instructions proxima reg s20 yellow">1. Approach and Enter</div>
+
+                <img class="reset-button clickable" src="images/global/controls_Reset.png">
+                <img class="launch-button clickable" src="images/global/controls_Launch.png">
+
+                <div class="turn-left-text proxima reg s14 blue-gray">Left Turn</div>
+                <div class="game-control turn-left clickable" data-action="left">
+                    <img class="control-image turn-left" src="images/global/controls_Left.png">
+                </div>
+
+                <div class="move-forward-text proxima reg s14 blue-gray">Forward</div>
+                <div class="game-control move-forward clickable" data-action="forward">
+                    <img class="control-image move-forward" src="images/global/controls_Forward.png">
+                </div>
+
+                <div class="turn-right-text proxima reg s14 blue-gray">Right Turn</div>
+                <div class="game-control turn-right clickable" data-action="right">
+                    <img class="control-image turn-right" src="images/global/controls_Right.png">
+                </div>
+
+                <div class="enter-text proxima reg s14 blue-gray">Enter</div>
+                <div class="game-control special-command enter clickable" data-action="special">
+                    <img class="control-image enter" src="images/global/controls_Enter.png">
+                </div>
+
+                <div class="movement-directions proxima white s15">
+                    <strong class="yellow">Plot Course:</strong> Drag each direction tile on the left to the boxes below. Then, click LAUNCH.
+                </div>
+                <div class="movement-queue">
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                </div>
+            </div>
+            <div class="cover hidden" data-show="fadeIn 0.5s" data-hide="fadeOut ~0.5s 0.5s"></div>
+        </div>
+        <div class="dialog tutorial-dialog hidden" data-show="fadeIn" data-hide="fadeOut">
+            <img class="bg-image" src="images/challenge-2/c2-game-help-1.png" data-show="fadeIn">
+            <img src="images/global/modal_close.png" class="close" data-show="fadeIn">
+        </div>
+        <div class="dialog message-dialog hidden" data-show="fadeIn" data-hide="fadeOut">
+            <div class="message-text"></div>
+            <img src="images/global/modal_close.png" class="close" data-show="fadeIn">
+        </div>
+    </div>
+</section>
+
+<section id="volcano_get_sample_mission" class="fixed full height hidden">
+    <!--Todo Change Next button to gameplay item-->
+    <img src="images/global/next.png" class="next hidden clickable" data-show="fadeIn">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-2/c2-mission-debrief-bg.jpg" class="sky">
+                <div class="overlay"></div>
+            </div>
+            <div class="content">
+
+                <div class="game-board">
+                    <img class="game-grid" src="images/challenge-2/c2-game-grid-2.png">
+                    <img class="game-2-destination" src="images/challenge-2/c2-game-destination-2.png">
+                    <img class="game-2-air-current-hazards" src="images/challenge-2/c2-hazard-air-currents.png">
+                    <div class="game-piece">
+                      <img class="game-piece-sprite" src="images/challenge-2/c2-game-drone-2.png">
+                    </div>
+                </div>
+
+                <img class="help-icon clickable hotspot hotspot-tutorial-help" data-dialog="#volcano_get_sample_mission .get-sample-dialog" src="images/global/info.png">
+                <div class="game-title nasal reg s36 white">Volcano</div>
+                <div class="game-instructions proxima reg s20 yellow">2. Collect a sample</div>
+
+                <img class="reset-button clickable" src="images/global/controls_Reset.png">
+                <img class="launch-button clickable" src="images/global/controls_Launch.png">
+
+                <div class="turn-left-text proxima reg s14 blue-gray">Left Turn</div>
+                <div class="game-control turn-left clickable" data-action="left">
+                    <img class="control-image turn-left" src="images/global/controls_Left.png">
+                </div>
+
+                <div class="move-forward-text proxima reg s14 blue-gray">Forward</div>
+                <div class="game-control move-forward clickable" data-action="forward">
+                    <img class="control-image move-forward" src="images/global/controls_Forward.png">
+                </div>
+
+                <div class="turn-right-text proxima reg s14 blue-gray">Right Turn</div>
+                <div class="game-control turn-right clickable" data-action="right">
+                    <img class="control-image turn-right" src="images/global/controls_Right.png">
+                </div>
+
+                <div class="get-sample-text proxima reg s14 blue-gray lh-tight">Collect Sample</div>
+                <div class="game-control special-command get-sample clickable" data-action="special">
+                    <img class="control-image enter" src="images/global/controls_Sample.png">
+                </div>
+
+                <div class="movement-queue">
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                </div>
+            </div>
+            <div class="cover hidden" data-show="fadeIn 0.5s" data-hide="fadeOut ~0.5s 0.5s"></div>
+        </div>
+        <div class="dialog get-sample-dialog hidden" data-show="fadeIn" data-hide="fadeOut">
+            <img class="bg-image" src="images/challenge-2/c2-game-help-2.png" data-show="fadeIn">
+            <img src="images/global/modal_close.png" class="close" data-show="fadeIn">
+        </div>
+        <div class="dialog message-dialog hidden" data-show="fadeIn" data-hide="fadeOut">
+            <div class="message-text"></div>
+            <img src="images/global/modal_close.png" class="close" data-show="fadeIn">
+        </div>
+    </div>
+</section>
+
+<section id="volcano_congrats_screen" class="congrats-screen fixed full height hidden" data-show="fadeIn 2s">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-1/c1-stormy-sunset.png" class="sky">
+            </div>
+            <div class="content">
+                <img class="gradient entire" src="images/complete/complete_gradient.png">
+                <div class="blue-heading">
+                    <img class="challenge" src="images/complete/challenge.png">
+                    <div class="white-box nasal white s80">2</div>
+                </div>
+                <div class="to-our nasal white s36 shadowed">
+                    Natural Hazards -<br />
+                    Robots to the Rescue
+                </div>
+                <div class="great-work proxima extra s20">
+                    Super job!
+                </div>
+                <div class="learned proxima reg s20">
+                    Your work monitoring the active volcano was of great importance to the <em>Natural Hazards Rapid Response Team</em>.
+                </div>
+                <div class="now proxima extra corn dark s20">
+                    The people living near the volcano can be updated with the information you gathered.
+                </div>
+                <div class="continue clickable corn shadowless smaller button">
+                    Continue
+                </div>
+                <img class="twf" src="images/complete/twf.png">
+                <img class="de" src="images/complete/de.png">
+                <div class="copyright proxima reg s14">
+                    Copyright &copy; 2018 Discovery Education, Inc. All rights reserved.
+                </div>
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Earthquake Rescue -->
+<section id="earthquake_rescue_map" class="fixed full height hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/map-bg.jpg" class="sky">
+            </div>
+            <div class="content">
+                <img src="images/challenge-3/c3-icon.png"
+                     class="mp-c3-icon">
+                <img src="images/global/map-atv-bot.png"
+                     class="mp-atv">
+                <img src="images/global/map-go.png"
+                     class="mp-go clickable">
+
+                <div class="map-title nasal white s54">
+                    Earthquake</div>
+
+                <div class="map-subtitle proxima med s24 white">
+                    <span class="step-blue proxima bold">Rescue assignment: </span>California</div>
+
+                <div class="mission-alert proxima reg s21 yellow lh-tight">
+                    An earthquake in California has damaged buildings and cast debris into the streets.</div>
+
+                <div class="mission-message proxima reg s18 lt-gray lh-tight">
+                    Bring disaster relief supplies to the survivors in cut-off areas!</div>
+
+                <div class="atv-label proxima reg s15 lt-blue">
+                    Robot: All Terrain Ground Vehicle</div>
+
+                <div class="spinning-earth-container volcano-container">
+                    <canvas id="earthquake-earth" width="600" height="600"></canvas>
+                    <div id="earthquake-locations" class=""></div>
+                </div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                </div>
+
+                <hr class="title-underline" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="earthquake_mission_debrief" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-3/c3-earthquake-bg.png" class="sky">
+            </div>
+            <div class="content">
+                <img src="images/challenge-3/c3-icon-large.png"
+                     class="mp-c2-icon-large">
+
+                <div class="debrief-title nasal white s58">
+                    Earthquake</div>
+
+                <div class="debrief-alert proxima s25 yellow">
+                    California has just experienced a magnitude 7.0 earthquake!
+                </div>
+
+                <div class="debrief-message proxima s18 white">
+                    We have received a call from emergency services saying there are people trapped in that building. Program your robot to travel to and bring aid to the survivors!</div>
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="earthquake_mission_questions" class="fixed full height hidden">
+    <img src="images/global/next.png" class="clickable next-emq hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-3/c3-earthquake-bg.png" class="sky">
+                <div class="overlay"></div>
+            </div>
+            <div class="cover hidden" data-show="fadeIn 0.5s" data-hide="fadeOut ~0.5s 0.5s"></div>
+            <div class="content">
+                <!--Taken From Screen #3-->
+                <div class="earthquake-assembly-questions container dialog h1" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <div class="blue-heading">
+                        <img class="heading-image" src="images/challenge-3/c3-icon-inverted.png">
+                        <div class="dialog-title proxima reg off-gray lh-tight s20" data-show="fadeIn ~1.5s">
+                            Before you program your robot to bring disaster relief supplies to the survivors in cut-off areas, you'll need to assure the robot has all of the equipment it needs.
+                            <br />
+                            <strong class="white">Answer the questions below:</strong>
+                        </div>
+                    </div>
+
+                    <div class="question-container">
+
+                        <div class="show-1 entire hidden" data-slide-show="fadeIn">
+                            <div class="question proxima reg orange-brown s21">
+                                1. What mode of transportation is the best way to reach people trapped in the collapsed buildings?
+                            </div>
+                            <div class="answers show-1" data-slide-show="flipInX">
+                                <div class="answer clickable proxima med white s16">Flying</div>
+                                <div class="answer clickable proxima med white s16 good">Driving on land</div>
+                                <div class="answer clickable proxima med white s16">Swimming underwater</div>
+                                <div class="answer clickable proxima med white s16">Running on foot</div>
+                            </div>
+                            <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+                            <div class="next-question clickable proxima semi s15 yellow finished-show hidden">Next<br>Question</div>
+                        </div>
+                        <div class="show-2 entire hidden" data-slide-show="fadeIn">
+                            <div class="question proxima reg orange-brown s21">
+                                2. What does the robot need to navigate within a crumbling building?
+                            </div>
+                            <div class="answers show-2" data-slide-show="flipInX">
+                                <div class="answer clickable proxima med white s16">Temperature sensor</div>
+                                <div class="answer clickable proxima med white s16">Liquid Depth sensor</div>
+                                <div class="answer clickable proxima med white s16 good">Ultrasonic sensor</div>
+                                <div class="answer clickable proxima med white s16">Flotation device</div>
+                            </div>
+                            <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+                            <div class="next-question clickable proxima semi s15 yellow finished-show hidden">Next<br>Question</div>
+                        </div>
+                        <div class="show-3 entire hidden" data-slide-show="fadeIn">
+                            <div class="question proxima med orange-brown s21">
+                                3. What should the robot bring these people when it finds them?
+                            </div>
+                            <div class="answers show-3" data-slide-show="flipInX">
+                                <div class="answer clickable proxima med white s16">Flotation device</div>
+                                <div class="answer clickable proxima med white s16">Extra battery pack</div>
+                                <div class="answer clickable proxima med white s16 good">First aid</div>
+                                <div class="answer clickable proxima med white s16">Vaccines</div>
+                            </div>
+                            <div class="submit clickable white shadowless smaller button finished-hide">Submit</div>
+                            <div class="close-dialog clickable proxima semi s15 yellow finished-show hidden">Close<br>Dialog</div>
+                        </div>
+                        <div class="next clickable s100 nasal white">&rsaquo;</div>
+                        <div class="prev clickable s100 nasal white">&lsaquo;</div>
+                        <div class="outof proxima med s15 white show-1 hidden">1 of 3</div>
+                        <div class="outof proxima med s15 white show-2 hidden">2 of 3</div>
+                        <div class="outof proxima med s15 white show-3 hidden">3 of 3</div>
+                    </div>
+                </div>
+
+                <div class="quiz-wrapup hidden">
+                    <div class="blue-heading">
+                        <img class="heading-image" src="images/challenge-3/c3-icon-inverted.png">
+                        <div class="dialog-title proxima reg off-gray lh-tight s20" data-show="fadeIn ~1.5s">
+                            <strong class="white">Congratulations!</strong><br />
+                            <br />
+                            Your robot is ready. There are survivors trapped in the rubble. Navigate your robot to bring supplies to the survivors!
+                        </div>
+                    </div>
+                    <img class="c3-atv" src="images/challenge-3/c3-atv-close-up.png">
+                </div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="earthquake_disaster_relief_mission" class="fixed full height hidden">
+    <!--Todo Change Next button to gameplay item-->
+    <img src="images/global/next.png" class="next next-vmq hidden clickable" data-show="fadeIn">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-3/c3-earthquake-bg.png" class="sky">
+                <div class="overlay"></div>
+            </div>
+            <div class="content">
+
+                <div class="game-board">
+                    <img class="game-grid" src="images/challenge-3/c3-game-grid.png">
+                    <img class="game-3-destination-1" src="images/challenge-3/c3-game-destination.png">
+                    <img class="game-3-destination-2" src="images/challenge-3/c3-game-destination.png">
+                    <img class="hazard hazards-crack" src="images/challenge-3/c3-hazard-crack.png">
+                    <img class="hazard hazards-debris" src="images/challenge-3/c3-hazard-debris.png">
+                    <img class="hazard hazards-debris-lg" src="images/challenge-3/c3-hazard-debris-lg.png">
+                    <img class="hazard hazards-fire" src="images/challenge-3/c3-hazard-fire.png">
+                    <div class="game-piece">
+                        <img class="game-piece-sprite" src="images/challenge-3/c3-game-sprite-1.png">
+                    </div>
+                </div>
+
+                <img class="help-icon clickable hotspot hotspot-tutorial-help" data-dialog="#earthquake_disaster_relief_mission .disaster-relief-dialog" src="images/global/info.png">
+                <div class="game-title nasal reg s36 white">Earthquake</div>
+                <div class="game-instructions proxima reg s20 yellow">Disaster Relief</div>
+
+                <img class="reset-button clickable" src="images/global/controls_Reset.png">
+                <img class="launch-button clickable" src="images/global/controls_Launch.png">
+
+                <div class="turn-left-text proxima reg s14 blue-gray">Left Turn</div>
+                <div class="game-control turn-left clickable" data-action="left">
+                    <img class="control-image turn-left" src="images/global/controls_Left.png">
+                </div>
+
+                <div class="move-forward-text proxima reg s14 blue-gray">Forward</div>
+                <div class="game-control move-forward clickable" data-action="forward">
+                    <img class="control-image move-forward" src="images/global/controls_Forward.png">
+                </div>
+
+                <div class="turn-right-text proxima reg s14 blue-gray">Right Turn</div>
+                <div class="game-control turn-right clickable" data-action="right">
+                    <img class="control-image turn-right" src="images/global/controls_Right.png">
+                </div>
+
+                <div class="disaster-relief-text proxima reg s14 blue-gray lh-tight">Disaster Relief</div>
+                <div class="game-control special-command disaster-relief clickable" data-action="special">
+                    <img class="control-image enter" src="images/global/controls_Relief.png">
+                </div>
+
+                <div class="movement-queue">
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                    <div class="drop-area"></div>
+                </div>
+            </div>
+            <div class="cover hidden" data-show="fadeIn 0.5s" data-hide="fadeOut ~0.5s 0.5s"></div>
+        </div>
+        <div class="dialog disaster-relief-dialog hidden" data-show="fadeIn" data-hide="fadeOut">
+            <img class="bg-image" src="images/challenge-3/c3-game-help.png" data-show="fadeIn">
+            <div class="close" data-show="fadeIn"></div>
+        </div>
+        <div class="dialog message-dialog hidden" data-show="fadeIn" data-hide="fadeOut">
+            <div class="message-text"></div>
+            <img src="images/global/modal_close.png" class="close" data-show="fadeIn">
+        </div>
+    </div>
+</section>
+
+<section id="earthquake_congrats_screen" class="congrats-screen fixed full height hidden" data-show="fadeIn 2s">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-1/c1-stormy-sunset.png" class="sky">
+            </div>
+            <div class="content">
+                <img class="gradient entire" src="images/complete/complete_gradient.png">
+                <div class="blue-heading">
+                    <img class="challenge" src="images/complete/challenge.png">
+                    <div class="white-box nasal white s80">3</div>
+                </div>
+                <div class="to-our nasal white s36 shadowed">
+                    Natural Hazards -<br />
+                    Robots to the Rescue
+                </div>
+                <div class="great-work proxima extra s20">
+                    Excellent Job!
+                </div>
+                <div class="learned proxima reg s20">
+                    You successfully navigated the robot to the people trapped in the building and brought them relief supplies.
+                </div>
+                <div class="now proxima extra corn dark s20">
+                    Think about the effort it took for you to help people trapped by an earthquake. Is it better to try to prevent damage from natural disasters or to deal with disasters after they occur? Why?
+                </div>
+                <div class="continue clickable corn shadowless smaller button">
+                    Continue
+                </div>
+                <img class="twf" src="images/complete/twf.png">
+                <img class="de" src="images/complete/de.png">
+                <div class="copyright proxima reg s14">
+                    Copyright &copy; 2018 Discovery Education, Inc. All rights reserved.
+                </div>
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Summary Screen -->
+<section id="interactive_summary" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-1/c1-stormy-sunset.png" class="sky">
+            </div>
+            <div class="content">
+                <div class="blue-heading">
+                    <img class="heading-image" src="images/challenge-4/c4-icon-inverted.png">
+                    <div class="dialog-title proxima reg off-gray lh-tight s20" data-show="fadeIn ~1.5s">
+                        Think about the different natural disasters that can occur. What are the short-and long-term impacts of different natural disasters?
+                    </div>
+                    <div class="categories-title proxima semi s21 white">Drag each natural hazard impact to the correct category below:</div>
+                </div>
+                <div class="impacts-heading proxima reg s21 yellow">Impacts</div>
+
+                <div class="impacts">
+
+                    <div class="impact-targets">
+                        <div class="c4-target-short-term-impacts-container">
+                            <div class="impact-label proxima reg s15 white">SHORT-TERM IMPACTS</div>
+                            <img class="c4-target-short-term-impacts-outline" src="images/challenge-1/c1-target-event-outline.png">
+                        </div>
+                        <div class="c4-target-long-term-impacts-container">
+                            <div class="impact-label proxima reg s15 white">LONG-TERM IMPACTS</div>
+                            <img class="c4-target-long-term-impacts-outline" src="images/challenge-1/c1-target-inside-outline.png">
+                        </div>
+                        <div class="drop-area d1" data-name='["d1","d2", "d3"]' data-correct='d1'></div>
+                        <div class="drop-area d2" data-name='["d1","d2", "d3"]' data-correct='d2'></div>
+                        <div class="drop-area d3" data-name='["d1","d2", "d3"]' data-correct='d3'></div>
+                        <div class="drop-area d4" data-name='["d4","d5"]' data-correct='d4'></div>
+                        <div class="drop-area d5" data-name='["d4","d5"]' data-correct='d5'></div>
+                    </div>
+
+                    <div class="impacts-source">
+                        <div class="drag impact impact-landscapes" data-target="d4"><img class="c1-impact-property-damage" src="images/challenge-4/c4_summary_landscape.png"></div>
+                        <div class="drag impact impact-money" data-target="d3"><img class="c1-hazard-drag-earthquake" src="images/challenge-4/c4_summary_money.png"></div>
+                        <div class="drag impact impact-migration" data-target="d5"><img class="c1-hazard-drag-flood" src="images/challenge-4/c4_summary_migration.png"></div>
+                        <div class="drag impact impact-injury" data-target="d2"><img class="c1-hazard-drag-hurricane" src="images/challenge-4/c4_summary_injury.png"></div>
+                        <div class="drag impact impact-property" data-target="d1"><img class="c1-hazard-drag-volcano" src="images/challenge-4/c4_summary_property.png"></div>
+
+                        <img class="drop-success drop-success-d1 d1 hidden" src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+                        <img class="drop-success drop-success-d2 d2 hidden" src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+                        <img class="drop-success drop-success-d3 d3 hidden" src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+                        <img class="drop-success drop-success-d4 d4 hidden" src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+                        <img class="drop-success drop-success-d5 d5 hidden" src="images/02/modals/telescope/02_modal_telescope_checkMark.png">
+                    </div>
+
+                    <div class="good-job proxima bold white s30 hidden drag-success" data-drag-success="zoomIn 2s">
+                        Good Job!
+                    </div>
+
+                    <div class="submit clickable white button drag-done hidden" data-drag-done="bounceIn" data-drag-success="fadeOut" data-drag-failure="fadeOut" data-drag-retry="fadeOut">
+                        Submit
+                    </div>
+
+                    <div class="nice-try drag-retry clickable white button hidden" data-drag-retry="zoomIn 2s">
+                        Try Again!
+                    </div>
+
+                    <div class="correct-order proxima bold white s30 drag-failure hidden" data-drag-failure="fadeIn 2s">
+                        Nice Try! Here's the correct answer:
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+            <div class="cover hidden" data-show="fadeIn 0.5s" data-hide="fadeOut ~0.5s 0.5s"></div>
+        </div>
+        <div class="dialog h1 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Military Services
+            </div>
+            <img class="back" src="images/challenge-4/career_military_modal.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                Many people serving in the military help with disaster relief. They have expertise in providing medical care and evacuation when needed.
+            </div>
+        </div>
+        <div class="dialog h2 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Storm Chaser
+            </div>
+            <img class="back" src="images/challenge-4/career_stormChaser_modal.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                These meteorologists study weather conditions that produce large storms. They help scientists predict and understand storms to give people more warning before a natural disaster occurs.
+            </div>
+        </div>
+        <div class="dialog h3 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Reporter/Journalist
+            </div>
+            <img class="back" src="images/challenge-4/career_reporter_modal.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                Reporters spread the word when a natural disaster is approaching. They make sure people know to evacuate or stay indoors to be safe.
+            </div>
+        </div>
+        <div class="dialog h4 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Software Developer
+            </div>
+            <img class="back" src="images/challenge-4/career_software_modal.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                Software developers design the programming for robots that assist with recovery from a natural disaster. They make sure the robots do what they are told.
+            </div>
+        </div>
+        <div class="dialog h5 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Robotics Engineer
+            </div>
+            <img class="back" src="images/challenge-4/career_robotics_modal.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                Robotics engineers design the physical hardware of robots. They choose what components are needed for robots to function.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Career Connection Screen -->
+<section id="career_connection" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-1/c1-stormy-sunset.png" class="sky">
+            </div>
+            <div class="content">
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                </div>
+                <div class="blue">
+                    <img src="images/challenge-4/c4-icon-inverted.png" class="challenge1">
+                    <div class="intro proxima reg gray s18">
+                        What careers help people to prevent and deal with natural disasters? In fact, quite a few. Let's explore some of these careers and learn what professionals in each area do.
+                    </div>
+                    <div class="instructions proxima reg white s18">
+                        Do any of these careers seem interesting to you? Why?
+                    </div>
+                </div>
+                <img class="clickable learn1" src="images/challenge-4/career_military.png" data-dialog="#career_connection .dialog.h1"
+                     data-text=".learn1-text" data-check="c1">
+                <img class="clickable learn2" src="images/challenge-4/career_stormChaser.png" data-dialog="#career_connection .dialog.h2"
+                     data-text=".learn2-text" data-check="c2">
+                <img class="clickable learn3" src="images/challenge-4/career_reporter.png" data-dialog="#career_connection .dialog.h3"
+                     data-text=".learn3-text" data-check="c3">
+                <img class="clickable learn4" src="images/challenge-4/career_software.png" data-dialog="#career_connection .dialog.h4"
+                     data-text=".learn4-text" data-check="c4">
+                <img class="clickable learn5" src="images/challenge-4/career_robotics.png" data-dialog="#career_connection .dialog.h5"
+                     data-text=".learn5-text" data-check="c5">
+                <div class="proxima reg s18 white">
+                    <div class="learn1-text">Military Services</div>
+                    <div class="learn2-text">Metereologist</div>
+                    <div class="learn3-text">Reporter/Journalist</div>
+                    <div class="learn4-text">Software Developer</div>
+                    <div class="learn5-text">Robotics Engineer</div>
+                </div>
+
+                <img src="images/03/chall_01_planet_checkbox.png" class="checkbox1 clickable checkbox hide-c1 learn1-checkbox"
+                     data-toggle="c1" data-dialog="#career_connection .dialog.h1" data-text=".learn1-text" data-check="c1">
+                <img src="images/03/chall_01_planet_checkbox.png" class="checkbox2 clickable checkbox hide-c2 learn2-checkbox"
+                     data-toggle="c2" data-dialog="#career_connection .dialog.h2" data-text=".learn2-text" data-check="c2">
+                <img src="images/03/chall_01_planet_checkbox.png" class="checkbox3 clickable checkbox hide-c3 learn3-checkbox"
+                     data-toggle="c3" data-dialog="#career_connection .dialog.h3" data-text=".learn3-text" data-check="c3">
+                <img src="images/03/chall_01_planet_checkbox.png" class="checkbox4 clickable checkbox hide-c4 learn4-checkbox"
+                     data-toggle="c4" data-dialog="#career_connection .dialog.h4" data-text=".learn4-text" data-check="c4">
+                <img src="images/03/chall_01_planet_checkbox.png" class="checkbox5 clickable checkbox hide-c5 learn5-checkbox"
+                     data-toggle="c5" data-dialog="#career_connection .dialog.h5" data-text=".learn5-text" data-check="c5">
+                <img src="images/03/chall_01_planet_checkbox_selected.png"
+                     class="checkbox1 clickable checkbox hidden show-c1" data-toggle="c1">
+                <img src="images/03/chall_01_planet_checkbox_selected.png"
+                     class="checkbox2 clickable checkbox hidden show-c2" data-toggle="c2">
+                <img src="images/03/chall_01_planet_checkbox_selected.png"
+                     class="checkbox3 clickable checkbox hidden show-c3" data-toggle="c3">
+                <img src="images/03/chall_01_planet_checkbox_selected.png"
+                     class="checkbox4 clickable checkbox hidden show-c4" data-toggle="c4">
+                <img src="images/03/chall_01_planet_checkbox_selected.png"
+                     class="checkbox5 clickable checkbox hidden show-c5" data-toggle="c5">
+                <img src="images/03/chall_01_planet_checkbox_selected.png"
+                     class="checkbox6 clickable checkbox hidden show-c6" data-toggle="c6">
+
+                <div class="continue clickable corn shadowless smaller button hidden">
+                    Continue
+                </div>
+            </div>
+            <div class="cover hidden" data-show="fadeIn 0.5s" data-hide="fadeOut ~0.5s 0.5s"></div>
+        </div>
+        <div class="dialog h1 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Military Services
+            </div>
+            <img class="back" src="images/challenge-4/career_military_modal.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                Many people serving in the military help with disaster relief. They have expertise in providing medical care and evacuation when needed.
+            </div>
+        </div>
+        <div class="dialog h2 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Metereologist
+            </div>
+            <img class="back" src="images/challenge-4/career_stormChaser_modal.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                These meteorologists study weather conditions that produce large storms. They help scientists predict and understand storms to give people more warning before a natural disaster occurs.
+            </div>
+        </div>
+        <div class="dialog h3 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Reporter/Journalist
+            </div>
+            <img class="back" src="images/challenge-4/career_reporter_modal.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                Reporters spread the word when a natural disaster is approaching. They make sure people know to evacuate or stay indoors to be safe.
+            </div>
+        </div>
+        <div class="dialog h4 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Software Developer
+            </div>
+            <img class="back" src="images/challenge-4/career_software_modal.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                Software developers design the programming for robots that assist with recovery from a natural disaster. They make sure the robots do what they are told.
+            </div>
+        </div>
+        <div class="dialog h5 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Robotics Engineer
+            </div>
+            <img class="back" src="images/challenge-4/career_robotics_modal.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                Robotics engineers design the physical hardware of robots. They choose what components are needed for robots to function.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Congrats Screen -->
+<section id="final_congrats_screen" class="congrats-screen fixed full height hidden" data-show="fadeIn 2s">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/challenge-1/c1-stormy-sunset.png" class="sky">
+            </div>
+            <div class="content">
+                <img class="gradient entire" src="images/complete/complete_gradient.png">
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                </div>
+                <div class="blue-heading">
+                    <img class="challenge" src="images/complete/challenge.png">
+                    <div class="white-box nasal white s80">4</div>
+                </div>
+                <div class="to-our nasal white s36 shadowed">
+                    Natural Hazards -<br />
+                    Robots to the Rescue
+                </div>
+                <div class="great-work proxima extra s20">
+                    You did a great job!
+                </div>
+                <div class="learned proxima reg s20">
+                    While we cannot prevent natural hazards from occuring, we can continue to better understand how to manage and lessen their impact using engineering and technology.
+                </div>
+                <div class="now proxima extra corn dark s20">
+                    You may find yourself contributing to this important work one day!
+                </div>
+                <div class="continue clickable corn shadowless smaller button">
+                    Continue
+                </div>
+                <img class="twf" src="images/complete/twf.png">
+                <img class="de" src="images/complete/de.png">
+                <div class="copyright proxima reg s14">
+                    Copyright &copy; 2018 Discovery Education, Inc. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Wrap Up -->
+<section id="wrap_up" class="fixed full height hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img class="loader image" src="images/splash-screen/splash-bg.png">
+            </div>
+            <div class="content">
+                <!-- <img src="images/intro/moon.png" class="moon"> -->
+                <div class="title">
+                    <div class="title-solar nasal white">
+                        <!--<span class="s12"></span>--><br>
+                        <span class="s22">Natural Hazards -</span>
+                    </div>
+                    <div class="title-back nasal corn s14">
+                        Robots to the Rescue
+                    </div>
+                </div>
+                <div class="congrats proxima extra s30 yellow">
+                    Congratulations!
+                </div>
+                <div class="completed proxima reg s30 white">
+                    You have successfully completed<br>
+                    <strong>Natural Hazards - Robots to the Rescue.</strong>
+                </div>
+                <div class="panel-container">
+                    <img class="panel" src="images/10/wrapUp_panel.png">
+                    <img class="numbers" src="images/10/wrapUp_challenges-numbers.png">
+                    <img class="checks" src="images/10/wrapUp_yellowChecks.png">
+                    <a href="images/completion-certificate-natural-hazards.pdf" target="_blank"><img class="cert clickable" src="images/10/wrapUp_cert_bttn.png"></a>
+                    <img class="play clickable" src="images/10/wrapUp_play_bttn.png">
+                    <img class="tiger clickable" src="images/10/wrapUp_tgr_bttn.png">
+                </div>
+                <img class="dised" src="images/10/wrapUp_de_white.png">
+                <img class="twf" src="images/10/wrapUp_twf_white.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/missions.js"></script>
+
+</body>
+</html>
