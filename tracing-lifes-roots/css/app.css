@@ -1,0 +1,3525 @@
+@import url("https://use.typekit.net/pnd8jrt.css");
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+.centered {
+  text-align: center;
+}
+.centered > .absolute {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.particles {
+  position: relative;
+}
+.particles > * {
+  display: block;
+  position: absolute;
+}
+.blue-dialog {
+  left: 80px;
+  top: 100px;
+  width: 202px;
+  height: 252px;
+  border-radius: 16px;
+  background-color: rgba(0, 133, 213, 0.6);
+}
+.blue-dialog-full {
+  top: 12%;
+  left: 5%;
+  height: 25%;
+  width: 90%;
+  font-size: 18px;
+}
+.blue-dialog-full .dialog-image {
+  top: 25px;
+  left: 20px;
+}
+.blue-dialog-full .dialog-description {
+  font-family: proxima-nova-regular, sans-serif;
+  left: 130px;
+  top: 45px;
+  width: 720px;
+  padding: 0;
+}
+.blue-dialog-full .dialog-instructions {
+  color: #ffb43d;
+  font-family: proxima-nova-regular, sans-serif;
+  text-align: center;
+  left: 18%;
+  width: 65%;
+  top: 95px;
+}
+.progress {
+  display: inline-block;
+  right: 90px;
+  top: 45px;
+}
+.progress > * {
+  position: static !important;
+  margin-left: 5px;
+  display: inline-block;
+}
+.progress .tab {
+  width: 14px;
+  height: 14px;
+  border-radius: 1px;
+  background-color: none;
+  border: 2px solid #aaa;
+  box-sizing: border-box;
+  opacity: 0.8;
+}
+.progress .tab.progressed {
+  background-color: #0085d5;
+  border: 2px solid #ffffff;
+  opacity: 1;
+}
+.progress img {
+  width: 21px;
+  height: 21px;
+}
+.nooverflow {
+  overflow: hidden;
+}
+.sequence {
+  position: relative;
+}
+.sequence > span {
+  display: inline-block;
+}
+.height.full {
+  height: 100vh;
+}
+.height.half {
+  height: 50vh;
+}
+.height.larger {
+  height: 100vh;
+}
+.hidden {
+  display: none !important;
+}
+.ignore {
+  pointer-events: none;
+  user-select: none;
+}
+.disabled {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.3;
+}
+.clickable {
+  cursor: pointer;
+  user-select: none;
+}
+section {
+  width: 100%;
+  position: relative;
+}
+section.fixed {
+  position: fixed;
+  top: 0;
+}
+section > .buffer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  height: 300%;
+}
+section > .buffer.bottom {
+  height: 200%;
+}
+section > .buffer.top {
+  top: 0;
+  height: 200%;
+}
+section > .buffer.top.bottom {
+  top: 0;
+  height: 100%;
+}
+.absolute,
+.absolutes > * {
+  position: absolute;
+}
+.absolute span,
+.absolutes > * span,
+.absolute strong,
+.absolutes > * strong,
+.absolute em,
+.absolutes > * em,
+.absolute i,
+.absolutes > * i,
+.absolute a,
+.absolutes > * a {
+  position: relative;
+}
+.relative,
+.relatives > * {
+  position: relative;
+}
+.inline,
+.inlines > * {
+  display: inline-block;
+  position: static !important;
+}
+.layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.popout {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.toggled {
+  filter: drop-shadow(0 0 20px #309dde);
+}
+[data-help] {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.loader-background {
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #000000;
+}
+.loader-background .loader {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
+.loader-background .loader.dots {
+  margin-top: -15px;
+}
+.divider {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.lds-ring-fixed-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -32px;
+  margin-right: -32px;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.nasal {
+  font-family: nasalization, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.proxima {
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+.proxima.reg {
+  font-weight: 400;
+}
+.proxima.med {
+  font-weight: 500;
+}
+.proxima.semi {
+  font-weight: 600;
+}
+.proxima.bold {
+  font-weight: 700;
+}
+.proxima.extra {
+  font-weight: 800;
+}
+.proxima.black-bold {
+  font-weight: 900;
+}
+.proxima.italic {
+  font-style: italic;
+}
+.proxima.nova {
+  font-family: proxima-nova-regular, sans-serif;
+}
+.lh-tight {
+  line-height: 1.1em;
+}
+.drop-shadow-small {
+  text-shadow: 1px 1px #000;
+}
+.drop-shadow {
+  text-shadow: 2px 2px #000;
+}
+.white {
+  color: #ffffff;
+}
+.black {
+  color: #000;
+}
+.yellow {
+  color: #a7f750;
+}
+.off-gray {
+  color: #c0bfbf;
+}
+.green {
+  color: #a7f750;
+}
+.gray {
+  color: #bbb;
+}
+.blue-gray {
+  color: #b0c0ca;
+}
+.orange-brown {
+  color: #eba332;
+}
+.step-yellow {
+  color: #fcaa35;
+}
+.step-gray {
+  color: #979898;
+}
+.step-blue {
+  color: #0085d5;
+}
+.lt-blue {
+  color: #80a4b9;
+}
+.corn {
+  color: #67d6e5;
+}
+.corn.dark {
+  color: #0085d5;
+}
+.lt-gray {
+  color: #e2e2e2;
+}
+.s12 {
+  font-size: 12px;
+}
+.s13 {
+  font-size: 13px;
+}
+.s14 {
+  font-size: 14px;
+}
+.s15 {
+  font-size: 15px;
+}
+.s16 {
+  font-size: 16px;
+}
+.s18 {
+  font-size: 18px;
+}
+.s20 {
+  font-size: 20px;
+}
+.s21 {
+  font-size: 21px;
+}
+.s22 {
+  font-size: 22px;
+}
+.s24 {
+  font-size: 24px;
+}
+.s25 {
+  font-size: 25px;
+}
+.s30 {
+  font-size: 30px;
+}
+.s36 {
+  font-size: 36px;
+}
+.s40 {
+  font-size: 36px;
+}
+.s54 {
+  font-size: 54px;
+}
+.s57 {
+  font-size: 57px;
+}
+.s58 {
+  font-size: 58px;
+}
+.s64 {
+  font-size: 64px;
+}
+.s80 {
+  font-size: 80px;
+}
+.s57.white,
+.s80.white {
+  text-shadow: 1px 1px 0px gray;
+}
+.s36.shadowed {
+  text-shadow: 1px 1px 4px gray;
+}
+.s100 {
+  font-size: 100px;
+}
+.scene {
+  width: 1024px;
+  height: 624px;
+  position: relative;
+}
+.scene .container {
+  width: 100%;
+  height: 100%;
+}
+.scene .container .background {
+  width: 1750px;
+  height: 736px;
+  position: absolute;
+  left: -363px;
+  top: -56px;
+  pointer-events: none;
+}
+.scene .container .background * {
+  position: absolute;
+}
+.scene .container .background span,
+.scene .container .background strong,
+.scene .container .background em,
+.scene .container .background i,
+.scene .container .background a,
+.scene .container .background br {
+  position: relative;
+}
+.scene .container .background .divider {
+  z-index: 100;
+  right: 0;
+  transform: translateX(50%);
+  width: 40%;
+  height: 100%;
+  opacity: 0;
+}
+.scene .container .background .overlay {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.7;
+}
+.scene .container .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.scene .container .content * {
+  position: absolute;
+}
+.scene .container .content span,
+.scene .container .content strong,
+.scene .container .content em,
+.scene .container .content i,
+.scene .container .content a,
+.scene .container .content br {
+  position: relative;
+}
+.scene .container .cover {
+  width: 1750px;
+  height: 736px;
+  position: absolute;
+  left: -363px;
+  top: -56px;
+  background-color: rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+  z-index: 1000;
+}
+.scene .dialog {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1001;
+}
+.scene .dialog * {
+  position: absolute;
+}
+.scene .dialog span,
+.scene .dialog strong,
+.scene .dialog em,
+.scene .dialog i,
+.scene .dialog a {
+  position: relative;
+}
+.scene .wide {
+  width: 100%;
+}
+.scene .entire {
+  width: 100%;
+  height: 100%;
+}
+.next {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  bottom: 12%;
+}
+.dialog {
+  position: absolute;
+}
+.dialog .close {
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  top: 30px;
+}
+.dialog .blue,
+.dialog .question-container {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  height: 75%;
+  width: 90%;
+}
+.dialog .blue-heading {
+  top: 15%;
+  left: 5%;
+  height: 25%;
+  width: 90%;
+}
+.dialog .blue-heading .heading-image {
+  top: 25px;
+  left: 20px;
+}
+.dialog .dialog-title {
+  position: absolute;
+  top: 0%;
+  height: 20%;
+  padding-top: 4%;
+  padding-left: 9%;
+}
+.dialog .back {
+  width: 100%;
+  height: 100%;
+}
+.notebook-modal.dialog .back {
+  left: 5.8%;
+  top: 90px;
+  width: auto;
+  height: auto;
+}
+.notebook-modal.dialog .row-divider {
+  top: 432px;
+  left: 100px;
+  width: 802px;
+  height: 100px;
+}
+.notebook-modal.dialog .divider-line {
+  color: black;
+  width: 520px;
+  height: 2px;
+  background-color: black;
+  opacity: 0.2;
+  left: 250px;
+}
+.notebook-modal.dialog .divider-text {
+  top: 21px;
+  left: 340px;
+  color: black;
+  opacity: 0.3;
+  font-family: 'proxima-nova';
+}
+.notebook-modal.dialog .continue-button {
+  top: 560px;
+  left: 550px;
+  opacity: 0;
+}
+.notebook-modal.dialog .row {
+  left: 50px;
+}
+.notebook-modal.dialog .row .row-title {
+  left: 50px;
+}
+.notebook-modal.dialog .row.row-1 {
+  top: 223px;
+}
+.notebook-modal.dialog .row.row-2 {
+  top: 292px;
+}
+.notebook-modal.dialog .row.row-3 {
+  top: 363px;
+}
+.notebook-modal.dialog .row.row-4 {
+  top: 493px;
+}
+.notebook-modal.dialog .row .checkbox-selected-container {
+  width: 30px;
+  overflow: hidden;
+  height: 30px;
+}
+.notebook-modal.dialog .row .checkbox-column {
+  top: 2px;
+}
+.notebook-modal.dialog .row .checkbox-column .checkbox-selected {
+  display: none;
+}
+.notebook-modal.dialog .row .checkbox-column.active .checkbox-selected {
+  display: block;
+}
+.notebook-modal.dialog .row .column-1 {
+  left: 340px;
+}
+.notebook-modal.dialog .row .column-2 {
+  left: 475px;
+}
+.notebook-modal.dialog .row .column-3 {
+  left: 610px;
+}
+.notebook-modal.dialog .row .column-4 {
+  left: 745px;
+}
+.notebook-modal.dialog.internal-page .row-1 {
+  top: 243px;
+}
+.notebook-modal.dialog.internal-page .note-1-bullet {
+  top: 347px;
+  left: 392px;
+}
+.notebook-modal.dialog.internal-page .note-1 {
+  top: 342px;
+  left: 415px;
+}
+.notebook-modal.dialog.internal-page .note-2-bullet {
+  top: 427px;
+  left: 392px;
+}
+.notebook-modal.dialog.internal-page .note-2 {
+  top: 422px;
+  left: 415px;
+}
+.notebook-modal.dialog.internal-page .continue-message {
+  top: 543px;
+  left: 390px;
+}
+.notebook-modal.dialog.internal-page .continue-button {
+  top: 542px;
+  left: 700px;
+}
+.button {
+  border-radius: 6px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  padding: 0.4em 1.2em;
+  display: inline-block;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+.button.white {
+  background-color: white;
+  color: black;
+}
+.button.corn {
+  background-color: #0085d5;
+  color: white;
+}
+.button.shadowless {
+  box-shadow: inherit;
+}
+.button.smaller {
+  font-size: 16px;
+}
+.circle {
+  border-radius: 30px;
+  font-size: 30px;
+  padding: 15px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-family: nasalization, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.circle.white {
+  background-color: white;
+  color: #00213c;
+}
+#splash_screen .parallax-sky {
+  background-color: #153759;
+  width: 100%;
+  height: 100%;
+}
+#splash_screen .begin-button {
+  top: 550px;
+  left: 50px;
+  background-color: #1586d2;
+  border-radius: 40px;
+  padding: 5px 30px;
+  font-family: proxima-nova-regular, sans-serif;
+}
+#splash_screen .colored-bg {
+  width: 100%;
+  height: 100%;
+  background-color: #052543;
+}
+#splash_screen .title-banner {
+  top: 445px;
+  left: 46px;
+}
+#splash_screen .title-full {
+  top: 110px;
+  left: 50px;
+}
+#splash_screen .animal-container,
+#challenge_1_debrief .animal-container,
+#animal_stat_discovery .animal-container {
+  top: 0;
+  left: 0;
+  width: 1024px;
+  height: 624px;
+}
+#splash_screen .animal-container .animal-duck,
+#challenge_1_debrief .animal-container .animal-duck,
+#animal_stat_discovery .animal-container .animal-duck {
+  top: 44%;
+  left: 54%;
+}
+#splash_screen .animal-container .animal-otter,
+#challenge_1_debrief .animal-container .animal-otter,
+#animal_stat_discovery .animal-container .animal-otter {
+  top: 56%;
+  left: 59%;
+}
+#splash_screen .animal-container .animal-echidna,
+#challenge_1_debrief .animal-container .animal-echidna,
+#animal_stat_discovery .animal-container .animal-echidna {
+  top: 73%;
+  left: 64%;
+}
+#splash_screen .animal-container .animal-platypus,
+#challenge_1_debrief .animal-container .animal-platypus,
+#animal_stat_discovery .animal-container .animal-platypus {
+  top: 86%;
+  left: 47.4%;
+}
+#splash_screen .animal-container .animal-text,
+#challenge_1_debrief .animal-container .animal-text,
+#animal_stat_discovery .animal-container .animal-text {
+  font-size: 16px;
+  color: #bdd5e5;
+  font-family: proxima-nova-regular, sans-serif;
+}
+#splash_screen .animal-container .animal-text.animal-text-duck,
+#challenge_1_debrief .animal-container .animal-text.animal-text-duck,
+#animal_stat_discovery .animal-container .animal-text.animal-text-duck {
+  top: 5px;
+  left: 5px;
+}
+#splash_screen .animal-container .animal-text.animal-text-otter,
+#challenge_1_debrief .animal-container .animal-text.animal-text-otter,
+#animal_stat_discovery .animal-container .animal-text.animal-text-otter {
+  top: 50px;
+  left: 100px;
+}
+#splash_screen .animal-container .animal-text.animal-text-echnida,
+#challenge_1_debrief .animal-container .animal-text.animal-text-echnida,
+#animal_stat_discovery .animal-container .animal-text.animal-text-echnida {
+  top: 67px;
+  left: 25px;
+}
+#splash_screen .animal-container .animal-text.animal-text-platypus,
+#challenge_1_debrief .animal-container .animal-text.animal-text-platypus,
+#animal_stat_discovery .animal-container .animal-text.animal-text-platypus {
+  top: 55px;
+  left: 120px;
+}
+#challenge_1_debrief .instructions-title {
+  top: 510px;
+  left: 5%;
+  text-shadow: 2px 2px #000;
+}
+#challenge_1_debrief .instructions {
+  top: 540px;
+  left: 5%;
+  width: 350px;
+  text-shadow: 1px 1px #000;
+}
+#animal_stat_discovery .instructions-title {
+  top: 510px;
+  left: 5%;
+  text-shadow: 2px 2px #000;
+}
+#animal_stat_discovery .instructions {
+  top: 540px;
+  left: 5%;
+  width: 350px;
+  text-shadow: 1px 1px #000;
+}
+#animal_stat_discovery .dialog .back {
+  left: 5.8%;
+  top: 90px;
+  width: auto;
+  height: auto;
+}
+#animal_stat_discovery .dialog .dialog-title {
+  color: #0a2a3f;
+  top: 84px;
+  left: 673px;
+}
+#animal_stat_discovery .dialog .world-locations {
+  color: #4395c6;
+  font-size: 13px;
+  font-family: proxima-nova-regular, sans-serif;
+  font-weight: normal;
+  text-align: center;
+}
+#animal_stat_discovery .dialog .world-locations .africa-label {
+  top: 275px;
+  left: 130px;
+}
+#animal_stat_discovery .dialog .world-locations .europe-label {
+  top: 206px;
+  left: 161px;
+}
+#animal_stat_discovery .dialog .world-locations .asia-label {
+  top: 235px;
+  left: 235px;
+}
+#animal_stat_discovery .dialog .world-locations .australia-label {
+  top: 336px;
+  left: 273px;
+}
+#animal_stat_discovery .dialog .world-locations .north-america-label {
+  top: 224px;
+  left: 443px;
+}
+#animal_stat_discovery .dialog .world-locations .south-america-label {
+  top: 310px;
+  left: 500px;
+}
+#animal_stat_discovery .dialog .large-animal-image.duck {
+  top: 325px;
+  left: 190px;
+}
+#animal_stat_discovery .dialog .large-animal-image.otter {
+  top: 325px;
+  left: 160px;
+}
+#animal_stat_discovery .dialog .large-animal-image.echidna {
+  top: 375px;
+  left: 200px;
+}
+#animal_stat_discovery .dialog .large-animal-image.platypus {
+  top: 400px;
+  left: 150px;
+}
+#animal_stat_discovery .dialog .key-stats-container {
+  top: 190px;
+  left: 640px;
+}
+#animal_stat_discovery .dialog .key-stats-container .header {
+  text-transform: uppercase;
+  color: #014974;
+  width: 300px;
+  font-weight: bold;
+}
+#animal_stat_discovery .dialog .key-stats-container .label {
+  text-transform: uppercase;
+  top: 20px;
+  font-family: proxima-nova-regular, sans-serif;
+  font-size: 13px;
+  color: #fff;
+  width: 300px;
+  font-weight: bold;
+}
+#animal_stat_discovery .dialog .key-stats-container .description {
+  top: 20px;
+  font-family: proxima-nova-regular, sans-serif;
+  font-size: 13px;
+  color: #dcdcdc;
+  width: 300px;
+}
+#animal_stat_discovery .dialog .key-stats-container .class-label {
+  top: 40px;
+}
+#animal_stat_discovery .dialog .key-stats-container .class-description {
+  top: 55px;
+}
+#animal_stat_discovery .dialog .key-stats-container .weight-label {
+  top: 85px;
+}
+#animal_stat_discovery .dialog .key-stats-container .weight-description {
+  top: 100px;
+}
+#animal_stat_discovery .dialog .key-stats-container .habitat-label {
+  top: 130px;
+}
+#animal_stat_discovery .dialog .key-stats-container .habitat-description {
+  top: 145px;
+}
+#animal_stat_discovery .dialog .key-stats-container .defense-label {
+  top: 175px;
+}
+#animal_stat_discovery .dialog .key-stats-container .defense-description {
+  top: 190px;
+}
+#animal_stat_discovery .dialog .key-stats-container .birth-type-label {
+  top: 220px;
+}
+#animal_stat_discovery .dialog .key-stats-container .birth-type-description {
+  top: 235px;
+}
+#animal_stat_discovery .dialog .key-stats-container .favorite-food-label {
+  top: 265px;
+}
+#animal_stat_discovery .dialog .key-stats-container .favorite-food-description {
+  top: 280px;
+}
+#animal_stat_discovery .dialog .key-stats-container .home-label {
+  top: 310px;
+}
+#animal_stat_discovery .dialog .key-stats-container .home-description {
+  top: 325px;
+}
+#animal_stat_discovery .dialog .fun-fact {
+  top: 563px;
+  left: 114px;
+  width: 448px;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+}
+#animal_stat_discovery .dialog.otter-modal .key-stats-container .home-label {
+  top: 325px;
+}
+#animal_stat_discovery .dialog.otter-modal .key-stats-container .home-description {
+  top: 340px;
+}
+#animal_stat_discovery .dialog.echidna-modal .dialog-title {
+  left: 655px;
+}
+#animal_stat_discovery .dialog.platypus-modal .dialog-title {
+  left: 655px;
+}
+#animal_stat_discovery .dialog.platypus-modal .key-stats-container .home-label {
+  top: 325px;
+}
+#animal_stat_discovery .dialog.platypus-modal .key-stats-container .home-description {
+  top: 340px;
+}
+#challenge_1_zoo_lab .background-fade {
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color: black;
+}
+#challenge_1_zoo_lab .section-title {
+  width: 588px;
+  height: 158px;
+  border-radius: 16px;
+  background-color: #0085d5;
+  color: white;
+  font-family: nasalization, sans-serif;
+  font-size: 62px;
+  line-height: 158px;
+  top: 170px;
+  left: 225px;
+  text-align: center;
+}
+#challenge_1_zoo_lab .page-description {
+  top: 350px;
+  left: 23%;
+  width: 56%;
+}
+#embryology_intro .blue-dialog .dialog-description {
+  top: 32px;
+}
+#embryology_intro .embryo-container {
+  width: 90%;
+  height: 215px;
+  top: 280px;
+  left: 5%;
+}
+#embryology_intro .embryo-container .chicken-embryo-container {
+  top: 0;
+  left: 15%;
+}
+#embryology_intro .embryo-container .human-embryo-container {
+  top: 0;
+  left: 40%;
+}
+#embryology_intro .embryo-container .fish-embryo-container {
+  top: 0;
+  left: 65%;
+}
+#embryology_intro .embryo-container .label {
+  width: 182px;
+  height: 20px;
+  top: -21px;
+  text-align: center;
+}
+#embryology_intro .page-description {
+  top: 525px;
+  left: 5%;
+  width: 90%;
+}
+#embryology_intro .disclaimer {
+  top: 605px;
+  left: 5%;
+  width: 90%;
+}
+#embryo_sorting_activity .embryo-hotspot-container {
+  left: 5%;
+  width: 90%;
+  height: 250px;
+  top: 300px;
+}
+#embryo_sorting_activity .embryo-hotspot-container .embryo-hotspot-label {
+  width: 100%;
+  text-align: center;
+}
+#embryo_sorting_activity .embryo-hotspot-container .duck-hotspot {
+  top: 50px;
+  left: 120px;
+}
+#embryo_sorting_activity .embryo-hotspot-container .echidna-hotspot {
+  top: 50px;
+  left: 300px;
+}
+#embryo_sorting_activity .embryo-hotspot-container .otter-hotspot {
+  top: 50px;
+  left: 480px;
+}
+#embryo_sorting_activity .embryo-hotspot-container .platypus-hotspot {
+  top: 50px;
+  left: 645px;
+}
+#embryo_sorting_activity .blue-dialog-full .dialog-description {
+  top: 30px;
+}
+#embryo_sorting_activity .continue {
+  top: 562px;
+  left: 455px;
+}
+#embryo_sorting_activity .dialog .back {
+  left: 5.8%;
+  top: 90px;
+  width: auto;
+  height: auto;
+}
+#embryo_sorting_activity .dialog .dialog-title {
+  top: 15%;
+  left: 2%;
+  height: 20%;
+}
+#embryo_sorting_activity .dialog .dialog-instructions {
+  top: 30%;
+  left: 11%;
+  width: 20%;
+}
+#embryo_sorting_activity .dialog .target-1 {
+  top: 295px;
+  left: 172px;
+}
+#embryo_sorting_activity .dialog .target-2 {
+  top: 295px;
+  left: 419px;
+}
+#embryo_sorting_activity .dialog .target-3 {
+  top: 295px;
+  left: 662px;
+}
+#embryo_sorting_activity .dialog .embryo-duck-dnd-container .source-1 {
+  top: 40px;
+  left: 740px;
+}
+#embryo_sorting_activity .dialog .embryo-duck-dnd-container .source-2 {
+  top: 40px;
+  left: 340px;
+}
+#embryo_sorting_activity .dialog .embryo-duck-dnd-container .source-3 {
+  top: 40px;
+  left: 540px;
+}
+#embryo_sorting_activity .dialog .embryo-echidna-dnd-container .source-1 {
+  top: 40px;
+  left: 740px;
+}
+#embryo_sorting_activity .dialog .embryo-echidna-dnd-container .source-2 {
+  top: 40px;
+  left: 540px;
+}
+#embryo_sorting_activity .dialog .embryo-echidna-dnd-container .source-3 {
+  top: 40px;
+  left: 340px;
+}
+#embryo_sorting_activity .dialog .embryo-otter-dnd-container .source-1 {
+  top: 40px;
+  left: 340px;
+}
+#embryo_sorting_activity .dialog .embryo-otter-dnd-container .source-2 {
+  top: 40px;
+  left: 740px;
+}
+#embryo_sorting_activity .dialog .embryo-otter-dnd-container .source-3 {
+  top: 40px;
+  left: 540px;
+}
+#embryo_sorting_activity .dialog .embryo-platypus-dnd-container .source-1 {
+  top: 40px;
+  left: 540px;
+}
+#embryo_sorting_activity .dialog .embryo-platypus-dnd-container .source-2 {
+  top: 40px;
+  left: 340px;
+}
+#embryo_sorting_activity .dialog .embryo-platypus-dnd-container .source-3 {
+  top: 40px;
+  left: 740px;
+}
+#embryo_sorting_activity .dialog .timeline-indicator {
+  left: 430px;
+  top: 560px;
+}
+#embryo_sorting_activity .dialog .young-indicator {
+  text-transform: uppercase;
+  top: 562px;
+  left: 325px;
+}
+#embryo_sorting_activity .dialog .old-indicator {
+  text-transform: uppercase;
+  top: 562px;
+  left: 630px;
+}
+#embryo_sorting_activity .dialog .submit {
+  top: 170px;
+  left: 529px;
+}
+#embryo_sorting_activity .dialog .nice-try {
+  top: 170px;
+  left: 509px;
+  width: 104px;
+}
+#embryo_sorting_activity .dialog .good-job {
+  top: 170px;
+  left: 370px;
+  width: 500px;
+  text-align: center;
+}
+#embryo_sorting_activity .dialog .correct-order {
+  top: 170px;
+  left: 370px;
+  width: 500px;
+  text-align: center;
+}
+#embryology_similarities .icon {
+  top: 75px;
+  left: 5%;
+}
+#embryology_similarities .page-description {
+  top: 260px;
+  left: 5%;
+  width: 209px;
+}
+#embryology_similarities .page-description span {
+  color: #ffb43d;
+}
+#embryology_similarities .my-notebook-icon {
+  top: 550px;
+  left: 5%;
+  opacity: 0.3;
+  cursor: default;
+}
+#embryology_similarities .my-notebook-icon.active {
+  opacity: 1;
+  cursor: pointer;
+}
+#embryology_similarities .embryo-container {
+  top: 75px;
+  border-radius: 9px;
+  border: 1px solid #309dde;
+  width: 144px;
+  height: 514px;
+}
+#embryology_similarities .embryo-container.active {
+  background-color: #072341;
+  border: 1px solid #072341;
+}
+#embryology_similarities .embryo-container.active .check-box.checked {
+  display: block;
+}
+#embryology_similarities .embryo-container .check-box {
+  top: 5px;
+  left: 5px;
+}
+#embryology_similarities .embryo-container .check-box.checked {
+  display: none;
+}
+#embryology_similarities .embryo-container .container-title {
+  top: 5px;
+  left: 35px;
+  font-size: 18px;
+  font-family: proxima-nova-regular, sans-serif;
+  font-weight: normal;
+  color: white;
+  height: 23px;
+  line-height: 23px;
+}
+#embryology_similarities .embryo-container .dotted-line-1 {
+  top: 40px;
+  left: 25px;
+}
+#embryology_similarities .embryo-container .dotted-line-2 {
+  top: 200px;
+  left: 25px;
+}
+#embryology_similarities .embryo-container .dotted-line-3 {
+  top: 360px;
+  left: 25px;
+}
+#embryology_similarities .embryo-container .embryo-stage {
+  width: 134px;
+  left: 5px;
+}
+#embryology_similarities .embryo-container .embryo-stage-1 {
+  top: 40px;
+}
+#embryology_similarities .embryo-container .embryo-stage-2 {
+  top: 200px;
+}
+#embryology_similarities .embryo-container .embryo-stage-3 {
+  top: 355px;
+}
+#embryology_similarities .embryo-container.duck-embryo-container {
+  left: 302px;
+}
+#embryology_similarities .embryo-container.echidna-embryo-container {
+  left: 477px;
+}
+#embryology_similarities .embryo-container.otter-embryo-container {
+  left: 652px;
+}
+#embryology_similarities .embryo-container.platypus-embryo-container {
+  left: 827px;
+}
+#embryology_similarities .disclaimer {
+  top: 650px;
+  left: 380px;
+}
+#project_debrief .title {
+  left: 700px;
+  top: 60px;
+  width: 250px;
+}
+#project_debrief .subtitle {
+  left: 705px;
+  top: 269px;
+  width: 220px;
+}
+#project_debrief .instructions {
+  left: 705px;
+  top: 470px;
+  width: 200px;
+}
+#project_debrief .c3-atv {
+  left: 310px;
+  top: 280px;
+}
+#project_debrief .c1-earth-rasterized {
+  top: 310px;
+  left: 490px;
+}
+#project_debrief .c1-inside-earth-indicator {
+  top: 460px;
+  left: 510px;
+}
+#project_debrief .c1-inside-earth-label {
+  top: 510px;
+  left: 360px;
+}
+#project_debrief .c1-inside-earth-pointer {
+  top: 520px;
+  left: 482px;
+}
+#project_debrief .c1-outside-earth-indicator {
+  top: 468px;
+  left: 685px;
+}
+#project_debrief .c1-outside-earth-label {
+  top: 535px;
+  left: 800px;
+}
+#project_debrief .c1-outside-earth-pointer {
+  top: 535px;
+  left: 751px;
+}
+#project_debrief .c1-severe-weather-indicator {
+  top: 326px;
+  left: 727px;
+}
+#project_debrief .c1-severe-weather-label {
+  top: 290px;
+  left: 800px;
+}
+#project_debrief .c1-severe-weather-pointer {
+  top: 330px;
+  left: 766px;
+}
+#project_debrief .definition-title {
+  top: 200px;
+  left: 80px;
+}
+#project_debrief .definition-text {
+  top: 230px;
+  left: 80px;
+  width: 300px;
+}
+#project_debrief .categories-title {
+  top: 110px;
+  left: 320px;
+}
+#hazard_dnd .scene > .container {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+#hazard_dnd .title {
+  left: 700px;
+  top: 60px;
+  width: 250px;
+}
+#hazard_dnd .subtitle {
+  left: 705px;
+  top: 269px;
+  width: 220px;
+}
+#hazard_dnd .instructions {
+  left: 705px;
+  top: 470px;
+  width: 200px;
+}
+#hazard_dnd .c3-atv {
+  left: 310px;
+  top: 280px;
+}
+#hazard_dnd .blue-heading {
+  top: 12%;
+  left: 5%;
+  height: 25%;
+  width: 90%;
+}
+#hazard_dnd .blue-heading .heading-image {
+  top: 25px;
+  left: 20px;
+}
+#hazard_dnd .dialog-title {
+  left: 140px;
+  top: 45px;
+  width: 700px;
+  padding: 0;
+}
+#hazard_dnd .categories-title {
+  top: 110px;
+  left: 180px;
+}
+#hazard_dnd .hazards-heading {
+  top: 250px;
+  left: 420px;
+}
+#hazard_dnd .hazards-source .ui-draggable.ui-draggable-handle {
+  width: 85px;
+  height: 85px;
+}
+#hazard_dnd .hazards-source .drag {
+  cursor: pointer;
+}
+#hazard_dnd .hazards-source .hazard {
+  margin: 8px 12px;
+}
+#hazard_dnd .hazards-source .hazard-floods {
+  top: 282px;
+  left: 133px;
+}
+#hazard_dnd .hazards-source .hazard-tsunamis {
+  top: 282px;
+  left: 263px;
+}
+#hazard_dnd .hazards-source .hazard-hurricanes {
+  top: 282px;
+  left: 393px;
+}
+#hazard_dnd .hazards-source .hazard-volcanoes {
+  top: 282px;
+  left: 523px;
+}
+#hazard_dnd .hazards-source .hazard-earthquakes {
+  top: 282px;
+  left: 653px;
+}
+#hazard_dnd .hazards-source .hazard-tornadoes {
+  top: 282px;
+  left: 783px;
+}
+#hazard_dnd .hazards-targets .c1-target-inside-outline-container {
+  top: 450px;
+  left: 130px;
+}
+#hazard_dnd .hazards-targets .c1-target-inside-outline-container .inside-label {
+  top: -25px;
+  left: 0px;
+  width: 215px;
+  text-align: center;
+}
+#hazard_dnd .hazards-targets .c1-target-surface-outline-container {
+  top: 450px;
+  left: 400px;
+}
+#hazard_dnd .hazards-targets .c1-target-surface-outline-container .surface-label {
+  top: -25px;
+  left: -10px;
+  width: 137px;
+  text-align: center;
+}
+#hazard_dnd .hazards-targets .c1-target-event-outline-container {
+  top: 450px;
+  left: 570px;
+}
+#hazard_dnd .hazards-targets .c1-target-event-outline-container .event-label {
+  top: -25px;
+  left: 0px;
+  width: 316px;
+  text-align: center;
+}
+#hazard_dnd .hazards-targets .drop-area {
+  width: 110px;
+  height: 120px;
+  top: 458px;
+}
+#hazard_dnd .hazards-targets .drop-area.d1 {
+  left: 129px;
+}
+#hazard_dnd .hazards-targets .drop-area.d2 {
+  left: 237px;
+}
+#hazard_dnd .hazards-targets .drop-area.d3 {
+  left: 403px;
+}
+#hazard_dnd .hazards-targets .drop-area.d4 {
+  left: 569px;
+}
+#hazard_dnd .hazards-targets .drop-area.d5 {
+  left: 673px;
+}
+#hazard_dnd .hazards-targets .drop-area.d6 {
+  left: 777px;
+}
+#hazard_dnd .drop {
+  top: 225px;
+}
+#hazard_dnd .drop.d1 {
+  left: 230px;
+}
+#hazard_dnd .drop.d2 {
+  left: 400px;
+}
+#hazard_dnd .drop.d3 {
+  left: 570px;
+}
+#hazard_dnd .drop.d4 {
+  left: 740px;
+}
+#hazard_dnd .distance .arrow {
+  top: 280px;
+}
+#hazard_dnd .distance .arrow.a1 {
+  left: 200px;
+}
+#hazard_dnd .distance .arrow.a2 {
+  left: 370px;
+}
+#hazard_dnd .distance .arrow.a3 {
+  left: 540px;
+}
+#hazard_dnd .distance .arrow.a4 {
+  left: 710px;
+}
+#hazard_dnd .distance .drop-success {
+  top: 455px;
+}
+#hazard_dnd .distance .drop-success.d1 {
+  left: 210px;
+}
+#hazard_dnd .distance .drop-success.d2 {
+  left: 318px;
+}
+#hazard_dnd .distance .drop-success.d3 {
+  left: 482px;
+}
+#hazard_dnd .distance .drop-success.d4 {
+  left: 648px;
+}
+#hazard_dnd .distance .drop-success.d5 {
+  left: 750px;
+}
+#hazard_dnd .distance .drop-success.d6 {
+  left: 855px;
+}
+#hazard_dnd .distance .submit {
+  top: 300px;
+  left: 460px;
+}
+#hazard_dnd .distance .good-job {
+  top: 300px;
+  text-align: center;
+  width: 400px;
+  left: 320px;
+}
+#hazard_dnd .distance .nice-try {
+  top: 300px;
+  text-align: center;
+  width: 110px;
+  left: 442px;
+}
+#hazard_dnd .distance .correct-order {
+  top: 300px;
+  text-align: center;
+  width: 920px;
+  left: 50px;
+}
+#earths_layers .fixed {
+  position: fixed;
+}
+#earths_layers #earths_layers_a {
+  z-index: 1;
+}
+#earths_layers #earths_layers_b {
+  z-index: 2;
+}
+#earths_layers #earths_layers_c {
+  z-index: 3;
+}
+#earths_layers #earths_layers_d {
+  z-index: 4;
+}
+#earths_layers #earths_layers_e {
+  z-index: 5;
+}
+#earths_layers #earths_layers_f {
+  z-index: 6;
+}
+#earths_layers #earths_layers_g {
+  z-index: 7;
+}
+#earths_layers #earths_layers_h {
+  z-index: 8;
+}
+#earths_layers #earths_layers_i {
+  z-index: 9;
+}
+#earths_layers #earths_layers_a,
+#earths_layers #earths_layers_b,
+#earths_layers #earths_layers_c,
+#earths_layers #earths_layers_d,
+#earths_layers #earths_layers_e,
+#earths_layers #earths_layers_f,
+#earths_layers #earths_layers_g,
+#earths_layers #earths_layers_h {
+  overflow: hidden;
+}
+#earths_layers #earths_layers_i {
+  overflow: hidden;
+  height: 400vh;
+  margin-bottom: -300vh;
+}
+#earths_layers #earths_layers_h,
+#earths_layers #earths_layers_f,
+#earths_layers #earths_layers_d,
+#earths_layers #earths_layers_b {
+  overflow: hidden;
+  height: 200vh;
+  margin-bottom: -100vh;
+}
+#earths_layers #earths_layers_dialog {
+  z-index: 10;
+}
+#earths_layers #earths_layers_dialog .black-background {
+  background-color: black;
+  opacity: 0.9;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#earths_layers #earths_layers_dialog .dialog .dialog-title {
+  top: 0px;
+  left: 50px;
+}
+#earths_layers #earths_layers_dialog .dialog .icon {
+  top: 30px;
+  left: 60px;
+}
+#earths_layers #earths_layers_dialog .dialog .modal-bg-image {
+  top: 20%;
+  left: 5%;
+  height: 75%;
+  width: 90%;
+}
+#earths_layers #earths_layers_dialog .dialog.h-volcanoes .description-info {
+  top: 220px;
+  left: 130px;
+  width: 350px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-volcanoes .label-info-magma {
+  top: 560px;
+  left: 775px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-volcanoes .label-info-main-vent {
+  top: 425px;
+  left: 770px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-volcanoes .label-info-side-vent {
+  top: 240px;
+  left: 870px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-volcanoes .label-info-crater {
+  top: 160px;
+  left: 815px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-volcanoes .label-info-gas-and-ash {
+  top: 145px;
+  left: 605px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-volcanoes .label-info-lava-flow {
+  top: 260px;
+  left: 550px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-earthquakes .label-info-plates {
+  top: 195px;
+  left: 690px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-earthquakes .label-info-crust {
+  top: 262px;
+  left: 65px;
+  width: 140px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-earthquakes .description-info {
+  top: 560px;
+  left: 240px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-earthquakes .line-container {
+  width: 32px;
+  height: 50px;
+  top: 220px;
+  left: 680px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-earthquakes .line-container .line {
+  width: 32px;
+  height: 47px;
+  border-bottom: 1px solid white;
+  -webkit-transform: translateY(-20px) translateX(5px) rotate(-51deg);
+  -moz-transform: translateY(-20px) translateX(5px) rotate(-51deg);
+  -ms-transform: translateY(-20px) translateX(5px) rotate(-51deg);
+}
+#earths_layers #earths_layers_dialog .dialog.h-tsunamis .description-info {
+  top: 160px;
+  left: 120px;
+  width: 550px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-floods .description-info {
+  top: 190px;
+  left: 120px;
+  width: 275px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-tornadoes .description-info {
+  top: 280px;
+  left: 700px;
+  width: 260px;
+}
+#earths_layers #earths_layers_dialog .dialog.h-hurricanes .description-info {
+  top: 160px;
+  left: 100px;
+  width: 250px;
+}
+#earths_layers .background {
+  margin-bottom: -10%;
+}
+#earths_layers .scroll-up {
+  position: fixed;
+  top: 0;
+}
+#earths_layers #scroll_marker {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+#earths_layers .scroll-up-text {
+  top: 630px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+}
+#earths_layers .scroll-title-container {
+  top: 450px;
+  left: 55px;
+  width: 910px;
+  height: 158px;
+  background-color: #0085d5;
+  border-radius: 33px;
+}
+#earths_layers .scroll-title-container .scroll-title {
+  top: 60px;
+  left: 240px;
+  width: 400px;
+  text-align: center;
+}
+#earths_layers .scroll-title-container .scroll-directions {
+  top: 20px;
+  left: 5%;
+  width: 90%;
+  text-align: center;
+}
+#earths_layers .text-block-info-a {
+  top: 200px;
+  left: 135px;
+  width: 790px;
+}
+#earths_layers .text-block-info-b {
+  top: 330px;
+  left: 135px;
+  width: 790px;
+}
+#earths_layers .inner-core-container {
+  top: 510px;
+  left: 60px;
+  height: 400px;
+}
+#earths_layers .inner-core-container .inner-core-image {
+  top: 20px;
+  left: 0px;
+}
+#earths_layers .inner-core-container .inner-core-info {
+  top: 70px;
+  left: 330px;
+  width: 500px;
+}
+#earths_layers .inner-core-container .inner-core-title {
+  top: 144px;
+  left: 330px;
+  width: 300px;
+}
+#earths_layers .inner-core-container .inner-core-line {
+  top: 153px;
+  left: 160px;
+  height: 2px;
+  width: 150px;
+  background-color: black;
+  border: none;
+}
+#earths_layers .inner-core-distance {
+  top: 165px;
+  left: 720px;
+  width: 170px;
+  height: 80px;
+  background-color: #eac235;
+  text-align: right;
+}
+#earths_layers .inner-core-distance .inner-core-distance-info {
+  top: 10px;
+  left: 20px;
+  right: 20px;
+}
+#earths_layers .outer-core-container {
+  top: 1350px;
+  left: 60px;
+}
+#earths_layers .outer-core-container .outer-core-image {
+  top: 20px;
+  left: 600px;
+}
+#earths_layers .outer-core-container .outer-core-info {
+  top: 70px;
+  left: 0;
+  width: 500px;
+}
+#earths_layers .outer-core-container .outer-core-title {
+  top: 144px;
+  left: 330px;
+  width: 300px;
+}
+#earths_layers .outer-core-container .outer-core-line {
+  top: 153px;
+  left: 560px;
+  height: 2px;
+  width: 115px;
+  background-color: black;
+  border: none;
+}
+#earths_layers .outer-core-distance {
+  top: 210px;
+  left: 20px;
+  width: 170px;
+  height: 80px;
+  background-color: #e9501c;
+  text-align: left;
+}
+#earths_layers .outer-core-distance .outer-core-distance-info {
+  top: 10px;
+  left: 20px;
+  right: 20px;
+}
+#earths_layers .mantle-container {
+  top: 900px;
+  left: 60px;
+}
+#earths_layers .mantle-container .mantle-image {
+  top: 120px;
+  left: 0px;
+}
+#earths_layers .mantle-container .mantle-info-1 {
+  top: 70px;
+  left: 330px;
+  width: 450px;
+}
+#earths_layers .mantle-container .mantle-title {
+  top: 243px;
+  left: 330px;
+  width: 300px;
+}
+#earths_layers .mantle-container .mantle-line {
+  top: 253px;
+  left: 250px;
+  height: 3px;
+  width: 60px;
+  background-color: white;
+  border: none;
+}
+#earths_layers .mantle-container .mantle-info-2 {
+  top: 310px;
+  left: 330px;
+  width: 450px;
+}
+#earths_layers .select-dialog-instructions {
+  top: 50px;
+  left: 650px;
+  width: 145px;
+}
+#earths_layers .crust-title {
+  top: 340px;
+  left: 110px;
+}
+#earths_layers .crust-line {
+  top: 370px;
+  left: 143px;
+  width: 3px;
+  height: 30px;
+  border: none;
+  background-color: white;
+}
+#earths_layers .crust-info {
+  top: 480px;
+  left: 60px;
+  width: 400px;
+}
+#earths_layers .atmosphere-title {
+  top: 330px;
+  left: 450px;
+}
+#earths_layers .atmosphere-info {
+  top: 120px;
+  left: 450px;
+  width: 400px;
+}
+#earths_layers .hotspot {
+  width: 129px;
+}
+#earths_layers .hotspot.hotspot-volcanoes {
+  top: 1300px;
+  left: 650px;
+}
+#earths_layers .hotspot.hotspot-volcanoes .hotspot-text {
+  top: 125px;
+}
+#earths_layers .hotspot.hotspot-earthquakes {
+  top: 1020px;
+  left: 450px;
+}
+#earths_layers .hotspot.hotspot-earthquakes .hotspot-text {
+  top: -15px;
+  left: -5px;
+}
+#earths_layers .hotspot.hotspot-tsunamis {
+  top: 820px;
+  left: 100px;
+}
+#earths_layers .hotspot.hotspot-tsunamis .hotspot-text {
+  top: -15px;
+  left: 0px;
+}
+#earths_layers .hotspot.hotspot-floods {
+  top: 710px;
+  left: 320px;
+}
+#earths_layers .hotspot.hotspot-floods .hotspot-text {
+  top: 125px;
+  left: 0px;
+}
+#earths_layers .hotspot.hotspot-tornadoes {
+  top: 550px;
+  left: 450px;
+}
+#earths_layers .hotspot.hotspot-tornadoes .hotspot-text {
+  top: 125px;
+  left: 0px;
+}
+#earths_layers .hotspot.hotspot-hurricanes {
+  top: 440px;
+  left: 160px;
+}
+#earths_layers .hotspot.hotspot-hurricanes .hotspot-text {
+  top: 125px;
+  left: 0px;
+}
+#earths_layers .hotspot .hotspot-text {
+  width: 100%;
+  text-align: center;
+}
+#earths_layers .hotspot .hotspot-text .hotspot-text {
+  top: 0px;
+  left: 0px;
+}
+#earths_layers .trigger {
+  position: absolute;
+}
+#earths_layers .trigger.intro-text-trigger {
+  top: 0px;
+  left: 2%;
+  right: 96%;
+  height: 100%;
+}
+#earths_layers .trigger.inner-core-trigger {
+  top: 900px;
+  left: 0;
+  right: 98%;
+  height: 100%;
+}
+#earths_layers .trigger.outer-core-trigger {
+  height: 100%;
+  width: 20px;
+  z-index: 10000;
+  position: absolute;
+}
+#earths_layers .trigger.outer-core-trigger-2 {
+  height: 100%;
+  width: 20px;
+  z-index: 10000;
+  position: absolute;
+}
+#earths_layers .trigger.mantle-trigger-1 {
+  height: 100%;
+  width: 20px;
+  z-index: 10000;
+  position: absolute;
+}
+#earths_layers .trigger.mantle-trigger-2 {
+  height: 100%;
+  width: 20px;
+  z-index: 10000;
+  position: absolute;
+}
+#earths_layers .trigger.modal-trigger-1 {
+  height: 100%;
+  width: 20px;
+  z-index: 10000;
+  position: absolute;
+}
+#earths_layers .trigger.modal-trigger-2 {
+  height: 100%;
+  width: 20px;
+  z-index: 10000;
+  position: absolute;
+}
+#earths_layers .trigger.modal-trigger-3 {
+  height: 100%;
+  width: 20px;
+  z-index: 10000;
+  position: absolute;
+}
+.congrats-screen .blue-heading {
+  left: 80px;
+  top: 100px;
+  width: 202px;
+  height: 252px;
+  border-radius: 16px;
+  background-color: rgba(0, 101, 213, 0.4);
+}
+.congrats-screen .white-box {
+  left: 70px;
+  top: 65px;
+  width: 92px;
+  height: 122px;
+  border-radius: 16px;
+  border: 2.5px solid #9cd2f2;
+  line-height: 122px;
+  text-align: center;
+}
+.congrats-screen .challenge {
+  top: 30px;
+  left: 20px;
+}
+.congrats-screen .to-our {
+  left: 400px;
+  top: 100px;
+}
+.congrats-screen .great-work {
+  top: 210px;
+  left: 400px;
+}
+.congrats-screen .learned {
+  left: 400px;
+  top: 260px;
+  width: 550px;
+}
+.congrats-screen .now {
+  left: 400px;
+  top: 350px;
+  width: 550px;
+}
+.congrats-screen .continue {
+  left: 400px;
+  top: 420px;
+}
+.congrats-screen .twf {
+  width: 120px;
+  left: 380px;
+  top: 500px;
+}
+.congrats-screen .de {
+  top: 516px;
+  left: 510px;
+  width: 171px;
+}
+.congrats-screen .copyright {
+  text-align: center;
+  bottom: 20px;
+  width: 100%;
+}
+.congrats-screen .progress {
+  top: 20px;
+  right: 50px;
+}
+.congrats-screen .progress .tab {
+  width: 14px;
+  height: 14px;
+  border: 2.5px solid rgba(35, 35, 85, 0.3);
+}
+.congrats-screen .progress .tab.progressed {
+  border: 2.5px solid white;
+}
+#hazard_dnd .stars {
+  width: 1024px;
+  left: 363px;
+}
+#hazard_dnd .doors-left {
+  top: -56px;
+  left: -320px;
+}
+#hazard_dnd .doors-right {
+  top: -56px;
+  right: -380px;
+}
+#hazard_dnd .floor {
+  bottom: -50px;
+  left: -220px;
+}
+#hazard_dnd .telescope {
+  bottom: -50px;
+  left: 50px;
+}
+#hazard_dnd .title {
+  left: 700px;
+  top: 60px;
+  width: 250px;
+}
+#hazard_dnd .subtitle {
+  left: 705px;
+  top: 269px;
+  width: 220px;
+}
+#hazard_dnd .instructions {
+  left: 705px;
+  top: 470px;
+  width: 200px;
+}
+#hazard_dnd .hotspot {
+  cursor: pointer;
+}
+#hazard_dnd .hotspot.h1 {
+  left: 48%;
+}
+#hazard_dnd .hotspot.h2 {
+  top: 40%;
+  left: 23%;
+}
+#hazard_dnd .hotspot.h3 {
+  top: 55%;
+  left: 46%;
+}
+#hazard_dnd .parallax .dialog-title {
+  width: 800px;
+}
+#hazard_dnd .parallax .spacecraft {
+  padding: 30px 50px;
+  text-align: center;
+}
+#hazard_dnd .parallax .circle-1 {
+  left: 50px;
+  top: 100px;
+}
+#hazard_dnd .parallax .text-1 {
+  top: 100px;
+  left: 130px;
+  width: 180px;
+}
+#hazard_dnd .parallax .circle-2 {
+  left: 50px;
+  top: 230px;
+}
+#hazard_dnd .parallax .text-2 {
+  top: 230px;
+  left: 130px;
+  width: 200px;
+}
+#hazard_dnd .parallax .circle-3 {
+  top: 100px;
+  left: 320px;
+}
+#hazard_dnd .parallax .text-3 {
+  top: 100px;
+  left: 400px;
+  width: 200px;
+}
+#hazard_dnd .parallax .circle-4 {
+  top: 100px;
+  left: 610px;
+}
+#hazard_dnd .parallax .text-4 {
+  top: 100px;
+  left: 690px;
+  width: 200px;
+}
+#hazard_dnd .parallax .summary {
+  padding: 30px;
+  bottom: 0;
+}
+#hazard_dnd .spect .help {
+  top: 5px;
+  left: 160px;
+  width: 704px;
+}
+#hazard_dnd .spect .help img {
+  left: -25px;
+  top: 4px;
+}
+#hazard_dnd .spect .prev {
+  bottom: 0;
+  left: 10px;
+}
+#hazard_dnd .spect .next {
+  bottom: 0;
+  right: 10px;
+}
+#hazard_dnd .spect .next-question,
+#hazard_dnd .spect .close-dialog {
+  bottom: 35px;
+  right: 45px;
+  text-align: right;
+}
+#hazard_dnd .spect .outof {
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+#hazard_dnd .spect .dialog-title {
+  left: 50px;
+  top: 50px;
+  width: 900px;
+  padding: 0;
+}
+#hazard_dnd .spect .blue {
+  top: 230px;
+  height: 374px;
+}
+#hazard_dnd .spect .description {
+  padding: 30px;
+}
+#hazard_dnd .spect .question {
+  left: 80px;
+  top: 120px;
+  width: 300px;
+}
+#hazard_dnd .spect .question-image {
+  top: 210px;
+  left: 80px;
+}
+#hazard_dnd .spect .question-image-description {
+  width: 300px;
+  top: 245px;
+  left: 80px;
+  text-align: center;
+}
+#hazard_dnd .spect .answers {
+  right: 80px;
+  top: 110px;
+  width: 387px;
+}
+#hazard_dnd .spect .answers > .answer {
+  background-color: #0085d5;
+  color: #ffffff;
+  border-radius: 6px;
+  height: 32px;
+  position: relative;
+  margin-top: 10px;
+  line-height: 28px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+#hazard_dnd .spect .answers > .answer.selected {
+  border: 2px solid #ffffff;
+}
+#hazard_dnd .spect .answers > .answer.correct::before {
+  content: url(../images/02/modals/spectrometry/02_modal_Spectometry_feedbac_check.png);
+  left: -30px;
+  position: absolute;
+  top: -1px;
+}
+#hazard_dnd .spect .answers > .answer.incorrect::before {
+  content: url(../images/02/modals/spectrometry/02_modal_Spectometry_feedbac_x.png);
+  left: -30px;
+  position: absolute;
+  top: -1px;
+}
+#hazard_dnd .spect .submit {
+  right: 80px;
+  bottom: 50px;
+}
+#screen2 .title {
+  bottom: 20%;
+  left: 10%;
+}
+#screen2 .tagline {
+  bottom: 10%;
+  left: 10%;
+}
+#screen2 .instructions {
+  right: 10%;
+  top: 10%;
+  width: 200px;
+}
+#screen2 .hotspot {
+  cursor: pointer;
+}
+#screen2 .hotspot.h1 {
+  top: 10%;
+  left: 45%;
+}
+#screen2 .hotspot.h2 {
+  top: 40%;
+  left: 70%;
+}
+#screen2 .hotspot.h3 {
+  top: 55%;
+  left: 55%;
+}
+#screen2 .dialog.h1 .astronaut {
+  top: 50px;
+  left: 30px;
+}
+#screen2 .dialog.h1 .astronaut-text {
+  top: 120px;
+  left: 250px;
+  width: 180px;
+}
+#screen2 .dialog.h1 .food {
+  left: 550px;
+  top: 50px;
+}
+#screen2 .dialog.h1 .food-text {
+  left: 500px;
+  top: 300px;
+  width: 400px;
+}
+#screen2 .dialog.h2 .skylab {
+  left: 50px;
+  top: 50px;
+}
+#screen2 .dialog.h2 .skylab-text {
+  left: 520px;
+  top: 170px;
+  width: 350px;
+}
+#screen2 .dialog.h3 .person {
+  top: 101px;
+}
+#screen2 .dialog.h3 .person-text {
+  top: 100px;
+  left: 450px;
+  width: 350px;
+}
+#screen4 .planet1 {
+  top: 260px;
+  left: 150px;
+  width: 200px;
+}
+#screen4 .planet2 {
+  top: 260px;
+  left: 420px;
+}
+#screen4 .planet3 {
+  top: 280px;
+  left: 710px;
+}
+#screen4 .desc1 {
+  top: 460px;
+  left: 150px;
+  width: 200px;
+  text-align: center;
+}
+#screen4 .desc2 {
+  top: 460px;
+  left: 420px;
+  width: 170px;
+  text-align: center;
+}
+#screen4 .desc3 {
+  top: 460px;
+  left: 710px;
+  width: 150px;
+  text-align: center;
+}
+#screen4 .checkbox1 {
+  top: 250px;
+  left: 130px;
+}
+#screen4 .checkbox2 {
+  top: 250px;
+  left: 400px;
+}
+#screen4 .checkbox3 {
+  top: 250px;
+  left: 670px;
+}
+#screen4 .challenge1 {
+  top: 20px;
+  left: 20px;
+}
+#screen4 .blue {
+  top: 50px;
+  left: 50px;
+  width: 924px;
+  height: 148px;
+}
+#screen4 .blue.congrats {
+  background-color: #309dde;
+}
+#screen4 .intro {
+  left: 150px;
+  top: 15px;
+  width: 740px;
+}
+#screen4 .instructions {
+  top: 113px;
+  left: 140px;
+}
+#screen4 .think {
+  top: 520px;
+  left: 65px;
+  width: 894px;
+}
+#screen4 .submit {
+  top: 210px;
+  left: 448px;
+}
+#screen4 .great {
+  top: 20px;
+  left: 20px;
+}
+#screen4 .learned {
+  top: 60px;
+  left: 20px;
+  width: 720px;
+}
+#screen4 .continue {
+  top: 210px;
+  left: 444px;
+}
+#large_scroll .background {
+  width: 100%;
+  margin-bottom: -10%;
+}
+#large_scroll .scroll-up {
+  position: fixed;
+  top: 0;
+}
+#large_scroll .asteroid {
+  position: fixed;
+}
+#large_scroll #scroll_marker {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+#challenge_2_zoo_lab .background-fade {
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color: black;
+}
+#challenge_2_zoo_lab .section-title {
+  width: 588px;
+  height: 158px;
+  border-radius: 16px;
+  background-color: #0085d5;
+  color: white;
+  font-family: nasalization, sans-serif;
+  font-size: 62px;
+  line-height: 158px;
+  top: 170px;
+  left: 225px;
+  text-align: center;
+}
+#challenge_2_zoo_lab .page-description {
+  top: 350px;
+  left: 23%;
+  width: 56%;
+  font-size: 20px;
+}
+#challenge_2_skeleton_reveal .icon {
+  top: 75px;
+  left: 5%;
+}
+#challenge_2_skeleton_reveal .page-description {
+  top: 260px;
+  left: 5%;
+  width: 228px;
+}
+#challenge_2_skeleton_reveal .page-description span {
+  color: #ffb43d;
+}
+#challenge_2_skeleton_reveal .dialog-instructions {
+  color: #ffb43d;
+  font-family: proxima-nova-regular, sans-serif;
+  text-align: center;
+  left: 25%;
+  width: 65%;
+  top: 95px;
+}
+#challenge_2_skeleton_reveal .animal-duck {
+  top: 180px;
+  left: 300px;
+}
+#challenge_2_skeleton_reveal .animal-duck .duck-text {
+  top: 30px;
+  left: 50px;
+}
+#challenge_2_skeleton_reveal .animal-platypus {
+  top: 225px;
+  left: 580px;
+}
+#challenge_2_skeleton_reveal .animal-platypus .platypus-text {
+  top: -10px;
+  left: 60px;
+}
+#challenge_2_skeleton_reveal .animal-otter {
+  top: 460px;
+  left: 220px;
+}
+#challenge_2_skeleton_reveal .animal-otter .otter-text {
+  top: 20px;
+  left: 120px;
+}
+#challenge_2_skeleton_reveal .animal-echidna {
+  top: 460px;
+  left: 690px;
+}
+#challenge_2_skeleton_reveal .animal-echidna .echidna-text {
+  top: 20px;
+  left: -40px;
+}
+#challenge_2_skeleton_reveal .animal-skeleton .active {
+  display: block;
+}
+#challenge_2_skeleton_reveal .dialog .title {
+  top: 40px;
+  left: 50px;
+}
+#challenge_2_skeleton_reveal .dialog.duck-modal .image-normal,
+#challenge_2_skeleton_reveal .dialog.duck-modal .image-skeleton {
+  top: 100px;
+  left: 200px;
+}
+#challenge_2_skeleton_reveal .dialog.otter-modal .image-normal,
+#challenge_2_skeleton_reveal .dialog.otter-modal .image-skeleton {
+  top: 200px;
+  left: 90px;
+}
+#challenge_2_skeleton_reveal .dialog.echidna-modal .image-normal,
+#challenge_2_skeleton_reveal .dialog.echidna-modal .image-skeleton {
+  top: 150px;
+  left: 230px;
+}
+#challenge_2_skeleton_reveal .dialog.platypus-modal .image-normal,
+#challenge_2_skeleton_reveal .dialog.platypus-modal .image-skeleton {
+  top: 180px;
+  left: 120px;
+}
+#challenge_2_skeleton_reveal .dialog .image-normal {
+  display: block;
+}
+#challenge_2_humerus_reveal .icon {
+  top: 75px;
+  left: 5%;
+}
+#challenge_2_humerus_reveal .page-description {
+  top: 260px;
+  left: 5%;
+  width: 225px;
+}
+#challenge_2_humerus_reveal .page-description span {
+  color: #ffb43d;
+}
+#challenge_2_humerus_reveal .dialog-instructions {
+  font-family: proxima-nova-regular, sans-serif;
+  left: 25%;
+  width: 65%;
+  top: 85px;
+}
+#challenge_2_humerus_reveal .animal-duck {
+  top: 180px;
+  left: 300px;
+}
+#challenge_2_humerus_reveal .animal-duck .duck-text {
+  top: 30px;
+  left: 60px;
+}
+#challenge_2_humerus_reveal .animal-duck .animal-hotspot {
+  top: 30px;
+  left: 20px;
+}
+#challenge_2_humerus_reveal .animal-platypus {
+  top: 235px;
+  left: 600px;
+}
+#challenge_2_humerus_reveal .animal-platypus .platypus-text {
+  top: -20px;
+  left: 70px;
+}
+#challenge_2_humerus_reveal .animal-platypus .animal-hotspot {
+  top: -20px;
+  left: 30px;
+}
+#challenge_2_humerus_reveal .animal-otter {
+  top: 460px;
+  left: 220px;
+}
+#challenge_2_humerus_reveal .animal-otter .otter-text {
+  top: 0px;
+  left: 140px;
+}
+#challenge_2_humerus_reveal .animal-otter .animal-hotspot {
+  top: 0px;
+  left: 100px;
+}
+#challenge_2_humerus_reveal .animal-echidna {
+  top: 460px;
+  left: 690px;
+}
+#challenge_2_humerus_reveal .animal-echidna .echidna-text {
+  top: 0px;
+  left: -20px;
+}
+#challenge_2_humerus_reveal .animal-echidna .animal-hotspot {
+  top: 0px;
+  left: -60px;
+}
+#challenge_2_humerus_reveal .dialog .title {
+  top: 40px;
+  left: 50px;
+}
+#challenge_2_humerus_reveal .dialog.duck-modal .image-humerus,
+#challenge_2_humerus_reveal .dialog.duck-modal .image-skeleton {
+  top: 100px;
+  left: 200px;
+}
+#challenge_2_humerus_reveal .dialog.otter-modal .image-humerus,
+#challenge_2_humerus_reveal .dialog.otter-modal .image-skeleton {
+  top: 200px;
+  left: 90px;
+}
+#challenge_2_humerus_reveal .dialog.echidna-modal .image-humerus,
+#challenge_2_humerus_reveal .dialog.echidna-modal .image-skeleton {
+  top: 150px;
+  left: 230px;
+}
+#challenge_2_humerus_reveal .dialog.platypus-modal .image-humerus,
+#challenge_2_humerus_reveal .dialog.platypus-modal .image-skeleton {
+  top: 180px;
+  left: 120px;
+}
+#challenge_2_humerus_reveal .dialog .image-skeleton {
+  display: block;
+}
+#challenge_2_skull_selection .icon {
+  top: 75px;
+  left: 5%;
+}
+#challenge_2_skull_selection .page-description {
+  top: 260px;
+  left: 5%;
+  width: 228px;
+}
+#challenge_2_skull_selection .page-description span {
+  color: #ffb43d;
+}
+#challenge_2_skull_selection .dialog-instructions {
+  color: #ffb43d;
+  font-family: proxima-nova-regular, sans-serif;
+  text-align: center;
+  left: 25%;
+  width: 65%;
+  top: 95px;
+}
+#challenge_2_skull_selection .animal-duck {
+  top: 180px;
+  left: 300px;
+}
+#challenge_2_skull_selection .animal-duck .duck-text {
+  top: 30px;
+  left: 60px;
+}
+#challenge_2_skull_selection .animal-duck .animal-hotspot {
+  top: 30px;
+  left: 20px;
+}
+#challenge_2_skull_selection .animal-platypus {
+  top: 235px;
+  left: 600px;
+}
+#challenge_2_skull_selection .animal-platypus .platypus-text {
+  top: -20px;
+  left: 70px;
+}
+#challenge_2_skull_selection .animal-platypus .animal-hotspot {
+  top: -20px;
+  left: 30px;
+}
+#challenge_2_skull_selection .animal-otter {
+  top: 460px;
+  left: 220px;
+}
+#challenge_2_skull_selection .animal-otter .otter-text {
+  top: 0px;
+  left: 140px;
+}
+#challenge_2_skull_selection .animal-otter .animal-hotspot {
+  top: 0px;
+  left: 100px;
+}
+#challenge_2_skull_selection .animal-echidna {
+  top: 460px;
+  left: 690px;
+}
+#challenge_2_skull_selection .animal-echidna .echidna-text {
+  top: 0px;
+  left: -20px;
+}
+#challenge_2_skull_selection .animal-echidna .animal-hotspot {
+  top: 0px;
+  left: -60px;
+}
+#challenge_2_skull_selection .animal-humerus {
+  display: none;
+}
+#challenge_2_skull_selection .animal-humerus .active {
+  display: block;
+}
+#challenge_2_skull_selection .dialog .title {
+  top: 40px;
+  left: 50px;
+}
+#challenge_2_skull_selection .dialog.duck-modal .image-humerus,
+#challenge_2_skull_selection .dialog.duck-modal .image-skeleton {
+  top: 100px;
+  left: 200px;
+}
+#challenge_2_skull_selection .dialog.otter-modal .image-humerus,
+#challenge_2_skull_selection .dialog.otter-modal .image-skeleton {
+  top: 200px;
+  left: 90px;
+}
+#challenge_2_skull_selection .dialog.echidna-modal .image-humerus,
+#challenge_2_skull_selection .dialog.echidna-modal .image-skeleton {
+  top: 150px;
+  left: 230px;
+}
+#challenge_2_skull_selection .dialog.platypus-modal .image-humerus,
+#challenge_2_skull_selection .dialog.platypus-modal .image-skeleton {
+  top: 180px;
+  left: 120px;
+}
+#challenge_2_skull_selection .dialog .image-skeleton {
+  display: block;
+}
+#challenge_2_skull_selection .dialog .image-humerus {
+  display: none;
+}
+#challenge_2_skull_selection .skull-dnd-container {
+  position: relative;
+}
+#challenge_2_skull_selection .skull-target-box-container {
+  width: 142px;
+  height: 78px;
+}
+#challenge_2_skull_selection .skull-drop-area {
+  background-color: #082645;
+  width: 144px;
+  height: 20px;
+  opacity: 0.5;
+}
+#challenge_2_skull_selection .skull-drop-area .skull-drop-area-text {
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: proxima-nova-regular, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+}
+#challenge_2_skull_selection .skull-drop-area-1 {
+  top: 270px;
+  left: 5%;
+}
+#challenge_2_skull_selection .skull-drop-area-2 {
+  top: 477px;
+  left: 5%;
+}
+#challenge_2_skull_selection .skull-target-box-1 {
+  top: 300px;
+  left: 5%;
+}
+#challenge_2_skull_selection .skull-target-box-2 {
+  top: 390px;
+  left: 5%;
+}
+#challenge_2_skull_selection .skull-target-box-container-1 {
+  top: 300px;
+  left: 5%;
+}
+#challenge_2_skull_selection .skull-target-box-container-2 {
+  top: 390px;
+  left: 5%;
+}
+#challenge_2_skull_selection .skull-target-box-container .skull-target-box-image {
+  display: none;
+}
+#challenge_2_skull_selection .skull-target-box-container.active .skull-target-box-image {
+  display: block;
+}
+#challenge_2_skull_selection .skull-target-box-container .duck {
+  top: 10px;
+  left: 5px;
+}
+#challenge_2_skull_selection .skull-target-box-container .otter {
+  top: 15px;
+  left: 15px;
+}
+#challenge_2_skull_selection .skull-target-box-container .echidna {
+  top: 15px;
+  left: 5px;
+}
+#challenge_2_skull_selection .skull-target-box-container .platypus {
+  top: 10px;
+  left: 5px;
+}
+#challenge_2_skull_selection .animal-skull {
+  cursor: pointer;
+}
+#challenge_2_skull_selection .duck-skull {
+  top: 195px;
+  left: 486px;
+}
+#challenge_2_skull_selection .platypus-skull {
+  top: 271px;
+  left: 819px;
+}
+#challenge_2_skull_selection .otter-skull {
+  top: 550px;
+  left: 586px;
+}
+#challenge_2_skull_selection .echidna-skull {
+  top: 543px;
+  left: 883px;
+}
+#challenge_2_skull_selection .clear-button {
+  top: 520px;
+  left: 7%;
+  width: 70px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 7px;
+  background-color: #04619e;
+  color: white;
+  text-transform: uppercase;
+  font-family: proxima-nova-regular, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 13px;
+}
+#challenge_2_skull_selection .submit-button {
+  top: 570px;
+  left: 7%;
+  width: 70px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 7px;
+  background-color: white;
+  color: #082645;
+  text-transform: uppercase;
+  font-family: proxima-nova-regular, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 13px;
+}
+#challenge_2_skull_selection .submitted-text {
+  top: 530px;
+  left: 60px;
+  font-size: 15px;
+  text-align: center;
+  width: 130px;
+}
+#challenge_2_skeleton_selection .icon {
+  top: 75px;
+  left: 5%;
+}
+#challenge_2_skeleton_selection .page-description {
+  top: 260px;
+  left: 5%;
+  width: 228px;
+}
+#challenge_2_skeleton_selection .page-description span {
+  color: #ffb43d;
+}
+#challenge_2_skeleton_selection .dialog-instructions {
+  font-family: proxima-nova-regular, sans-serif;
+  color: #ffb43d;
+  left: 25%;
+  width: 65%;
+  top: 85px;
+}
+#challenge_2_skeleton_selection .animal-duck {
+  top: 180px;
+  left: 300px;
+}
+#challenge_2_skeleton_selection .animal-duck .duck-text {
+  top: 30px;
+  left: 60px;
+}
+#challenge_2_skeleton_selection .animal-duck .check-box {
+  top: 50px;
+  left: 60px;
+}
+#challenge_2_skeleton_selection .animal-platypus {
+  top: 235px;
+  left: 600px;
+}
+#challenge_2_skeleton_selection .animal-platypus .platypus-text {
+  top: -20px;
+  left: 70px;
+}
+#challenge_2_skeleton_selection .animal-platypus .check-box {
+  top: 0px;
+  left: 70px;
+}
+#challenge_2_skeleton_selection .animal-otter {
+  top: 460px;
+  left: 220px;
+}
+#challenge_2_skeleton_selection .animal-otter .otter-text {
+  top: 0px;
+  left: 140px;
+}
+#challenge_2_skeleton_selection .animal-otter .check-box {
+  top: 20px;
+  left: 140px;
+}
+#challenge_2_skeleton_selection .animal-echidna {
+  top: 460px;
+  left: 690px;
+}
+#challenge_2_skeleton_selection .animal-echidna .echidna-text {
+  top: 0px;
+  left: -20px;
+}
+#challenge_2_skeleton_selection .animal-echidna .check-box {
+  top: 20px;
+  left: -20px;
+}
+#challenge_2_skeleton_selection .animal .check-box.checked {
+  display: none;
+}
+#challenge_2_skeleton_selection .animal.active .check-box.checked {
+  display: block;
+}
+#challenge_2_skeleton_selection .animal .animal-skeleton-dark {
+  display: none;
+}
+#challenge_2_skeleton_selection .animal.active .animal-skeleton-dark {
+  display: block;
+}
+#challenge_2_skeleton_selection .my-notebook-icon {
+  top: 550px;
+  left: 5%;
+  opacity: 0.3;
+}
+#challenge_2_skeleton_selection .my-notebook-icon.active {
+  opacity: 1;
+}
+#challenge_2_skeleton_selection .skull-dnd-container {
+  position: relative;
+  opacity: 0.3;
+}
+#challenge_2_skeleton_selection .skull-target-box-container {
+  width: 142px;
+  height: 78px;
+}
+#challenge_2_skeleton_selection .skull-drop-area {
+  background-color: #082645;
+  width: 144px;
+  height: 20px;
+}
+#challenge_2_skeleton_selection .skull-drop-area .skull-drop-area-text {
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: proxima-nova-regular, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+}
+#challenge_2_skeleton_selection .skull-drop-area-1 {
+  top: 270px;
+  left: 5%;
+}
+#challenge_2_skeleton_selection .skull-drop-area-2 {
+  top: 477px;
+  left: 5%;
+}
+#challenge_2_skeleton_selection .skull-target-box-1 {
+  top: 300px;
+  left: 5%;
+}
+#challenge_2_skeleton_selection .skull-target-box-2 {
+  top: 390px;
+  left: 5%;
+}
+#challenge_2_skeleton_selection .skull-target-box-container-1 {
+  top: 300px;
+  left: 5%;
+}
+#challenge_2_skeleton_selection .skull-target-box-container-2 {
+  top: 390px;
+  left: 5%;
+}
+#challenge_2_skeleton_selection .skull-target-box-container .skull-target-box-image {
+  display: none;
+}
+#challenge_2_skeleton_selection .skull-target-box-container.active .skull-target-box-image {
+  display: block;
+}
+#challenge_2_skeleton_selection .skull-target-box-container .duck {
+  top: 10px;
+  left: 5px;
+}
+#challenge_2_skeleton_selection .skull-target-box-container .otter {
+  top: 15px;
+  left: 15px;
+}
+#challenge_2_skeleton_selection .skull-target-box-container .echidna {
+  top: 15px;
+  left: 5px;
+}
+#challenge_2_skeleton_selection .skull-target-box-container .platypus {
+  top: 10px;
+  left: 5px;
+}
+#challenge_2_skeleton_selection .duck-skull {
+  top: 195px;
+  left: 486px;
+}
+#challenge_2_skeleton_selection .platypus-skull {
+  top: 271px;
+  left: 819px;
+}
+#challenge_2_skeleton_selection .otter-skull {
+  top: 550px;
+  left: 586px;
+}
+#challenge_2_skeleton_selection .echidna-skull {
+  top: 543px;
+  left: 883px;
+}
+#challenge_2_skeleton_selection .submit-button,
+#challenge_2_skeleton_selection .clear-button {
+  display: none;
+}
+#challenge_3_zoo_lab .background-fade {
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color: black;
+}
+#challenge_3_zoo_lab .section-title {
+  width: 588px;
+  height: 158px;
+  border-radius: 16px;
+  background-color: #0085d5;
+  color: white;
+  font-family: nasalization, sans-serif;
+  font-size: 62px;
+  line-height: 158px;
+  top: 170px;
+  left: 225px;
+  text-align: center;
+}
+#challenge_3_zoo_lab .page-description {
+  top: 350px;
+  left: 23%;
+  width: 56%;
+  font-size: 20px;
+}
+#challenge_3_cell .process-container {
+  top: 350px;
+  left: 10%;
+}
+#challenge_3_cell .process-container .text-description {
+  font-size: 18px;
+  font-family: proxima-nova-regular, sans-serif;
+  font-weight: normal;
+  color: white;
+  white-space: nowrap;
+  top: -50px;
+  left: 50px;
+}
+#challenge_3_cell .process-container .indicator-line {
+  width: 3px;
+  background-color: #309dde;
+  top: -15px;
+  left: 94px;
+  height: 100px;
+}
+#challenge_3_cell .process-container .animal-section .animal-cell {
+  top: 38px;
+  left: 66px;
+}
+#challenge_3_cell .process-container .animal-section .indicator-line {
+  height: 55px;
+}
+#challenge_3_cell .process-container .cell-section {
+  left: 250px;
+}
+#challenge_3_cell .process-container .cell-section .cell-image {
+  top: -7px;
+  left: 12px;
+}
+#challenge_3_cell .process-container .cell-section .indicator-line {
+  height: 88px;
+}
+#challenge_3_cell .process-container .cell-section .text-description {
+  left: 40px;
+}
+#challenge_3_cell .process-container .chrome-section {
+  left: 500px;
+}
+#challenge_3_cell .process-container .chrome-section .chrome-image {
+  top: 10px;
+  left: 30px;
+}
+#challenge_3_cell .process-container .chrome-section .indicator-line {
+  height: 30px;
+}
+#challenge_3_cell .process-container .chrome-section .text-description {
+  left: 40px;
+}
+#challenge_3_cell .process-container .dna-section {
+  left: 650px;
+}
+#challenge_3_cell .process-container .dna-section .dna-image {
+  top: -50px;
+  left: 10px;
+}
+#challenge_3_cell .process-container .dna-section .text-description {
+  left: 130px;
+}
+#challenge_3_cell .process-arrow {
+  top: 60px;
+}
+#challenge_3_cell .process-arrow.process-arrow-1 {
+  left: 168px;
+}
+#challenge_3_cell .process-arrow.process-arrow-2 {
+  left: 435px;
+}
+#challenge_3_cell .process-arrow.process-arrow-3 {
+  left: 635px;
+}
+#challenge_3_dna .dna-bg {
+  top: 88px;
+  left: -170px;
+}
+#challenge_3_dna .nucleotides-container {
+  top: 270px;
+  left: 10%;
+}
+#challenge_3_dna .nucleotides-a {
+  top: 305px;
+  left: 121px;
+}
+#challenge_3_dna .nucleotides-t {
+  top: 305px;
+  left: 186px;
+}
+#challenge_3_dna .nucleotides-g {
+  top: 305px;
+  left: 250px;
+}
+#challenge_3_dna .nucleotides-c {
+  top: 305px;
+  left: 314px;
+}
+#challenge_3_dna .nucleotides-a-title {
+  top: 365px;
+  left: 121px;
+}
+#challenge_3_dna .nucleotides-t-title {
+  top: 365px;
+  left: 182px;
+}
+#challenge_3_dna .nucleotides-g-title {
+  top: 365px;
+  left: 252px;
+}
+#challenge_3_dna .nucleotides-c-title {
+  top: 365px;
+  left: 314px;
+}
+#challenge_3_mutations .dna-bg {
+  top: 88px;
+  left: -170px;
+}
+#challenge_3_mutations .nucleotides-container {
+  top: 270px;
+  left: 10%;
+}
+#challenge_3_mutations .mutation {
+  top: 371px;
+  left: 533px;
+}
+#challenge_3_mutations .mutation-line {
+  top: 425px;
+  left: 580px;
+}
+#challenge_3_mutations .mutation-text {
+  top: 465px;
+  left: 820px;
+}
+#challenge_3_mutations .nucleotides-container {
+  top: 270px;
+  left: 10%;
+}
+#challenge_3_mutations .nucleotides-a {
+  top: 305px;
+  left: 121px;
+}
+#challenge_3_mutations .nucleotides-t {
+  top: 305px;
+  left: 186px;
+}
+#challenge_3_mutations .nucleotides-g {
+  top: 305px;
+  left: 250px;
+}
+#challenge_3_mutations .nucleotides-c {
+  top: 305px;
+  left: 314px;
+}
+#challenge_3_mutations .nucleotides-a-title {
+  top: 365px;
+  left: 121px;
+}
+#challenge_3_mutations .nucleotides-t-title {
+  top: 365px;
+  left: 182px;
+}
+#challenge_3_mutations .nucleotides-g-title {
+  top: 365px;
+  left: 252px;
+}
+#challenge_3_mutations .nucleotides-c-title {
+  top: 365px;
+  left: 314px;
+}
+#challenge_3_dna_strands .step-text {
+  left: 5%;
+  width: 220px;
+  line-height: 18px;
+}
+#challenge_3_dna_strands .step-1-indicator {
+  top: 260px;
+  left: 5%;
+}
+#challenge_3_dna_strands .step-1-text {
+  top: 260px;
+}
+#challenge_3_dna_strands .step-2-indicator {
+  top: 370px;
+  left: 5%;
+}
+#challenge_3_dna_strands .step-2-text {
+  top: 370px;
+}
+#challenge_3_dna_strands .step-3-indicator {
+  top: 480px;
+  left: 5%;
+}
+#challenge_3_dna_strands .step-3-text {
+  top: 480px;
+}
+#challenge_3_dna_strands .tabbed-text {
+  padding-left: 40px;
+}
+#challenge_3_dna_strands .diagram {
+  top: 270px;
+  left: 330px;
+}
+#challenge_3_dna_selections .icon {
+  top: 75px;
+  left: 5%;
+}
+#challenge_3_dna_selections .page-description {
+  top: 250px;
+  left: 5%;
+  width: 209px;
+  line-height: 20px;
+}
+#challenge_3_dna_selections .page-description span {
+  color: #ffb43d;
+}
+#challenge_3_dna_selections .page-description-2 {
+  top: 615px;
+  left: 26%;
+  width: 800px;
+  font-size: 15px;
+  line-height: 15px;
+}
+#challenge_3_dna_selections .my-notebook-icon {
+  top: 550px;
+  left: 5%;
+  opacity: 0.3;
+}
+#challenge_3_dna_selections .my-notebook-icon.active {
+  opacity: 1;
+}
+#challenge_3_dna_selections .embryo-container {
+  top: 75px;
+  border-radius: 9px;
+  border: 1px solid #309dde;
+  width: 144px;
+  height: 514px;
+}
+#challenge_3_dna_selections .embryo-container.active {
+  background-color: #072341;
+  border: 1px solid #072341;
+}
+#challenge_3_dna_selections .embryo-container.active .check-box.checked {
+  display: block;
+}
+#challenge_3_dna_selections .embryo-container .check-box {
+  top: 5px;
+  left: 5px;
+}
+#challenge_3_dna_selections .embryo-container .check-box.checked {
+  display: none;
+}
+#challenge_3_dna_selections .embryo-container .container-title {
+  top: 5px;
+  left: 35px;
+  font-size: 18px;
+  font-family: proxima-nova-regular, sans-serif;
+  font-weight: normal;
+  color: white;
+  height: 23px;
+  line-height: 23px;
+}
+#challenge_3_dna_selections .embryo-container .dotted-line-1 {
+  top: 40px;
+  left: 25px;
+}
+#challenge_3_dna_selections .embryo-container .dotted-line-2 {
+  top: 200px;
+  left: 25px;
+}
+#challenge_3_dna_selections .embryo-container .dotted-line-3 {
+  top: 360px;
+  left: 25px;
+}
+#challenge_3_dna_selections .embryo-container .embryo-stage {
+  width: 134px;
+  left: 5px;
+}
+#challenge_3_dna_selections .embryo-container .embryo-stage-1 {
+  top: 40px;
+}
+#challenge_3_dna_selections .embryo-container .embryo-stage-2 {
+  top: 200px;
+}
+#challenge_3_dna_selections .embryo-container .embryo-stage-3 {
+  top: 355px;
+}
+#challenge_3_dna_selections .embryo-container.duck-embryo-container {
+  left: 302px;
+}
+#challenge_3_dna_selections .embryo-container.echidna-embryo-container {
+  left: 477px;
+}
+#challenge_3_dna_selections .embryo-container.otter-embryo-container {
+  left: 652px;
+}
+#challenge_3_dna_selections .embryo-container.platypus-embryo-container {
+  left: 827px;
+}
+#challenge_4_final_choice .page-description {
+  top: 550px;
+  left: 10%;
+  width: 80%;
+  font-size: 20px;
+}
+#challenge_4_final_choice .dialog-instructions {
+  color: #ffb43d;
+  font-family: proxima-nova-regular, sans-serif;
+  text-align: center;
+  left: 17%;
+  width: 65%;
+  top: 275px;
+}
+#challenge_4_final_choice .my-notebook-icon {
+  top: 370px;
+  left: 39%;
+}
+#challenge_4_final_choice .dialog-description-2 {
+  top: 550px;
+  left: 220px;
+}
+#challenge_4_final_choice .notebook-modal.dialog .divider-text {
+  opacity: 1;
+}
+#challenge_4_cardiogram .cladogram-highlight {
+  top: 413px;
+  left: 558px;
+}
+#challenge_4_cardiogram .cladogram-chart {
+  top: 270px;
+  left: 280px;
+}
+#challenge_4_cardiogram .page-description {
+  left: 79%;
+  top: 400px;
+  width: 160px;
+}
+#challenge_4_cardiogram .cladogram-chart-partial {
+  top: 280px;
+  left: 50px;
+}
+#challenge_4_cardiogram .cladogram-chart-duck {
+  top: 282px;
+  left: 275px;
+}
+#challenge_4_cardiogram .cladogram-chart-otter {
+  top: 350px;
+  left: 460px;
+}
+#challenge_4_cardiogram .cladogram-chart-monotremes-box-1 {
+  top: 371px;
+  left: 645px;
+}
+#challenge_4_cardiogram .cladogram-chart-monotremes-box-2 {
+  top: 526px;
+  left: 645px;
+}
+#challenge_4_cardiogram .cladogram-chart-monotremes-lines {
+  top: 423px;
+  left: 650px;
+}
+#challenge_4_cardiogram .cladogram-chart-echidna {
+  top: 375px;
+  left: 668px;
+}
+#challenge_4_cardiogram .cladogram-chart-platypus {
+  top: 533px;
+  left: 653px;
+}
+#career_connection .intro {
+  left: 150px;
+  top: 15px;
+  width: 740px;
+  font-family: proxima-nova-regular, sans-serif;
+}
+#career_connection .instructions {
+  top: 90px;
+  left: 240px;
+  font-family: proxima-nova-regular, sans-serif;
+}
+#career_connection .learn1 {
+  left: 170px;
+  top: 260px;
+}
+#career_connection .learn2 {
+  left: 400px;
+  top: 260px;
+}
+#career_connection .learn3 {
+  left: 630px;
+  top: 260px;
+}
+#career_connection .learn4 {
+  left: 170px;
+  top: 432px;
+}
+#career_connection .learn5 {
+  left: 400px;
+  top: 432px;
+}
+#career_connection .learn6 {
+  left: 630px;
+  top: 432px;
+}
+#career_connection .continue {
+  left: 455px;
+  top: 615px;
+}
+#career_connection .dialog .dialog-title {
+  left: 40px;
+  top: 20px;
+}
+#career_connection .dialog .back {
+  top: 134px;
+  left: 57px;
+  width: auto;
+  height: auto;
+}
+#career_connection .dialog .blue {
+  top: 200px;
+  background-color: #0085d5;
+  left: 120px;
+  color: white;
+  padding: 40px;
+  width: 300px;
+  height: 170px;
+  border-radius: 6px;
+}
+#wrap_up .title {
+  top: 80px;
+  left: 565px;
+  width: 400px;
+}
+#wrap_up .title-back {
+  top: 48px;
+  width: 600px;
+  left: 55px;
+}
+#wrap_up .panel {
+  left: 815px;
+  top: 25px;
+}
+#wrap_up .numbers {
+  top: 50px;
+  left: 865px;
+}
+#wrap_up .checks {
+  top: 58px;
+  left: 945px;
+}
+#wrap_up .cert {
+  left: 826px;
+  top: 340px;
+}
+#wrap_up .play {
+  left: 826px;
+  top: 418px;
+}
+#wrap_up .tiger {
+  left: 826px;
+  top: 513px;
+}
+#wrap_up .twf {
+  left: 70px;
+  top: 510px;
+  width: 100px;
+}
+#wrap_up .dised {
+  left: 220px;
+  top: 525px;
+  height: 30px;
+}
+#wrap_up .completed {
+  left: 180px;
+  top: 80px;
+  width: 600px;
+  text-align: right;
+}
+#wrap_up .congrats {
+  left: 100px;
+  top: 350px;
+  width: 680px;
+  text-align: right;
+}
+#wrap_up .wrap-up-title {
+  top: 170px;
+  left: 450px;
+}

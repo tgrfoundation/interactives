@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script>
+        var DEBUG = false;
+        var BACKWARDS = false;
+        var TRANSITION_DURING = false;
+        var TRANSITION_DURATION = 0;
+    </script>
+
+    <!-- <link rel="stylesheet" href="css/vendor.css"> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89584346-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-89584346-7');
+    </script>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+<body>
+
+<!-- Splash Screen -->
+<section id="splash_screen" class="fixed full height hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img class="splash-bg loader image" src="images/global/global_bg_world.png">
+                <div class="colored-bg"></div>
+                <img class="splash-bg loader image faded-bg" src="images/splash-screen/00-splash-bg.png">
+                <img class="splash-bg loader image dna-sidebar" src="images/challenge-1/c1-dna-sidebar.png">
+            </div>
+            <div class="content">
+                <div class="animal-container">
+                    <div class="animal animal-duck">
+                        <div class="animal-text animal-text-duck">Duck</div>
+                        <img class="animal-image animal-image-duck" src="images/splash-screen/00_duck.png">
+                    </div>
+                    <div class="animal animal-otter">
+                        <div class="animal-text animal-text-otter">Otter</div>
+                        <img class="animal-image animal-image-otter" src="images/splash-screen/00_otter.png">
+                    </div>
+                    <div class="animal animal-echidna">
+                        <div class="animal-text animal-text-echnida">Echidna</div>
+                        <img class="animal-image animal-image-echnida" src="images/splash-screen/00_echnida.png">
+                    </div>
+                    <div class="animal animal-platypus">
+                        <div class="animal-text animal-text-platypus">Platypus</div>
+                        <img class="animal-image animal-image-platypus" src="images/splash-screen/00_platypus.png">
+                    </div>
+                </div>
+
+                <div class="clickable begin-button proxima reg white s24">Begin</div>
+
+                <!--<img class="title-banner" src="images/splash-screen/00_title_full.png" data-hide="fadeOutDown ~1s">-->
+                <img class="title-full" src="images/challenge-1/c1-title-full.png" data-hide="fadeOutDown ~1s">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- challenge_1_debrief -->
+<section id="challenge_1_debrief" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg_world.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="dimmed-background">
+            </div>
+            <div class="content">
+                <div class="animal-container">
+                    <div class="animal animal-duck">
+                        <div class="animal-text animal-text-duck">Duck</div>
+                        <img class="animal-image animal-image-duck" src="images/splash-screen/00_duck.png">
+                    </div>
+                    <div class="animal animal-otter">
+                        <div class="animal-text animal-text-otter">Otter</div>
+                        <img class="animal-image animal-image-otter" src="images/splash-screen/00_otter.png">
+                    </div>
+                    <div class="animal animal-echidna">
+                        <div class="animal-text animal-text-echnida">Echidna</div>
+                        <img class="animal-image animal-image-echnida" src="images/splash-screen/00_echnida.png">
+                    </div>
+                    <div class="animal animal-platypus">
+                        <div class="animal-text animal-text-platypus">Platypus</div>
+                        <img class="animal-image animal-image-platypus" src="images/splash-screen/00_platypus.png">
+                    </div>
+                </div>
+
+                <div class="blue-dialog blue-dialog-full">
+                    <img class="dialog-image" src="images/challenge-1/c1-icon-inverted.png">
+                    <div class="dialog-description proxima reg off-gray lh-tight">
+                        It took millions and millions of years for plants and animals to adapt, change and evolve into the variety of species that now exist on Planet Earth. Because of this, some animals may have more in common than you realize.
+                    </div>
+                </div>
+
+                <div class="instructions-title proxima med s24 yellow">Your Mission:</div>
+                <div class="instructions proxima reg s18 off-gray">You will be investigating three lines of evidence that scientists use to establish common ancestry among species.</div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- animal_stat_discovery -->
+<section id="animal_stat_discovery" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg_world.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="">
+            </div>
+            <div class="content">
+                <div class="animal-container">
+                    <div class="animal animal-duck clickable duck-hotspot" data-dialog="#animal_stat_discovery .dialog.h1" data-animal="duck">
+                        <div class="animal-text animal-text-duck">Duck</div>
+                        <img class="animal-image animal-image-duck" src="images/splash-screen/00_duck.png">
+                    </div>
+                    <div class="animal animal-otter clickable otter-hotspot" data-dialog="#animal_stat_discovery .dialog.h2" data-animal="otter">
+                        <div class="animal-text animal-text-otter">Otter</div>
+                        <img class="animal-image animal-image-otter" src="images/splash-screen/00_otter.png">
+                    </div>
+                    <div class="animal animal-echidna clickable echidna-hotspot" data-dialog="#animal_stat_discovery .dialog.h3" data-animal="echidna">
+                        <div class="animal-text animal-text-echnida">Echidna</div>
+                        <img class="animal-image animal-image-echnida" src="images/splash-screen/00_echnida.png">
+                    </div>
+                    <div class="animal animal-platypus clickable platypus-hotspot" data-dialog="#animal_stat_discovery .dialog.h4" data-animal="platypus">
+                        <div class="animal-text animal-text-platypus">Platypus</div>
+                        <img class="animal-image animal-image-platypus" src="images/splash-screen/00_platypus.png">
+                    </div>
+                </div>
+
+                <div class="blue-dialog blue-dialog-full">
+                    <img class="dialog-image" src="images/challenge-1/c1-icon-inverted.png">
+                    <div class="dialog-description proxima reg off-gray lh-tight">
+                        First, let's take a closer look at four animals that seem to share some common traits.
+                    </div>
+                    <div class="dialog-instructions proxima nova reg">
+                        Click on each animal to learn their key stats.
+                    </div>
+                </div>
+
+                <div class="instructions-title proxima med s24 yellow">Consider:</div>
+                <div class="instructions proxima reg s22 off-gray">Of the <strong>platypus</strong>, <strong>echidna</strong>, <strong>otter</strong> and <strong>duck</strong>, which two species do you think are most likely to be related?</div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog h1 hidden duck-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img class="back" src="images/challenge-1/c1-animal-stat-modal-bg.png">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima nova reg s24">
+                Duck
+            </div>
+
+            <div class="world-locations s13 proxima nova med">
+                <div class="africa-label" data-show="bounceIn ~3.0s">Africa</div>
+                <div class="europe-label" data-show="bounceIn ~3.1s">Europe</div>
+                <div class="asia-label" data-show="bounceIn ~3.2s">Asia</div>
+                <div class="australia-label" data-show="bounceIn ~3.3s">Australia</div>
+                <div class="north-america-label" data-show="bounceIn ~3.4s">North America</div>
+                <div class="south-america-label" data-show="bounceIn ~3.5s">South America</div>
+            </div>
+
+            <img class="large-animal-image duck" src="images/challenge-1/c1-stats-modal-duck.png">
+
+            <div class="fun-fact s13 proxima nova reg black" data-show="fadeIn ~4.0s">
+                <strong>Fun Fact:</strong> Ducks produce oil that makes their feathers waterproof.
+            </div>
+
+            <div class="key-stats-container">
+                <div class="header s13 proxima nova med" data-show="fadeInUp ~1.2s">
+                    Key Stats
+                </div>
+
+                <div class="class-label label" data-show="fadeInUp ~1.3s">Class</div>
+                <div class="class-description description" data-show="fadeInUp ~1.4s">Bird</div>
+                <div class="weight-label label"  data-show="fadeInUp ~1.5s">Weight</div>
+                <div class="weight-description description" data-show="fadeInUp ~1.6s">1-3.5 pounds</div>
+                <div class="habitat-label label" data-show="fadeInUp ~1.7s">Habitat</div>
+                <div class="habitat-description description" data-show="fadeInUp ~1.8s">Fresh water and salt water</div>
+                <div class="defense-label label" data-show="fadeInUp ~1.9s">Defense</div>
+                <div class="defense-description description" data-show="fadeInUp ~2s">Flight</div>
+                <div class="birth-type-label label" data-show="fadeInUp ~2.1s">Give birth To</div>
+                <div class="birth-type-description description" data-show="fadeInUp ~2.2s">Eggs</div>
+                <div class="favorite-food-label label"  data-show="fadeInUp ~2.3s">Favorite food</div>
+                <div class="favorite-food-description description"  data-show="fadeInUp ~2.4s">Worms, plants and fish</div>
+                <div class="home-label label" data-show="fadeInUp ~2.5s">Home</div>
+                <div class="home-description description" data-show="fadeInUp ~2.6s">North America, South America, Asia, Europe, Africa and Australia</div>
+            </div>
+        </div>
+
+        <div class="dialog h2 hidden otter-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img class="back" src="images/challenge-1/c1-animal-stat-modal-bg.png">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima nova reg s24">
+                Otter
+            </div>
+
+            <div class="world-locations s13 proxima nova med">
+                <div class="africa-label" data-show="bounceIn ~3.0s">Africa</div>
+                <div class="europe-label" data-show="bounceIn ~3.1s">Europe</div>
+                <div class="asia-label" data-show="bounceIn ~3.2s">Asia</div>
+                <div class="north-america-label" data-show="bounceIn ~3.4s">North America</div>
+                <div class="south-america-label" data-show="bounceIn ~3.5s">South America</div>
+            </div>
+
+            <img class="large-animal-image otter" src="images/challenge-1/c1-stats-modal-otter.png">
+
+            <div class="fun-fact s14 proxima nova reg black" data-show="fadeIn ~4.0s">
+                <strong>Fun Fact:</strong> Otters are curious and love to play.
+            </div>
+
+            <div class="key-stats-container">
+                <div class="header s13 proxima nova med" data-show="fadeInUp ~1.2s">
+                    Key Stats
+                </div>
+
+                <div class="class-label label" data-show="fadeInUp ~1.3s">Class</div>
+                <div class="class-description description" data-show="fadeInUp ~1.4s">Mammal</div>
+                <div class="weight-label label"  data-show="fadeInUp ~1.5s">Weight</div>
+                <div class="weight-description description" data-show="fadeInUp ~1.6s">11-90 pounds</div>
+                <div class="habitat-label label" data-show="fadeInUp ~1.7s">Habitat</div>
+                <div class="habitat-description description" data-show="fadeInUp ~1.8s">Fresh water and salt water</div>
+                <div class="defense-label label" data-show="fadeInUp ~1.9s">Defense</div>
+                <div class="defense-description description" data-show="fadeInUp ~2s">Quick escapes and thick fur</div>
+                <div class="birth-type-label label" data-show="fadeInUp ~2.1s">Give birth to</div>
+                <div class="birth-type-description description" data-show="fadeInUp ~2.2s">Live young</div>
+                <div class="favorite-food-label label"  data-show="fadeInUp ~2.3s">Favorite food</div>
+                <div class="favorite-food-description description"  data-show="fadeInUp ~2.4s">- In the sea: mussels, crabs, snails and more<br />
+                - In the river: crayfish, crabs, frogs and more</div>
+                <div class="home-label label" data-show="fadeInUp ~2.5s">Home</div>
+                <div class="home-description description" data-show="fadeInUp ~2.6s">North America, South America, Asia, Europe and Africa</div>
+            </div>
+        </div>
+
+        <div class="dialog h3 hidden echidna-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img class="back" src="images/challenge-1/c1-animal-stat-modal-bg.png">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima nova reg s24">
+                Echidna
+            </div>
+
+            <div class="world-locations s13 proxima nova med">
+                <div class="australia-label" data-show="bounceIn ~3.0s">Australia</div>
+            </div>
+
+            <img class="large-animal-image echidna" src="images/challenge-1/c1-stats-modal-echidna.png">
+
+            <div class="fun-fact s14 proxima nova reg black" data-show="fadeIn ~4.0s">
+                <strong>Fun Fact:</strong> Their sticky tongues help them catch their prey.
+            </div>
+
+            <div class="key-stats-container">
+                <div class="header s13 proxima nova med" data-show="fadeInUp ~1.2s">
+                    Key Stats
+                </div>
+
+                <div class="class-label label" data-show="fadeInUp ~1.3s">Class</div>
+                <div class="class-description description" data-show="fadeInUp ~1.4s">Mammal</div>
+                <div class="weight-label label"  data-show="fadeInUp ~1.5s">Weight</div>
+                <div class="weight-description description" data-show="fadeInUp ~1.6s">5-22 pounds</div>
+                <div class="habitat-label label" data-show="fadeInUp ~1.7s">Habitat</div>
+                <div class="habitat-description description" data-show="fadeInUp ~1.8s">Caves and burrows</div>
+                <div class="defense-label label" data-show="fadeInUp ~1.9s">Defense</div>
+                <div class="defense-description description" data-show="fadeInUp ~2s">Prickly spines</div>
+                <div class="birth-type-label label" data-show="fadeInUp ~2.1s">Give birth to</div>
+                <div class="birth-type-description description" data-show="fadeInUp ~2.2s">Eggs</div>
+                <div class="favorite-food-label label"  data-show="fadeInUp ~2.3s">Favorite food</div>
+                <div class="favorite-food-description description"  data-show="fadeInUp ~2.4s">Ants and termites</div>
+                <div class="home-label label" data-show="fadeInUp ~2.5s">Home</div>
+                <div class="home-description description" data-show="fadeInUp ~2.6s">Australia and Tasmania</div>
+            </div>
+        </div>
+
+        <div class="dialog h4 hidden platypus-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img class="back" src="images/challenge-1/c1-animal-stat-modal-bg.png">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima nova reg s24">
+                Platypus
+            </div>
+
+            <div class="world-locations s13 proxima nova med">
+                <div class="australia-label" data-show="bounceIn ~3.0s">Australia</div>
+            </div>
+
+            <img class="large-animal-image platypus" src="images/challenge-1/c1-stats-modal-platypus.png">
+
+            <div class="fun-fact s13 proxima nova reg black" data-show="fadeIn ~4.0s">
+                <strong>Fun Fact:</strong> Platypus use their bill to sense electrical currents in water.
+            </div>
+
+            <div class="key-stats-container">
+                <div class="header s13 proxima nova med" data-show="fadeInUp ~1.2s">
+                    Key Stats
+                </div>
+
+                <div class="class-label label" data-show="fadeInUp ~1.3s">Class</div>
+                <div class="class-description description" data-show="fadeInUp ~1.4s">Mammal</div>
+                <div class="weight-label label"  data-show="fadeInUp ~1.5s">Weight</div>
+                <div class="weight-description description" data-show="fadeInUp ~1.6s">1.5-5 pounds</div>
+                <div class="habitat-label label" data-show="fadeInUp ~1.7s">Habitat</div>
+                <div class="habitat-description description" data-show="fadeInUp ~1.8s">Fresh water</div>
+                <div class="defense-label label" data-show="fadeInUp ~1.9s">Defense</div>
+                <div class="defense-description description" data-show="fadeInUp ~2s">Adult males have venomous spurs</div>
+                <div class="birth-type-label label" data-show="fadeInUp ~2.1s">Give birth to</div>
+                <div class="birth-type-description description" data-show="fadeInUp ~2.2s">Eggs</div>
+                <div class="favorite-food-label label"  data-show="fadeInUp ~2.3s">Favorite food</div>
+                <div class="favorite-food-description description"  data-show="fadeInUp ~2.4s">Bottom-dwelling invertebrates like <br />shrimp and worms</div>
+                <div class="home-label label" data-show="fadeInUp ~2.5s">Home</div>
+                <div class="home-description description" data-show="fadeInUp ~2.6s">Australia and Tasmania</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- challenge_1_zoo_lab -->
+<section id="challenge_1_zoo_lab" class="fixed full height hidden">
+    <!--<a href="earths-layers.html">--><img src="images/global/next.png" class="next clickable"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_zoo_bg.png" class="">
+                <div class="background-fade"></div>
+            </div>
+            <div class="content">
+
+                <div class="section-title">Embryology</div>
+
+                <div class="page-description proxima reg s21 white">To really investigate which two species are most closely related, you'll need more information and access to a real science laboratory. Join us at the Zoo Lab as we work together with scientists to learn more about each of these animals.</div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- embryology intro -->
+<section id="embryology_intro" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="">
+            </div>
+            <div class="content">
+
+                <div class="blue-dialog blue-dialog-full">
+                    <img class="dialog-image" src="images/challenge-1/c1-icon-inverted.png">
+                    <div class="dialog-description proxima reg off-gray lh-tight">
+                        Two different word parts make up the word <strong class="white">Embryology</strong>. The suffix "<strong class="white">ology</strong>" means "the study of." The root word "<strong class="white">Embryo</strong>" describes an unborn animal or human at one of its earliest forms of development.<br />
+                        <br />
+                        Embryos that show distinct similarities likely descended from a common ancestor.
+                    </div>
+                </div>
+
+                <div class="embryo-container">
+                    <div class="chicken-embryo-container">
+                        <div class="chicken-embryo-label label white s18 proxima nova reg">Chicken</div>
+                        <img src="images/challenge-1/c1-embryo-chicken.png" class="chicken-embryo-image">
+                        <img src="images/challenge-1/c1-embryo-chicken-gills.png" class="chicken-embryo-image-gills">
+                    </div>
+                    <div class="human-embryo-container">
+                        <div class="human-embryo-label label white s18 proxima nova reg">Human</div>
+                        <img src="images/challenge-1/c1-embryo-human.png" class="human-embryo-image">
+                        <img src="images/challenge-1/c1-embryo-human-gills.png" class="human-embryo-image-gills">
+                    </div>
+                    <div class="fish-embryo-container">
+                        <div class="fish-embryo-label label white s18 proxima nova reg">Fish</div>
+                        <img src="images/challenge-1/c1-embryo-fish.png" class="fish-embryo-image">
+                        <img src="images/challenge-1/c1-embryo-fish-gills.png" class="fish-embryo-image-gills">
+                    </div>
+                </div>
+
+                <div class="page-description proxima nova reg s18 off-gray">For example, the embryos of chickens and humans have slits on their necks that look very similar to the gills of fish. While chickens and humans don't actually develop these gills, the presence of these slits in their embryos is just one piece of evidence that helps scientists determine whether all three animals share common ancestry.</div>
+
+                <div class="disclaimer proxima nova reg s14 off-gray drop-shadow-small">Illustrations are meant for instructional purposes only and are not scientific drawings.</div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- embryo sort activity -->
+<section id="embryo_sorting_activity" class="fixed full height hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="">
+            </div>
+            <div class="content">
+
+                <div class="blue-dialog blue-dialog-full">
+                    <img class="dialog-image" src="images/challenge-1/c1-icon-inverted.png">
+                    <div class="dialog-description proxima reg off-gray lh-tight">
+                        In the Embryology Room, you'll be able to compare and contrast platypus, echidna, otter and duck embryos at three different stages in search of distinct similarities.
+                    </div>
+                    <div class="dialog-instructions">
+                        Click on each of the animals to see what they looked like in their youngest form, and then try to order the embryos from youngest to oldest.
+                    </div>
+                </div>
+
+                <div class="embryo-hotspot-container">
+                    <div class="embryo-hotspot-label s20 yellow proxima nova reg">EMBRYOS</div>
+
+                    <div class="clickable duck-hotspot" data-dialog="#embryo_sorting_activity .dialog.h1" data-animal="duck">
+                        <img class="hotspot-image duck-hotspot-image" src="images/challenge-1/c1-duck-hotspot.png">
+                    </div>
+                    <div class="clickable echidna-hotspot" data-dialog="#embryo_sorting_activity .dialog.h2" data-animal="echidna">
+                        <img class="hotspot-image echidna-hotspot-image" src="images/challenge-1/c1-echnida-hotspot.png">
+                    </div>
+                    <div class="clickable otter-hotspot" data-dialog="#embryo_sorting_activity .dialog.h3" data-animal="otter">
+                        <img class="hotspot-image otter-hotspot-image" src="images/challenge-1/c1-otter-hotspot.png">
+                    </div>
+                    <div class="clickable platypus-hotspot" data-dialog="#embryo_sorting_activity .dialog.h4" data-animal="platypus">
+                        <img class="hotspot-image platypus-hotspot-image" src="images/challenge-1/c1-platypus-hotspot.png">
+                    </div>
+                </div>
+
+                <div class="continue clickable corn shadowless smaller button hidden">
+                    Continue
+                </div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog h1 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img class="back" src="images/challenge-1/c1-modal-bg.png">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima nova med yellow s36" data-show="fadeIn ~1.5s">
+                Duck
+            </div>
+            <div class="dialog-instructions off-gray proxima nova reg s21" data-show="fadeIn ~1s">
+                Drag each embryo and order them from youngest to oldest.
+            </div>
+
+            <div class="embryo-duck-dnd-container">
+                <img class="drop-area embryo-target target-1 d1" data-name='d1' data-correct='d1' src="images/challenge-1/c1-embryo-target.png">
+                <img class="drop-area embryo-target target-2 d2" data-name='d2' data-correct='d2' src="images/challenge-1/c1-embryo-target.png">
+                <img class="drop-area embryo-target target-3 d3" data-name='d3' data-correct='d3' src="images/challenge-1/c1-embryo-target.png">
+
+                <img class="drag embryo-source source-1" data-target='d1' src="images/challenge-1/modal-embryos/embryo_duck_01.png">
+                <img class="drag embryo-source source-2" data-target='d2' src="images/challenge-1/modal-embryos/embryo_duck_02.png">
+                <img class="drag embryo-source source-3" data-target='d3' src="images/challenge-1/modal-embryos/embryo_duck_03.png">
+
+                <div class="submit clickable white button drag-done hidden" data-drag-done="bounceIn" data-drag-success="fadeOut" data-drag-failure="fadeOut" data-drag-retry="fadeOut">
+                    Submit
+                </div>
+                <div class="good-job proxima bold white s30 hidden drag-success" data-drag-success="zoomIn 2s">
+                    Good Job!
+                </div>
+                <div class="nice-try drag-retry clickable white button hidden" data-drag-retry="zoomIn 2s">
+                    Try Again!
+                </div>
+                <div class="correct-order proxima bold white s30 drag-failure hidden" data-drag-failure="fadeIn 1s">
+                    Nice Try! Here's the correct answer:
+                </div>
+            </div>
+
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <div class="young-indicator s15 proxima nova reg white">Youngest</div>
+            <div class="old-indicator s15 proxima nova reg white">Oldest</div>
+        </div>
+
+        <div class="dialog h2 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img class="back" src="images/challenge-1/c1-modal-bg.png">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima nova med yellow s36" data-show="fadeIn ~1.5s">
+                Echidna
+            </div>
+            <div class="dialog-instructions off-gray proxima nova reg s21" data-show="fadeIn ~1s">
+                Drag each embryo and order them from youngest to oldest.
+            </div>
+
+            <div class="embryo-echidna-dnd-container">
+                <img class="drop-area embryo-target target-1 d1" data-name='d1' data-correct='d1' src="images/challenge-1/c1-embryo-target.png">
+                <img class="drop-area embryo-target target-2 d2" data-name='d2' data-correct='d2' src="images/challenge-1/c1-embryo-target.png">
+                <img class="drop-area embryo-target target-3 d3" data-name='d3' data-correct='d3' src="images/challenge-1/c1-embryo-target.png">
+
+                <img class="drag embryo-source source-1" data-target='d1' src="images/challenge-1/modal-embryos/embryo_echidna_01.png">
+                <img class="drag embryo-source source-2" data-target='d2' src="images/challenge-1/modal-embryos/embryo_echidna_02.png">
+                <img class="drag embryo-source source-3" data-target='d3' src="images/challenge-1/modal-embryos/embryo_echidna_03.png">
+
+                <div class="submit clickable white button drag-done hidden" data-drag-done="bounceIn" data-drag-success="fadeOut" data-drag-failure="fadeOut" data-drag-retry="fadeOut">
+                    Submit
+                </div>
+                <div class="good-job proxima bold white s30 hidden drag-success" data-drag-success="zoomIn 2s">
+                    Good Job!
+                </div>
+                <div class="nice-try drag-retry clickable white button hidden" data-drag-retry="zoomIn 2s">
+                    Try Again!
+                </div>
+                <div class="correct-order proxima bold white s30 drag-failure hidden" data-drag-failure="fadeIn 2s">
+                    Nice Try! Here's the correct answer:
+                </div>
+            </div>
+
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <div class="young-indicator s15 proxima nova reg white">Youngest</div>
+            <div class="old-indicator s15 proxima nova reg white">Oldest</div>
+        </div>
+
+        <div class="dialog h3 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img class="back" src="images/challenge-1/c1-modal-bg.png">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima nova med yellow s36" data-show="fadeIn ~1.5s">
+                Otter
+            </div>
+            <div class="dialog-instructions off-gray proxima nova reg s21" data-show="fadeIn ~1s">
+                Drag each embryo and order them from youngest to oldest.
+            </div>
+
+            <div class="embryo-otter-dnd-container">
+                <img class="drop-area embryo-target target-1 d1" data-name='d1' data-correct='d1' src="images/challenge-1/c1-embryo-target.png">
+                <img class="drop-area embryo-target target-2 d2" data-name='d2' data-correct='d2' src="images/challenge-1/c1-embryo-target.png">
+                <img class="drop-area embryo-target target-3 d3" data-name='d3' data-correct='d3' src="images/challenge-1/c1-embryo-target.png">
+
+                <img class="drag embryo-source source-1" data-target='d1' src="images/challenge-1/modal-embryos/embryo_otter_01.png">
+                <img class="drag embryo-source source-2" data-target='d2' src="images/challenge-1/modal-embryos/embryo_otter_02.png">
+                <img class="drag embryo-source source-3" data-target='d3' src="images/challenge-1/modal-embryos/embryo_otter_03.png">
+
+                <div class="submit clickable white button drag-done hidden" data-drag-done="bounceIn" data-drag-success="fadeOut" data-drag-failure="fadeOut" data-drag-retry="fadeOut">
+                    Submit
+                </div>
+                <div class="good-job proxima bold white s30 hidden drag-success" data-drag-success="zoomIn 2s">
+                    Good Job!
+                </div>
+                <div class="nice-try drag-retry clickable white button hidden" data-drag-retry="zoomIn 2s">
+                    Try Again!
+                </div>
+                <div class="correct-order proxima bold white s30 drag-failure hidden" data-drag-failure="fadeIn 2s">
+                    Nice Try! Here's the correct answer:
+                </div>
+            </div>
+
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <div class="young-indicator s15 proxima nova reg white">Youngest</div>
+            <div class="old-indicator s15 proxima nova reg white">Oldest</div>
+        </div>
+
+        <div class="dialog h4 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img class="back" src="images/challenge-1/c1-modal-bg.png">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima nova med yellow s36" data-show="fadeIn ~1.5s">
+                Platypus
+            </div>
+            <div class="dialog-instructions off-gray proxima nova reg s21" data-show="fadeIn ~1s">
+                Drag each embryo and order them from youngest to oldest.
+            </div>
+
+            <div class="embryo-platypus-dnd-container">
+                <img class="drop-area embryo-target target-1 d1" data-name='d1' data-correct='d1' src="images/challenge-1/c1-embryo-target.png">
+                <img class="drop-area embryo-target target-2 d2" data-name='d2' data-correct='d2' src="images/challenge-1/c1-embryo-target.png">
+                <img class="drop-area embryo-target target-3 d3" data-name='d3' data-correct='d3' src="images/challenge-1/c1-embryo-target.png">
+
+                <img class="drag embryo-source source-1" data-target='d1' src="images/challenge-1/modal-embryos/embryo_platypus_01.png">
+                <img class="drag embryo-source source-2" data-target='d2' src="images/challenge-1/modal-embryos/embryo_platypus_02.png">
+                <img class="drag embryo-source source-3" data-target='d3' src="images/challenge-1/modal-embryos/embryo_platypus_03.png">
+
+                <div class="submit clickable white button drag-done hidden" data-drag-done="bounceIn" data-drag-success="fadeOut" data-drag-failure="fadeOut" data-drag-retry="fadeOut">
+                    Submit
+                </div>
+                <div class="good-job proxima bold white s30 hidden drag-success" data-drag-success="zoomIn 2s">
+                    Good Job!
+                </div>
+                <div class="nice-try drag-retry clickable white button hidden" data-drag-retry="zoomIn 2s">
+                    Try Again!
+                </div>
+                <div class="correct-order proxima bold white s30 drag-failure hidden" data-drag-failure="fadeIn 2s">
+                    Nice Try! Here's the correct answer:
+                </div>
+            </div>
+
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+
+            <img class="timeline-indicator" src="images/challenge-1/c1-embryo-modal-arrow.png">
+            <div class="young-indicator s15 proxima nova reg white">Youngest</div>
+            <div class="old-indicator s15 proxima nova reg white">Oldest</div>
+        </div>
+    </div>
+</section>
+
+<!-- embryology similarities -->
+<section id="embryology_similarities" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="">
+            </div>
+            <div class="content">
+                <img class="icon" src="images/challenge-1/c1-icon.png">
+
+                <div class="page-description proxima nova reg s18 off-gray">
+                    Now that the embryos are organized, they're ready to study for similarities.<br />
+                    <br />
+                    <span>Based upon characteristics found in each set of embryos, choose which two animals are most similar.</span><br />
+                    <br />
+                    Then, click on your notebook to record your findings.
+                </div>
+
+                <img class="my-notebook-icon" src="images/global/global-my-notebook.png" data-dialog="#embryology_similarities .dialog.h1">
+
+                <div class="embryo-container duck-embryo-container clickable" data-chose="duck">
+                    <img class="check-box unchecked" src="images/challenge-1/c1-check-box.png">
+                    <img class="check-box checked" src="images/challenge-1/c1-check-box-checked.png">
+                    <div class="container-title">Duck</div>
+                    <img class="dotted-line-1" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="embryo-stage-1 embryo-stage" src="images/challenge-1/modal-embryos/embryo_duck_01.png">
+                    <img class="dotted-line-2" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="embryo-stage-2 embryo-stage" src="images/challenge-1/modal-embryos/embryo_duck_02.png">
+                    <img class="dotted-line-3" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="embryo-stage-3 embryo-stage" src="images/challenge-1/modal-embryos/embryo_duck_03.png">
+                </div>
+
+                <div class="embryo-container echidna-embryo-container clickable" data-chose="echidna">
+                    <img class="check-box unchecked" src="images/challenge-1/c1-check-box.png">
+                    <img class="check-box checked" src="images/challenge-1/c1-check-box-checked.png">
+                    <div class="container-title">Echidna</div>
+                    <img class="dotted-line-1" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="embryo-stage-1 embryo-stage" src="images/challenge-1/modal-embryos/embryo_echidna_01.png">
+                    <img class="dotted-line-2" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="embryo-stage-2 embryo-stage" src="images/challenge-1/modal-embryos/embryo_echidna_02.png">
+                    <img class="dotted-line-3" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="embryo-stage-3 embryo-stage" src="images/challenge-1/modal-embryos/embryo_echidna_03.png">
+                </div>
+
+                <div class="embryo-container otter-embryo-container clickable" data-chose="otter">
+                    <img class="check-box unchecked" src="images/challenge-1/c1-check-box.png">
+                    <img class="check-box checked" src="images/challenge-1/c1-check-box-checked.png">
+                    <div class="container-title">Otter</div>
+                    <img class="dotted-line-1" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="embryo-stage-1 embryo-stage" src="images/challenge-1/modal-embryos/embryo_otter_01.png">
+                    <img class="dotted-line-2" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="embryo-stage-2 embryo-stage" src="images/challenge-1/modal-embryos/embryo_otter_02.png">
+                    <img class="dotted-line-3" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="embryo-stage-3 embryo-stage" src="images/challenge-1/modal-embryos/embryo_otter_03.png">
+                </div>
+
+                <div class="embryo-container platypus-embryo-container clickable" data-chose="platypus">
+                    <img class="check-box unchecked" src="images/challenge-1/c1-check-box.png">
+                    <img class="check-box checked" src="images/challenge-1/c1-check-box-checked.png">
+                    <div class="container-title">Platypus</div>
+                    <img class="dotted-line-1" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="embryo-stage-1 embryo-stage" src="images/challenge-1/modal-embryos/embryo_platypus_01.png">
+                    <img class="dotted-line-2" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="embryo-stage-2 embryo-stage" src="images/challenge-1/modal-embryos/embryo_platypus_02.png">
+                    <img class="dotted-line-3" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="embryo-stage-3 embryo-stage" src="images/challenge-1/modal-embryos/embryo_platypus_03.png">
+                </div>
+
+                <div class="disclaimer proxima nova reg s14 off-gray drop-shadow-small">Illustrations are meant for instructional purposes only and are not scientific drawings.</div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="notebook-modal internal-page dialog h1 hidden" data-show="notebookOpen 2s" data-hide="notebookClose 1s">
+            <img class="back" src="images/global/notebook/notebook_background.png">
+
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~3s">
+
+            <div class="row row-1">
+                <img class="row-title embryonic-investigation" src="images/global/notebook/notebook_embryoic_full.png">
+                <div class="checkboxes" data-progress-chosen="chosen_embryo">
+                    <div class="checkbox-column column-1 duck" data-chosen="duck">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                    <div class="checkbox-column column-2 echidna active" data-chosen="echidna">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                    <div class="checkbox-column column-3 otter" data-chosen="otter">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                    <div class="checkbox-column column-4 platypus" data-chosen="platypus">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img class="note-1-bullet" src="images/global/notebook/notebook-bullet.png">
+            <img class="note-1" src="images/global/notebook/notebook-c1-note-1.png">
+            <img class="note-2-bullet" src="images/global/notebook/notebook-bullet.png">
+            <img class="note-2" src="images/global/notebook/notebook-c1-note-2.png">
+
+            <div class="continue-message proxima nova s18 reg">You've recorded your findings. Click to</div>
+            <img class="continue-button close" src="images/global/notebook/notebook-continue.png">
+
+        </div>
+    </div>
+</section>
+
+<!-- embryology_congrats -->
+<section id="embryology_congrats" class="congrats-screen fixed full height hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="">
+            </div>
+            <div class="content">
+                <img class="gradient entire" src="images/global/complete/complete_gradient.png">
+                <div class="blue-heading">
+                    <img class="challenge" src="images/global/complete/challenge.png">
+                    <div class="white-box nasal white s80">1</div>
+                </div>
+                <div class="to-our nasal white s54 shadowed">
+                    Tracing Life's Roots
+                </div>
+                <div class="great-work proxima extra s20">
+                    Great work!
+                </div>
+                <div class="learned proxima reg s20">
+                    In the Embryology Room you learned about the common characteristics between four animals and investigated which two species are most closely related.
+                </div>
+                <div class="now proxima extra corn dark s20">
+                    You are now ready to visit the Anatomy Room!
+                </div>
+                <div class="continue clickable corn shadowless smaller button">
+                    Continue
+                </div>
+                <img class="twf" src="images/global/complete/twf.jpg">
+                <img class="de" src="images/global/complete/de.png">
+                <div class="copyright proxima reg s14">
+                    Copyright &copy; 2019 Discovery Education, Inc. All rights reserved.
+                </div>
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="small" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    Please resize your browser to a wider resolution.
+  </div>
+</section>
+
+<section id="smallMobile" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    It looks like your device screen is too small. If you can, try a different device with a larger landscape resolution.
+  </div>
+</section>
+
+<section id="wrong" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    Please resize your browser to a wider resolution.
+  </div>
+</section>
+
+<section id="wrongMobile" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    Please rotate your device.
+  </div>
+</section>
+
+<script src="js/challenge-1.js"></script>
+
+</body>
+</html>

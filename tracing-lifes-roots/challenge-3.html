@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script>
+		var DEBUG = false;
+		var BACKWARDS = false;
+		var TRANSITION_DURING = false;
+		var TRANSITION_DURATION = 0;
+    </script>
+
+    <!-- <link rel="stylesheet" href="css/vendor.css"> -->
+    <link rel="stylesheet" href="css/app.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89584346-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-89584346-7');
+    </script>
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+<body>
+
+<!-- challenge_3_zoo_lab -->
+<section id="challenge_3_zoo_lab" class="fixed full height hidden">
+    <!--<a href="earths-layers.html">--><img src="images/global/next.png" class="next clickable"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_zoo_bg.png" class="">
+                <div class="background-fade"></div>
+            </div>
+            <div class="content">
+
+                <!--<div class="section-title">DNA</div>-->
+                <img src="images/challenge-3/title_dna.png" class="section-title">
+
+                <div class="page-description proxima reg s21 white">Your last stop in the Zoo Lab is the DNA Room. The DNA Room is your most important stop in this investigation.</div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- challenge_3_cell -->
+<section id="challenge_3_cell" class="fixed full height hidden">
+    <!--<a href="earths-layers.html">--><img src="images/global/next.png" class="next clickable"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="dimmed-background">
+            </div>
+            <div class="content">
+
+                <div class="blue-dialog blue-dialog-full">
+                    <img class="dialog-image" src="images/challenge-3/c3-icon-inverted.png">
+                    <div class="dialog-description proxima reg off-gray lh-tight">
+                        Short for <strong class="white">deoxyribonucleic acid</strong>, the <strong class="white">DNA</strong> in an animal's cells is what makes an animal unique. DNA exists in the nucleus of every animal's cell. Within the DNA are genes that influence how an animal grows and develops.
+                    </div>
+                </div>
+
+                <div class="process-container">
+                    <div class="process-section animal-section">
+                        <img class="animal-image" src="images/challenge-3/c3-echidna-silhouette.png">
+                        <img class="animal-cell" src="images/challenge-3/c3-cell-nucleus-small.png">
+                        <div class="text-description">Animal Cell</div>
+                        <div class="indicator-line"></div>
+                    </div>
+
+                    <img class="process-arrow process-arrow-1" src="images/challenge-3/c3-process-arrow.png">
+
+                    <div class="process-section cell-section">
+                        <img class="cell-image" src="images/challenge-3/c3-cell-nucleus.png">
+                        <div class="text-description">Cell Nucleus</div>
+                        <div class="indicator-line"></div>
+                    </div>
+
+                    <img class="process-arrow process-arrow-2" src="images/challenge-3/c3-process-arrow.png">
+
+                    <div class="process-section chrome-section">
+                        <img class="chrome-image" src="images/challenge-3/c3-chromosome.png">
+                        <div class="text-description">Chromosome</div>
+                        <div class="indicator-line"></div>
+                    </div>
+
+                    <img class="process-arrow process-arrow-3" src="images/challenge-3/c3-process-arrow.png">
+
+                    <div class="process-section dna-section">
+                        <img class="dna-image" src="images/challenge-3/c3-dna-strand-small.png">
+                        <div class="text-description">DNA</div>
+                    </div>
+
+                </div>
+
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- challenge_3_dna_introduction -->
+<section id="challenge_3_dna" class="fixed full height hidden">
+    <!--<a href="earths-layers.html">--><img src="images/global/next.png" class="next clickable"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="dimmed-background">
+            </div>
+            <div class="content">
+
+                <img class="dna-bg" src="images/challenge-3/c3-dna-bg.png">
+
+                <div class="blue-dialog blue-dialog-full">
+                    <img class="dialog-image" src="images/challenge-3/c3-icon-inverted.png">
+                    <div class="dialog-description proxima reg off-gray lh-tight">
+                        DNA is made up of molecules called <strong class="white">nucleotides</strong>. There are four common types of nucleotides: <strong class="white">Adenine (A)</strong>, <strong class="white">Thymine (T)</strong>, <strong class="white">Guanine (G)</strong> and <strong class="white">Cytosine (C)</strong>. A single strand of DNA is made up of a unique combination of these four letters.
+                    </div>
+                </div>
+
+                <img class="nucleotides-container" src="images/challenge-3/Ch-03_03_nucleotides_blank.png">
+                <img class="nucleotides-a" src="images/challenge-3/Ch-03_03_A.png">
+                <div class="nucleotides-a-title proxima off-gray s13 med">
+                    Adenine
+                </div>
+                <img class="nucleotides-t" src="images/challenge-3/Ch-03_03_T.png">
+                <div class="nucleotides-t-title proxima off-gray s13 med">
+                    Thymine
+                </div>
+                <img class="nucleotides-g" src="images/challenge-3/Ch-03_03_G.png">
+                <div class="nucleotides-g-title proxima off-gray s13 med">
+                    Guanine
+                </div>
+                <img class="nucleotides-c" src="images/challenge-3/Ch-03_03_C.png">
+                <div class="nucleotides-c-title proxima off-gray s13 med">
+                    Cytosine
+                </div>
+
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- challenge_3_mutations -->
+<section id="challenge_3_mutations" class="fixed full height hidden">
+    <!--<a href="earths-layers.html">--><img src="images/global/next.png" class="next clickable"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="dimmed-background">
+            </div>
+            <div class="content">
+
+                <img class="dna-bg" src="images/challenge-3/c3-dna-bg.png">
+
+                <div class="blue-dialog blue-dialog-full">
+                    <img class="dialog-image" src="images/challenge-3/c3-icon-inverted.png">
+                    <div class="dialog-description proxima reg off-gray lh-tight">
+                        <strong class="white">Mutations</strong>, or changes, to DNA can happen when DNA is not copied perfectly or, in rarer cases, due to environmental factors. Mutations can be beneficial, harmful or even non-impactful. The differences and similarities among animals' DNA is a strong indicator of the degree by which animals are related.
+                    </div>
+                </div>
+
+                <img class="mutation-line" src="images/challenge-3/c3-mutation-line.png">
+                <div class="mutation-text s18 proxima nova reg white">Mutation</div>
+                <img class="mutation" src="images/challenge-3/c3-mutation.png">
+
+                <img class="nucleotides-container" src="images/challenge-3/Ch-03_03_nucleotides_blank.png">
+                <img class="nucleotides-a" src="images/challenge-3/Ch-03_03_A.png">
+                <div class="nucleotides-a-title proxima off-gray s13 med">
+                    Adenine
+                </div>
+                <img class="nucleotides-t" src="images/challenge-3/Ch-03_03_T.png">
+                <div class="nucleotides-t-title proxima off-gray s13 med">
+                    Thymine
+                </div>
+                <img class="nucleotides-g" src="images/challenge-3/Ch-03_03_G.png">
+                <div class="nucleotides-g-title proxima off-gray s13 med">
+                    Guanine
+                </div>
+                <img class="nucleotides-c" src="images/challenge-3/Ch-03_03_C.png">
+                <div class="nucleotides-c-title proxima off-gray s13 med">
+                    Cytosine
+                </div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- challenge_3_dna_strands -->
+<section id="challenge_3_dna_strands" class="fixed full height hidden">
+    <!--<a href="earths-layers.html">--><img src="images/global/next.png" class="next clickable"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="dimmed-background">
+            </div>
+            <div class="content">
+
+                <div class="blue-dialog blue-dialog-full">
+                    <img class="dialog-image" src="images/challenge-3/c3-icon-inverted.png">
+                    <div class="dialog-description proxima reg off-gray lh-tight">
+                        To see how closely related one species is to another, you can examine which animals' DNA strands are the most similar. You'll use a technique called <strong class="white">gel electrophoresis</strong> to separate and study the DNA. During this process, restriction enzymes are added to DNA, which help break the DNA into smaller segments.
+                    </div>
+                </div>
+
+                <img class="step-1-indicator" src="images/challenge-3/c3-step-1.png">
+                <div class="step-text step-1-text s18 proxima nova reg off-gray"><span class="tabbed-text">DNA is colored with </span><span class="tabbed-text">dye and poured into a</span> box filled with gel and a buffer that conducts a current.</div>
+                <img class="step-2-indicator" src="images/challenge-3/c3-step-2.png">
+                <div class="step-text step-2-text s18 proxima nova reg off-gray"><span class="tabbed-text">An electrical current is </span><span class="tabbed-text">turned on that pulls</span> the DNA through the gel towards the positive side of the box.</div>
+                <img class="step-3-indicator" src="images/challenge-3/c3-step-3.png">
+                <div class="step-text step-3-text s18 proxima nova reg off-gray"><span class="tabbed-text">DNA is spread over </span><span class="tabbed-text">the gel, ending the</span> process. The DNA is ready to study.</div>
+
+                <img class="diagram" src="images/challenge-3/c3-electrophoresis-diagram.png">
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- challenge_3_dna_selections -->
+<section id="challenge_3_dna_selections" class="fixed full height hidden">
+    <!--<a href="earths-layers.html">--><img src="images/global/next.png" class="next clickable hidden"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="dimmed-background">
+            </div>
+            <div class="content">
+                <img class="icon" src="images/challenge-3/c3-icon-large.png">
+
+                <div class="page-description proxima nova reg s18 off-gray">
+                    You're now ready to perform your own DNA sequencing!<br />
+                    <br />
+                    <span>Compare each animal's DNA Bands to see which have the closest match.</span><br />
+                    <br />
+                    Then, click on your notebook to record your findings.
+                </div>
+
+                <div class="page-description-2 proxima nova reg s12 off-gray
+">
+                    (Remember that no species will match one-to-one, but you need to determine which two have the most matches.)
+                </div>
+
+                <img class="clickable my-notebook-icon" src="images/global/global-my-notebook.png" data-dialog="#challenge_3_dna_selections .dialog.h1">
+
+                <div class="clickable embryo-container duck-embryo-container" data-chose="duck">
+                    <img class="check-box unchecked" src="images/challenge-1/c1-check-box.png">
+                    <img class="check-box checked" src="images/challenge-1/c1-check-box-checked.png">
+                    <div class="container-title">Duck</div>
+                    <img class="dotted-line-1" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="dna-strands dna-strands-duck" src="images/challenge-3/c3-duck-dna-strands.png">
+                </div>
+
+                <div class="clickable embryo-container echidna-embryo-container active" data-chose="echidna">
+                    <img class="check-box unchecked" src="images/challenge-1/c1-check-box.png">
+                    <img class="check-box checked" src="images/challenge-1/c1-check-box-checked.png">
+                    <div class="container-title">Echidna</div>
+                    <img class="dotted-line-1" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="dna-strands dna-strands-duck" src="images/challenge-3/c3-echidna-dna-strands.png">
+                </div>
+
+                <div class="clickable embryo-container otter-embryo-container" data-chose="otter">
+                    <img class="check-box unchecked" src="images/challenge-1/c1-check-box.png">
+                    <img class="check-box checked" src="images/challenge-1/c1-check-box-checked.png">
+                    <div class="container-title">Otter</div>
+                    <img class="dotted-line-1" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="dna-strands dna-strands-duck" src="images/challenge-3/c3-otter-dna-strands.png">
+                </div>
+
+                <div class="clickable embryo-container platypus-embryo-container active" data-chose="platypus">
+                    <img class="check-box unchecked" src="images/challenge-1/c1-check-box.png">
+                    <img class="check-box checked" src="images/challenge-1/c1-check-box-checked.png">
+                    <div class="container-title">Platypus</div>
+                    <img class="dotted-line-1" src="images/challenge-1/c1-dotted-line.png">
+                    <img class="dna-strands dna-strands-duck" src="images/challenge-3/c3-platypus-dna-strands.png">
+                </div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="notebook-modal internal-page dialog h1 hidden" data-show="notebookOpen 2s" data-hide="notebookClose 2s">
+            <img class="back" src="images/global/notebook/notebook_background.png">
+
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~3s">
+
+            <div class="row row-1">
+                <img class="row-title embryonic-investigation" src="images/global/notebook/notebook_genetic_full.png">
+                <div class="checkboxes" data-progress-chosen="chosen_dna">
+                    <div class="checkbox-column column-1 duck" data-chosen="duck">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                    <div class="checkbox-column column-2 echidna" data-chosen="echidna">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                    <div class="checkbox-column column-3 otter" data-chosen="otter">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                    <div class="checkbox-column column-4 platypus" data-chosen="platypus">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img class="note-1-bullet" src="images/global/notebook/notebook-bullet.png">
+            <img class="note-1" src="images/global/notebook/notebook-c3-note-1.png">
+            <img class="note-2-bullet" src="images/global/notebook/notebook-bullet.png">
+            <img class="note-2" src="images/global/notebook/notebook-c3-note-2.png">
+            <img class="note-2-bullet" src="images/global/notebook/notebook-bullet.png">
+            <img class="note-2" src="images/global/notebook/notebook-c3-note-2.png">
+
+            <div class="continue-message proxima nova s18 reg">You've recorded your findings. Click to</div>
+            <img class="continue-button close" src="images/global/notebook/notebook-continue.png">
+        </div>
+    </div>
+</section>
+
+<!-- challenge_3_dna_congrats -->
+<section id="challenge_3_dna_congrats" class="congrats-screen fixed full height hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="">
+            </div>
+            <div class="content">
+                <img class="gradient entire" src="images/global/complete/complete_gradient.png">
+                <div class="blue-heading">
+                    <img class="challenge" src="images/global/complete/challenge.png">
+                    <div class="white-box nasal white s80">3</div>
+                </div>
+                <div class="to-our nasal white s54 shadowed">
+                    Tracing Life's Roots
+                </div>
+                <div class="great-work proxima extra s20">
+                    Good work!
+                </div>
+                <div class="learned proxima reg s20">
+                    Your DNA evidence will be analyzed by many other scientists.
+                </div>
+                <div class="now proxima extra corn dark s20">
+                    Let's go back to the Science Lab for the final analysis.
+                </div>
+                <div class="continue clickable corn shadowless smaller button">
+                    Continue
+                </div>
+                <img class="twf" src="images/global/complete/twf.jpg">
+                <img class="de" src="images/global/complete/de.png">
+                <div class="copyright proxima reg s14">
+                    Copyright &copy; 2019 Discovery Education, Inc. All rights reserved.
+                </div>
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="small" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    Please resize your browser to a wider resolution.
+  </div>
+</section>
+
+<section id="smallMobile" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    It looks like your device screen is too small. If you can, try a different device with a larger landscape resolution.
+  </div>
+</section>
+
+<section id="wrong" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    Please resize your browser to a wider resolution.
+  </div>
+</section>
+
+<section id="wrongMobile" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    Please rotate your device.
+  </div>
+</section>
+
+<script src="js/challenge-3.js"></script>
+
+</body>
+</html>

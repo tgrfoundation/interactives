@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script>
+		var DEBUG = false;
+		var BACKWARDS = false;
+		var TRANSITION_DURING = false;
+		var TRANSITION_DURATION = 0;
+    </script>
+
+    <!-- <link rel="stylesheet" href="css/vendor.css"> -->
+    <link rel="stylesheet" href="css/app.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89584346-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-89584346-7');
+    </script>
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+<body>
+
+<!-- challenge_2_zoo_lab -->
+<section id="challenge_2_zoo_lab" class="fixed full height hidden">
+    <!--<a href="earths-layers.html">--><img src="images/global/next.png" class="next clickable"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_zoo_bg.png" class="">
+                <div class="background-fade"></div>
+            </div>
+            <div class="content">
+
+                <!--<div class="section-title">Anatomy</div>-->
+                <img src="images/challenge-2/title_anatomy.png" class="section-title">
+                <div class="a-line"></div>
+
+                <div class="page-description proxima reg s21 white">An animal's internal anatomy can also provide clues as to how it may be related to other animals. However, an animal's anatomy does not always suggest how closely different animals may be related, which is why this room is just one of your stops before you make a final decision.</div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- challenge_2_skeleton_reveal -->
+<section id="challenge_2_skeleton_reveal" class="fixed full height hidden">
+    <img src="images/global/next.png" class="hidden next clickable"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="dimmed-background">
+            </div>
+            <div class="content">
+
+                <img class="icon" src="images/challenge-2/c2-icon-large.png">
+
+                <div class="page-description proxima nova reg s18 off-gray">
+                    You don't need a science lab to see what an animal looks like on the outside.<br />
+                    <br />
+                    Underneath the layers of fur or feathers and skin exists a <strong class="white">skeleton</strong> unique to each species.<br />
+                    <br />
+                    What can we learn from an animal's skeleton? How can it help us further investigate how animals are related?
+                </div>
+                <div class="dialog-instructions proxima nova reg">
+                    Click on each animal to get a closer look at it's anatomy.
+                </div>
+
+                <div class="animal animal-duck clickable duck-hotspot" data-dialog="#challenge_2_skeleton_reveal .dialog.h1" data-animal="duck">
+                    <div class="duck-text proxima nova med white">Duck</div>
+                    <img class="duck-normal" src="images/challenge-2/c2-duck.png">
+                    <img class="animal-skeleton hidden" src="images/challenge-2/c2-duck-skeleton.png">
+                </div>
+
+                <div class="animal animal-platypus clickable platypus-hotspot" data-dialog="#challenge_2_skeleton_reveal .dialog.h4" data-animal="platypus">
+                    <div class="platypus-text proxima nova med white">Platypus</div>
+                    <img class="platypus-normal" src="images/challenge-2/c2-platypus.png">
+                    <img class="animal-skeleton hidden" src="images/challenge-2/c2-platypus-skeleton.png">
+                </div>
+
+                <div class="animal animal-otter clickable otter-hotspot" data-dialog="#challenge_2_skeleton_reveal .dialog.h2" data-animal="otter">
+                    <div class="otter-text proxima nova med white">Otter</div>
+                    <img class="otter-normal" src="images/challenge-2/c2-otter.png">
+                    <img class="animal-skeleton hidden" src="images/challenge-2/c2-otter-skeleton.png">
+                </div>
+
+                <div class="animal animal-echidna clickable echidna-hotspot" data-dialog="#challenge_2_skeleton_reveal .dialog.h3" data-animal="echidna">
+                    <div class="echidna-text proxima nova med white">Echidna</div>
+                    <img class="echidna-normal" src="images/challenge-2/c2-echidna.png">
+                    <img class="animal-skeleton hidden" src="images/challenge-2/c2-echidna-skeleton.png">
+                </div>
+
+                <div class="dialog h1 hidden duck-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img class="back" src="images/challenge-2/c2-modal-bg.png">
+                    <img src="images/global/modal_close_dark.png" class="close" data-show="bounceIn ~2s">
+
+                    <img class="title duck-title" src="images/challenge-2/c2-modal-duck-title.png">
+                    <img class="image-normal image-duck" src="images/challenge-2/c2-modal-duck.png">
+                    <img class="image-skeleton skeleton-duck" src="images/challenge-2/c2-modal-duck-skeleton.png">
+                </div>
+
+                <div class="dialog h2 hidden otter-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img class="back" src="images/challenge-2/c2-modal-bg.png">
+                    <img src="images/global/modal_close_dark.png" class="close" data-show="bounceIn ~2s">
+
+                    <img class="title otter-title" src="images/challenge-2/c2-modal-otter-title.png">
+                    <img class="image-normal image-otter" src="images/challenge-2/c2-modal-otter.png">
+                    <img class="image-skeleton skeleton-otter" src="images/challenge-2/c2-modal-otter-skeleton.png">
+                </div>
+
+                <div class="dialog h3 hidden echidna-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img class="back" src="images/challenge-2/c2-modal-bg.png">
+                    <img src="images/global/modal_close_dark.png" class="close" data-show="bounceIn ~2s">
+
+                    <img class="title echidna-title" src="images/challenge-2/c2-modal-echidna-title.png">
+                    <img class="image-normal image-echidna" src="images/challenge-2/c2-modal-echidna.png">
+                    <img class="image-skeleton skeleton-echidna" src="images/challenge-2/c2-modal-echidna-skeleton.png">
+                </div>
+
+                <div class="dialog h4 hidden platypus-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img class="back" src="images/challenge-2/c2-modal-bg.png">
+                    <img src="images/global/modal_close_dark.png" class="close" data-show="bounceIn ~2s">
+
+                    <img class="title platypus-title" src="images/challenge-2/c2-modal-platypus-title.png">
+                    <img class="image-normal image-platypus" src="images/challenge-2/c2-modal-platypus.png">
+                    <img class="image-skeleton skeleton-platypus" src="images/challenge-2/c2-modal-platypus-skeleton.png">
+                </div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- challenge_2_humerus_reveal -->
+<section id="challenge_2_humerus_reveal" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable hidden"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="dimmed-background">
+            </div>
+            <div class="content">
+
+                <img class="icon" src="images/challenge-2/c2-icon-large.png">
+
+                <div class="page-description instructions proxima nova reg s18 off-gray">
+                    <span>Click on each animal skeleton to view its humerus bone.</span>
+                </div>
+
+                <div class="page-description post-activity proxima nova reg s18 off-gray hidden">
+                    As you can see, these humeri are <strong class="white">homologous</strong> &mdash; or similar. Similarities often occur in animals when they have a common ancestor. <br />
+                    <br />
+                    However, their anatomy also remains slightly different because each animal adapted over time to survive best in its own environment.
+                </div>
+                <div class="dialog-instructions off-gray reg s18 proxima nova reg">
+                    Let's examine the limbs of each animal.<br />
+                    <br />
+                    The <strong class="white">humerus</strong> bone is the upper arm bone, which exists between the shoulder joint and the elbow joint.
+                </div>
+
+                <div class="animal animal-duck clickable duck-hotspot" data-dialog="#challenge_2_humerus_reveal .dialog.h1" data-animal="duck">
+                    <div class="duck-text proxima nova med white">Duck</div>
+                    <img class="animal-skeleton" src="images/challenge-2/c2-duck-skeleton.png">
+                    <img class="animal-humerus duck-humerus hidden" src="images/challenge-2/c2-duck-humerus.png">
+                    <!--<img class="animal-hotspot" src="images/challenge-2/c2-modal-hotspot-arrow.png">-->
+                </div>
+
+                <div class="animal animal-platypus clickable platypus-hotspot" data-dialog="#challenge_2_humerus_reveal .dialog.h4" data-animal="platypus">
+                    <div class="platypus-text proxima nova med white">Platypus</div>
+                    <img class="animal-skeleton" src="images/challenge-2/c2-platypus-skeleton.png">
+                    <img class="animal-humerus platypus-humerus hidden" src="images/challenge-2/c2-platypus-humerus.png">
+                    <!--<img class="animal-hotspot" src="images/challenge-2/c2-modal-hotspot-arrow.png">-->
+                </div>
+
+                <div class="animal animal-otter clickable otter-hotspot" data-dialog="#challenge_2_humerus_reveal .dialog.h2" data-animal="otter">
+                    <div class="otter-text proxima nova med white">Otter</div>
+                    <img class="animal-skeleton" src="images/challenge-2/c2-otter-skeleton.png">
+                    <img class="animal-humerus otter-humerus hidden" src="images/challenge-2/c2-otter-humerus.png">
+                    <!--<img class="animal-hotspot" src="images/challenge-2/c2-modal-hotspot-arrow.png">-->
+                </div>
+
+                <div class="animal animal-echidna clickable echidna-hotspot" data-dialog="#challenge_2_humerus_reveal .dialog.h3" data-animal="echidna">
+                    <div class="echidna-text proxima nova med white">Echidna</div>
+                    <img class="animal-skeleton" src="images/challenge-2/c2-echidna-skeleton.png">
+                    <img class="animal-humerus echidna-humerus hidden" src="images/challenge-2/c2-echidna-humerus.png">
+                    <!--<img class="animal-hotspot" src="images/challenge-2/c2-modal-hotspot-arrow.png">-->
+                </div>
+
+                <!-- =============== Humerus Modals =============== -->
+                <div class="dialog h1 hidden duck-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img class="back" src="images/challenge-2/c2-modal-bg.png">
+                    <img src="images/global/modal_close_dark.png" class="close" data-show="bounceIn ~2s">
+
+                    <img class="title duck-title" src="images/challenge-2/c2-modal-duck-title.png">
+                    <img class="image-skeleton skeleton-duck" src="images/challenge-2/c2-modal-duck-skeleton.png">
+                    <img class="image-humerus image-duck" src="images/challenge-2/c2-modal-duck-humerus.png">
+                </div>
+                <div class="dialog h2 hidden otter-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img class="back" src="images/challenge-2/c2-modal-bg.png">
+                    <img src="images/global/modal_close_dark.png" class="close" data-show="bounceIn ~2s">
+
+                    <img class="title otter-title" src="images/challenge-2/c2-modal-otter-title.png">
+                    <img class="image-skeleton skeleton-otter" src="images/challenge-2/c2-modal-otter-skeleton.png">
+                    <img class="image-humerus image-otter" src="images/challenge-2/c2-modal-otter-humerus.png">
+                </div>
+                <div class="dialog h3 hidden echidna-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img class="back" src="images/challenge-2/c2-modal-bg.png">
+                    <img src="images/global/modal_close_dark.png" class="close" data-show="bounceIn ~2s">
+
+                    <img class="title echidna-title" src="images/challenge-2/c2-modal-echidna-title.png">
+                    <img class="image-skeleton skeleton-echidna" src="images/challenge-2/c2-modal-echidna-skeleton.png">
+                    <img class="image-humerus image-echidna" src="images/challenge-2/c2-modal-echidna-humerus.png">
+                </div>
+                <div class="dialog h4 hidden platypus-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img class="back" src="images/challenge-2/c2-modal-bg.png">
+                    <img src="images/global/modal_close_dark.png" class="close" data-show="bounceIn ~2s">
+
+                    <img class="title platypus-title" src="images/challenge-2/c2-modal-platypus-title.png">
+                    <img class="image-skeleton skeleton-platypus" src="images/challenge-2/c2-modal-platypus-skeleton.png">
+                    <img class="image-humerus image-platypus" src="images/challenge-2/c2-modal-platypus-humerus.png">
+                </div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- challenge_2_skull_selection -->
+<section id="challenge_2_skull_selection" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable hidden"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="dimmed-background">
+            </div>
+            <div class="content">
+
+                <img class="icon" src="images/challenge-2/c2-icon-large.png">
+
+                <div class="dialog-instructions proxima nova reg">
+                    <span class="off-gray">Analogous structures are due to anatomical features developed separately and are not a sign of common ancestry.  A trait may be both homologous and analogous, depending on the level at which the trait is examined.</span><br />
+                    <br />
+                    Drag the skulls you believe are most similar into the target boxes.
+                </div>
+
+                <div class="animal animal-duck clickable duck-hotspot" data-dialog="#challenge_2_skull_selection .dialog.h1" data-animal="duck">
+                    <div class="duck-text proxima nova med white">Duck</div>
+                    <img class="animal-skeleton" src="images/challenge-2/c2-duck-skeleton-dim.png">
+                    <!--<img class="animal-hotspot" src="images/challenge-2/c2-modal-hotspot-arrow.png">-->
+                </div>
+
+                <div class="animal animal-platypus clickable platypus-hotspot" data-dialog="#challenge_2_skull_selection .dialog.h4" data-animal="platypus">
+                    <div class="platypus-text proxima nova med white">Platypus</div>
+                    <img class="animal-skeleton" src="images/challenge-2/c2-platypus-skeleton-dim.png">
+                    <!--<img class="animal-hotspot" src="images/challenge-2/c2-modal-hotspot-arrow.png">-->
+                </div>
+
+                <div class="animal animal-otter clickable otter-hotspot" data-dialog="#challenge_2_skull_selection .dialog.h2" data-animal="otter">
+                    <div class="otter-text proxima nova med white">Otter</div>
+                    <img class="animal-skeleton" src="images/challenge-2/c2-otter-skeleton-dim.png">
+                    <!--<img class="animal-hotspot" src="images/challenge-2/c2-modal-hotspot-arrow.png">-->
+                </div>
+
+                <div class="animal animal-echidna clickable echidna-hotspot" data-dialog="#challenge_2_skull_selection .dialog.h3" data-animal="echidna">
+                    <div class="echidna-text proxima nova med white">Echidna</div>
+                    <img class="animal-skeleton" src="images/challenge-2/c2-echidna-skeleton-dim.png">
+                    <!--<img class="animal-hotspot" src="images/challenge-2/c2-modal-hotspot-arrow.png">-->
+                </div>
+
+                <div class="skull-dnd-container">
+                    <div class="skull-drop-area skull-drop-area-1">
+                        <div class="skull-drop-area-text"></div>
+                    </div>
+
+                    <img class="skull-target-box skull-target-box-1" data-target-box="1" data-name="d1" data-correct="d1" src="images/challenge-2/c2-skull-target-box.png">
+                    <div class="skull-target-box-container skull-target-box-container-1">
+                        <img class="skull-target-box-image skull-target-box-image-1" src="images/challenge-2/c2-otter-target-skull.png">
+                    </div>
+
+
+                    <img class="skull-target-box skull-target-box-2" data-target-box="2" data-name="d2" data-correct="d2" src="images/challenge-2/c2-skull-target-box.png">
+                    <div class="skull-target-box-container skull-target-box-container-2">
+                        <img class="skull-target-box-image skull-target-box-image-2" src="images/challenge-2/c2-echidna-target-skull.png">
+                    </div>
+
+                    <div class="skull-drop-area skull-drop-area-2">
+                        <div class="skull-drop-area-text"></div>
+                    </div>
+
+                    <img class="animal-skull duck-skull" data-animal="duck" data-target='d1' src="images/challenge-2/c2-duck-skull.png">
+                    <img class="animal-skull platypus-skull" data-animal="platypus" data-target='d2' src="images/challenge-2/c2-platypus-skull.png">
+                    <img class="animal-skull otter-skull" data-animal="otter" data-target='d3' src="images/challenge-2/c2-otter-skull.png">
+                    <img class="animal-skull echidna-skull" data-animal="echidna" data-target='d4' src="images/challenge-2/c2-echidna-skull.png">
+
+                    <!--<img class="clear-button" src="images/challenge-2/c2-skull-clear-button.png">-->
+
+                    <div class="clear drag-retry clear-button clickable blue button hidden drag-success drag-failure" data-drag-success="fadeOut" data-drag-failure="fadeOut" data-drag-retry="fadeOut">
+                        Clear
+                    </div>
+
+                    <div class="submit submit-button clickable white button drag-done hidden" data-drag-done="bounceIn" data-drag-success="fadeOut" data-drag-failure="fadeOut" data-drag-retry="fadeOut">
+                        Submit
+                    </div>
+
+                    <div class="submitted-text correct-order nice-try good-job proxima bold white s30 hidden drag-success" data-drag-success="zoomIn 2s ~0.5s" data-drag-retry="zoomIn 2s ~0.5s" data-drag-failure="fadeIn 2s ~0.5s">
+                        <span class="green">Your choice has been recorded.</span><br />
+                        <br />
+                        Click the Next Arrow to continue
+                    </div>
+                </div>
+
+                <!-- =============== Skeleton Modals =============== -->
+                <div class="dialog h1 hidden duck-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img class="back" src="images/challenge-2/c2-modal-bg.png">
+                    <img src="images/global/modal_close_dark.png" class="close" data-show="bounceIn ~2s">
+
+                    <img class="title duck-title" src="images/challenge-2/c2-modal-duck-title.png">
+                    <img class="image-skeleton skeleton-duck" src="images/challenge-2/c2-modal-duck-skeleton.png">
+                </div>
+                <div class="dialog h2 hidden otter-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img class="back" src="images/challenge-2/c2-modal-bg.png">
+                    <img src="images/global/modal_close_dark.png" class="close" data-show="bounceIn ~2s">
+
+                    <img class="title otter-title" src="images/challenge-2/c2-modal-otter-title.png">
+                    <img class="image-skeleton skeleton-otter" src="images/challenge-2/c2-modal-otter-skeleton.png">
+                </div>
+                <div class="dialog h3 hidden echidna-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img class="back" src="images/challenge-2/c2-modal-bg.png">
+                    <img src="images/global/modal_close_dark.png" class="close" data-show="bounceIn ~2s">
+
+                    <img class="title echidna-title" src="images/challenge-2/c2-modal-echidna-title.png">
+                    <img class="image-skeleton skeleton-echidna" src="images/challenge-2/c2-modal-echidna-skeleton.png">
+                </div>
+                <div class="dialog h4 hidden platypus-modal" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+                    <img class="back" src="images/challenge-2/c2-modal-bg.png">
+                    <img src="images/global/modal_close_dark.png" class="close" data-show="bounceIn ~2s">
+
+                    <img class="title platypus-title" src="images/challenge-2/c2-modal-platypus-title.png">
+                    <img class="image-skeleton skeleton-platypus" src="images/challenge-2/c2-modal-platypus-skeleton.png">
+                </div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- challenge_2_skeleton_selection -->
+<section id="challenge_2_skeleton_selection" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable hidden"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="dimmed-background">
+            </div>
+            <div class="content">
+
+                <img class="icon" src="images/challenge-2/c2-icon-large.png">
+
+                <div class="dialog-instructions proxima nova reg">
+                    You have chosen the <span class="choice-1">choice 1</span> and the <span class="choice-2">choice 2</span> skulls as most alike. Now, looking at each animal's entire skeletal structure, choose which two you feel are most similar.<br />
+                    <br />
+                    <span class="off-gray">Then, click on your notebook to record you findings.</span>
+                </div>
+
+                <div class="animal animal-skeleton-container animal-duck clickable duck-hotspot" data-chose="duck">
+                    <div class="duck-text proxima nova med white">Duck</div>
+                    <img class="animal-skeleton" src="images/challenge-2/c2-duck-skeleton.png">
+                    <img class="animal-skeleton animal-skeleton-dark" src="images/challenge-2/c2-duck-skeleton-dark.png">
+                    <img class="check-box unchecked" src="images/challenge-1/c1-check-box.png">
+                    <img class="check-box checked" src="images/challenge-1/c1-check-box-checked.png">
+                </div>
+
+                <div class="animal animal-skeleton-container animal-platypus clickable platypus-hotspot" data-chose="platypus">
+                    <div class="platypus-text proxima nova med white">Platypus</div>
+                    <img class="animal-skeleton" src="images/challenge-2/c2-platypus-skeleton.png">
+                    <img class="animal-skeleton animal-skeleton-dark" src="images/challenge-2/c2-platypus-skeleton-dark.png">
+                    <img class="check-box unchecked" src="images/challenge-1/c1-check-box.png">
+                    <img class="check-box checked" src="images/challenge-1/c1-check-box-checked.png">
+                </div>
+
+                <div class="animal animal-skeleton-container animal-otter clickable otter-hotspot" data-chose="otter">
+                    <div class="otter-text proxima nova med white">Otter</div>
+                    <img class="animal-skeleton" src="images/challenge-2/c2-otter-skeleton.png">
+                    <img class="animal-skeleton animal-skeleton-dark" src="images/challenge-2/c2-otter-skeleton-dark.png">
+                    <img class="check-box unchecked" src="images/challenge-1/c1-check-box.png">
+                    <img class="check-box checked" src="images/challenge-1/c1-check-box-checked.png">
+                </div>
+
+                <div class="animal animal-skeleton-container animal-echidna clickable echidna-hotspot" data-chose="echidna">
+                    <div class="echidna-text proxima nova med white">Echidna</div>
+                    <img class="animal-skeleton" src="images/challenge-2/c2-echidna-skeleton.png">
+                    <img class="animal-skeleton animal-skeleton-dark" src="images/challenge-2/c2-echidna-skeleton-dark.png">
+                    <img class="check-box unchecked" src="images/challenge-1/c1-check-box.png">
+                    <img class="check-box checked" src="images/challenge-1/c1-check-box-checked.png">
+                </div>
+
+                <div class="skull-dnd-container">
+                    <div class="skull-drop-area skull-drop-area-1">
+                        <div class="skull-drop-area-text"></div>
+                    </div>
+
+                    <img class="skull-target-box skull-target-box-1" data-target-box="1" data-name="d1" data-correct="d1" src="images/challenge-2/c2-skull-target-box.png">
+                    <div class="skull-target-box-container skull-target-box-container-1">
+                        <img class="skull-target-box-image skull-target-box-image-1" src="images/challenge-2/c2-otter-target-skull.png">
+                    </div>
+
+
+                    <img class="skull-target-box skull-target-box-2" data-target-box="2" data-name="d2" data-correct="d2" src="images/challenge-2/c2-skull-target-box.png">
+                    <div class="skull-target-box-container skull-target-box-container-2">
+                        <img class="skull-target-box-image skull-target-box-image-2" src="images/challenge-2/c2-echidna-target-skull.png">
+                    </div>
+
+                    <div class="skull-drop-area skull-drop-area-2">
+                        <div class="skull-drop-area-text"></div>
+                    </div>
+
+                    <!--<img class="clear-button" src="images/challenge-2/c2-skull-clear-button.png">-->
+                </div>
+
+                <img class="clickable my-notebook-icon" src="images/global/global-my-notebook.png" data-dialog="#challenge_2_skeleton_selection .dialog.h1">
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="notebook-modal internal-page dialog h1 hidden" data-show="notebookOpen 4s" data-hide="notebookClose 2s">
+            <img class="back" src="images/global/notebook/notebook_background.png">
+
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~3s">
+
+            <div class="row row-1">
+                <img class="row-title embryonic-investigation" src="images/global/notebook/notebook_anatomic_full.png">
+                <div class="checkboxes" data-progress-chosen="chosen_skeleton">
+                    <div class="checkbox-column column-1 duck" data-chosen="duck">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                    <div class="checkbox-column column-2 echidna" data-chosen="echidna">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                    <div class="checkbox-column column-3 otter" data-chosen="otter">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                    <div class="checkbox-column column-4 platypus" data-chosen="platypus">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img class="note-1-bullet" src="images/global/notebook/notebook-bullet.png">
+            <img class="note-1" src="images/global/notebook/notebook-c2-note-1.png">
+            <img class="note-2-bullet" src="images/global/notebook/notebook-bullet.png">
+            <img class="note-2" src="images/global/notebook/notebook-c2-note-2.png">
+
+            <div class="continue-message proxima nova s18 reg">You've recorded your findings. Click to</div>
+            <img class="continue-button close" src="images/global/notebook/notebook-continue.png">
+
+        </div>
+    </div>
+</section>
+
+<!-- challenge_2_skeleton_congrats -->
+<section id="challenge_2_skeleton_congrats" class="congrats-screen fixed full height hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="">
+            </div>
+            <div class="content">
+                <img class="gradient entire" src="images/global/complete/complete_gradient.png">
+                <div class="blue-heading">
+                    <img class="challenge" src="images/global/complete/challenge.png">
+                    <div class="white-box nasal white s80">2</div>
+                </div>
+                <div class="to-our nasal white s54 shadowed">
+                    Tracing Life's Roots
+                </div>
+                <div class="great-work proxima extra s20">
+                    Super job!
+                </div>
+                <div class="learned proxima reg s20">
+                    In the Anatomy Room you examined animal skeletons, searching for homologous structures and how they have changed over time.
+                </div>
+                <div class="now proxima extra corn dark s20">
+                    You are now ready to visit the DNA Room!
+                </div>
+                <div class="continue clickable corn shadowless smaller button">
+                    Continue
+                </div>
+                <img class="twf" src="images/global/complete/twf.jpg">
+                <img class="de" src="images/global/complete/de.png">
+                <div class="copyright proxima reg s14">
+                    Copyright &copy; 2019 Discovery Education, Inc. All rights reserved.
+                </div>
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab"></div>
+                    <div class="tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="small" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    Please resize your browser to a wider resolution.
+  </div>
+</section>
+
+<section id="smallMobile" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    It looks like your device screen is too small. If you can, try a different device with a larger landscape resolution.
+  </div>
+</section>
+
+<section id="wrong" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    Please resize your browser to a wider resolution.
+  </div>
+</section>
+
+<section id="wrongMobile" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    Please rotate your device.
+  </div>
+</section>
+
+<script src="js/challenge-2.js"></script>
+
+</body>
+</html>

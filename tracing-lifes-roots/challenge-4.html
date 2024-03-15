@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script>
+		var DEBUG = false;
+		var BACKWARDS = false;
+		var TRANSITION_DURING = false;
+		var TRANSITION_DURATION = 0;
+    </script>
+
+    <!-- <link rel="stylesheet" href="css/vendor.css"> -->
+    <link rel="stylesheet" href="css/app.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89584346-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-89584346-7');
+    </script>
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+<body>
+
+<!-- challenge_4_final_choice -->
+<section id="challenge_4_final_choice" class="fixed full height hidden">
+    <!--<a href="earths-layers.html">--><img src="images/global/next.png" class="next clickable hidden"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="dimmed-background">
+            </div>
+            <div class="content">
+
+                <div class="blue-dialog blue-dialog-full">
+                    <img class="dialog-image" src="images/challenge-4/c4-icon-inverted.png">
+                    <div class="dialog-description proxima reg off-gray lh-tight">
+                        Now that you have taken notes on animal similarities through embryonic data, skeletal structures and DNA sequencing, it is time to choose which two animals you feel are most closely related.
+                    </div>
+                </div>
+
+                <div class="dialog-instructions proxima nova reg">
+                    Click on your notebook one last time to make your choice!
+                </div>
+
+                <img class="clickable my-notebook-icon active" src="images/global/global-my-notebook-large.png" data-dialog="#challenge_4_final_choice .dialog.h1">
+
+                <div class="dialog-description-2 proxima reg white lh-tight hidden">
+                    Continue to the next page to find out which two animals are most closely related!
+                </div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="notebook-modal dialog h1 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img class="back" src="images/global/notebook/notebook_background.png">
+
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+
+            <div class="row row-1">
+                <img class="row-title embryonic-investigation" src="images/global/notebook/notebook_embryoic_full.png">
+                <div class="checkboxes" data-progress-chosen="chosen_embryo">
+                    <div class="checkbox-column column-1 duck" data-chosen="duck">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <img class="checkbox-selected" src="images/global/notebook/notebook_checkbox_full.png">
+                    </div>
+                    <div class="checkbox-column column-2 echidna" data-chosen="echidna">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <img class="checkbox-selected" src="images/global/notebook/notebook_checkbox_full.png">
+                    </div>
+                    <div class="checkbox-column column-3 otter" data-chosen="otter">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <img class="checkbox-selected" src="images/global/notebook/notebook_checkbox_full.png">
+                    </div>
+                    <div class="checkbox-column column-4 platypus" data-chosen="platypus">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <img class="checkbox-selected" src="images/global/notebook/notebook_checkbox_full.png">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-2">
+                <img class="row-title embryonic-investigation" src="images/global/notebook/notebook_anatomic_full.png">
+                <div class="checkboxes" data-progress-chosen="chosen_skeleton">
+                    <div class="checkbox-column column-1 duck" data-chosen="duck">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <img class="checkbox-selected" src="images/global/notebook/notebook_checkbox_full.png">
+                    </div>
+                    <div class="checkbox-column column-2 echidna" data-chosen="echidna">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <img class="checkbox-selected" src="images/global/notebook/notebook_checkbox_full.png">
+                    </div>
+                    <div class="checkbox-column column-3 otter" data-chosen="otter">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <img class="checkbox-selected" src="images/global/notebook/notebook_checkbox_full.png">
+                    </div>
+                    <div class="checkbox-column column-4 platypus" data-chosen="platypus">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <img class="checkbox-selected" src="images/global/notebook/notebook_checkbox_full.png">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-3">
+                <img class="row-title embryonic-investigation" src="images/global/notebook/notebook_genetic_full.png">
+                <div class="checkboxes" data-progress-chosen="chosen_dna">
+                    <div class="checkbox-column column-1 duck" data-chosen="duck">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <img class="checkbox-selected" src="images/global/notebook/notebook_checkbox_full.png">
+                    </div>
+                    <div class="checkbox-column column-2 echidna" data-chosen="echidna">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <img class="checkbox-selected" src="images/global/notebook/notebook_checkbox_full.png">
+                    </div>
+                    <div class="checkbox-column column-3 otter" data-chosen="otter">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <img class="checkbox-selected" src="images/global/notebook/notebook_checkbox_full.png">
+                    </div>
+                    <div class="checkbox-column column-4 platypus" data-chosen="platypus">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <img class="checkbox-selected" src="images/global/notebook/notebook_checkbox_full.png">
+                    </div>
+                </div>
+            </div>
+            <div class="row-divider">
+                <div class="divider-line"></div>
+                <div class="divider-text">Based on your findings, what is your final conclusion?</div>
+            </div>
+            <div class="row row-4">
+                <img class="row-title embryonic-investigation" src="images/global/notebook/notebook_conclusion_full.png">
+                <div class="checkboxes" data-progress-chosen="chosen_conclusion">
+                    <div class="checkbox-column clickable column-1 duck" data-chosen="duck" data-chose="duck">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                    <div class="checkbox-column clickable column-2 echidna" data-chosen="echidna" data-chose="echidna">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                    <div class="checkbox-column clickable column-3 otter" data-chosen="otter" data-chose="otter">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                    <div class="checkbox-column clickable column-4 platypus" data-chosen="platypus" data-chose="platypus">
+                        <img class="checkbox-empty" src="images/global/notebook/notebook-checkbox-dark.png">
+                        <div class="checkbox-selected-container">
+                            <img class="checkbox-selected" src="images/global/notebook/notebook-check.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img class="continue-button close" src="images/global/notebook/notebook-continue.png">
+        </div>
+
+    </div>
+</section>
+
+<!-- challenge_4_cardiogram -->
+<section id="challenge_4_cardiogram" class="fixed full height hidden">
+    <!--<a href="earths-layers.html">--><img src="images/global/next.png" class="next clickable"><!--</a>-->
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="dimmed-background">
+            </div>
+            <div class="content">
+
+                <div class="blue-dialog blue-dialog-full">
+                    <img class="dialog-image" src="images/challenge-4/c4-icon-inverted.png">
+                    <div class="dialog-description proxima reg off-gray lh-tight">
+                        A <strong class="white">cladogram</strong> helps us visualize the classification of organisms by common traits. The further the animals are from each other on the diagram, the more distantly they are related, and less traits they have in common.
+                    </div>
+                </div>
+
+                <img class="cladogram-highlight" src="images/challenge-4/c4-cladogram-hl.png">
+
+                <!--<img class="cladogram-chart" src="images/challenge-4/c4-cladogram.png">-->
+                <img class="cladogram-chart-partial" src="images/challenge-4/clad.png">
+                <img class="cladogram-chart-duck" src="images/challenge-4/clad-duck.png">
+                <img class="cladogram-chart-otter" src="images/challenge-4/clad-otter.png">
+
+                <div class="cladogram-chart-monotremes-container">
+                    <img class="cladogram-chart-monotremes-box-1" src="images/challenge-4/cladogram_whiteBox.png">
+                    <img class="cladogram-chart-monotremes-box-2" src="images/challenge-4/cladogram_whiteBox.png">
+                    <img class="cladogram-chart-monotremes-lines" src="images/challenge-4/cladogram_whiteLines.png">
+                    <img class="cladogram-chart-echidna" src="images/challenge-4/clad-echidna.png">
+                    <img class="cladogram-chart-platypus" src="images/challenge-4/clad-platypus.png">
+                </div>
+
+                <div class="page-description s18 proxima nova reg off-gray">The animals which most closely match are the <strong class="white">Echidna</strong> and the <strong class="white">Platypus</strong>.<br />
+                <br />
+                Was your hypothesis correct?</div>
+
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- career_connection -->
+<section id="career_connection" class="fixed full height hidden">
+    <img src="images/global/next.png" class="next clickable hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="dimmed-background">
+            </div>
+            <div class="content">
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                </div>
+                <div class="blue-dialog blue-dialog-full">
+                    <img src="images/challenge-4/c4-icon-inverted.png" class="dialog-image">
+                    <div class="intro proxima reg gray s18">
+                        The Zoo Lab would love to have you return one day. You may be surprised at how many careers are related to the study of animals!
+                    </div>
+                    <div class="instructions proxima reg white s18">
+                        Let's explore some of these careers and see what they entail:
+                    </div>
+                </div>
+                <img class="clickable learn1" src="images/challenge-4/c4-hotspot-bioinform.png" data-dialog="#career_connection .dialog.h1" data-check="c1">
+                <img class="clickable learn2" src="images/challenge-4/c4-hotspot-evolutionary.png" data-dialog="#career_connection .dialog.h2" data-check="c2">
+                <img class="clickable learn3" src="images/challenge-4/c4-hotspot-taxonimist.png" data-dialog="#career_connection .dialog.h3" data-check="c3">
+                <img class="clickable learn4" src="images/challenge-4/c4-hotspot-anthropologist.png" data-dialog="#career_connection .dialog.h4" data-check="c4">
+                <img class="clickable learn5" src="images/challenge-4/c4-hotspot-ecologist.png" data-dialog="#career_connection .dialog.h5" data-check="c5">
+                <img class="clickable learn6" src="images/challenge-4/c4-hotspot-bioTech.png" data-dialog="#career_connection .dialog.h6" data-check="c6">
+
+                <div class="continue clickable corn shadowless smaller button hidden">
+                    Continue
+                </div>
+            </div>
+            <div class="cover hidden" data-show="fadeIn 0.5s" data-hide="fadeOut ~0.5s 0.5s"></div>
+        </div>
+        <div class="dialog h1 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Bioinformatician
+            </div>
+            <img class="back" src="images/challenge-4/c4-modal-bioinform.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                A bioinformatician combines research in biology, medicine and health-related studies with information technology to interpret data.
+            </div>
+        </div>
+        <div class="dialog h2 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Population Geneticist
+            </div>
+            <img class="back" src="images/challenge-4/c4-modal-ev-biologist.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                A population geneticist studies inherited genetic markers to either understand their origin or how those markers would impact the different organisms they are in.
+            </div>
+        </div>
+        <div class="dialog h3 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Taxonomist
+            </div>
+            <img class="back" src="images/challenge-4/c4-modal-taxon.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                A taxonomist is a biologist who specializes in the classification of organisms into related groups based on their structure, genetics and behavior.
+            </div>
+        </div>
+        <div class="dialog h4 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Anthropologist
+            </div>
+            <img class="back" src="images/challenge-4/c4-modal-anthrop.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                An anthropologist studies the origin, development and behavior of humans.
+            </div>
+        </div>
+        <div class="dialog h5 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Ecologist
+            </div>
+            <img class="back" src="images/challenge-4/c4-modal-ecologist.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                An ecologist studies the relationship between living organisms and their environment, including how humans affect other living organisms.
+            </div>
+        </div>
+        <div class="dialog h6 hidden" data-show="zoomIn ~0.5s" data-hide="zoomOut">
+            <img src="images/global/modal_close.png" class="close" data-show="bounceIn ~2s">
+            <div class="dialog-title proxima bold yellow s24" data-show="fadeIn ~1.5s">
+                Biotechnology Laboratory Technician
+            </div>
+            <img class="back" src="images/challenge-4/c4-modal-bio-lab-tech.png">
+            <div class="blue white proxima reg s18" data-show="fadeIn ~1s">
+                A lab technician works in laboratories aiding scientists and researchers in their studies of living organisms.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- final_congrats_screen -->
+<section id="final_congrats_screen" class="congrats-screen fixed full height hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="">
+            </div>
+            <div class="content">
+                <img class="gradient entire" src="images/global/complete/complete_gradient.png">
+                <div class="blue-heading">
+                    <img class="challenge" src="images/global/complete/challenge.png">
+                    <div class="white-box nasal white s80">4</div>
+                </div>
+                <div class="to-our nasal white s54 shadowed">
+                    Tracing Life's Roots
+                </div>
+                <div class="great-work proxima extra s20">
+                    Your animal ancestry investigation is now complete!
+                </div>
+                <div class="learned proxima extra corn dark s20">
+                    You took a giant leap in educating yourself more about animal ancestry through today's exploration.
+                </div>
+                <div class="continue clickable corn shadowless smaller button">
+                    Continue
+                </div>
+                <img class="twf" src="images/global/complete/twf.jpg">
+                <img class="de" src="images/global/complete/de.png">
+                <div class="copyright proxima reg s14">
+                    Copyright &copy; 2019 Discovery Education, Inc. All rights reserved.
+                </div>
+                <div class="progress">
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                    <div class="tab progressed"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- wrap_up -->
+<section id="wrap_up" class="wrap-up-screen fixed full height hidden">
+    <div class="scene">
+        <div class="container">
+            <div class="background">
+                <img src="images/global/global_bg.png" class="">
+                <img src="images/challenge-1/c1_bg_dim_cover.png" class="">
+            </div>
+            <div class="content">
+                <img class="wrap-up-title" src="images/challenge-4/end_title.png">
+                <div class="congrats proxima extra s30 yellow">
+                    Congratulations!
+                </div>
+                <div class="completed proxima reg s30 white">
+                    You have successfully completed
+                </div>
+                <div class="panel-container">
+                    <img class="panel" src="images/challenge-4/wrapUp_panel.png">
+                    <img class="numbers" src="images/challenge-4/wrapUp_challenges-numbers.png">
+                    <img class="checks" src="images/challenge-4/wrapUp_yellowChecks.png">
+                    <a id="certificate-of-completion" href="images/challenge-4/certificate-of-completion.pdf" target="_blank">
+                        <img id="cert-image" class="cert clickable" src="images/challenge-4/wrapUp_cert_bttn.png">
+                    </a>
+                    <img class="play clickable" src="images/challenge-4/wrapUp_play_bttn.png">
+                    <img class="tiger clickable" src="images/challenge-4/wrapUp_tgr_bttn.png">
+                </div>
+                <img class="dised" src="images/challenge-4/wrapUp_de_white.png">
+                <img class="twf" src="images/challenge-4/wrapUp_twf_white.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="small" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    Please resize your browser to a wider resolution.
+  </div>
+</section>
+
+<section id="smallMobile" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    It looks like your device screen is too small. If you can, try a different device with a larger landscape resolution.
+  </div>
+</section>
+
+<section id="wrong" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    Please resize your browser to a wider resolution.
+  </div>
+</section>
+
+<section id="wrongMobile" class="fixed full height hidden"
+  style="background-image: url(images/global/global_bg.png); background-size: cover">
+  <div style="position: fixed; left: 25%; width: 50%; text-align: center; color: white; font-size: 20px; top: 40%;">
+    Please rotate your device.
+  </div>
+</section>
+
+<script src="js/challenge-4.js"></script>
+
+</body>
+</html>
