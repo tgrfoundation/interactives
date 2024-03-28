@@ -1,0 +1,57 @@
+{
+  "version": "3.56.26219.0",
+  "course_id": "67NHWBOsPtN_course_id",
+  "title": "Examples of Three-Dimensional Thinking",
+  "thumbnail": "story_content/thumbnail.jpg",
+  "scenes": [
+    {
+      "title": "Untitled Scene"
+    }
+  ],
+  "slides": [
+    {
+      "id": "6ClkRz1PVv7",
+      "title": "3 Examples",
+      "scene_index": "1.1"
+    },
+    {
+      "id": "5a27kJ8wVdF",
+      "title": "Water 1",
+      "scene_index": "1.2"
+    },
+    {
+      "id": "6AlYg1vlevM",
+      "title": "Water 2",
+      "scene_index": "1.3"
+    },
+    {
+      "id": "5yyterfAH9W",
+      "title": "Pipeline 1",
+      "scene_index": "1.4"
+    },
+    {
+      "id": "5o2d2AqNDZF",
+      "title": "Pipeline 2",
+      "scene_index": "1.5"
+    },
+    {
+      "id": "6aZW3f1JVVm",
+      "title": "Gatsby 1",
+      "scene_index": "1.6"
+    },
+    {
+      "id": "6VzWLmlydGe",
+      "title": "Gatsby 2",
+      "scene_index": "1.7"
+    }
+  ],
+  "player": {
+    "name": "unified",
+    "width": 980,
+    "height": 460
+  },
+  "stage": {
+    "width": 960,
+    "height": 440
+  }
+}
