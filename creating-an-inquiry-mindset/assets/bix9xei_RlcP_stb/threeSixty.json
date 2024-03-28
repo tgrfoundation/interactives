@@ -1,0 +1,24 @@
+{
+  "version": "3.49.24347.0",
+  "scenes": [
+    {
+      "title": "Untitled Scene"
+    }
+  ],
+  "slides": [
+    {
+      "id": "6ClkRz1PVv7",
+      "title": "Student Voice Spectrum",
+      "scene_index": "1.1"
+    }
+  ],
+  "player": {
+    "name": "unified",
+    "width": 1208,
+    "height": 634
+  },
+  "stage": {
+    "width": 1188,
+    "height": 540
+  }
+}
