@@ -1,0 +1,24 @@
+{
+  "version": "3.42.22792.0",
+  "scenes": [
+    {
+      "title": "Untitled Scene"
+    }
+  ],
+  "slides": [
+    {
+      "id": "6ClkRz1PVv7",
+      "title": "interdisiplinary learning",
+      "scene_index": "1.1"
+    }
+  ],
+  "player": {
+    "name": "unified",
+    "width": 1080,
+    "height": 524
+  },
+  "stage": {
+    "width": 1060,
+    "height": 430
+  }
+}
