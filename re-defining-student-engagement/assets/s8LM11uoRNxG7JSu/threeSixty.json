@@ -1,0 +1,59 @@
+{
+  "version": "3.47.23871.0",
+  "scenes": [
+    {
+      "title": "Untitled Scene"
+    }
+  ],
+  "slides": [
+    {
+      "id": "6ClkRz1PVv7",
+      "title": "Introduction",
+      "scene_index": "1.1"
+    },
+    {
+      "id": "6cWHpJems7K",
+      "title": "Scenario 1",
+      "scene_index": "1.2"
+    },
+    {
+      "id": "5lqMdk8549q",
+      "title": "Scenario 1 Back",
+      "scene_index": "1.3"
+    },
+    {
+      "id": "6m70Cdrefsk",
+      "title": "Scenario 2",
+      "scene_index": "1.4"
+    },
+    {
+      "id": "6O1X914zuHn",
+      "title": "Scenario 2 Back",
+      "scene_index": "1.5"
+    },
+    {
+      "id": "61pcfoRqloU",
+      "title": "Scenario 3",
+      "scene_index": "1.6"
+    },
+    {
+      "id": "6I0wKlwTJpo",
+      "title": "Scenario 3 Back",
+      "scene_index": "1.7"
+    },
+    {
+      "id": "5xDmIokSMll",
+      "title": "Summary",
+      "scene_index": "1.8"
+    }
+  ],
+  "player": {
+    "name": "unified",
+    "width": 980,
+    "height": 433
+  },
+  "stage": {
+    "width": 960,
+    "height": 390
+  }
+}
